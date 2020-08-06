@@ -3,7 +3,11 @@ layout: default.njk
 ---
 <main id="main" class="text-gray-800 bg-gray-200">
   <div class="post">
-    <h1>{{title}}</h1>
+    <div class="title">
+      <h1>{{title}}</h1>
+      <span class="author">by <i>{{author}}</i>
+      </span>
+    </div>
     {{ content | safe }}
   </div>
 </main>

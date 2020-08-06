@@ -4,7 +4,7 @@
 }
 
 .post h1 {
-  @apply text-2xl font-semibold pt-24 mb-12;
+  @apply text-2xl font-semibold;
 }
 
 .post ol, ul {
@@ -21,6 +21,14 @@
 
 .post :not(pre)>code[class*=language-], .post pre[class*=language-] {
   @apply my-8;
+}
+
+.post .title {
+  @apply pt-24 mb-12;
+}
+
+.post .author {
+  @apply mt-4 inline-block;
 }
 
 .post-date {
