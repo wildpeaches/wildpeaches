@@ -3,6 +3,7 @@ module.exports = (eleventyConfig) => {
   const markdownIt = require("markdown-it");
   const markdownItAttrs = require("markdown-it-attrs");
   const markdownItFootnote = require("markdown-it-footnote");
+  const markdownItKatex = require("@iktakahiro/markdown-it-katex");
   const CleanCSS = require("clean-css");
 
   const options = {
@@ -12,7 +13,8 @@ module.exports = (eleventyConfig) => {
   };
   const markdownLib = markdownIt(options)
     .use(markdownItAttrs)
-    .use(markdownItFootnote);
+    .use(markdownItFootnote)
+    .use(markdownItKatex);
 
   // Use markdownIt with markdownItAttrs for markdown parsing
   // Allows for classes and id's to be applied in markdown without

@@ -45,6 +45,7 @@
   "homepage": "https://github.com/JanDW/wildpeaches#readme",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@iktakahiro/markdown-it-katex": "^4.0.0",
     "autoprefixer": "^9.8.6",
     "clean-css-cli": "^4.3.0",
     "csscomb": "^4.3.0",
