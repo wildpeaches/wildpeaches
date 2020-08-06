@@ -3,31 +3,58 @@
   @apply px-10 mx-auto;
 }
 
-.post h1 {
+.post > blockquote {
+  @apply border-solid border-gray-700 border-l-4 px-5 py-2 my-10 bg-gray-200;
+}
+
+
+.post > p > code {
+  @apply inline-block px-2 bg-gray-200;
+}
+
+.post > .title > h1 {
   @apply text-2xl font-semibold;
 }
 
-.post ol, ul {
+.post > ol, 
+.post > ul {
   @apply my-5 list-inside;  
 }
 
-.post ol {
+.post > ol {
   @apply list-decimal;
 }
 
+.post > ul {
+  @apply list-square;
+}
+
 .post p {
-  @apply mt-5;
+  @apply my-5;
+}
+
+.post > img {
+  @apply my-10;
+}
+
+.post > .katex-block {
+  @apply my-10;
 }
 
 .post :not(pre)>code[class*=language-], .post pre[class*=language-] {
   @apply my-8;
 }
 
-.post .title {
+.post > .title {
   @apply pt-24 mb-12;
 }
 
-.post .author {
+.post > .title > h1 {
+  @apply text-2xl font-semibold;
+}
+
+
+.post > .author {
   @apply mt-4 inline-block;
 }
 

@@ -119,14 +119,14 @@ li > ol {
 
 h2,
 .h2 {
-  @apply text-2xl text-gray-900 font-medium pt-24 mb-8;
+  @apply text-2xl text-gray-900 font-medium pt-8 mb-4;
 }
 
 h2::after {
   @apply block;
   content: '';
   width: 2rem;
-  height: 0.25rem;
+  height: 0.15rem;
   margin-top: 1rem;
   @apply bg-gray-700;
 }

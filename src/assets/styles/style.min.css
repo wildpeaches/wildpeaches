@@ -125,15 +125,15 @@ h2,
   color: #1a202c;
   color: rgba(26, 32, 44, var(--text-opacity));
   font-weight: 500;
-  padding-top: 6rem;
-  margin-bottom: 2rem;
+  padding-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 h2::after {
   display: block;
   content: '';
   width: 2rem;
-  height: 0.25rem;
+  height: 0.15rem;
   margin-top: 1rem;
   --bg-opacity: 1;
   background-color: #4a5568;
@@ -486,23 +486,65 @@ dd {
   margin-right: auto;
 }
 
-.post h1 {
+.post > blockquote {
+  border-style: solid;
+  --border-opacity: 1;
+  border-color: #4a5568;
+  border-color: rgba(74, 85, 104, var(--border-opacity));
+  border-left-width: 4px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  --bg-opacity: 1;
+  background-color: #edf2f7;
+  background-color: rgba(237, 242, 247, var(--bg-opacity));
+}
+
+.post > p > code {
+  display: inline-block;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  --bg-opacity: 1;
+  background-color: #edf2f7;
+  background-color: rgba(237, 242, 247, var(--bg-opacity));
+}
+
+.post > .title > h1 {
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.post ol, ul {
+.post > ol, 
+.post > ul {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   list-style-position: inside;
 }
 
-.post ol {
+.post > ol {
   list-style-type: decimal;
+}
+
+.post > ul {
+  list-style-type: square;
 }
 
 .post p {
   margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.post > img {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.post > .katex-block {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .post :not(pre)>code[class*=language-], .post pre[class*=language-] {
@@ -510,12 +552,17 @@ dd {
   margin-bottom: 2rem;
 }
 
-.post .title {
+.post > .title {
   padding-top: 6rem;
   margin-bottom: 3rem;
 }
 
-.post .author {
+.post > .title > h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.post > .author {
   margin-top: 1rem;
   display: inline-block;
 }
