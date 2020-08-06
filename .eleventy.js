@@ -5,6 +5,7 @@ module.exports = (eleventyConfig) => {
   const markdownItFootnote = require("markdown-it-footnote");
   const markdownItKatex = require("@iktakahiro/markdown-it-katex");
   const CleanCSS = require("clean-css");
+  const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
   const options = {
     html: true,
@@ -28,6 +29,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("src/assets/styles/**/*.min.css");
   // eleventyConfig.addPassthroughCopy('src/_content/portfolio/**/*.{png|gif|jpg|webp}');
   eleventyConfig.addPassthroughCopy({ "src/assets/siteroot": "/" });
+
+  //Plugins
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   // Filters
   eleventyConfig.addFilter("cssmin", function (code) {

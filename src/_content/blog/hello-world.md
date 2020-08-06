@@ -24,7 +24,7 @@ Here's a [link](https://jandewilde.org), I always forgot how to create them in m
 Code can be useful. However it's use should not be overstated since:
 
 1. you can't eat it
-1. it can't be used to eliminate body odor. 
+1. it does not eliminate body odor. 
 
 These are some clear shortcomings, nevertheless, here is a sprinkling of it.
 

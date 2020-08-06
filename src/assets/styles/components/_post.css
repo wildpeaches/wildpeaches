@@ -7,8 +7,20 @@
   @apply text-2xl font-semibold pt-24 mb-12;
 }
 
+.post ol, ul {
+  @apply my-5 list-inside;  
+}
+
+.post ol {
+  @apply list-decimal;
+}
+
 .post p {
   @apply mt-5;
+}
+
+.post :not(pre)>code[class*=language-], .post pre[class*=language-] {
+  @apply my-8;
 }
 
 .post-date {
