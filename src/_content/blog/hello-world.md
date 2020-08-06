@@ -6,15 +6,49 @@ layout: blog.njk
 permalink: /hello-world/
 ---
 
-# {{title}}
+There are people who go by the moniker of mathematician. 
 
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio recusandae voluptas laborum repellendus vel dolor qui iure odit, enim autem vitae ipsam minus aliquam! Dolorum pariatur vel reprehenderit. Voluptatibus, suscipit.
+They are known to like to try and impress everyone by using symbols like $\varphi$. Sometimes they'll write stuff like ${3x-1}+(1+x)^2$ and feel quite chuffed with themselves. When they gather in flocks at a conference (known as a misery of mathematicians) they start peacocking pretty soon and will regurgitate such monstrosities as:
 
-Fuga perspiciatis, sequi asperiores a distinctio quae quas iste consectetur fugit, totam eos! Aspernatur doloremque nam officiis distinctio a tempora architecto quo voluptatum harum ad. Voluptatum blanditiis corporis veniam deserunt!
+$$\begin{array}{c}
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
+= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
+\nabla \cdot \vec{\mathbf{B}} & = 0
+\end{array}$$
 
-Dicta quos accusamus animi earum distinctio tenetur quaerat eos dolorem fugit reprehenderit sint deserunt, in quia. Dolore quisquam esse, consectetur dolorem et numquam a eius nemo quidem eveniet cumque repudiandae?
+Yeah, right. Like that drivel means anything. Homeopathy can cure cancer and Alex Jones will be remembered as a philosopher of Plato's significance. Sure.
 
-Sed, fugiat perspiciatis iste quis blanditiis nemo voluptatibus, rem ab ex id esse iusto fugit quisquam eos, neque quos ipsa dicta facilis. Odit, veritatis accusantium. Labore dolore animi maxime nulla?
+Here's a [link](https://jandewilde.org), I always forgot how to create them in markdown until I used the mnemonic device: b before p, brackets before parens.
 
-Assumenda nulla ab corrupti expedita laborum architecto animi temporibus, labore quam, distinctio veniam optio officia enim, harum nobis magni blanditiis nam molestias dolorum numquam quos mollitia tempora doloribus. Dicta, porro!
+Code can be useful. However it's use should not be overstated since:
+
+1. you can't eat it
+1. it can't be used to eliminate body odor. 
+
+These are some clear shortcomings, nevertheless, here is a sprinkling of it.
+
+```js
+const getInversionCount = (array) => {
+  let inversionCount = 0;
+  for (let i = 0; i < array.length; i++) {
+    let placesNotInvertedCount = 0;
+    for (let j = 0; j < i; j++) {
+      let arrayj = array[j];
+      let arrayi = array[i];
+
+      console.log({ i, j, arrayi, arrayj });
+      if (arrayj < arrayi) placesNotInvertedCount++;
+    }
+    inversionCount += array[i] - 1 - placesNotInvertedCount;
+    console.log(inversionCount);
+  }
+  return inversionCount;
+};
+```
+
+> Blockquote anyone?
+
+
+
 

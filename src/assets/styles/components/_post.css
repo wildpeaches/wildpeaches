@@ -1,0 +1,27 @@
+.post {
+  max-width: 70ch;
+  @apply px-10 mx-auto;
+}
+
+.post h1 {
+  @apply text-2xl font-semibold pt-24 mb-12;
+}
+
+.post p {
+  @apply mt-5;
+}
+
+.post-date {
+  display: inline-block;
+  padding: 0 0.75em;
+  transform: skewX(-10deg);
+  background-color: #56a4bc;
+}
+
+.post-date__text {
+  display: inline-block;
+  color: #fff;
+  transform: skewX(10deg);
+  font-size: 90%;
+  font-weight: 500;
+}

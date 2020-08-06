@@ -238,26 +238,6 @@ a:link {
   @apply bg-gray-900 flex justify-center;
 }
 
-.post {
-  max-width: 70ch;
-  @apply px-10 mx-auto;
-}
-
-.post-date {
-  display: inline-block;
-  padding: 0 0.75em;
-  transform: skewX(-10deg);
-  background-color: #56a4bc;
-}
-
-.post-date__text {
-  display: inline-block;
-  color: #fff;
-  transform: skewX(10deg);
-  font-size: 90%;
-  font-weight: 500;
-}
-
 .bg-tan-100 {
   background-color: #f8f6f2;
 }
