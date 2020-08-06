@@ -4,14 +4,13 @@
   "description": "A shared blog",
   "scripts": {
     "css:concat": "cat src/assets/styles/_font.css src/assets/styles/_tailwind.css src/assets/styles/_custom.css > src/assets/styles/build/bundle.css",
-    "css:postcss-dev": "npx postcss src/assets/styles/build/bundle.css -o src/assets/styles/build/style.css --env development && npx postcss src/_includes/components/hero-1/hero-1.css -o src/_includes/components/hero-1/build/hero-1.css",
+    "css:postcss-dev": "npx postcss src/assets/styles/build/bundle.css -o src/assets/styles/build/style.css --env development",
     "css:postcss-prod": "npx postcss src/assets/styles/build/bundle.css -o src/assets/styles/build/style.css --env production",
     "css:minify": "npx cleancss src/assets/styles/build/style.css -o src/assets/styles/style.min.css",
     "build-dev:css": "npm run css:concat && npm run css:postcss-dev && cp src/assets/styles/build/style.css src/assets/styles/style.min.css",
     "build-prod:css": "npm run css:concat && npm run css:postcss-prod && npm run css:minify",
     "start": "npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve",
-    "deploy:jandewil.de": "npm run build-prod:css  && npm run start && rsync -zavilr --delete --exclude '.DS_Store' ./www/ jandewil@jandewilde.org:/home4/jandewil/public_html/jandewilde/",
+    "serve": "npx @11ty/eleventy --serve", 
     "lint:markdown": "markdownlint src/**/*.md"
   },
   "repository": {

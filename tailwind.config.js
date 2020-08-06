@@ -23,31 +23,7 @@ module.exports = {
   },
   variants: {}, 
   corePlugins: {
-    container: false
   },
   plugins: [
-    function( {addComponents} ){
-      addComponents({
-        '.container': {
-          maxWidth: '100%',
-          margin: '0 auto',
-          '@screen sm': {
-            maxWidth: '640px',
-          },
-          '@screen md': {
-            maxWidth: '768px',
-          },
-          '@screen lg': {
-            maxWidth: '1024px',
-          },
-          '@screen xl': {
-            maxWidth: '1280px',
-          },
-          '@screen xxl': {
-            maxWidth: '1680px',
-          },
-        },
-      });
-    }
   ],
 };
