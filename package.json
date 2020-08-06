@@ -1,0 +1,71 @@
+{
+  "name": "wild-peaches",
+  "version": "0.0.1",
+  "description": "A shared blog",
+  "scripts": {
+    "css:concat": "cat src/assets/styles/_font.css src/assets/styles/_tailwind.css src/assets/styles/_custom.css > src/assets/styles/build/bundle.css",
+    "css:postcss-dev": "npx postcss src/assets/styles/build/bundle.css -o src/assets/styles/build/style.css --env development && npx postcss src/_includes/components/hero-1/hero-1.css -o src/_includes/components/hero-1/build/hero-1.css",
+    "css:postcss-prod": "npx postcss src/assets/styles/build/bundle.css -o src/assets/styles/build/style.css --env production",
+    "css:minify": "npx cleancss src/assets/styles/build/style.css -o src/assets/styles/style.min.css",
+    "build-dev:css": "npm run css:concat && npm run css:postcss-dev && cp src/assets/styles/build/style.css src/assets/styles/style.min.css",
+    "build-prod:css": "npm run css:concat && npm run css:postcss-prod && npm run css:minify",
+    "start": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "deploy:jandewil.de": "npm run build-prod:css  && npm run start && rsync -zavilr --delete --exclude '.DS_Store' ./www/ jandewil@jandewilde.org:/home4/jandewil/public_html/jandewilde/",
+    "lint:markdown": "markdownlint src/**/*.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JanDW/wildpeaches.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{html,json}": [
+      "prettier --write",
+      "git add -A"
+    ],
+    "scripts/**/*.{js,json}": [
+      "prettier --write",
+      "git add -A"
+    ],
+    "styles/**/*.css": [
+      "csscomb --tty-mode --",
+      "git add -A"
+    ]
+  },
+  "keywords": [],
+  "author": "Jan De Wilde",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/JanDW/wildpeaches/issues"
+  },
+  "homepage": "https://github.com/JanDW/wildpeaches#readme",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "autoprefixer": "^9.8.6",
+    "clean-css-cli": "^4.3.0",
+    "csscomb": "^4.3.0",
+    "cssnano": "^4.1.10",
+    "http-server": "^0.12.3",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "markdown-it": "^11.0.0",
+    "markdown-it-attrs": "^3.0.3",
+    "markdown-it-footnote": "^3.0.2",
+    "markdownlint-cli": "^0.23.2",
+    "postcss-cli": "^7.1.1",
+    "postcss-custom-selectors": "^5.1.2",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-extend-rule": "^3.0.0",
+    "prettier": "2.0.5",
+    "purgecss": "^2.3.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "tailwindcss": "^1.6.2"
+  }
+}
