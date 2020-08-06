@@ -1,9 +1,8 @@
 ---
 title: Hello World
-tag: blog
 author: Jan De Wilde
-layout: blog.njk
 permalink: /hello-world/
+date: 2020-08-06
 ---
 
 *This post demoes the capabilities of Markdown and added extensions. This post was created in the United States of America, anno 2020. Not that it matters.*
@@ -57,7 +56,7 @@ Figuring out a good hierarchy of headings takes a while, so for now here's just 
 
 Oh ho! Philosophers! Seems like it struck you out of left field? Well, we don't discriminate in the kind of nerds we target, that's not what we stand for.
 
-This is **bold**. There's --strikethrough-- Here's a [link](https://jandewilde.org), I always forgot how to create them in markdown until I used the mnemonic device: b before p, brackets before parens.
+This is **bold**. Here's a [link](https://jandewilde.org), I always forgot how to create them in markdown until I used the mnemonic device: b before p, brackets before parens.
 
 ![](https://images.unsplash.com/photo-1523350703530-161b46e28e24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=720&q=80)
 

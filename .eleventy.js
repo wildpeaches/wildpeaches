@@ -38,6 +38,26 @@ module.exports = (eleventyConfig) => {
     return new CleanCSS({}).minify(code).styles;
   });
 
+  eleventyConfig.addFilter("dateFormat", function (value) {
+    const monthNames = [
+      "Jan",
+      "Feb",
+      "Ma",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    return `${
+      monthNames[value.getMonth()]
+    } ${value.getDate()}, ${value.getFullYear()}`;
+  });
+
   return {
     dir: {
       // ⚠️ These values are both relative to your input directory.

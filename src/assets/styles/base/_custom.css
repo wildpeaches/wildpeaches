@@ -117,19 +117,6 @@ li > ol {
   transform: translate(0, -50px);
 }
 
-h2,
-.h2 {
-  @apply text-2xl text-gray-900 font-medium pt-8 mb-4;
-}
-
-h2::after {
-  @apply block;
-  content: '';
-  width: 2rem;
-  height: 0.15rem;
-  margin-top: 1rem;
-  @apply bg-gray-700;
-}
 
 /* h3, .h3 {
     @apply font-bold;

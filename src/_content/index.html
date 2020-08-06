@@ -1,0 +1,23 @@
+---
+layout: blog.njk
+title: Wild Peaches
+author: John Peach & Jan De Wilde
+permalink: /
+---
+
+A precusor to a blog with a horrific name to boot. Do wild peaches even exist? Very much open to suggestions to get rid of this atrocity.
+
+Here is a listing of current blog posts:
+
+<section class="posts my-6">
+  <ul class="divide-y-2 divide-gray-300">
+    {% for post in collections.posts %}
+
+    <li class="py-4 text-lg">
+      <a class="no-underline" href="{{ post.url }}">{{ post.data.title }}</a> &middot;
+      <span class="text-gray-600">{{ post.date | dateFormat }}</span>
+    </li>
+    
+    {% endfor %}
+  </ul>
+</section>

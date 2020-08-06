@@ -16,6 +16,20 @@
   @apply text-2xl font-semibold;
 }
 
+.post > h2 {
+  @apply text-2xl text-gray-900 font-medium pt-8 mb-4;
+}
+
+.post h2::after {
+  @apply block;
+  content: '';
+  width: 2rem;
+  height: 0.15rem;
+  margin-top: 1rem;
+  @apply bg-gray-700;
+}
+
+
 .post > ol, 
 .post > ul {
   @apply my-5 list-inside;  
