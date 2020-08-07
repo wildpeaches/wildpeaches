@@ -39,23 +39,7 @@ module.exports = (eleventyConfig) => {
   });
 
   eleventyConfig.addFilter("dateFormat", function (value) {
-    const monthNames = [
-      "Jan",
-      "Feb",
-      "Ma",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-    return `${
-      monthNames[value.getMonth()]
-    } ${value.getDate()}, ${value.getFullYear()}`;
+    return `${value.getMonth() + 1}.${value.getDate()}.${value.getFullYear()}`;
   });
 
   return {
