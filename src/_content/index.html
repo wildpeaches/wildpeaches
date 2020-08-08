@@ -1,26 +1,33 @@
 ---
 layout: blog.njk
 title: Wild Peaches
-author: John Peach & Jan De Wilde
+author: Jan De Wilde & John Peach 
 permalink: /
 bodyClass: bg-blue-200 text-blue-900
 ---
 
-A precusor to a blog with a horrific name to boot. Do wild peaches even exist? Very much open to suggestions to get rid of this atrocity.
-
-Here is a listing of current blog posts:
+Two ex-neighbors with a project blog. That's all.
 
 <section class="posts my-6">
   <ul class="divide-y divide-blue-400">
-    {% for post in collections.posts %}
+    {% for post in collections.posts | reverse %}
 
-    <li class="py-3 text-lg">
-      <a class="no-underline text-blue-900 font-medium" href="{{ post.url }}">
-      <span>{{ post.date | dateFormat }}</span> &middot;
-      {{ post.data.title }}
-      </a> 
+    <li class="py-3 text-xl">
+      <a
+        class="no-underline text-blue-900 font-medium flex"
+        href="{{ post.url }}"
+      >
+        <div>{{ post.date | dateFormat }}</div>
+        <div class="ml-6">
+          {{ post.data.title }} {% if post.data.subtitle %}
+          <div class="text-blue-900 text-opacity-75 text-base">
+            {{ post.data.subtitle }}
+          </div>
+          {% endif %}
+        </div>
+      </a>
     </li>
-    
+
     {% endfor %}
   </ul>
 </section>

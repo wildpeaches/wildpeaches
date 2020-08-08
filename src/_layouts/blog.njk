@@ -6,13 +6,21 @@ bodyClass: text-gray-800 bg-gray-200
 <main id="main">
   <div class="post">
     <!-- @TODO couldn't get this working with 'not' keyword, so using else instead -->
-    {% if permalink === "/" %} {% else %}
+    {% if permalink === "/" %} 
+    
+    {% else %}
     <a href="/">← back</a>
     {% endif %}
+    <div class="date">
+      {{ date }}
+    </div>
     <div class="title">
       <h1>{{ title }}</h1>
-      <span class="author"
-        >by <i>{{ author }}</i>
+      {% if subtitle %}
+        <p class="mt-0">{{ subtitle }}</p>
+      {% endif %}
+      <span class="byline"
+        >by <span>{{ author }}</span>
       </span>
     </div>
     {{ content | safe }}

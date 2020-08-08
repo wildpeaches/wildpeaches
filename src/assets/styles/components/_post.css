@@ -42,6 +42,14 @@
   @apply my-10;
 }
 
+.post .byline > span {
+  @apply uppercase text-sm font-bold tracking-wider;
+}
+
+.post > .date {
+  @apply pt-24 mb-4 text-sm;
+}
+
 .post > .katex-block {
   @apply my-10;
 }
@@ -51,7 +59,7 @@
 }
 
 .post > .title {
-  @apply pt-24 mb-12;
+  @apply mb-12;
 }
 
 .post > .title > h1 {
