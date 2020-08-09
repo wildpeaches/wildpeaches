@@ -1,7 +1,7 @@
 ---
 layout: blog.njk
 title: Wild Peaches
-author: Jan De Wilde & John Peach 
+author: Jan De Wilde & John Peach
 permalink: /
 bodyClass: bg-blue-200 text-blue-900
 ---
@@ -17,7 +17,9 @@ Two ex-neighbors with a project blog. That's all.
         class="no-underline text-blue-900 font-medium flex"
         href="{{ post.url }}"
       >
-        <div>{{ post.date | dateFormat }}</div>
+        <time datetime="{{ post.date | w3DateFilter }}"
+          >{{ post.date | dateFilter }}</time
+        >
         <div class="ml-6">
           {{ post.data.title }} {% if post.data.subtitle %}
           <div class="text-blue-900 text-opacity-75 text-base">

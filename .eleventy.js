@@ -1,12 +1,14 @@
+const dateFilter = require("./src/filters/date-filter");
+const w3DateFilter = require("./src/filters/w3-date-filter");
+const markdownIt = require("markdown-it");
+const markdownItAttrs = require("markdown-it-attrs");
+const markdownItFootnote = require("markdown-it-footnote");
+const markdownItKatex = require("@iktakahiro/markdown-it-katex");
+const CleanCSS = require("clean-css");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+
 module.exports = (eleventyConfig) => {
   // Markdown
-  const markdownIt = require("markdown-it");
-  const markdownItAttrs = require("markdown-it-attrs");
-  const markdownItFootnote = require("markdown-it-footnote");
-  const markdownItKatex = require("@iktakahiro/markdown-it-katex");
-  const CleanCSS = require("clean-css");
-  const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-
   const options = {
     html: true,
     breaks: true,
@@ -33,14 +35,13 @@ module.exports = (eleventyConfig) => {
   //Plugins
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  // Filters
+  // Add Filters
   eleventyConfig.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;
   });
 
-  eleventyConfig.addFilter("dateFormat", function (value) {
-    return `${value.getMonth() + 1}.${value.getDate()}.${value.getFullYear()}`;
-  });
+  eleventyConfig.addFilter("dateFilter", dateFilter);
+  eleventyConfig.addFilter("w3DateFilter", w3DateFilter);
 
   return {
     dir: {
