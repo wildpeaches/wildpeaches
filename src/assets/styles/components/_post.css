@@ -54,6 +54,10 @@
   @apply my-10;
 }
 
+.post  /*.katex-block */  .frac-line {
+  @apply currentcolor;
+}
+
 .post :not(pre)>code[class*=language-], .post pre[class*=language-] {
   @apply my-8;
 }

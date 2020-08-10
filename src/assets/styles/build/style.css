@@ -552,6 +552,12 @@ dd {
   margin-bottom: 2.5rem;
 }
 
+.post  /*.katex-block */  .frac-line {
+  --border-opacity: 1;
+  border-color: #1a202c;
+  border-color: rgba(26, 32, 44, var(--border-opacity));
+}
+
 .post :not(pre)>code[class*=language-], .post pre[class*=language-] {
   margin-top: 2rem;
   margin-bottom: 2rem;
