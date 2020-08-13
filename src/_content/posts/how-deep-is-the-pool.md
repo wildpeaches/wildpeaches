@@ -29,7 +29,7 @@ where $\alpha$ will be a function of the probability of a positive test. This is
 $$ \alpha(k,n,p) = Pr(k;n,p) = \binom{n}{k} p^k (1 - p)^{n-k} $$
 for $k = 0,1, \ldots, n$ which gives the probability of $k$ failues in $n$ tests when the probability of failure (infection) for a single individual is $p$.
 
-For our case, all we're concerned about is the case $k = 0$, $Pr(0;n,p) = (1-p)^n$ when the test returns a negative result since $1-p$ is the probability  someone is not infected and $(1-p)^n$ means all $n$ people in the pool test negative.
+For our case, all we're concerned about is the case $k = 0$, $Pr(0;n,p) = (1-p)^n$ when the test returns a negative result since $1-p$ is the probability someone is not infected and $(1-p)^n$ means all $n$ people in the pool test negative.
 
 The test function $T$ is then
 $$ T(n,p) = \frac{N}{n} \left( 1 + ( 1 - (1-p)^n ) n \right)$$
@@ -44,21 +44,23 @@ Suppose the test is 97% accurate, which seems on the surface pretty good. This m
 
 So now it appears that 4 out of 100 or 4% are infected. Since we need to know $p$, the probability of infection, correctly to be able to set the depth of the pool $n$, in this case we'd be off by 400%. Even worse, the accuracy of tests tends to decrease as the pool size increases. For this analysis though, we'll assume a perfect test.
 
-Ok, so to find the number of tests required for a given infection rate $p$ means we need to find the value of $n$ that makes $T(n,p)$ the smallest. A little bit of calculus here—we need to find 
+Ok, so to find the number of tests required for a given infection rate $p$ means we need to find the value of $n$ that makes $T(n,p)$ the smallest.
 
-$$\frac{dT(n,p)}{dn} = -(1-p)^n \log(1-p) - \frac{1}{n^2} = 0$$ 
+![](/assets/img/how-deep-is-the-pool/pool-size-p-seven-half.svg){.mx-auto .blend-multiply}
 
-for some value of $n$. That is, we're looking for the point on the curve where the slope is zero which will indicate either a minimum, a maximum or an inflection point. Without going into any more, it turns out  these points are the minimum values we're looking for.
+A little bit of calculus here—we need to find
+
+$$\frac{dT(n,p)}{dn} = -(1-p)^n \log(1-p) - \frac{1}{n^2} = 0$$
+
+for some value of $n$. That is, we're looking for the point on the curve where the slope is zero which will indicate either a minimum, a maximum or an inflection point. Without going into any more, it turns out these points are the minimum values we're looking for.
 
 Solving $\frac{dT}{dn} = 0$ for various values of $p$ gives this plot: ([python code here](https://gist.github.com/JanDW/2d555feb2967fd7fb3bb7525e03c2506))
-
 
 ![](/assets/img/how-deep-is-the-pool/pool-sizes.svg){.mx-auto .blend-multiply}
 
 which shows that for infection rates above about 1% the pool sizes are less than 10 people, and by the time the positivity is above 5% the pool size needs to drop to 5 people or fewer.
 
 Once we have the optimal number of people per pool then for each infection probability $p$ we can calculate the number of required tests $T(n,p)$ shown here:
-
 
 ![](/assets/img/how-deep-is-the-pool/tests-required.svg){.mx-auto .blend-multiply}
 
@@ -70,4 +72,9 @@ People are showing up to be tested because they don't feel well or think they ma
 
 This shows that to make COVID-19 pool testing worthwhile the test will need to be very accurate and we'll need to test a lot of people even if they have no reason to think that they may be sick or have been exposed.
 
-![](/assets/img/how-deep-is-the-pool/testing-rates.png){.mx-auto .blend-multiply .mt-24}
+<figure class="mt-12">
+  <iframe title="Embed" src="https://coronavirus.jhu.edu/embed/testing/state-data/testing_per_state_US.html" width="736" height="466" allowfullscreen="" frameborder="no" style="max-width: 100%"></iframe>
+  <figcaption>
+  <small class="text-gray-600">Visualization by <a href="https://coronavirus.jhu.edu/testing/individual-states" rel="external">John Hopkins University of Medicine &middot; Coronavirus Resource Center</a></small>
+  </figcaption>
+</figure>
