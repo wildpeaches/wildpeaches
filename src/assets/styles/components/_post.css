@@ -8,6 +8,10 @@
 }
 
 
+.post img {
+  @apply my-16;
+}
+
 .post > p > code {
   @apply inline-block px-2 bg-white;
 }

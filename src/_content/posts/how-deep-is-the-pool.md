@@ -75,6 +75,6 @@ This shows that to make COVID-19 pool testing worthwhile the test will need to b
 <figure class="mt-12">
   <iframe title="Embed" src="https://coronavirus.jhu.edu/embed/testing/state-data/testing_per_state_US.html" width="736" height="466" allowfullscreen="" frameborder="no" style="max-width: 100%"></iframe>
   <figcaption>
-  <small class="text-gray-600">Visualization by <a href="https://coronavirus.jhu.edu/testing/individual-states" rel="external">John Hopkins University of Medicine &middot; Coronavirus Resource Center</a></small>
+  <small class="text-gray-600">Visualization by <a href="https://coronavirus.jhu.edu/testing/individual-states" rel="external">John Hopkins University &amp; Medicine &middot; Coronavirus Resource Center</a></small>
   </figcaption>
 </figure>
