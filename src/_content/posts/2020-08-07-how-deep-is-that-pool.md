@@ -3,7 +3,6 @@ title: How deep is that pool?
 subtitle: The mathematics of COVID-19 testing
 author: John Peach
 permalink: /how-deep-is-that-pool/
-date: 2020-08-07
 tags: [math, covid-19]
 ---
 

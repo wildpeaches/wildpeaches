@@ -2,7 +2,6 @@
 title: Creating posts 
 author: Jan De Wilde
 permalink: /creating-posts/
-date: 2020-08-06
 ---
 
 Firstly, make sure you have your [local development environment](../local-development/) running and the website is open on `localhost`  in your browser.

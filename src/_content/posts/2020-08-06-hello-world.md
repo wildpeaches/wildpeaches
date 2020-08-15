@@ -2,7 +2,6 @@
 title: Hello World
 author: Jan De Wilde
 permalink: /hello-world/
-date: 2020-08-06
 ---
 
 *This post demoes the capabilities of Markdown and added extensions. This post was created in the United States of America, anno 2020. Not that it matters.*
