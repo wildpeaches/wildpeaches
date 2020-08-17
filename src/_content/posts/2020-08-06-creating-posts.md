@@ -1,7 +1,6 @@
 ---
 title: Creating posts 
 author: Jan De Wilde
-permalink: /creating-posts/
 date: 2020-08-06
 ---
 

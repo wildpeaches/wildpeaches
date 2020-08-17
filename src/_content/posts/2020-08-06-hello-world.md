@@ -1,7 +1,6 @@
 ---
 title: Hello World
 author: Jan De Wilde
-permalink: /hello-world/
 date: 2020-08-06
 ---
 
