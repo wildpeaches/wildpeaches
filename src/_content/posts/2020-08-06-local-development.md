@@ -1,7 +1,7 @@
 ---
 title: Local development configuration
 author: Jan De Wilde
-permalink: /local-development/
+date: 2020-08-06
 ---
 
 ## Installing git and nodeJS
