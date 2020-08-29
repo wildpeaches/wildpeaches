@@ -93,7 +93,7 @@ In this simulation Boonie always gets caught. But what about other conspiracies?
 
 David Grimes, from Oxford University, published a paper in PLOS ONE, [On the Viability of Conspiratorial Beliefs](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0147905) in which he derived an equation for the survival time of a conspiracy theory. It depends on the number of conspirators, the amount of time since the beginning of the conspiracy, and an intrinsic probability of discovery common to all conspiracies. A faked moon landing [would have been uncovered in about 3.7 years](https://www.bbc.com/news/science-environment-35411684). His equation is
 
-$$ L(t,N(t)) = 1 - e^{-t(1-\phi^{N(t)}} $$
+$$ L(t,N(t)) = 1 - e^{-t \left( 1-\phi^{N(t)} \right) } $$
 
 where $N(t)$ is the Gompertzian survival function,
 
