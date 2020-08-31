@@ -1,9 +1,9 @@
 ---
 title: The Boonie Conundrum
 subtitle: Monte Carlo simulation of a conspiracy
-author: JOHN PEACH
-date: 2020-08-27
-tags: [math, Monte Carlo simulation, conspiracies, Gompertz Survival Function]
+author: John Peach
+tags: [math]
+keywords: [Monte Carlo simulation, conspiracies, Gompertz Survival Function]
 ---
 
 This is the tale of the Great Boonie Conspiracy in which we show through the mathematics of the Gompertz Survival Function that all conspiracies must fail. It's the story of a coverup by people who didn't cover up and were exposed in the end.
@@ -71,7 +71,7 @@ To run the simulation we need estimates of the interactions between students, te
 * Teacher opportunity = 0.1%. Teachers are busy, they don't have time for these things.
 * Teacher-principal opportunity = 1%. The principal is also busy.
 
-With all that, this is a plot of a typical run. ([Octave code boonieSim.m](/assets/code/the-boonie-conundrum/boonieSim.m)) 
+With all that, this is a plot of a typical run. ([Octave code boonieSim.m](https://gist.github.com/JanDW/62b4b4d4ca9822080a7ed6209e33ab50)) 
 
 ![](/assets/img/the-boonie-conundrum/the-boonie-rumor.png){.mx-auto .blend-multiply}
 
@@ -83,7 +83,7 @@ While working on the Manhattan Project, Stanislaw Ulam developed a method to stu
 
 We can easily perform Monte Carlo experiments with the Boonie rumor, too. Since the friends and opportunity matrices are generated randomly each time the function is called, the results will be slightly different at the end of each run. By repeating the experiment many times, we can start to see patterns.
 
-In this [Monte Carlo experiment](/assets/code/the-boonie-conundrum/boonie_Monte_Carlo.m), I ran the same Boonie rumor function 1000 times. The peak seems to occur around 20 days, and the longest he got away with it is 80 days, but he always gets caught. In fact, after 40 days, there are fewer and fewer cases, meaning that Boonie is very unlikely to make it longer than 40 days in general. Monte Carlo experiments are very useful for obtaining statistical insights into problems. You can also change the experiment by adjusting some of the parameters such as studentFriendship probability to see how sensitive the outcome is to a small change.
+In this [Monte Carlo experiment](https://gist.github.com/JanDW/67d70ecb54bf186622f2a201e01a02ea), I ran the same Boonie rumor function 1000 times. The peak seems to occur around 20 days, and the longest he got away with it is 80 days, but he always gets caught. In fact, after 40 days, there are fewer and fewer cases, meaning that Boonie is very unlikely to make it longer than 40 days in general. Monte Carlo experiments are very useful for obtaining statistical insights into problems. You can also change the experiment by adjusting some of the parameters such as studentFriendship probability to see how sensitive the outcome is to a small change.
 
 ![](/assets/img/the-boonie-conundrum/boonie-monte-carlo.png){.mx-auto .blend-multiply}
 
