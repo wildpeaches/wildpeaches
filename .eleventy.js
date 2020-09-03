@@ -51,7 +51,7 @@ module.exports = (eleventyConfig) => {
       input: "src",
       output: "www",
     },
-    templateFormats: ["md", "njk", "html", "liquid"],
+    templateFormats: ["md", "njk", "html"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
