@@ -447,6 +447,14 @@ dd {
   margin-right: -50vw;
 }
 
+.content-wrapper {
+  max-width: 70ch;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .footnote-item {
   --text-opacity: 1;
   color: #4a5568;
@@ -461,11 +469,6 @@ dd {
 }
 
 .post {
-  max-width: 70ch;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .post > blockquote {
@@ -483,6 +486,11 @@ dd {
   --bg-opacity: 1;
   background-color: #e2e8f0;
   background-color: rgba(226, 232, 240, var(--bg-opacity));
+}
+
+.post img {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .post > p > code {
@@ -553,9 +561,7 @@ dd {
 }
 
 .post  /*.katex-block */  .frac-line {
-  --border-opacity: 1;
-  border-color: #1a202c;
-  border-color: rgba(26, 32, 44, var(--border-opacity));
+  color: currentColor;
 }
 
 .post :not(pre)>code[class*=language-], .post pre[class*=language-] {

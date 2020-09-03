@@ -1,12 +1,9 @@
 {
   "items": [
     {
-      "text": "Home",
-      "url": "/"
-    },
-    {
-      "text": "About",
-      "url": "/about-us/"
+      "text": "⌘ Wild Peaches",
+      "url": "/",
+      "cssClass" : "font-bold"
     }
   ]
 }    

@@ -440,6 +440,12 @@ dd {
   }
 }
 
+
+.content-wrapper {
+  max-width: 70ch;
+  @apply px-10 mx-auto;
+}
+
 .footnote-item {
   @apply text-gray-700 text-base my-2;
 }
