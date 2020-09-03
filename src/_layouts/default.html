@@ -1,0 +1,15 @@
+---
+title: Wild Peaches
+---
+
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  {% include 'head.html' %}
+  <body
+    class="font-base text-lg overflow-x-hidden home-font-features {% if bodyClass %}{{ bodyClass }}{% endif %}"
+  >
+    {% include 'global-nav.html' %} 
+    {{ content | safe}}
+    {% include 'footer.html' %}
+  </body>
+</html>

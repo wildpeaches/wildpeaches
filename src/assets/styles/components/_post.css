@@ -1,6 +1,4 @@
-.post {
-  max-width: 70ch;
-  @apply px-10 mx-auto;
+.post { 
 }
 
 .post > blockquote {
@@ -56,6 +54,10 @@
 
 .post > .katex-block {
   @apply my-10;
+}
+
+.post  /*.katex-block */  .frac-line {
+  @apply text-current;
 }
 
 .post :not(pre)>code[class*=language-], .post pre[class*=language-] {

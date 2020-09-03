@@ -1,0 +1,21 @@
+<div class="bg-white border-b-1 border-gray-400">
+  <nav>
+    <ul class="content-wrapper global-nav flex flex-center py-4">
+      {% for item in navigation.items %}
+      <li class="pr-4">
+        <a
+          href="{{ item.url }}"
+          class="{{ item.cssClass }} no-underline"
+          {{
+          helpers.getLinkActiveState(item.url,
+          page.url)
+          |
+          safe
+          }}
+          >{{ item.text }}</a
+        >
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

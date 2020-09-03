@@ -1,19 +1,10 @@
 ---
-layout: default.njk
+layout: default
 bodyClass: text-gray-800 bg-gray-200
 ---
 
 <main id="main">
-  <div class="post">
-    <!-- @TODO couldn't get this working with 'not' keyword, so using else instead -->
-    {% if permalink === "/" %} {% else %}
-    <a href="/">← back</a>
-    {% endif %} {% if hero %}
-    <div class="hero">
-      <img alt="" src="{{ hero }}" />
-    </div>
-    {% endif %}
-
+  <div class="post content-wrapper">
     <div class="date">
       <time datetime="{{ page.date | w3DateFilter }}"></time>
       {{ page.date | dateFilter }}
