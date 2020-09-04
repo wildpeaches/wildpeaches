@@ -14,13 +14,13 @@ One of Boonie's responsibilities as team captain was to organize the fundraising
 
 Monday morning's school announcements included one for Boonie to report to the principal's office. Principal S. demanded Boonie apologize to the town by writing a letter to the editor, and so Boonie did as he was told. Here's a lightly edited version:
 
-"Saturday the Boys Varsity Soccer had a car wash outside of the high school.
-
-Unfortunately, what we thought was fun and games turned out to be very offensive.
-
-Children of all ages saw us strutting around in our sports shorts; we didn’t consider the consequences of such immature humor. 
-
-Kids our age have been having high school carwashes to support our teams, and what we thought was the norm turned out to be disastrous."
+> Saturday the Boys Varsity Soccer had a car wash outside of the high school.
+>
+> Unfortunately, what we thought was fun and games turned out to be very offensive.
+>
+> Children of all ages saw us strutting around in our sports shorts; we didn’t consider the consequences of such immature humor.
+>
+> Kids our age have been having high school carwashes to support our teams, and what we thought was the norm turned out to be disastrous.
 
 It went on from there and seemed to be an abject apology. But if you read the first letter of each sentence you'll see the start of a hidden message which isn't exactly apologetic.
 
