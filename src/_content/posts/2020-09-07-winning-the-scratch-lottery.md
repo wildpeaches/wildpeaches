@@ -10,9 +10,7 @@ Mohan Srivastava is a geological statistician from Toronto who helps mining comp
 
 Lottery ticket printing companies need to produce exactly the right number of winning tickets at each payoff level. Let's look at a typical bingo ticket, one that I bought in Delaware several years ago. 
 
-
-
-![Bingo Card](C:\Users\johnx\OneDrive\Documents\Mathematics\Scratch Lottery\img\Bingo Card 60.jpg)
+![Bingo Card 60](../../assets/img/winning-the-scratch-lottery/Bingo Card 60.jpg)
 
 To play, you scratch off all the "?'s" in the area labeled "Caller's Card" and then scratch off matching numbers in each of the four Bingo cards above. If you complete any horizontal, vertical, or diagonal line you've got a winner. What Srivastava figured out is that for a winning ticket, each number in a winning row, column or diagonal can only appear once on any of the cards because otherwise, the printer would have a very hard time keeping track of where the winning numbers appear and how they contribute to winning cards.
 
@@ -23,8 +21,10 @@ $$
 E[x] = \sum_{i=1}^n p_i x_i 
 $$
 where   $p_i$ is the probability of event $i$ and $x_i$ is the payoff for the event. Another formulation is to include the cost, $C$, of the ticket in the expectation and then divide by the cost to get the expected return per dollar wagered,
-$$ E[x] = \frac{\sum_{i=1}^n p_i x_i - C}{C} = \frac{\sum_{i=1}^n p_i x_i}{C} - 1. $$
-In this formulation, if $E[x] > 0$ then you make money on average, while if the value is negative you lose. 
+$$
+E[x] = \frac{\sum_{i=1}^n p_i x_i - C}{C} = \frac{\sum_{i=1}^n p_i x_i}{C} - 1. 
+$$
+In this formulation, if $E[x] > 0$ then you make money on average, while if the value is negative you lose.
 
 This is an example of the odds and payoffs for each possible winning combination from [Delaware](https://www.delottery.com/Content/images/instant-lottery/instant-details/DE192OSB_V12_05032020.jpg) (slightly different from my card). It's easy to calculate the expectation using Excel. I made a spreadsheet with columns for the payoff amount (Win), the odds, the probability, and the expected value for that combination. I also calculated the adjusted probability and adjusted expectation. I'll explain those in a bit. 
 
@@ -78,9 +78,7 @@ Most states have apps to scan lottery tickets with your phone, but a more rapid 
 
 [SikuliX by RaiMan](http://sikulix.com/) automates keyboard, mouse, and screen functions programmatically. It uses [OpenCV](https://opencv.org/) to find images on the screen. The four Bingo cards can be found by searching for this pattern:
 
-![Lines Mask](C:\Users\johnx\OneDrive\Documents\Mathematics\Scratch Lottery\img\Lines mask.png)
-
-
+![Lines mask](../../assets/img/winning-the-scratch-lottery/Lines mask.png)
 
 SikuliX returns the location of the pattern on the screen, so images of each card can be captured with a snipping tool like [Greenshot](https://getgreenshot.org/). SikuliX can also find the locations of other special symbols such as the "FREE" in the middle of the cards and the little stack of money at random places on each card.
 
@@ -110,13 +108,8 @@ By summing these card arrays horizontally and vertically we can find rows or col
 
 Of course, it would be nice to fully automate the card handling process with a [Sain Smart robotic arm](https://www.sainsmart.com/products/6-axis-desktop-robotic-arm-assembled?variant=45101269588&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&utm_campaign=gs-2018-08-06&utm_source=google&utm_medium=smart_campaign&gclid=CjwKCAjw4rf6BRAvEiwAn2Q76hbnjXvDfjqax182Z_2NH5rwnm5mNKEy2nbklUOrsnatKz64XbQ5BhoCg7EQAvD_BwE), which could also be used to scratch off the lottery tickets. But, in any case, I think we've arrived at phase 3.
 
-![Underpants Gnomes](C:\Users\johnx\OneDrive\Documents\Mathematics\Scratch Lottery\img\underpantsgnomes1.jpg)
+![underpantsgnomes1](../../assets/img/winning-the-scratch-lottery/underpantsgnomes1.jpg)
 
 ---
 
 Many states have adopted scratch lotteries as a way to pay for their schools, but the lottery is a very regressive tax on the mathematically challenged. By filtering out the winning tickets we'd be effectively increasing this regressive taxation. On the other hand, the Wired article suggested that some people are using the lottery to launder money, so it might be considered a social service to foil their efforts. Given the moral issues and all the software and hardware required you have to wonder, is it worth all this effort for a lousy \$100K a year?
-
-
-```python
-
-```
