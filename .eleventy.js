@@ -13,6 +13,7 @@ module.exports = (eleventyConfig) => {
     html: true,
     breaks: true,
     linkify: true,
+    typographer: true,
   };
   const markdownLib = markdownIt(options)
     .use(markdownItAttrs)
