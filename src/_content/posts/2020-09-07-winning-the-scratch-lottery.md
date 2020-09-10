@@ -29,6 +29,8 @@ In this formulation, if $E[x] > 0$ then you make money on average, while if the 
 
 This is an example of the odds and payoffs for each possible winning combination from [Delaware](https://www.delottery.com/Content/images/instant-lottery/instant-details/DE192OSB_V12_05032020.jpg) (slightly different from my card). It's easy to calculate the expectation using Excel. I made a spreadsheet with columns for the payoff amount (Win), the odds, the probability, and the expected value for that combination. I also calculated the adjusted probability and adjusted expectation. I'll explain those in a bit. 
 
+<div class="full-bleed my-16">
+
 | Win  | Odds  | Probability | Expectation | Adjusted Prob | Adjusted Exp |
 |-----:|------:|------------:|------------:|--------------:|-------------:|
 | 3    | 10    | 0.1000      | 0.3000      | 0.3579        | 1.0736       |
@@ -64,6 +66,9 @@ This is an example of the odds and payoffs for each possible winning combination
 | 500  | 30000 | 0.0000      | 0.0167      | 0.0001        | 0.0596       |
 | 5000 | 60000 | 0.0000      | 0.0833      | 0.0001        | 0.2982       |
 |      |       | 0.2515      | -0.3933     | 0.9000        | 1.1711       |
+{.w-max-1100}
+
+</div>
 
 Looking at the first row which corresponds to a Bingo on line 1 of card 1, the payoff is \$3 and the odds are 1 in 10 which makes the probability 1/10 = 0.1. Multiplying the payoff by the probability gives the expectation for that Bingo of \$0.30. Adding all of the expectations and then dividing by the \$3 cost of the card (minus 1) gives an overall expectation of about -39 cents. In other words, you can expect to lose \$0.39 of every dollar that you play. 
 
