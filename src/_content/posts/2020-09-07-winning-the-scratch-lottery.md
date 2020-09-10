@@ -10,7 +10,7 @@ Mohan Srivastava is a geological statistician from Toronto who helps mining comp
 
 Lottery ticket printing companies need to produce exactly the right number of winning tickets at each payoff level. Let's look at a typical bingo ticket, one that I bought in Delaware several years ago. 
 
-![Bingo Card 60](../../assets/img/winning-the-scratch-lottery/Bingo Card 60.jpg)
+![Bingo Card 60](/assets/img/winning-the-scratch-lottery/bingo-card.jpg){.mx-auto}
 
 To play, you scratch off all the "?'s" in the area labeled "Caller's Card" and then scratch off matching numbers in each of the four Bingo cards above. If you complete any horizontal, vertical, or diagonal line you've got a winner. What Srivastava figured out is that for a winning ticket, each number in a winning row, column or diagonal can only appear once on any of the cards because otherwise, the printer would have a very hard time keeping track of where the winning numbers appear and how they contribute to winning cards.
 
@@ -30,7 +30,7 @@ In this formulation, if $E[x] > 0$ then you make money on average, while if the 
 This is an example of the odds and payoffs for each possible winning combination from [Delaware](https://www.delottery.com/Content/images/instant-lottery/instant-details/DE192OSB_V12_05032020.jpg) (slightly different from my card). It's easy to calculate the expectation using Excel. I made a spreadsheet with columns for the payoff amount (Win), the odds, the probability, and the expected value for that combination. I also calculated the adjusted probability and adjusted expectation. I'll explain those in a bit. 
 
 | Win  | Odds  | Probability | Expectation | Adjusted Prob | Adjusted Exp |
-|------|-------|-------------|-------------|---------------|--------------|
+|-----:|------:|------------:|------------:|--------------:|-------------:|
 | 3    | 10    | 0.1000      | 0.3000      | 0.3579        | 1.0736       |
 | 3    | 20    | 0.0500      | 0.1500      | 0.1789        | 0.5368       |
 | 4    | 50    | 0.0200      | 0.0800      | 0.0716        | 0.2863       |
@@ -79,28 +79,32 @@ Most states have apps to scan lottery tickets with your phone, but a more rapid 
 
 [SikuliX by RaiMan](http://sikulix.com/) automates keyboard, mouse, and screen functions programmatically. It uses [OpenCV](https://opencv.org/) to find images on the screen. The four Bingo cards can be found by searching for this pattern:
 
-![Lines mask](../../assets/img/winning-the-scratch-lottery/Lines mask.png)
+![Lines mask](/assets/img/winning-the-scratch-lottery/lines-mask.png){.mx-auto}
 
 SikuliX returns the location of the pattern on the screen, so images of each card can be captured with a snipping tool like [Greenshot](https://getgreenshot.org/). SikuliX can also find the locations of other special symbols such as the "FREE" in the middle of the cards and the little stack of money at random places on each card.
 
 Image processing in [Anaconda Python](https://www.anaconda.com/) will let us remove the lines by subtracting the mask shown above from each card, as well as the special symbols. With a clean image, [Tesseract OCR](https://nanonets.com/blog/ocr-with-tesseract/) gives the text equivalent of each number found in the card images. Using the online OCR program [OCRSpace](https://ocr.space/) without any image cleaning returned these numbers for each card:
 
 
+<pre class="mb-16"> 
+<samp>
 Card 1                        Card 2
 
-11 29 41 51 74	              11 28 3160 | 71	
-08 22 3 58 69	                13 19 4u 53 63
+11 29 41 51 74                11 28 31 60 | 71	
+08 22 3 58 69                 13 19 4u 53 63
 CE 23 FREE 55 67              05 24 FREE 46 74	
-09 30 34 57 71	              10 27 36 52 61
+09 30 34 57 71                10 27 36 52 61
 13 17 38 52 75                07 18 48 73	
 
 Card 3                        Card 4
 
-11 17 4259 69	                05 21 41 61	
+11 17 42 59 69                05 21 41 61	
 15 28 43 56 64                13 27 31 57 68	
 04 26 FREE 47 68              10 30 FREE 56 6	
-14 30 57 62	                  07 19 35 51 73
+14 30 57 62                   07 19 35 51 73
 02 22 44 55 72                04 16 5 55 74	
+</samp>
+</pre>
 
 There are errors, but Tesseract even correctly converted the "FREE" at the center of each Bingo card. Cleaning up the images prior to running the OCR should take care of most of the errors. 
 
@@ -110,7 +114,7 @@ By summing these card arrays horizontally and vertically we can find rows or col
 
 Of course, it would be nice to fully automate the card handling process with a [Sain Smart robotic arm](https://www.sainsmart.com/products/6-axis-desktop-robotic-arm-assembled?variant=45101269588&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&utm_campaign=gs-2018-08-06&utm_source=google&utm_medium=smart_campaign&gclid=CjwKCAjw4rf6BRAvEiwAn2Q76hbnjXvDfjqax182Z_2NH5rwnm5mNKEy2nbklUOrsnatKz64XbQ5BhoCg7EQAvD_BwE), which could also be used to scratch off the lottery tickets. But, in any case, I think we've arrived at phase 3.
 
-![underpantsgnomes1](../../assets/img/winning-the-scratch-lottery/underpantsgnomes1.jpg)
+![underpantsgnomes1](/assets/img/winning-the-scratch-lottery/underpants-gnomes.jpg)
 
 ---
 
