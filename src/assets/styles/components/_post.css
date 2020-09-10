@@ -1,10 +1,9 @@
-.post { 
+.post {
 }
 
 .post > blockquote {
   @apply border-solid border-gray-700 border-l-4 px-5 py-2 my-10 bg-gray-300;
 }
-
 
 .post img {
   @apply my-16;
@@ -22,10 +21,9 @@
   @apply text-xl text-gray-900 font-medium pt-4 mb-2;
 }
 
-
-.post > ol, 
+.post > ol,
 .post > ul {
-  @apply my-5 list-inside;  
+  @apply my-5 list-inside;
 }
 
 .post > ol {
@@ -60,7 +58,8 @@
   border-color: currentColor;
 }
 
-.post :not(pre)>code[class*=language-], .post pre[class*=language-] {
+.post :not(pre) > code[class*="language-"],
+.post pre[class*="language-"] {
   @apply my-8;
 }
 
@@ -71,7 +70,6 @@
 .post > .title > h1 {
   @apply text-2xl font-semibold;
 }
-
 
 .post > .author {
   @apply mt-4 inline-block;
@@ -90,4 +88,26 @@
   transform: skewX(10deg);
   font-size: 90%;
   font-weight: 500;
+}
+
+.post table {
+  @apply bg-white;
+}
+
+.post thead > tr > th {
+  @apply py-4 px-2;
+}
+
+.post tbody > tr > th,
+.post tbody > tr > td {
+  @apply py-1 px-2;
+}
+
+.post tbody {
+  @apply font-mono;
+}
+
+.post tbody td,
+.post tbody th {
+  @apply py-2 border-b border-gray-300;
 }
