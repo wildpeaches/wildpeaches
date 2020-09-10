@@ -560,8 +560,8 @@ dd {
   margin-bottom: 2.5rem;
 }
 
-.post  /*.katex-block */  .frac-line {
-  color: currentColor;
+.post .katex * {
+  border-color: currentColor;
 }
 
 .post :not(pre)>code[class*=language-], .post pre[class*=language-] {
