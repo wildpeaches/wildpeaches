@@ -6,7 +6,7 @@ tags: [math]
 keywords: [Gambling, Statistics, Expectation, Optical Character Recognition]
 ---
 
-Mohan Srivastava is a geological statistician from Toronto who helps mining companies find gold. In 2003, he struck gold in another way by figuring out how to beat the Canadian scratch lottery, as he explained to [Jonah Lehrer of Wired Magazine](https://www.wired.com/2011/01/ff-lottery/). People think the lottery is a completely random game, but it isn't. The lottery tickets must be carefully controlled so that the lottery commission knows a priori how much it expects to earn from each game.
+Mohan Srivastava is a geological        statistician from Toronto who helps mining companies find gold. In 2003, he struck gold in another way by figuring out how to beat the Canadian scratch lottery, as he explained to [Jonah Lehrer of Wired Magazine](https://www.wired.com/2011/01/ff-lottery/). People think the lottery is a completely random game, but it isn't. The lottery tickets must be carefully controlled so that the lottery commission knows a priori how much it expects to earn from each game.
 
 Lottery ticket printing companies need to produce exactly the right number of winning tickets at each payoff level. Let's look at a typical bingo ticket, one that I bought in Delaware several years ago. 
 
@@ -66,7 +66,7 @@ This is an example of the odds and payoffs for each possible winning combination
 | 500  | 30000 | 0.0000      | 0.0167      | 0.0001        | 0.0596       |
 | 5000 | 60000 | 0.0000      | 0.0833      | 0.0001        | 0.2982       |
 |      |       | 0.2515      | -0.3933     | 0.9000        | 1.1711       |
-{.w-max-1100}
+{.w-max-900}
 
 </div>
 
