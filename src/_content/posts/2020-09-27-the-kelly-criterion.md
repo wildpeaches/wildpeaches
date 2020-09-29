@@ -20,7 +20,7 @@ It depends on how much you've brought to the table, and your current stash after
 $$
 S = S_0 - S_0b + S_0bw = S_0(1-b+bw).
 $$
-In a long series of these bets, you'll win some and you'll lose some. Let's say you play $n$ times so you'll have a series of wins and losses, {*W,L,W,W,...L,W*}.  Your stash after these $n$ bets will be something like,
+In a long series of these bets, you'll win some and you'll lose some. Let's say you play $n$ times so you'll have a series of wins and losses, $\{W,L,W,W,\ldots,L,W\}$.  Your stash after these $n$ bets will be something like,
 $$
 S_n = S_0(1-b+bw)(1-b)(1-b+bw)(1-b+bw) \cdots (1-b)(1-b+bw).
 $$
@@ -83,7 +83,7 @@ b=\frac{pw-1}{w-1}=\frac{3/2-1}{3-1}=\frac{1}{4}.
 $$
 Putting $b = \frac{1}{4}$ into the function $R(b,p,w)$ gives a maximum return ratio of $R_{max}=1.0607$, meaning your stash will grow at a rate of about 6% per bet.  Professor Albert Bartlett has said, "The greatest shortcoming of the human race is our inability to understand the exponential function." He was referring to population growth and energy, but understanding it in terms of how much your pile of money can grow when properly bet might also be important to you. By increasing the size of your next bet after a win and decreasing it after a loss you can achieve exponential growth.
 
-Notice for $b=0$ the return ratio is 1 meaning if you don't play you can't win. At the other end, $b=1$ which is when you gamble everything. Unless the outcome is certain, you'll lose it all sooner or later. For $b=0.5$ the curve has come down to 1 and for all values of  $b>0.5, $ $R<1$. Even though you might correctly predict the outcome and have a positive expectation, you can still lose money if you bet too large a fraction of your money.  
+Notice for $b=0$ the return ratio is 1 meaning if you don't play you can't win. At the other end, $b=1$ which is when you gamble everything. Unless the outcome is certain, you'll lose it all sooner or later. For $b=0.5$ the curve has come down to 1 and for all values of  $b>0.5$, $R<1$. Even though you might correctly predict the outcome and have a positive expectation, you can still lose money if you bet too large a fraction of your money.  
 
 Here's a Monte Carlo experiment of the Kelly Criterion. By Monte Carlo, I mean the outcomes of each game are randomly chosen by the computer so it's very much like a real coin toss game. The values for $p$ and $w$ are still the same as before, but each outcome is unknown before the bet. I ran three different cases for the value of $b$. There's the optimal value of $b=0.25$ and two other cases, Bet- and Bet+ where $b = \mp 0.05$. At the end of the experiment, the stash for the optimal case is 361.1, but for the other two, it's only 289. It's a little hard to see because the curves are wiggling around a lot, but there is quite a difference in the outcome. 
 
