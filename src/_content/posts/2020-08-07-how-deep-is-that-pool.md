@@ -52,7 +52,7 @@ So now it appears that 4 out of 100 or 4% are infected. Since we need to know $p
 
 Ok, so to find the number of tests required for a given infection rate $p$ means we need to find the value of $n$ that makes $T(n,p)$ the smallest.
 
-![Pool size for p = 7.5%](/assets/img/how-deep-is-the-pool/Pool size for p = 7.5%.png){.mx-auto}
+![Pool size for p = 7.5%](/assets/img/how-deep-is-the-pool/pool-size-p-seven-half.svg){.mx-auto}
 
 A little bit of calculus here—we need to find
 $$
@@ -62,13 +62,13 @@ for some value of $n$. That is, we're looking for the point on the curve where t
 
 Solving $\frac{dT}{dn} = 0$ for various values of $p$ gives this plot: ([python code here](https://gist.github.com/JanDW/2d555feb2967fd7fb3bb7525e03c2506))
 
-![Pool sizes](/assets/img/how-deep-is-the-pool/Pool sizes.png){.mx-auto}
+![Pool sizes](/assets/img/how-deep-is-the-pool/pool-sizes.svg){.mx-auto}
 
 shows that for infection rates above about 1% the pool sizes are less than 10 people, and by the time the positivity is above 5% the pool size needs to drop to 5 people or fewer.
 
 Once we have the optimal number of people per pool then for each infection probability $p$ we can calculate the number of required tests $T(n,p)$ shown here:
 
-![Tests required](/assets/img/how-deep-is-the-pool/Tests required.png){.mx-auto}
+![Tests required](/assets/img/how-deep-is-the-pool/tests-required.svg){.mx-auto}
 
 Johns Hopkins University has been tracking [COVID-19 cases and testing](https://coronavirus.jhu.edu/testing/individual-states) which shows the current positivity rate for the U.S. is about 7.5%, and there's also a [state-by-state breakdown](https://coronavirus.jhu.edu/testing/tracker/overview) which shows the positivity rates running from -4.6% to 20.9%. The negative positivity rate (does that even make sense?) is a result of how the scoring is done and the fact that reporting isn't fully available for all states. But what this shows is for a 7.5% positivity rate, the optimal pool size is around 4 and we'll need 50 tests for every 100 people. So, sure we'll save half the number of tests, but it's not going to get us a call from the Nobel Committee or a MacArthur Genius Grant. By the time the background rate is 20%, it's hardly worth bothering with pool testing.
 
@@ -84,4 +84,5 @@ This shows that to make COVID-19 pool testing worthwhile the test will need to b
   <small class="text-gray-600">Visualization by <a href="https://coronavirus.jhu.edu/testing/individual-states" rel="external">John Hopkins University &amp; Medicine &middot; Coronavirus Resource Center</a></small>
   </figcaption>
 </figure>
+
 Usama Kadri from Cardiff University has developed a [linear algebra method](https://www.tandfonline.com/doi/full/10.1080/20476965.2020.1817801) that tests samples from the same person in different pools multiple times to identify infected people, but it requires automated testing methods that may not be available to many hospitals. You can read about his technique in the 7 Oct 2020 edition of [SciTechDaily](https://scitechdaily.com/simple-algebra-enables-faster-large-volume-covid-19-testing/). 
