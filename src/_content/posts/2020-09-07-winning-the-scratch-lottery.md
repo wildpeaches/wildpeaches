@@ -90,26 +90,7 @@ SikuliX returns the location of the pattern on the screen, so images of each car
 
 Image processing in [Anaconda Python](https://www.anaconda.com/) will let us remove the lines by subtracting the mask shown above from each card, as well as the special symbols. With a clean image, [Tesseract OCR](https://nanonets.com/blog/ocr-with-tesseract/) gives the text equivalent of each number found in the card images. Using the online OCR program [OCRSpace](https://ocr.space/) without any image cleaning returned these numbers for each card:
 
-
-<pre class="mb-16"> 
-<samp>
-Card 1                        Card 2
-
-11 29 41 51 74                11 28 31 60 | 71	
-08 22 3 58 69                 13 19 4u 53 63
-CE 23 FREE 55 67              05 24 FREE 46 74	
-09 30 34 57 71                10 27 36 52 61
-13 17 38 52 75                07 18 48 73	
-
-Card 3                        Card 4
-
-11 17 42 59 69                05 21 41 61	
-15 28 43 56 64                13 27 31 57 68	
-04 26 FREE 47 68              10 30 FREE 56 6	
-14 30 57 62                   07 19 35 51 73
-02 22 44 55 72                04 16 5 55 74	
-</samp>
-</pre>
+![Bingo Card 60](/assets/img/winning-the-scratch-lottery/bingo-card-ocr-results.svg){.mx-auto}
 
 There are errors, but Tesseract even correctly converted the "FREE" at the center of each Bingo card. Cleaning up the images prior to running the OCR should take care of most of the errors. 
 
