@@ -189,33 +189,33 @@ After starting DELFTship, click on the white rectangle in the upper left corner 
 
 
 
-![delftship-start-screen](/assets/img/yacht-design-with-mathematics/delftship-start-screen.svg){.mx-auto}
+![delftship-start-screen](/assets/img/yacht-design-with-mathematics/delftship-start-screen.svg){.mx-auto .blend-multiply}
 
 
 
 Next to the "New Project" icon is the "Open Project" icon. Click on the down arrow and select "Import" and "Surface" (the second choice). Import the text file `Letcher_curves.txt`. (Notice that blanks in the file name have been changed to underscores.)
 
-![delftship-open-txt-file](/assets/img/yacht-design-with-mathematics/delftship-open-txt-file.svg){.mx-auto}
+![delftship-open-txt-file](/assets/img/yacht-design-with-mathematics/delftship-open-txt-file.svg){.mx-auto .blend-multiply}
 
 Click OK for the default number of columns, rows, and "Yes" for the dialog box, "The main particulars have not been specified", 
 
-![delftship-enter-main-now](/assets/img/yacht-design-with-mathematics/delftship-enter-main-now.svg){.mx-auto}
+![delftship-enter-main-now](/assets/img/yacht-design-with-mathematics/delftship-enter-main-now.svg){.mx-auto .blend-multiply}
 
 which will open a Projects Settings input. Copy the values from Octave for the length, beam, and draft (including the minus sign) and uncheck the default for midship location. Copy the values derived above, then click "OK". 
 
-![delftship-enter-main-particulars](/assets/img/yacht-design-with-mathematics/delftship-enter-main-particulars.svg){.mx-auto}
+![delftship-enter-main-particulars](/assets/img/yacht-design-with-mathematics/delftship-enter-main-particulars.svg){.mx-auto .blend-multiply}
 
 You should see the starboard half of your yacht:
 
-![DELFTship](/assets/img/yacht-design-with-mathematics/DELFTship.svg){.mx-auto}
+![DELFTship](/assets/img/yacht-design-with-mathematics/DELFTship.svg){.mx-auto .blend-multiply}
 
 Clicking on the "Aft" and "Wireframe" icons displays the section curves similar to the ones above.
 
- ![delft-sections](/assets/img/yacht-design-with-mathematics/delft-sections.svg){.mx-auto}
+ ![delft-sections](/assets/img/yacht-design-with-mathematics/delft-sections.svg){.mx-auto .blend-multiply}
 
 If you click on "Gauss" and "Both sides" you'll see the complete hull. Gauss indicates curvature in the hull which may be negative, zero, or positive and colored blue, green, and orange respectively. Negative curvature means locally the surface is like a saddle - it curves upwards one way and downwards in a direction perpendicular to the first. Zero curvature means that in at least one direction the surface is flat and positive means curvature is the same in both directions. For boats, the curvature should be mostly positive with possibly some flat sections. An area that shows up as blue surrounded by orange indicates the hull is not fair and will induce drag if the area is below the waterline.
 
- ![](/assets/img/yacht-design-with-mathematics/delft-both-sides.svg){.mx-auto}
+ ![](/assets/img/yacht-design-with-mathematics/delft-both-sides.svg){.mx-auto .blend-multiply}
 
 This figure shows a view of Letcher's six curve yacht from the stern with "Both sides" turned on and the "Environment map" set to "Sky". There are many more features to DELFTship you may want to explore.
 
