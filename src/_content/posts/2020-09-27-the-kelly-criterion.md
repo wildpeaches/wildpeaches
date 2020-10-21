@@ -106,7 +106,7 @@ $$
 
 ------
 
-If the product $p \times w > 1$ then you can expect to win in the long run if you use the Kelly optimization. Here's an example where $p=1/2$ and $w = 3$. The [Python](https://www.anaconda.com/) function to plot this is [plotReturnRatio.py](<script src="https://gist.github.com/XerxesZorgon/33d4fb8d521a1508d52d0792a5c7204c.js"></script>).
+If the product $p \times w > 1$ then you can expect to win in the long run if you use the Kelly optimization. Here's an example where $p=1/2$ and $w = 3$. The [Python](https://www.anaconda.com/) function to plot this is [plotReturnRatio.py](https://gist.github.com/XerxesZorgon/33d4fb8d521a1508d52d0792a5c7204c.
 
 <img src="../../assets/img/the-kelly-criterion/return-ratio.png" alt="return-ratio" style="zoom:67%;" />
 
@@ -118,7 +118,7 @@ Putting $b = \frac{1}{4}$ into the function $R(b,p,w)$ gives a maximum return ra
 
 Notice for $b=0$ the return ratio is 1 meaning if you don't play you can't win. At the other end, $b=1$ which is when you gamble everything. Unless the outcome is certain, you'll lose it all sooner or later. For $b=0.5$ the curve has come down to 1 and for all values of  $b>0.5, $ $R<1$. Even though you might correctly predict the outcome and have a positive expectation, you can still lose money if you bet too large a fraction of your money.  
 
-Here's a [Monte Carlo](<script src="https://gist.github.com/XerxesZorgon/33d4fb8d521a1508d52d0792a5c7204c.js"></script>) experiment of the Kelly Criterion. By Monte Carlo, I mean the outcomes of each game are randomly chosen by the computer so it's very much like a real coin toss game. The values for $p$ and $w$ are still the same as before, but each outcome is unknown before the bet. I ran three different cases for the value of $b$. There's the optimal value of $b_{opt}=0.25$ and two other cases, Bet- and Bet+ where $b = b_{opt} \mp 0.05$. At the end of the experiment, the stash for the optimal case is \$361.1, but for the other two, it's only \$289 starting with an initial amount of just \$1. It's a little hard to see because the curves are wiggling around a lot, but there is quite a difference in the outcome. 
+Here's a [Monte Carlo](https://gist.github.com/XerxesZorgon/33d4fb8d521a1508d52d0792a5c7204c) experiment of the Kelly Criterion. By Monte Carlo, I mean the outcomes of each game are randomly chosen by the computer so it's very much like a real coin toss game. The values for $p$ and $w$ are still the same as before, but each outcome is unknown before the bet. I ran three different cases for the value of $b$. There's the optimal value of $b_{opt}=0.25$ and two other cases, Bet- and Bet+ where $b = b_{opt} \mp 0.05$. At the end of the experiment, the stash for the optimal case is \$361.1, but for the other two, it's only \$289 starting with an initial amount of just \$1. It's a little hard to see because the curves are wiggling around a lot, but there is quite a difference in the outcome. 
 
 <img src="../../assets/img/the-kelly-criterion/kelly-monte-carlo.png" alt="kelly-monte-carlo" style="zoom:67%;" />
 
