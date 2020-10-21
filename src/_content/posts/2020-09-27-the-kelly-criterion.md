@@ -34,8 +34,12 @@ $$
 $$
 Including the probability of selection, and since $\log \left(\frac{1}{x} \right) = -\log(x)$ gives Shannon's entropy equation. In Abner's example,
 $$
-H(\{A,B,C,D\}) = -\left[ 0.5 \times \log_2(0.5) + 0.25 \times \log_2(0.25) + 2 \times 0.125 \times \log_2(0.125) \right] \\
-= -\left[ (0.5 \times -1) + (0.25 \times -2) + 2 \times (0.125 \times -3) \right] = 1.75
+\begin{aligned}
+&H(\{A,B,C,D\}) \\
+&= -\left[ 0.5 \times \log_2(0.5) + 0.25 \times \log_2(0.25) + 2 \times 0.125 \times \log_2(0.125) \right] \\
+&= -\left[ (0.5 \times -1) + (0.25 \times -2) + 2 \times (0.125 \times -3) \right] \\
+&= 1.75
+\end{aligned}
 $$
 If a gambler has received some inside information he has an edge over the other gamblers. Suppose Aunt Mildred decides to get in on the game with Abner but doesn't realize he favors "A" and "B". You somehow convince Aunt Millie to bet on which one of you can get to the right answer first. You know on average you'll get it in 1.75 while she'll take 2 questions, so you've got an edge. Kelly used Shannon's entropy equation to calculate the optimal amount to bet when you know how much of an edge you have. 
 
