@@ -104,9 +104,7 @@ bw-pw-b+1=0 \\
 b = \frac{pw-1}{w-1}.
 $$
 
-------
-
-If the product $p \times w > 1$ then you can expect to win in the long run if you use the Kelly optimization. Here's an example where $p=1/2$ and $w = 3$. The [Python](https://www.anaconda.com/) function to plot this is [plotReturnRatio.py](https://gist.github.com/XerxesZorgon/33d4fb8d521a1508d52d0792a5c7204c.
+If the product $p \times w > 1$ then you can expect to win in the long run if you use the Kelly optimization. Here's an example where $p=1/2$ and $w = 3$. The [Python](https://www.anaconda.com/) function to plot this is [plotReturnRatio.py](https://gist.github.com/XerxesZorgon/33d4fb8d521a1508d52d0792a5c7204c).
 
 <img src="../../assets/img/the-kelly-criterion/return-ratio.png" alt="return-ratio" style="zoom:67%;" />
 
