@@ -4,10 +4,9 @@ const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const markdownItFootnote = require("markdown-it-footnote");
 const markdownItKatex = require("@iktakahiro/markdown-it-katex");
-const markdownItLazyLoad = require("markdown-it-image-lazy-loading");
+const markdownItImageLazyLoading = require("markdown-it-image-lazy-loading");
 const CleanCSS = require("clean-css");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const markdownItImageLazyLoading = require("markdown-it-image-lazy-loading");
 
 module.exports = (eleventyConfig) => {
   // Markdown
