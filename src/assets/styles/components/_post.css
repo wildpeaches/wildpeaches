@@ -51,7 +51,7 @@
 }
 
 .post > .katex-block {
-  @apply my-10 py-1 bg-white;
+  @apply my-10 py-1;
 }
 
 .post .katex * {
