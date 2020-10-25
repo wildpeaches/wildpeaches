@@ -84,7 +84,7 @@ li > ol {
 
 /* .h-alpha {} */
 
-.h1 {
+/* .h1 {
   font-family: utopia-std-headline, serif;
   font-size: 3.6rem;
   font-weight: 800;
@@ -105,7 +105,7 @@ li > ol {
   content: '';
 
   border-bottom: 5px solid #e56741;
-}
+} */
 
 .h-beta {
   /* color:#E7900F; */

@@ -1,7 +1,8 @@
 @import "./config/*.css";
+@import "./vendor/*.css";
 @import "./helpers/*.css";
 @import "./base/*.css";
 @import "./scopes/*.css";
 @import "./layouts/*.css";
 @import "./components/*.css";
-@import "./vendor/*.css";
+

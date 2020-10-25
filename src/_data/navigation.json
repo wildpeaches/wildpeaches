@@ -1,9 +1,9 @@
 {
   "items": [
     {
-      "text": "⌘ Wild Peaches",
+      "text": "Wild Peaches",
       "url": "/",
-      "cssClass" : "font-bold"
+      "cssClass" : "font-semibold"
     }
   ]
 }    
