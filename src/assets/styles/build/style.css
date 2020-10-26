@@ -19386,13 +19386,14 @@ dd {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  text-indent: -1em;
+  text-indent: -1em; /* account for markdown-it-anchor permlink */
 }
 
 h1 {
   font-size: 2.25rem;
   font-weight: 600;
-  text-indent: 0;
+  letter-spacing: -0.025em;
+  text-indent: 0; /* no permlink markdown-it-anchor */
 }
 
 .post {
@@ -19468,18 +19469,13 @@ h1 {
   margin-bottom: 2.5rem;
 }
 
-.post .byline > span {
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-}
+/* .post .byline > span {
+  @apply uppercase text-sm font-bold tracking-wider;
+} */
 
-.post > .date {
-  padding-top: 6rem;
-  margin-bottom: 1rem;
-  font-size: 0.875rem;
-}
+/* .post > .date {
+  @apply pt-24 mb-4 text-sm;
+} */
 
 .post > .katex-block {
   margin-top: 2.5rem;

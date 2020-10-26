@@ -42,13 +42,13 @@
   @apply my-10;
 }
 
-.post .byline > span {
+/* .post .byline > span {
   @apply uppercase text-sm font-bold tracking-wider;
-}
+} */
 
-.post > .date {
+/* .post > .date {
   @apply pt-24 mb-4 text-sm;
-}
+} */
 
 .post > .katex-block {
   @apply my-10 py-1;
