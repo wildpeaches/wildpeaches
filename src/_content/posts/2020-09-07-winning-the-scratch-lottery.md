@@ -1,6 +1,6 @@
 ---
 title: Winning the Scratch Lottery
-subtitle: An experiment in OCR, Robotics and Statistics
+subtitle: An Experiment in OCR, Robotics, and Statistics
 author: John Peach
 tags: [math]
 keywords: [Gambling, Statistics, Expectation, Optical Character Recognition]
