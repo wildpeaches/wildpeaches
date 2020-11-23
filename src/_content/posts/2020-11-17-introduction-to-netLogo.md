@@ -1,6 +1,6 @@
 ---
 title: Introduction to NetLogo 
-subtitle: Using Agent-Based Modeling to study Emergent Systtems
+subtitle: Using Agent-Based Modeling to study Emergent Systems
 author: John Peach
 tags: [math]
 keywords: [Agent Based Model, Emergent Systems]
@@ -13,13 +13,18 @@ In this post, I'm going to introduce NetLogo and show you how to write a simple 
 [NetLogo](https://ccl.northwestern.edu/netlogo/) is a simulation environment for multi-agent systems. Agents operate according to a set of rules within their environment. For example, the environment might be a grassy area where sheep can graze, and wolves attack and eat the sheep. Eating the sheep increases wolf energy allowing them to reproduce as does eating grass for the sheep. But with more wolves around, the sheep population declines until the wolves starve, and if the sheep eat too much grass before it can regrow, they starve. The rules are simple. Sheep search for grassy patches and eat what they find, while the wolves hunt for sheep. With enough energy, sheep and wolves reproduce. An emergent system evolves from the collective actions of the agents.
 
 In this example, sheep, wolves and grassy patches are agents. The wolf-sheep simulation is an instance of the Lotka-Volterra predator-prey model,
+
 $$
-\frac{ds}{dt} = \alpha s - \beta sw \\
+\frac{ds}{dt} = \alpha s - \beta sw
+$$
+
+$$
 \frac{dw}{dt} = \delta sw - \gamma s
 $$
+
 where $\frac{ds}{dt}$ represents the growth rate of the sheep population $s$, $\frac{dw}{dt}$ is the rate of increase of the wolf population $w$, and the constants $\alpha, \beta, \delta$, and $\gamma$ control the interaction between the species. NetLogo lets you simulate the predator-prey model without needing to understand the math behind the interactions.
 
-![wolf-sheep](/assets/img/netlogo-introduction/wolf-sheep.svg)
+![wolf-sheep](/assets/img/netlogo-introduction/wolf-sheep.svg){.mx-auto}
 
 The rules for the sheep-agents are pretty simple. First, they move in search of a new patch of grass and this move costs one unit of energy. If they find grass they eat it, but if their energy is too low they die. With sufficient energy, they can reproduce. Wolf rules are the same except they eat sheep instead of grass. At each time step, or "tick" every agent follows it's own set of rules and the system evolves.
 
@@ -38,7 +43,7 @@ The rules for the sheep-agents are pretty simple. First, they move in search of 
 
 When you run this simulation you'll see the sheep running around searching for grass, the wolves searching for sheep, and the grass being eaten. A plot of the sheep and wolf populations looks like this.
 
-![population-plot](/assets/img/netlogo-introduction/population-plot.svg)
+![population-plot](/assets/img/netlogo-introduction/population-plot.svg){.mx-auto}
 
 If you'd like to run this example, go to Files $\rightarrow$ Model Library $\rightarrow$ Biology $\rightarrow$ Wolf Sheep Predation. 
 
@@ -50,7 +55,7 @@ NetLogo comes with a model library containing hundreds of pre-built models in ar
 
 When you first start NetLogo you'll see a screen like this:
 
-![netlogo-start-screen](/assets/img/netlogo-introduction/netlogo-start-screen.svg)
+![netlogo-start-screen](/assets/img/netlogo-introduction/netlogo-start-screen.svg){.mx-auto .blend-multiply}
 
 The black square is the environment or world where agents move and follow the instructions you've written. The white area to the left is reserved for buttons, sliders, plots, and other interactive devices. At the bottom are the Command Center and a blank space where you can enter one line commands as the observer.
 
@@ -82,7 +87,7 @@ The turtles are asked to move forward at speed `speed` and then turn right one d
 
 In the Interface area, we need to add two buttons to run the code just written. Make sure the drop-down next to "Add" is set to "Button" and then click on "Button" followed by a click in the white space which will create a button. A pop-up box will open where you need to enter the command `to-setup` and change the Display name to `Setup`,
 
-![make-setup-button](/assets/img/netlogo-introduction/make-setup-button.svg)
+![make-setup-button](/assets/img/netlogo-introduction/make-setup-button.svg){.blend-multiply}
 
 Make another button with the command `to-go`, Display name `Go` and check the box next to "Forever". When you run the simulation, first click on "Setup" then "Go". Because you checked "Forever" for the "Go" button, the simulation will continue running until you click "Go" again.
 
@@ -92,13 +97,13 @@ We'll add in one more bit of code and two more buttons. This code changes the tu
 
 reducing the speed from the current speed to speed - .15. Add these two buttons below the "Setup" and "Go" buttons:
 
-![change-speed-track-turtle](/assets/img/netlogo-introduction/change-speed-track-turtle.svg)
+![change-speed-track-turtle](/assets/img/netlogo-introduction/change-speed-track-turtle.svg){.mx-auto}
 
 The command for the "Change speed" button is a call to the `change-speed` function and the "Track turtle" button needs this command: `ask one-of turtles [pen-down]` which randomly selects one of the turtles and tells it to put its pen down. When the pen is down you'll be able to see a track of where the turtle has been. Right-click on the buttons and select "Edit" to add the commands.
 
 You now have a complete NetLogo program. Click the "Setup" button to generate a circle of colored dots. Click on the "Go" button and the dots will spin clockwise around the circle. Don't click the "Change speed" button just yet, though.
 
-![turtle-setup](/assets/img/netlogo-introduction/turtle-setup.svg)
+![turtle-setup](/assets/img/netlogo-introduction/turtle-setup.svg){.mx-auto}
 
 Before you change the turtle speed, think about what you expect to happen when the speed changes. What we know will happen is that each turtle will be taking a slightly shorter step size during every tick. But what does the collective behavior look like? What is the resulting emergent system? Now, go ahead and click "Change speed" and watch the system for a while. Change the speed a second time. You can restart at any time by clicking the "Go" button and then resetting the simulation with the "Setup" button.
 
@@ -110,11 +115,11 @@ Many computer languages have Integrated Development Environments (IDEs) where yo
 
 Since NetLogo is agent-based, each class of turtle is doing the same thing all at the same time. Instead of using breakpoints, you can click the "Go" button to stop the simulation. Right-click on an agent to see a pop-up menu. At the bottom of the menu, you can choose to inspect the turtle (here it's turtle #18) or inspect the patch under the turtle. Patches are small squares with integer coordinates, so in this case, the patch is at $x = 20$, $y = -3$. 
 
-![debug-turtle](/assets/img/netlogo-introduction/debug-turtle.svg)
+![debug-turtle](/assets/img/netlogo-introduction/debug-turtle.svg){.mx-auto}
 
 Clicking on "inspect turtle 18" brings up this dialog:
 
-![inspect-turtle](/assets/img/netlogo-introduction/inspect-turtle.svg)
+![inspect-turtle](/assets/img/netlogo-introduction/inspect-turtle.svg){.mx-auto}
 
 Here, you can see the properties of this turtle, including the special turtles-own speed. Change the speed to 0.2 and set the pen-mode to "down", then press "Go" again. At the bottom of the Interface screen are the Command Center and an input area labeled "observer >",
 
