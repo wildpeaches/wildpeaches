@@ -1,6 +1,6 @@
 ---
 title: Introduction to NetLogo 
-subtitle: Using Agent-Based Modeling to study Emergent Systems
+subtitle: Using Agent-Based Modeling to Study Emergent Systems
 author: John Peach
 tags: [math]
 keywords: [Agent Based Model, Emergent Systems]

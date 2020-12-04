@@ -1,6 +1,6 @@
 ---
-title: Of sailing ships, velociraptors, and walking on the Moon 
-subtitle: Catamaran parameters in SMath Studio
+title: Of Sailing Ships, Velociraptors, and Walking on the Moon 
+subtitle: Catamaran Parameters in SMath Studio
 author: John Peach
 tags: [math]
 keywords: [hull design, units]
