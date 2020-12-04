@@ -7,8 +7,8 @@ tags: [math, yacht design, homotopies, octave, geogebra, delftship]
 ---
 
 > A ship in harbor is safe, but that is not what ships are built for.
-
-\- William Shedd
+>
+>—William Shedd
 
 I'll show you how to design a yacht hull with five Bezier curves and a homotopy. I'll demonstrate how to make a scale model of your boat. Becoming a pirate and sailing the seven seas is left as an exercise to the reader.
 
@@ -22,9 +22,8 @@ Historically, yacht designers drew the outlines of boats on their drafting board
 
 As computers became more widely available, designers turned to them to handle the difficult problems of yacht design. Now, high-performance yachts such as these by [Team Oracle USA](https://en.wikipedia.org/wiki/Oracle_Team_USA), are drawn with supercomputers calculating [Computational Fluid Dynamics](https://en.wikipedia.org/wiki/Computational_fluid_dynamics).
 
-![Team Oracle high-performance yachts](/assets/img/yacht-design-with-mathematics/ac-72-team-oracle-boats-photo-d-ramey-logan.svg){.mb-1}
-
-Photograph by D Ramey Logan, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=27731307
+![Team Oracle high-performance yachts](/assets/img/yacht-design-with-mathematics/ac-72-team-oracle-boats-photo-d-ramey-logan.svg){.mb-1}[Photograph](https://commons.wikimedia.org/w/index.php?curid=27731307) by [D Ramey Logan](http://don.logan.com/), [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en){.mb-1}
+{.mb-12 .text-sm .text-gray-600}
 
 In 1972, John S. Letcher published a paper, [A New Approach to Numerical Fairing and Lofting](https://www.semanticscholar.org/paper/A-NEW-APPROACH-TO-NUMERICAL-FAIRING-AND-LOFTING-Letcher/56549810b9af3839dd1feec77cce063d3689feb8), where he showed how to calculate the surface of the hull using just six curves. We can combine Letcher's method with some computer power to create the 3D shape of a hull easily. It isn't up to the level of CFD on a supercomputer, but it makes the designing process much easier than spending hours carefully drawing the outline by hand.
 
@@ -32,11 +31,11 @@ In 1972, John S. Letcher published a paper, [A New Approach to Numerical Fairing
 
 The coordinate system used by most designers starts at the bow and runs towards the stern. The origin is at the waterline directly below the bow, and positive $x$ values increase towards the stern. The lines drawings are from Letcher's paper.
 
-![The Coordinate System](/assets/img/yacht-design-with-mathematics/the-coordinate-system.svg){.mx-auto}
+![The Coordinate System](/assets/img/yacht-design-with-mathematics/the-coordinate-system.svg){.mx-auto .blend-multiply}
 
 The first step is to draw the outline, which consists of three curves, the sheer $s(x)$, which is the view looking down from above, the top curve of the hull called the freeboard, $f(x)$, and the bottom without the keel called the profile, $p(x)$. 
 
-![Sheer Freeboard Profile curves example](/assets/img/yacht-design-with-mathematics/sheer-freeboard-profile.svg){.mx-auto}
+![Sheer Freeboard Profile curves example](/assets/img/yacht-design-with-mathematics/sheer-freeboard-profile.svg){.mx-auto .blend-multiply}
 
 Next, the yacht is "sliced" at several points along the $x$-axis, and these section curves are typically drawn on the same plot, such as this:
 
