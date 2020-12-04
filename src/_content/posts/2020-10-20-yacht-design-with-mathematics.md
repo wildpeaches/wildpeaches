@@ -49,8 +49,6 @@ But, how do you get a smooth transition from the aft section to the forward sect
 
 ![Animation of a continuous deformation of one curve into another](/assets/img/yacht-design-with-mathematics/HomotopySmall.gif){.mx-auto .blend-multiply}
 
-By Jim.belk - Own work, CC0, https://commons.wikimedia.org/w/index.php?curid=15513687
-
 Letcher used the idea of homotopies to transition the section curves from the forward sections to the aft sections. Now, he had the complete design in six curves, the sheer, freeboard, profile, forward section $\eta_1$, aft section $\eta_2$, and the homotopy transition function $A(x)$.
 
 ![The six defining curves of a boat hull](/assets/img/yacht-design-with-mathematics/six-defining-curves.svg){.mx-auto .blend-multiply}
