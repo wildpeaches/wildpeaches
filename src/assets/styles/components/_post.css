@@ -13,9 +13,9 @@
   @apply inline-block px-2 bg-white;
 }
 
-.post > .title > h1 {
+/* .post > .title > h1 {
   @apply text-2xl font-semibold;
-}
+} */
 
 .post > h2 {
   @apply text-xl text-gray-900 font-medium pt-4 mb-2;
@@ -42,16 +42,16 @@
   @apply my-10;
 }
 
-.post .byline > span {
+/* .post .byline > span {
   @apply uppercase text-sm font-bold tracking-wider;
-}
+} */
 
-.post > .date {
+/* .post > .date {
   @apply pt-24 mb-4 text-sm;
-}
+} */
 
 .post > .katex-block {
-  @apply my-10 py-1 bg-white;
+  @apply my-10 py-1;
 }
 
 .post .katex * {
@@ -67,9 +67,9 @@
   @apply mb-12;
 }
 
-.post > .title > h1 {
+/* .post > .title > h1 {
   @apply text-2xl font-semibold;
-}
+} */
 
 .post > .author {
   @apply mt-4 inline-block;
