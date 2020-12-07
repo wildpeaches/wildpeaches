@@ -7,9 +7,12 @@ keywords: [hull design, units]
 ---
 
 > In 18 hundred and 59, the engineer Brunel,
-> Would build the greatest ship afloat, and rule the ocean's swell.
-> Nineteen thousand tons of steel they used to shape the mighty keel,
-> Forged inside the smelter where they made the gates of Hell...
+> Would build the greatest ship afloat, 
+> and rule the ocean's swell.
+> Nineteen thousand tons of steel 
+> they used to shape the mighty keel,
+> Forged inside the smelter 
+> where they made the gates of Hell...
 > And the name upon the contract, Isambard Brunel.
 >
 > —Ballad of the Great Eastern, by Sting
