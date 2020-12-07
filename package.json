@@ -42,10 +42,9 @@
   },
   "homepage": "https://github.com/JanDW/wildpeaches#readme",
   "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
-    "@fullhuman/postcss-purgecss": "^3.0.0",
     "@iktakahiro/markdown-it-katex": "^4.0.1",
-    "autoprefixer": "^10.0.4",
     "clean-css-cli": "^4.3.0",
     "csscomb": "^4.3.0",
     "cssnano": "^4.1.10",
@@ -59,15 +58,14 @@
     "markdown-it-image-lazy-loading": "^1.0.2",
     "markdownlint-cli": "^0.25.0",
     "moment": "^2.29.1",
+    "postcss": "^8.1.14",
     "postcss-cli": "^8.3.0",
     "postcss-custom-selectors": "^5.1.2",
     "postcss-easy-import": "^3.0.0",
     "postcss-extend-rule": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "2.2.1",
-    "purgecss": "^3.0.0"
-  },
-  "dependencies": {
-    "@11ty/eleventy": "^0.11.1",
     "tailwindcss": "^2.0.1"
-  }
+  },
+  "dependencies": {}
 }
