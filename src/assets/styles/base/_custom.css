@@ -141,14 +141,7 @@ h3::before {
 
 .lede,
 .lead {
-  @apply text-gray-700 text-xl font-normal leading-snug;
-}
-
-@screen lg {
-  .lede,
-  .lead {
-    @apply text-2xl;
-  }
+  @apply text-lg text-center font-medium font-inter border-t border-b border-gray-300 py-4;
 }
 
 
@@ -363,10 +356,6 @@ dd {
   line-height: 1.05;
 }
 
-/* Inter font */
-.home-font-features {
-  font-feature-settings: 'ss01', 'cv01', 'cv11';
-}
 
 /* VIEWPORT BASED WIDTHS */
 
@@ -432,18 +421,8 @@ dd {
 
   .full-width {
     width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    margin-left: calc(50% - 50vw);
   }
-}
-
-
-.content-wrapper {
-  max-width: 70ch;
-  @apply px-10 mx-auto;
 }
 
 .footnote-item {

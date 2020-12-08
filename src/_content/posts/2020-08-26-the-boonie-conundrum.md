@@ -2,12 +2,10 @@
 title: The Boonie Conundrum
 subtitle: Monte Carlo Simulation of a Conspiracy
 author: John Peach
+lede: This is the tale of the Great Boonie Conspiracy in which we show through the mathematics of the Gompertz Survival Function that all conspiracies must fail. It's the story of a coverup by people who didn't cover up and were exposed in the end.
 tags: [math]
 keywords: [Monte Carlo simulation, conspiracies, Gompertz Survival Function]
 ---
-
-This is the tale of the Great Boonie Conspiracy in which we show through the mathematics of the Gompertz Survival Function that all conspiracies must fail. It's the story of a coverup by people who didn't cover up and were exposed in the end.
-
 ## The Boonie story
 
 The high school is an imposing brick building with soaring white columns and a semi-circular drive enclosing an expansive lawn with tall shady oak trees. Go around to the back and you'll find the sports field where Boonie led the boys' soccer team. 
@@ -34,24 +32,24 @@ This is Boonie's conundrum. As soon as he started telling his close friends, the
 
 As soon as the rumor leaped across the nearly impenetrable student/parent information barrier, Roger and I sketched up a graph something like this on my whiteboard and began estimating how long Boonie had until he faced the wrath of Principal S. a second time.
 
-![](../../assets/img/the-boonie-conundrum/boonie-graph.png){.mx-auto .blend-multiply}
+![](../../assets/img/the-boonie-conundrum/boonie-graph.png){ .blend-multiply}
 
 We figured he had about three weeks, and it turned out we were right to within a day or two. 
 
 
 A simplified version might help explain this. Suppose there are five friends: Alex, Boonie, Channing, Drew, Ellison. A way to visualize this is through a matrix like this,
 
-![](../../assets/img/the-boonie-conundrum/friends.png){.mx-auto .blend-multiply}
+![](../../assets/img/the-boonie-conundrum/friends.png){ .blend-multiply}
 
 The row with a "C" in front (for Channing) has "T" (true) in columns "Boonie" and "Channing", but "F" (false) for the others meaning Channing is friends with Boonie, but not Alex, Drew or Ellison. Next, we'll add in a vector of people who know about the hidden message.  In the beginning, only Boonie knows.
 
-![](../../assets/img/the-boonie-conundrum/knows-day-1.png){.mx-auto .blend-multiply}
+![](../../assets/img/the-boonie-conundrum/knows-day-1.png){ .blend-multiply}
 
 The highlighted column corresponds to the "T" in the knowledge vector to the right of the Friends matrix and indicates everyone Boonie tells, in this case, Channing and Drew. You can multiply the Friends matrix by the rumor knowledge vector by taking the first entry in the vector "F" and "multiplying" the entire first column of the friends. This makes everything for that column false, so put an "F" in the first position of the output vector on the right after the equals sign. The next entry is "T" because Boonie knows, and the column under "B" contains $F, T, T, T, F$ so those places where there's a "T" become "T" in the output vector, but "F" always remains "F". The remaining entries in the knowledge vector are "F" so they don't contribute anything.
 
 Simulate the spread of the rumor from day to day by repeating this process. On the second day, Boonie, Channing, and Drew are all in on the rumor, so if any one of them tells someone else, that person knows. In other words, a single "T" in the yellow highlighted region on the "A" row is sufficient for Alex to know. Drew knows and Drew is friends with Alex, so Alex hears about the story. The reason we put a "T" in the Boonie row and column is it keeps Boonie in the know at each step. All of the entries on the diagonal are true for the same reason. 
 
-![](../../assets/img/the-boonie-conundrum/knows-day-2.png){.mx-auto .blend-multiply}
+![](../../assets/img/the-boonie-conundrum/knows-day-2.png){ .blend-multiply}
 
 Rumors don't spread quite this quickly. We have motive, but not opportunity yet. Friends may get together during the school day, but there might be someone else (a teacher, Principal S.?) or another reason the message isn't passed on. To simulate this, we'll create an opportunity matrix the same size as the friends' matrix with mostly F's but a few T's where the opportunity exists. The opportunity matrix changes randomly every day, simulating different interactions between students. Now if there is a T in both the friends' matrix and the opportunity matrix, the rumor expands.
 
@@ -77,7 +75,7 @@ To run the simulation we need estimates of the interactions between students, te
 
 With all that, this is a plot of a typical run. ([Octave code boonieSim.m](https://gist.github.com/JanDW/62b4b4d4ca9822080a7ed6209e33ab50)) 
 
-![](../../assets/img/the-boonie-conundrum/the-boonie-rumor.png){.mx-auto .blend-multiply}
+![](../../assets/img/the-boonie-conundrum/the-boonie-rumor.png){ .blend-multiply}
 
 In 14 school days, or almost three weeks, the rumor travels from Boonie to Principal S. Only 16% of the teachers and 2% of the students (about 30) have heard the story, yet Boonie gets caught anyway.
 
@@ -89,7 +87,7 @@ We can perform Monte Carlo experiments with the Boonie rumor, too. Since the fri
 
 In this [Monte Carlo experiment](https://gist.github.com/JanDW/67d70ecb54bf186622f2a201e01a02ea), I ran the same Boonie rumor function 1000 times. The peak seems to occur around 20 days, and the longest he got away with it is 80 days, but he always gets caught. In fact, after 40 days, there are fewer and fewer cases, meaning that Boonie is very unlikely to make it longer than 40 days in general. Monte Carlo experiments are useful for obtaining statistical insights into problems. You can also change the experiment by adjusting some of the parameters such as `studentFriendship` probability to see how sensitive the outcome is to a small change.
 
-![](../../assets/img/the-boonie-conundrum/boonie-monte-carlo.png){.mx-auto .blend-multiply}
+![](../../assets/img/the-boonie-conundrum/boonie-monte-carlo.png){ .blend-multiply}
 
 ## On the Viability of Conspiratorial Beliefs
 

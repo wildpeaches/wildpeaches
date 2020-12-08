@@ -1,11 +1,11 @@
 <div class="">
   <nav>
-    <ul class="content-wrapper global-nav flex flex-center justify-center py-4 list-none">
+    <ul class="content-wrapper global-nav flex flex-center justify-center py-4 list-none font-inter">
       {% for item in navigation.items %}
       <li>
         <a
           href="{{ item.url }}"
-          class="{{ item.cssClass }} no-underline"
+          class="{{ item.cssClass }} {{ bodyClass }} no-underline"
           {{
           helpers.getLinkActiveState(item.url,
           page.url)

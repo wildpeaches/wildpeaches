@@ -1,0 +1,10 @@
+/* https://every-layout.dev/layouts/center/ */
+
+.center-l {
+  max-width: 55ch;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

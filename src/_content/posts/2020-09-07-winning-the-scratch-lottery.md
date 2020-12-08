@@ -2,11 +2,10 @@
 title: Winning the Scratch Lottery
 subtitle: An Experiment in OCR, Robotics, and Statistics
 author: John Peach
+lede: I know someone who has won the million-dollar lottery. Twice. Ask any mathematician about playing the lottery and you'll likely be told not to waste your money because you can't win. That would be bad advice because the lottery is rigged. In your favor. 
 tags: [math]
 keywords: [Gambling, Statistics, Expectation, Optical Character Recognition]
 ---
-
-I know someone who has won the million-dollar lottery. Twice. Ask any mathematician about playing the lottery and you'll likely be told not to waste your money because you can't win. That would be bad advice because the lottery is rigged. In your favor. 
 
 ## Mohan Srivastava's discovery
 
@@ -14,7 +13,7 @@ Mohan Srivastava is a geological statistician from Toronto who helps mining comp
 
 Printing companies need to produce the right number of winning tickets at each payoff level. Let's look at a typical bingo ticket, one that I bought in Delaware several years ago. 
 
-![Bingo Card 60](/assets/img/winning-the-scratch-lottery/bingo-card.jpg){.mx-auto}
+![Bingo Card 60](/assets/img/winning-the-scratch-lottery/bingo-card.jpg)
 
 To play, you scratch off all the "?'s" in the area labeled "Caller's Card" and then scratch off matching numbers in each of the four Bingo cards above. If you complete any horizontal, vertical, or diagonal line you've got a winner. Srivastava figured that for a winning ticket, each number in a winning row, column or diagonal can only appear once on any of the cards. Otherwise, it would be difficult to keep track of where the winning numbers appear and how they contribute to winning cards.
 
@@ -92,13 +91,13 @@ Most states have apps to scan lottery tickets with your phone, but a more rapid 
 
 [SikuliX by RaiMan](http://sikulix.com/) automates keyboard, mouse, and screen functions programmatically. It uses [OpenCV](https://opencv.org/) to find images on the screen. Search for this pattern to locate each of the four Bingo cards :
 
-![Lines mask](/assets/img/winning-the-scratch-lottery/lines-mask.png){.mx-auto}
+![Lines mask](/assets/img/winning-the-scratch-lottery/lines-mask.png)
 
 SikuliX returns the location of the pattern on the screen, and can capture images of each card with a snipping tool like [Greenshot](https://getgreenshot.org/). SikuliX can also find the locations of other special symbols such as the "FREE" in the middle of the cards and the little stack of money at random places on each card.
 
 Image processing in [Python](https://www.anaconda.com/) will let us remove the lines by subtracting the mask shown above from each card, as well as the special symbols. With a clean image, [Tesseract OCR](https://nanonets.com/blog/ocr-with-tesseract/) gives the text equivalent of each number found in the card images. Using the online OCR program [OCRSpace](https://ocr.space/) without any image cleaning returned these numbers for each card:
 
-![Bingo Card 60](/assets/img/winning-the-scratch-lottery/bingo-card-ocr-results.svg){.mx-auto}
+![Bingo Card 60](/assets/img/winning-the-scratch-lottery/bingo-card-ocr-results.svg)
 
 There are errors, but Tesseract even correctly converted the "FREE" at the center of each Bingo card. Cleaning up the images before running the OCR should take care of most of the errors. 
 

@@ -2,12 +2,10 @@
 title: The Kelly Criterion
 subtitle: Information Theory Reimagined
 author: John Peach
+lede: Two mathematicians from MIT team up with a New Jersey mobster to take down a casino. 
 tags: [math]
 keywords: [Gambling, Statistics, Expectation, Optical Character Recognition]
 ---
-
-Two mathematicians from MIT team up with a New Jersey mobster to take down a casino. 
-
 ## Shannon and Kelly at Bell Labs
 
 Claude Shannon is known as "the father of information theory" for a paper he published in 1948, ["A Mathematical Theory of Communication."](http://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf) For his master's thesis at MIT, he showed that logical operators in electric circuits may by implemented using Boolean algebra. Without these two ideas, the digital information age could not exist.

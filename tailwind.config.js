@@ -10,7 +10,7 @@ module.exports = {
       lg: '1280px'
     },
     colors: {
-      gray: colors.blueGray,
+      gray: colors.warmGray,
       blue: colors.blue,
       white: colors.white,
     },

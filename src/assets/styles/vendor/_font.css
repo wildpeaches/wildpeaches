@@ -1,10 +1,35 @@
 /* Inter variable font import */
 /* https://rsms.me/inter/ */
 
-@import url('https://rsms.me/inter/inter.css');
+@import url("https://rsms.me/inter/inter.css");
 
-html, body { font-family: 'Inter', sans-serif; }
+:root {
+  @apply font-serif text-lg;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
 
 @supports (font-variation-settings: normal) {
-  html, body { font-family: 'Inter var', sans-serif; }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  blockquote,
+  .font-inter {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+/* Inter font */
+.home-font-features {
+  font-feature-settings: "ss01", "cv01", "cv11";
 }

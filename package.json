@@ -41,22 +41,18 @@
     "url": "https://github.com/JanDW/wildpeaches/issues"
   },
   "homepage": "https://github.com/JanDW/wildpeaches#readme",
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
     "@iktakahiro/markdown-it-katex": "^4.0.1",
     "clean-css-cli": "^4.3.0",
     "csscomb": "^4.3.0",
     "cssnano": "^4.1.10",
-    "http-server": "^0.12.3",
-    "husky": "^4.3.4",
-    "lint-staged": "^10.5.3",
     "markdown-it": "^12.0.2",
     "markdown-it-anchor": "^6.0.1",
     "markdown-it-attrs": "^3.0.3",
     "markdown-it-footnote": "^3.0.2",
     "markdown-it-image-lazy-loading": "^1.0.2",
-    "markdownlint-cli": "^0.25.0",
     "moment": "^2.29.1",
     "postcss": "^8.1.14",
     "postcss-cli": "^8.3.0",
@@ -64,8 +60,13 @@
     "postcss-easy-import": "^3.0.0",
     "postcss-extend-rule": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "2.2.1",
     "tailwindcss": "^2.0.1"
   },
-  "dependencies": {}
+  "devDependencies": {
+    "http-server": "^0.12.3",
+    "husky": "^4.3.4",
+    "lint-staged": "^10.5.3",
+    "markdownlint-cli": "^0.25.0",
+    "prettier": "2.2.1"
+  }
 }

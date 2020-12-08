@@ -3,25 +3,25 @@ layout: default
 title: Wild Peaches
 author: Jan De Wilde & John Peach
 permalink: /
-bodyClass: text-blue-900 bg-blue-100
+bodyClass: text-blue-900 bg-blue-100 font-inter
 ---
 
-<section class="mt-48 mb-24 content-wrapper">
+<section class="my-24 stack-l center-l">
   <ul class="divide-y divide-blue-400 list-none">
     {% for post in collections.posts | reverse %}
 
-    <li class="py-3 text-xl leading-snug mb-2">
+    <li class="py-4 leading-snug">
       <a
-        class="no-underline text-blue-900 font-medium flex"
+        class="no-underline text-blue-900 flex"
         href="{{ post.url }}"
       >
         <!-- <time datetime="{{ post.date | w3DateFilter }}"
           >{{ post.date | dateFilter }}</time
         > -->
         <div>
-          {{ post.data.title }} 
+          <div class="font-medium text-xl">{{ post.data.title }}</div>
           {% if post.data.subtitle %}
-          <div class="mt-1 text-blue-900 text-opacity-75 text-base">
+          <div class="text-blue-900 text-opacity-75 text-lg font-inter">
             {{ post.data.subtitle }}
           </div>
           {% endif %}
