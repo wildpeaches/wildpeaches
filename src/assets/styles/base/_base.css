@@ -12,11 +12,11 @@ figcaption {
  max-width: 55ch;
 }
 
-table {
-  max-width: 100%;
-}
-
 h1 {@apply text-center;}
+
+table {
+  @apply text-base;
+}
 
 
 pre {

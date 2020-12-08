@@ -19468,21 +19468,13 @@ figcaption {
   max-width: 55ch;
 }
 
-table {
-  max-width: 100%;
-}
-
-h1 {
   text-align: center;
 }
 
-pre {
-  overflow-x: scroll;
+table {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
-
-/* This file compiles to style.css */
-
-/* https://css-tricks.com/dark-modes-with-css/ */
 
 html,body {
   height: 100%;
@@ -19975,19 +19967,11 @@ h1 {
 
 .center-l {
   max-width: 55ch;
-  margin-left: auto;
   margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-left: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
-
-/* https://every-layout.dev/layouts/stack/ */
-
-/*  */
-
-.stack-l {
-  --space: 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

@@ -19468,12 +19468,13 @@ figcaption {
   max-width: 55ch;
 }
 
-table {
-  max-width: 100%;
-}
-
 h1 {
   text-align: center;
+}
+
+table {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 pre {
@@ -19975,11 +19976,11 @@ h1 {
 
 .center-l {
   max-width: 55ch;
-  margin-left: auto;
+  box-sizing: content-box;
   margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-left: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 /* https://every-layout.dev/layouts/stack/ */

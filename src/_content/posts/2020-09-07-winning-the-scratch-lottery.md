@@ -71,6 +71,7 @@ Below is an example of the odds and payoffs for each possible winning combinatio
 | 500  | 30000 | 0.0000      | 0.0167      | 0.0001        | 0.0596       |
 | 5000 | 60000 | 0.0000      | 0.0833      | 0.0001        | 0.2982       |
 |      |       | 0.2515      | -0.3933     | 0.9000        | 1.1711       |
+
 {.w-max-900}
 
 </div>
