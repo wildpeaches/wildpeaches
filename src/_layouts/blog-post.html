@@ -6,14 +6,14 @@ bodyClass: text-gray-700 bg-gray-100
 <main id="main" class="center-l">
   <article class="stack-l post leading-relaxed">
     <div class="title mt-24 mb-6 center-l text-center">
-      <h1 class="leading-tight text-5xl">{{ title }}</h1>
+      <h1 class="leading-tighter text-5xl">{{ title }}</h1>
       {% if subtitle %}
-      <p class="leading-tight mt-2 text-2xl font-inter">
+      <p class="leading-tight mt-8 text-2xl font-inter">
         {{ subtitle }}
       </p>
       {% endif %}
 
-      <p class="mt-8 text-base text-gray-600 font-inter">
+      <p class="text-base text-gray-600 font-inter">
         <time datetime="{{ page.date | w3DateFilter }}"
           >{{ page.date | dateFilter }}</time
         >
