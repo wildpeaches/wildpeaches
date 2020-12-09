@@ -197,7 +197,9 @@ V = Fr \sqrt{gL} = 3.1 Fr \sqrt{L} \; \frac{m}{s}
 $$
 since $g = 9.8 \frac{m}{s^2}$. This means Halme's hull speed of $8.5 \; \frac{m}{s}$ corresponds to a  Froude number of $0.78$.
 
-From ["Thin or bulky: optimal aspect ratios for ship hulls"](file:///C:/Users/johnx/OneDrive/Documents/Wild%20Peaches/src/_content/working%20folders/Catamaran%20Design/Thin%20or%20bulky%20optimal%20aspect%20ratios%20for%20ship%20hulls.pdf), by Boucher et al, the Froude number for multihull sailboats seems to cluster around $1.25$, a bit higher than Halme's estimate ($U$ is the velocity):
+<!-- From ["Thin or bulky: optimal aspect ratios for ship hulls"](file:///C:/Users/johnx/OneDrive/Documents/Wild%20Peaches/src/_content/working%20folders/Catamaran%20Design/Thin%20or%20bulky%20optimal%20aspect%20ratios%20for%20ship%20hulls.pdf), by Boucher et al, the Froude number for multihull sailboats seems to cluster around $1.25$, a bit higher than Halme's estimate ($U$ is the velocity): -->
+
+From <cite>"Thin or bulky: optimal aspect ratios for ship hulls", by Boucher et al</cite>, the Froude number for multihull sailboats seems to cluster around $1.25$, a bit higher than Halme's estimate ($U$ is the velocity):
 
 ![Optimal aspect ratios for ship hulls](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/optimal-aspect-ratios-for-ship-hulls.png)
 
