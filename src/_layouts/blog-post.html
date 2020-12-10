@@ -8,12 +8,10 @@ bodyClass: text-gray-700 bg-gray-100
     <div class="title mt-24 mb-6 center-l text-center">
       <h1 class="leading-tighter text-5xl">{{ title }}</h1>
       {% if subtitle %}
-      <p class="leading-tight mt-8 text-2xl font-inter">
-        {{ subtitle }}
-      </p>
+      <p class="leading-tight mt-8 text-2xl font-inter">{{ subtitle }}</p>
       {% endif %}
 
-      <p class="text-base text-gray-600 font-inter">
+      <p class="text-base text-gray-600 font-inter max-w-none">
         <time datetime="{{ page.date | w3DateFilter }}"
           >{{ page.date | dateFilter }}</time
         >
@@ -22,7 +20,6 @@ bodyClass: text-gray-700 bg-gray-100
     </div>
     {% if lede %}
     <p class="lede">{{ lede }}</p>
-    {% endif %}
-    {{ content | safe }}
+    {% endif %} {{ content | safe }}
   </article>
 </main>
