@@ -27,7 +27,11 @@ module.exports = {
       },
     },
   },
-  variants: {}, 
+  variants: {
+    extend: {
+      borderWidth: ['hover', 'focus'],
+    }
+  }, 
   corePlugins: {
   },
   plugins: [

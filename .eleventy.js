@@ -25,7 +25,7 @@ module.exports = (eleventyConfig) => {
     .use(markdownItAnchor, {
       permalink: true,
       permalinkSymbol: "#",
-      permalinkClass: "text-gray-400 no-underline",
+      permalinkClass: "text-gray-400 border-b-0  hover:border-b-2",
       permalinkBefore: true
     });
 

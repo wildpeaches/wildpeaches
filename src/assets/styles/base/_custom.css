@@ -171,13 +171,21 @@ h3::before {
   background-color: #ede6d7;
 }
 
-a,
 a:link {
-  text-decoration: underline;
-  /* color: #137752; */
-  text-decoration-color: theme('colors.blue.600');
-  /* text-underline-position: under; */
-  /* text-decoration-style: wavy;  */
+  @apply border-gray-400 border-b-2;
+}
+
+a:hover {
+  @apply border-gray-600;
+}
+
+/**`
+/* This is supposed to be included in TailwindCSS
+/* but no luck? @TODO
+*/
+
+.border-current {
+  border-color: currentColor !important;
 }
 
 /* .global-footer {
