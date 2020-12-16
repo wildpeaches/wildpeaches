@@ -440,3 +440,7 @@ dd {
 .footnote-item p {
   display: inline;
 }
+
+.panel {
+  @apply bg-white border border-gray-200 rounded-lg;
+}
