@@ -13,7 +13,7 @@ Mohan Srivastava is a geological statistician from Toronto who helps mining comp
 
 Printing companies need to produce the right number of winning tickets at each payoff level. Let's look at a typical bingo ticket, one that I bought in Delaware several years ago. 
 
-![Bingo Card 60](/assets/img/winning-the-scratch-lottery/bingo-card.jpg)
+![A scratch lottery bingo card.](/assets/img/winning-the-scratch-lottery/bingo-card.jpg)
 
 To play, you scratch off all the "?'s" in the area labeled "Caller's Card" and then scratch off matching numbers in each of the four Bingo cards above. If you complete any horizontal, vertical, or diagonal line you've got a winner. Srivastava figured that for a winning ticket, each number in a winning row, column or diagonal can only appear once on any of the cards. Otherwise, it would be difficult to keep track of where the winning numbers appear and how they contribute to winning cards.
 
@@ -92,13 +92,13 @@ Most states have apps to scan lottery tickets with your phone, but a more rapid 
 
 [SikuliX by RaiMan](http://sikulix.com/) automates keyboard, mouse, and screen functions programmatically. It uses [OpenCV](https://opencv.org/) to find images on the screen. Search for this pattern to locate each of the four Bingo cards :
 
-![Lines mask](/assets/img/winning-the-scratch-lottery/lines-mask.png)
+![Grid structure.](/assets/img/winning-the-scratch-lottery/lines-mask.png)
 
 SikuliX returns the location of the pattern on the screen, and can capture images of each card with a snipping tool like [Greenshot](https://getgreenshot.org/). SikuliX can also find the locations of other special symbols such as the "FREE" in the middle of the cards and the little stack of money at random places on each card.
 
 Image processing in [Python](https://www.anaconda.com/) will let us remove the lines by subtracting the mask shown above from each card, as well as the special symbols. With a clean image, [Tesseract OCR](https://nanonets.com/blog/ocr-with-tesseract/) gives the text equivalent of each number found in the card images. Using the online OCR program [OCRSpace](https://ocr.space/) without any image cleaning returned these numbers for each card:
 
-![Bingo Card 60](/assets/img/winning-the-scratch-lottery/bingo-card-ocr-results.svg)
+![Comparison of Bingo Card and OCR results.](/assets/img/winning-the-scratch-lottery/bingo-card-ocr-results.svg)
 
 There are errors, but Tesseract even correctly converted the "FREE" at the center of each Bingo card. Cleaning up the images before running the OCR should take care of most of the errors. 
 
@@ -108,8 +108,12 @@ By summing these card arrays horizontally and vertically we can find rows or col
 
 Of course, it would be nice to fully automate the card handling process with a [Sain Smart robotic arm](https://www.sainsmart.com/products/6-axis-desktop-robotic-arm-assembled?variant=45101269588&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&utm_campaign=gs-2018-08-06&utm_source=google&utm_medium=smart_campaign&gclid=CjwKCAjw4rf6BRAvEiwAn2Q76hbnjXvDfjqax182Z_2NH5rwnm5mNKEy2nbklUOrsnatKz64XbQ5BhoCg7EQAvD_BwE), which could also be used to scratch off the lottery tickets. But, in any case, I think we've arrived at phase 3.
 
-![underpantsgnomes1](/assets/img/winning-the-scratch-lottery/underpants-gnomes.jpg)
+![South Park meme showing gnomes staring at project plan. Phase 1: Collect underpants. Phase 2: ? Phase 3: Profit.](/assets/img/winning-the-scratch-lottery/underpants-gnomes.jpg)
 
 ---
 
 Many states have adopted scratch lotteries as a way to pay for their schools, but the lottery is a very regressive tax on the mathematically challenged. By filtering out the winning tickets we'd be effectively increasing this regressive taxation. On the other hand, the Wired article suggested that some people are using the lottery to launder money, so it might be considered a social service to foil their efforts. Given the moral issues and all the software and hardware required you have to wonder, is it worth all this effort for a lousy \$100K a year?
+
+---
+
+*Update December 16, 2020:* [An elderly mathematician hacked the lottery for 26 million](https://entrepreneurshandbook.co/an-elderly-mathematician-hacked-the-lottery-for-26-million-121c28faa88b)

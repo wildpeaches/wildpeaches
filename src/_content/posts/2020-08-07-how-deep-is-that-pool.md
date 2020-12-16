@@ -58,7 +58,7 @@ So now it appears that 4 out of 100 or 4% are infected. Since we need to know th
 
 To find the number of tests required for a given infection rate $p$ means we need to find the value of $n$ that makes $T(n,p)$ the smallest.
 
-![Pool size for p = 7.5%](/assets/img/how-deep-is-the-pool/pool-size-p-seven-half.svg)
+![Pool size for p = 7.5%](/assets/img/how-deep-is-the-pool/pool-size-p-seven-half.svg){.blend-multiply}
 
 ## Optimum pool sizes
 
@@ -70,13 +70,13 @@ for some value of $n$. That is, we're looking for the point on the curve where t
 
 Solving $\frac{dT}{dn} = 0$ for various values of $p$ gives this plot: ([python code here](https://gist.github.com/JanDW/2d555feb2967fd7fb3bb7525e03c2506))
 
-![Pool sizes](/assets/img/how-deep-is-the-pool/pool-sizes.svg)
+![Pool sizes](/assets/img/how-deep-is-the-pool/pool-sizes.svg){.blend-multiply}
 
 shows that for infection rates above about 1% the pool sizes are less than 10 people, and by the time the positivity is above 5% the pool size needs to drop to 5 people or fewer.
 
 Once we have the optimal number of people per pool then for each infection probability $p$ we can calculate the number of required tests $T(n,p)$ shown here:
 
-![Tests required](/assets/img/how-deep-is-the-pool/tests-required.svg)
+![Tests required](/assets/img/how-deep-is-the-pool/tests-required.svg){.blend-multiply}
 
 If you'd like a review of derivatives Grant Sanderson's ["Derivative formulas through geometry"](https://www.youtube.com/watch?v=S0_qX4VJhMQ) video is a very good start and is part of his [The Essence of Calculus](https://www.youtube.com/watch?v=WUvTyaaNkzM) series. A complete calculus course is also available from Khan Academy's [Calculus I](https://www.khanacademy.org/math/calculus-1). 
 

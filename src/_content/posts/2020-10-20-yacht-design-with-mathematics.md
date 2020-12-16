@@ -84,7 +84,7 @@ since $0^0 = 1$ but $0^k = 0$ for all $k > 0$. Similarly, when $t = 1$, $B(t) = 
 
 
 
-![Animation of a quartic Bézier curve](/assets/img/yacht-design-with-mathematics/Bézier_4_big.gif){ .blend-multiply}
+![Animation of a quartic Bézier curve](/assets/img/yacht-design-with-mathematics/bezier.gif){ .blend-multiply}
 
 The Bezier curve (red) starts at $P_0$ when $t=0$ and ends at $P_4$ when $t=1$. 
 
