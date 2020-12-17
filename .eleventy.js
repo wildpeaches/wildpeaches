@@ -20,7 +20,7 @@ module.exports = (eleventyConfig) => {
   const markdownLib = markdownIt(options)
     .use(markdownItAttrs)
     .use(markdownItFootnote)
-    .use(markdownItKatex)
+    .use(markdownItKatex, {strict: false})
     .use(markdownItImageLazyLoading)
     .use(markdownItAnchor, {
       permalink: true,
