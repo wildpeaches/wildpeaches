@@ -76,13 +76,13 @@ Download the latest version of PARI/GP [here](https://pari.math.u-bordeaux.fr/do
 
 Besides the languages that come with Notepad++, there is a collection of [User Defined Languages (UDL)](https://github.com/notepad-plus-plus/userDefinedLanguages) ([list here](https://github.com/notepad-plus-plus/userDefinedLanguages/blob/master/udl-list.md)), and the PARI/GP definition is available [here](https://github.com/notepad-plus-plus/userDefinedLanguages/blob/master/UDLs/PARI-GP_by-third_maths.xml). Click on "Raw", copy the text into a new tab in Notepad++, and save it as "PariGP.xml" in the UDL folder. Now click on <u>L</u>anguage $\rightarrow$ User Defined Language $\rightarrow$ Define your language... which opens a dialog box. Click on Import... and navigate to the UDL folder. Select PariGP.xml and open it. If you click on <u>L</u>anguage again, you should see a dot next to User-defined at the bottom indicating that the PARI/GP lexer has been loaded. The Notepad++ user manual contains the [complete instructions](https://npp-user-manual.org/docs/user-defined-language-system/) for working with UDLs. 
 
-![PARI_GP UDL](/assets/img/kenken/PARI_GP UDL.svg)
+![PARI_GP UDL](/assets/img/kenken/PARIGP-UDL.svg)
 
 ## The PARI/GP Command Window
 
 Start PARI/GP by clicking on the desktop icon (because you're one of the cool kids). It should look something like this:
 
-![PariGP Command Window](/assets/img/kenken/PariGP Command Window.svg)
+![PariGP Command Window](/assets/img/kenken/PariGP-command-window.svg)
 
 The command prompt `gp >` is where you interact directly with the PARI engine. PARI understands all of the basic mathematical expressions as well as many specific to number theory. If you type `numbpart(20)` at the prompt PARI will return 627, the number of arithmetic partitions of 20. Enter `partitions(5)` to get a list of the partitions of $5$.
 
