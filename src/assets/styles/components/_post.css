@@ -52,6 +52,7 @@
 
 .post > .katex-block {
   @apply my-10 py-1;
+  overflow-x: scroll;
 }
 
 .post .katex * {
