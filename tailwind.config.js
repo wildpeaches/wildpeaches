@@ -13,6 +13,9 @@ module.exports = {
       gray: colors.warmGray,
       blue: colors.blue,
       white: colors.white,
+      green: colors.green,
+      red: colors.red,
+      teal: colors.teal
     },
     listStyleType: {
       none: 'none',

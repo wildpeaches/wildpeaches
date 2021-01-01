@@ -20,7 +20,7 @@ p {
 
 ul,
 ol {
-  @apply list-inside text-gray-700 my-0;
+  @apply list-inside my-0;
 }
 
 ul {
@@ -141,7 +141,7 @@ h3::before {
 
 .lede,
 .lead {
-  @apply text-lg text-center font-medium font-inter border-t border-b border-gray-300 py-4;
+  @apply text-lg font-medium font-inter border-t border-b border-gray-300 py-4;
 }
 
 
@@ -172,12 +172,25 @@ h3::before {
 }
 
 a:link {
+  border-bottom-color: transparent;
+  border-bottom-width: 2px;
+} 
+
+a:hover {
+  border-bottom-color: currentColor;
+}
+
+.post a:link {
   @apply border-gray-400 border-b-2;
 }
 
-a:hover {
+.post a:hover {
   @apply border-gray-600;
 }
+
+
+
+
 
 /**`
 /* This is supposed to be included in TailwindCSS
@@ -443,4 +456,27 @@ dd {
 
 .panel {
   @apply bg-white border border-gray-200 rounded-lg;
+}
+
+.form--success {
+  @apply bg-green-200 text-green-700 font-inter;
+}
+
+.form--error {
+  @apply bg-red-200 text-red-700 font-inter;
+}
+
+@layer utilities {
+  .no-indent {
+    text-indent: 0;
+  }
+
+  /* Should be in TailwindCSS, but isn't showing up in the compiled code */
+  .border-transparent {
+    border-color: transparent;
+  }
+
+  .text-current {
+    color: currentColor;
+  }
 }

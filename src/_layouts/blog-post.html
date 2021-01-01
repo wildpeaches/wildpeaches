@@ -1,14 +1,16 @@
 ---
 layout: default
 bodyClass: text-gray-700 bg-gray-50
+subClass: text-teal-100 bg-blue-900 
+includeSubscription: true
 ---
 
-<main id="main" class="center-l">
+<main id="main" class="center-l mb-12">
   <article class="stack-l post leading-relaxed">
-    <div class="title mt-24 mb-6 center-l text-center">
-      <h1 class="leading-tighter text-5xl">{{ title }}</h1>
+    <div class="title mt-24 mb-0">
+      <h1 class="leading-tighter text-5xl font-inter font-extrabold border-l-8 pl-4 -ml-6 border-gray-200">{{ title }}</h1>
       {% if subtitle %}
-      <p class="leading-tight mt-8 text-2xl font-inter">{{ subtitle }}</p>
+      <p class="leading-tight mt-4 text-2xl font-inter">{{ subtitle }}</p>
       {% endif %}
 
       <p class="text-base text-gray-600 font-inter max-w-none">
@@ -19,7 +21,7 @@ bodyClass: text-gray-700 bg-gray-50
       </p>
     </div>
     {% if lede %}
-    <p class="lede">{{ lede }}</p>
+    <p class="lede mt-0">{{ lede }}</p>
     {% endif %} {{ content | safe }}
   </article>
 </main>

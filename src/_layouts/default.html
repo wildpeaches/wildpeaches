@@ -9,7 +9,10 @@ title: Wild Peaches
     class="font-base text-xl overflow-x-hidden home-font-features {% if bodyClass %}{{ bodyClass }}{% endif %}"
   >
     {% include 'global-nav.html' %} 
-    {{ content | safe}}
+    {{ content | safe }}
+    {% if includeSubscription %}
+      {% include "subscription-form.html" %}
+    {% endif%}
     {% include 'footer.html' %}
     {% include 'analytics.html' %}
   </body>

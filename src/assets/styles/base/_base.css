@@ -12,7 +12,7 @@ figcaption {
  max-width: 55ch;
 }
 
-h1 {@apply text-center;}
+/* h1 {@apply text-center;} */
 
 table {
   @apply text-base;

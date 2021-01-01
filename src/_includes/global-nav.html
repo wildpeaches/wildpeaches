@@ -1,11 +1,10 @@
-<div class="">
-  <nav>
-    <ul class="content-wrapper global-nav flex flex-center justify-center py-4 list-none font-inter">
+  <nav id="top" class="bg-white">
+    <ul class="justify-center flex center-l py-4 list-none font-inter text-current">
       {% for item in navigation.items %}
-      <li>
+      <li class="{{ item.listClass }}">
         <a
           href="{{ item.url }}"
-          class="{{ item.cssClass }} {{ bodyClass }} border-b-0"
+          class="{{ item.cssClass }}"
           {{
           helpers.getLinkActiveState(item.url,
           page.url)
@@ -18,4 +17,3 @@
       {% endfor %}
     </ul>
   </nav>
-</div>

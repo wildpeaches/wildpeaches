@@ -4,9 +4,13 @@ title: Wild Peaches
 author: Jan De Wilde & John Peach
 permalink: /
 bodyClass: text-blue-900 bg-blue-50 font-inter
+subClass: text-teal-200 bg-blue-900
+includeSubscription: true 
 ---
 
 <section class="my-24 stack-l center-l">
+  <h1 class="leading-tighter text-5xl font-inter font-extrabold mb-4 border-l-8 pl-4 -ml-6 border-blue-200">Table of Contents</h1>
+
   <ul class="divide-y divide-blue-400 list-none">
     {% for post in collections.posts | reverse %}
 
@@ -25,6 +29,14 @@ bodyClass: text-blue-900 bg-blue-50 font-inter
             {{ post.data.subtitle }}
           </div>
           {% endif %}
+          <!-- {% if post.data.tags %}
+          <div class="text-blue-900 text-opacity-75 font-inter text-sm">
+          {% for tag in post.data.tags %}
+            #{{ tag }}
+          {% endfor %}
+
+          </div>
+          {% endif %} -->
         </div>
       </a>
     </li>

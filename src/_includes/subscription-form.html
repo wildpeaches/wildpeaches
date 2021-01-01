@@ -1,0 +1,74 @@
+<aside
+  class="font-inter bg-gray-900 sm:rounded-xl p-4 text-base max-w-md center-l {{ subClass }}"
+  aria-labelledby="subscribe-and-stay-in-the-loop"
+>
+  <div>
+    <h2 id="subscribe-and-stay-in-the-loop" class="font-bold no-indent text-white">
+      Subscribe and stay in the loop.
+    </h2>
+    <p>
+      Subscribe with your email address below and we'll notify you when a new post has been published.
+    </p>
+  </div>
+  <form
+    class="email-form text-white"
+    name="newsletter"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    aria-live="polite"
+  >
+    <div>
+      <div hidden aria-hidden="true">
+        <label>
+          Don’t fill this out if you're human:
+          <input name="bot-field" />
+        </label>
+      </div>
+
+      <label
+        >Your email address
+        <div class="sm:flex">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="block sm:max-w-xs w-full px-4 py-3 text-base appearance-none border border-gray-300 shadow-none bg-white text-blue-900 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300"
+            required
+          />
+          <button
+            type="submit"
+            class="mt-4 relative sm:mt-0 sm:h-auto sm:ml-4 block w-full sm:w-auto border border-transparent px-6 py-3 text-base font-semibold leading-snug bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500 transition ease-in-out duration-150"
+          >
+            Subscribe
+          </button>
+        </div>
+      </label>
+    </div>
+  </form>
+
+  <script>
+    const processForm = (form) => {
+      const data = new FormData(form);
+      data.append("form-name", "newsletter");
+      fetch("/", {
+        method: "POST",
+        body: data,
+      })
+        .then(() => {
+          form.innerHTML = `<div class="form--success px-2 py-4 text-center">Almost there!<br/> Check your inbox for a confirmation e-mail.</div>`;
+        })
+        .catch((error) => {
+          form.innerHTML = `<div class="form--error px-2 py-4 text-center">Error: ${error}</div>`;
+        });
+    };
+
+    const emailForm = document.querySelector(".email-form");
+    if (emailForm) {
+      emailForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        processForm(emailForm);
+      });
+    }
+  </script>
+</aside>
