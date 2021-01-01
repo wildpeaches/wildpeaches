@@ -1,13 +1,11 @@
 ---
-title: Put another KenKen on the barbie 
+title: Put Another KenKen on the Barbie 
 subtitle: Partitions with Pari/GP
+lede: If you like Sudoku, you'll love KenKen!
 author: John Peach
 tags: [math]
 keywords: [KenKen, Pari/GP, Integer Partitions, Number theory]
 ---
-
-If you like Sudoku, you'll love KenKen!
-
 ## Tetsuya Miyamoto
 
 Tetsuya Miyamoto (宮本 哲也), a Japanese mathematics teacher invented KenKen ("cleverness squared") in 2004 to help his students improve math and logic skills. His students have dominated Japan’s “Math Olympics,” the country’s top mathematics competition for ages 11–15. Mr. Miyamoto said he believes in “the art of teaching without teaching”, and his favorite hobby is scuba diving. He's the star of the new documentary, [“Miyamoto and the Machine, The Story of KenKen”](https://www.miyamotoandthemachine.com/), and featured in a New Yorker article, ["The Puzzle Inventor Who Makes Math Beautiful."](https://www.newyorker.com/culture/the-new-yorker-documentary/the-puzzle-inventor-who-makes-math-beautiful)
@@ -20,7 +18,7 @@ His approach to challenges is, "I make a list of things I do not like to do and 
 
 * Scrub the toilet
 * Take out the trash
-* Eat artificial [calamari](https://www.thisamericanlife.org/725/turkey-in-a-face-mask/act-one-3)
+* Eat [artificial calamari](https://www.thisamericanlife.org/725/turkey-in-a-face-mask/act-one-3)
 
 Your list might be different.
 
@@ -42,9 +40,9 @@ The [online game](http://www.kenkenpuzzle.com/) lets you choose the size of the 
 
 Suppose your puzzle has a cage with $7+$ in it. How many ways can you write $7$ as the sum of integers from $1$ to $7$? The answer is 15: 
 
-$\{(7),(1,6),(2,5),(3,4),(1,1,5),(1,2,4),(1,3,3),(2,2,3),(1,1,1,4),$
-
-$(1,1,2,3),(1,2,2,2),(1,1,1,1,3),(1,1,1,2,2),(1,1,1,1,1,2),(1,1,1,1,1,1,1)\}$ 
+$$\{(7),(1,6),(2,5),(3,4),(1,1,5),(1,2,4),\newline
+(1,3,3),(2,2,3),(1,1,1,4),(1,1,2,3),(1,2,2,2),\newline
+(1,1,1,1,3),(1,1,1,2,2),(1,1,1,1,1,2),(1,1,1,1,1,1,1)\}$$ 
 
 and this set is called the partition of $7$. 
 
@@ -174,9 +172,9 @@ The [Online Encyclopedia of Integer Sequences (OEIS)](https://oeis.org/) describ
 
 Suppose a cage with four cells has the operation $72 \times$. There are $16$ multiplicative partitions of $72 = 2^3 \times 3^2$, 
 
-$\{(2,2,2,3,3),(2,2,2,9),(2,2,3,6),(2,2,18),(2,3,3,4),(2,3,12),$
-
-$(2,4,9),(2,6,6),(2,36),(3,3,8),(3,4,6),(3,24),(4,18),(6,12),(8,9),(72)\}$. 
+$$\{(2,2,2,3,3),(2,2,2,9),(2,2,3,6),(2,2,18),(2,3,3,4),\newline
+(2,3,12),(2,4,9),(2,6,6),(2,36),(3,3,8),\newline
+(3,4,6),(3,24),(4,18),(6,12),(8,9),(72)\}$$ 
 
 The three $2$'s could all go into separate cells, or two could go into one cell and the other in a different cell, or they could all go into the same cell. The $3$'s are similar, but there are only two of them. Looking at the list of multiplicative partitions of  $72$ it's easy to see that the only possible partitions in a $9 \times 9$ puzzle are $(2,2,2,9),(2,2,3,6)$, and $(2,3,3,4)$, but you'd need to generate the full list first to be sure. 
 
