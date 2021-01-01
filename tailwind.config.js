@@ -1,12 +1,21 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   important: true,
+  purge: ['./www/**/*.html'],
   theme: {
     screens: {
       sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
-      xxl: '1680px'
+      md: '1024px',
+      lg: '1280px'
+    },
+    colors: {
+      gray: colors.warmGray,
+      blue: colors.blue,
+      white: colors.white,
+      green: colors.green,
+      red: colors.red,
+      teal: colors.teal
     },
     listStyleType: {
       none: 'none',
@@ -21,7 +30,11 @@ module.exports = {
       },
     },
   },
-  variants: {}, 
+  variants: {
+    extend: {
+      borderWidth: ['hover', 'focus'],
+    }
+  }, 
   corePlugins: {
   },
   plugins: [

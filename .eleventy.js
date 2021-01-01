@@ -8,6 +8,7 @@ const markdownItImageLazyLoading = require("markdown-it-image-lazy-loading");
 const markdownItAnchor = require("markdown-it-anchor");
 const CleanCSS = require("clean-css");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = (eleventyConfig) => {
   // Markdown
@@ -20,12 +21,12 @@ module.exports = (eleventyConfig) => {
   const markdownLib = markdownIt(options)
     .use(markdownItAttrs)
     .use(markdownItFootnote)
-    .use(markdownItKatex)
+    .use(markdownItKatex, {strict: false})
     .use(markdownItImageLazyLoading)
     .use(markdownItAnchor, {
       permalink: true,
       permalinkSymbol: "#",
-      permalinkClass: "text-gray-400 no-underline",
+      permalinkClass: "text-gray-400 border-b-0  hover:border-b-2",
       permalinkBefore: true
     });
 
@@ -44,6 +45,7 @@ module.exports = (eleventyConfig) => {
 
   //Plugins
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(pluginRss);
 
   // Add Filters
   eleventyConfig.addFilter("cssmin", function (code) {
@@ -61,7 +63,7 @@ module.exports = (eleventyConfig) => {
       input: "src",
       output: "www",
     },
-    templateFormats: ["md", "html"],
+    templateFormats: ["md", "html", "njk"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",

@@ -1,25 +1,34 @@
 ---
 layout: default
-bodyClass: text-gray-800 bg-gray-200
+bodyClass: text-gray-700 bg-gray-50
+subClass: text-teal-100 bg-blue-900
+includeSubscription: true
 ---
 
-<main id="main">
-  <article class="post content-wrapper">
-    <div class="title mt-48 mb-24 text-center">
-      <h1 class="leading-tight">{{ title }}</h1>
+<main id="main" class="center-l mb-12">
+  <article class="stack-l post leading-relaxed">
+    <div class="title mt-24 mb-0">
+      <h1
+        class="leading-tighter text-5xl font-inter font-extrabold border-l-8 pl-4 -ml-6 border-gray-200"
+      >
+        {{ title }}
+      </h1>
       {% if subtitle %}
-      <p class="leading-tight mt-4 text-xl">
+      <p class="leading-tight mt-4 text-2xl font-inter">
+        <span class="sr-only">Subtitle:</span>
         {{ subtitle }}
       </p>
       {% endif %}
 
-      <p class="my-0 text-base text-gray-600">
+      <p class="text-base text-gray-600 font-inter max-w-none">
         <time datetime="{{ page.date | w3DateFilter }}"
           >{{ page.date | dateFilter }}</time
         >
         <span class="byline">&middot; {{ author }}</span>
       </p>
     </div>
-    {{ content | safe }}
+    {% if lede %}
+    <p class="lede mt-0">{{ lede }}</p>
+    {% endif %} {{ content | safe }}
   </article>
 </main>

@@ -58,7 +58,7 @@ So now it appears that 4 out of 100 or 4% are infected. Since we need to know th
 
 To find the number of tests required for a given infection rate $p$ means we need to find the value of $n$ that makes $T(n,p)$ the smallest.
 
-![Pool size for p = 7.5%](/assets/img/how-deep-is-the-pool/pool-size-p-seven-half.svg){.mx-auto}
+![Pool size for p = 7.5%](/assets/img/how-deep-is-the-pool/pool-size-p-seven-half.svg){.blend-multiply}
 
 ## Optimum pool sizes
 
@@ -70,13 +70,13 @@ for some value of $n$. That is, we're looking for the point on the curve where t
 
 Solving $\frac{dT}{dn} = 0$ for various values of $p$ gives this plot: ([python code here](https://gist.github.com/JanDW/2d555feb2967fd7fb3bb7525e03c2506))
 
-![Pool sizes](/assets/img/how-deep-is-the-pool/pool-sizes.svg){.mx-auto}
+![Pool sizes](/assets/img/how-deep-is-the-pool/pool-sizes.svg){.blend-multiply}
 
 shows that for infection rates above about 1% the pool sizes are less than 10 people, and by the time the positivity is above 5% the pool size needs to drop to 5 people or fewer.
 
 Once we have the optimal number of people per pool then for each infection probability $p$ we can calculate the number of required tests $T(n,p)$ shown here:
 
-![Tests required](/assets/img/how-deep-is-the-pool/tests-required.svg){.mx-auto}
+![Tests required](/assets/img/how-deep-is-the-pool/tests-required.svg){.blend-multiply}
 
 If you'd like a review of derivatives Grant Sanderson's ["Derivative formulas through geometry"](https://www.youtube.com/watch?v=S0_qX4VJhMQ) video is a very good start and is part of his [The Essence of Calculus](https://www.youtube.com/watch?v=WUvTyaaNkzM) series. A complete calculus course is also available from Khan Academy's [Calculus I](https://www.khanacademy.org/math/calculus-1). 
 
@@ -90,8 +90,8 @@ People ask to be tested because they don't feel well or think they may have been
 
 This shows that to make COVID-19 pool testing worthwhile the test will need to be very accurate and we'll need to test a lot of people even if they have no reason to think that they may be sick or have been exposed.
 
-<figure class="mt-12">
-  <iframe title="Embed" src="https://coronavirus.jhu.edu/embed/testing/state-data/testing_per_state_US.html" width="736" height="466" allowfullscreen="" frameborder="no" style="max-width: 100%"></iframe>
+<figure class="my-12">
+  <iframe title="Embed" src="https://coronavirus.jhu.edu/embed/testing/state-data/testing_per_state_US.html" width="736" height="466" allowfullscreen="" frameborder="no" style="max-width: 100%" class="panel"></iframe>
   <figcaption>
   <small class="text-gray-600">Visualization by <a href="https://coronavirus.jhu.edu/testing/individual-states" rel="external">John Hopkins University &amp; Medicine &middot; Coronavirus Resource Center</a></small>
   </figcaption>

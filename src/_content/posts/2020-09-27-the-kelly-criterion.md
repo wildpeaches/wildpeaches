@@ -2,12 +2,10 @@
 title: The Kelly Criterion
 subtitle: Information Theory Reimagined
 author: John Peach
+lede: Two mathematicians from MIT team up with a New Jersey mobster to take down a casino. 
 tags: [math]
 keywords: [Gambling, Statistics, Expectation, Optical Character Recognition]
 ---
-
-Two mathematicians from MIT team up with a New Jersey mobster to take down a casino. 
-
 ## Shannon and Kelly at Bell Labs
 
 Claude Shannon is known as "the father of information theory" for a paper he published in 1948, ["A Mathematical Theory of Communication."](http://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf) For his master's thesis at MIT, he showed that logical operators in electric circuits may by implemented using Boolean algebra. Without these two ideas, the digital information age could not exist.
@@ -18,9 +16,9 @@ John Kelly, Jr. was a mathematician from Texas who met Shannon when they both wo
 
 Shannon wanted to know how much information could be transmitted through a channel, where a channel is any form of communication media such as a telephone wire, a transmission from a satellite, or a wink from one spy to another at the ambassador's fancy cocktail party. Shannon considered it from the recipient's point of view, and wondered how much information could be obtained from a message sent through a noisy channel. 
 
-He considered it much like a game of [Twenty Questions](https://en.wikipedia.org/wiki/Twenty_Questions), where one person chooses an object and answers yes or no questions from the other players until one of them can name the object. Shannon wanted to know how many questions on average you might need to ask before you'd know the answer. Let's consider a simplified version where the item is a letter from the set ${A,B,C,D}$. The best strategy is to first ask, "Is it in the set $\{A,B\}$?". If the answer is yes, next ask if the letter is "A". If it's not in the set, ask if it's "C". You'll always get the right answer in two questions if the other player chooses randomly.
+He considered it much like a game of [Twenty Questions](https://en.wikipedia.org/wiki/Twenty_Questions), where one person chooses an object and answers yes or no questions from the other players until one of them can name the object. Shannon wanted to know how many questions on average you might need to ask before you'd know the answer. Let's consider a simplified version where the item is a letter from the set ${A,B,C,D}$. The best strategy is to first ask, "Is it in the set $\{A,B\}$?". If the answer is yes, next ask if the letter is $A$. If it's not in the set, ask if it's $C$. You'll always get the right answer in two questions if the other player chooses randomly.
 
-Now, let's say you're playing against your young nephew, Abner, who is just learning his alphabet and always carries his stuffed bear toy with him. Little Abner chooses "A" (for Abner) 50% of the time, "B" (for Bear) 25%, and splits the other choices "C" and "D" evenly at 12.5%. Once you figure this out, your best strategy is to ask if it's "A" first, then "B", then "C". In half the games, you'll be right on the first guess, and in another 25% you'll have "B" in two guesses. After that, to get "C" or "D" will only require one more question. The average number of questions is
+Now, let's say you're playing against your young nephew, Abner, who is just learning his alphabet and always carries his stuffed bear toy with him. Little Abner chooses $A$ (for Abner) 50% of the time, $B$ (for Bear) 25%, and splits the other choices $C$ and $D$ evenly at 12.5%. Once you figure this out, your best strategy is to ask if it's $A$ first, then $B$, then $C$. In half the games, you'll be right on the first guess, and in another 25% you'll have $B$ in two guesses. After that, to get $C$ or $D$ will only require one more question. The average number of questions is
 $$
 Q = 1 \times 0.5 + 2 \times 0.25 + 3 \times 0.25 = 1.75
 $$
@@ -47,7 +45,7 @@ $$
 &= 1.75
 \end{aligned}
 $$
-If a gambler has received some inside information he has an edge over the other gamblers. Suppose Aunt Mildred decides to get in on the game with Abner but doesn't realize he favors "A" and "B". You somehow convince Aunt Millie to bet on which one of you can get to the right answer first. On average you'll get it in 1.75 while she'll take 2 questions, so you've got an edge. Kelly used Shannon's entropy equation to calculate the optimal amount to bet when you know how much of an edge you have. 
+If a gambler has received some inside information he has an edge over the other gamblers. Suppose Aunt Mildred decides to get in on the game with Abner but doesn't realize he favors $A$ and $B$. You somehow convince Aunt Millie to bet on which one of you can get to the right answer first. On average you'll get it in 1.75 while she'll take 2 questions, so you've got an edge. Kelly used Shannon's entropy equation to calculate the optimal amount to bet when you know how much of an edge you have.
 
 ## The Kelly Criterion
 
@@ -114,7 +112,8 @@ $$
 
 If the product $p \times w > 1$ you can expect to win in the long run if you use the Kelly optimization. Here's an example where $p=1/2$ and $w = 3$. The [Python](https://www.anaconda.com/) function to plot this is [plotReturnRatio.py](https://gist.github.com/XerxesZorgon/33d4fb8d521a1508d52d0792a5c7204c).
 
-<img src="/assets/img/the-kelly-criterion/return-ratio.png" alt="Kelly Criterion" style="zoom:80%;" /> 
+
+![Graph plotting return ratio against bet fraction, maximum return is 1.0607.](/assets/img/the-kelly-criterion/return-ratio.png){.blend-multiply}
 
 The red dot is where the ratio reaches a maximum and happens when 
 $$
@@ -128,10 +127,7 @@ Notice for $b=0$ the return ratio is 1 meaning if you don't play you can't win. 
 
 Here's a [Monte Carlo](https://gist.github.com/XerxesZorgon/33d4fb8d521a1508d52d0792a5c7204c) experiment of the Kelly Criterion. By Monte Carlo, I mean the outcomes of each game are randomly chosen by the computer so it's very much like a real coin toss game. The values for $p$ and $w$ are still the same as before, but each outcome is unknown before the bet. I ran three different cases for the value of $b$. There's the optimal value of $b_{opt}=0.25$ and two other cases, Bet- and Bet+ where $b = b_{opt} \mp 0.05$. At the end of the experiment, the stash for the optimal case is \$361.1, but for the other two, it's only \$289 starting with an initial amount of just \$1. It's a little hard to see because the curves are wiggling around a lot, but there is quite a difference in the outcome. 
 
-<img src="/assets/img/the-kelly-criterion/kelly-monte-carlo.png" alt="Monte Carlo Kelly Experiment" style="zoom:80%;" />
-
-
-
+![Graph for Monte Carlo Kelly experiment.](/assets/img/the-kelly-criterion/kelly-monte-carlo.png){.blend-multiply}
 ## Breaking the bank
 
 Claude Shannon left Bell Labs to become chairman of the Mathematics Department at MIT. One day a junior faculty member, Ed Thorp, asked Shannon for help getting a paper published. Roger Baldwin, a mathematician working at the Army's Aberdeen Proving Ground in Aberdeen, MD along with three associates, used an Army computer to calculate the odds when playing blackjack. The computer was supposed to calculate the ballistic trajectories of gunnery shells, but they took advantage of downtimes at night and discovered that by playing an optimal game the house odds could be brought down to just 0.62. 

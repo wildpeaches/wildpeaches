@@ -1,0 +1,24 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+pre,
+code,
+figcaption {
+ max-width: 55ch;
+}
+
+/* h1 {@apply text-center;} */
+
+table {
+  @apply text-base;
+}
+
+
+pre {
+  overflow-x: scroll;
+}

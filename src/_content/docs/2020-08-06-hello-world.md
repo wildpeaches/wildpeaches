@@ -88,38 +88,38 @@ HTML does just fine embedded in markdown. Here's a table. It's not very useful.
   </thead>
   <tbody class="divide-y divide-gray-300">
     <tr>
-      <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-300">
+      <td class="px-6 py-4 whitespace-nowrap border-b border-gray-300">
         Answer
       </td>
-      <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+      <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200">
         <div class="text-sm leading-5 text-gray-900">Amazingly Accurate Answer to Life,</div>
         <div class="text-sm leading-5 text-gray-500">the Universe and Everything</div>
       </td>
-      <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-right">
+      <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200 text-right">
         42
       </td> 
     </tr>
     <tr>
-      <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-300">
+      <td class="px-6 py-4 whitespace-nowrap border-b border-gray-300">
         Answer
       </td>
-      <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+      <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200">
         <div class="text-sm leading-5 text-gray-900">Amazingly Accurate Answer to Life,</div>
         <div class="text-sm leading-5 text-gray-500">the Universe and Everything</div>
       </td>
-      <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-right">
+      <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200 text-right">
         42
       </td> 
     </tr>
     <tr>
-      <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-300">
+      <td class="px-6 py-4 whitespace-nowrap border-b border-gray-300">
         Answer
       </td>
-      <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+      <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200">
         <div class="text-sm leading-5 text-gray-900">Amazingly Accurate Answer to Life,</div>
         <div class="text-sm leading-5 text-gray-500">the Universe and Everything</div>
       </td>
-      <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-right">
+      <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200 text-right">
         42
       </td> 
     </tr>
