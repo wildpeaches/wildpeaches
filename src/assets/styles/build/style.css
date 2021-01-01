@@ -19160,18 +19160,9 @@ video {
   color: rgba(19, 78, 74, var(--tw-text-opacity)) !important;
 }
 
-<<<<<<< HEAD
-.post > .katex-block {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  overflow-x: scroll;
-=======
 .focus\:text-gray-50:focus{
   --tw-text-opacity: 1 !important;
   color: rgba(250, 250, 249, var(--tw-text-opacity)) !important;
->>>>>>> dev
 }
 
 .focus\:text-gray-100:focus{
@@ -25075,6 +25066,7 @@ h1 {
   margin-bottom: 2.5rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  overflow-x: scroll;
 }
 
 .post .katex * {
