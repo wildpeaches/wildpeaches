@@ -96,36 +96,47 @@ Any of the partitions of $20$ that aren't $4$ long can be eliminated. Since all 
 
 In PARI/GP the partitions of a target integer $t$ can be stored in a vector,
 
-`v = partions(t);`
+```clike
+v = partions(t);
+```
 
 and the number of partitions as
 
-`np = numbpart(t);`
+```clike
+np = numbpart(t);
+```
 
 Semi-colons at the end of lines suppress the output in the command window and separate lines in a function. 
 
 To filter out the partitions that don't meet the requirements of a cage, we need to check each partition vector to see if the length is the size of the cage, $c$,
 
-`length(v) == c`
+```clike
+length(v) == c
+```
 
 and the maximum value of $v$ is less than the size of the puzzle, $n$,
 
-`vecmax(v) <= n`
+```clike
+vecmax(v) <= n
+```
 
 If the input parameter $u$ has been set to $1$ (true) then we need to check that all entries in $v$ are unique. Sets in PARI/GP are defined to have unique values, so simply converting $v$ to a set and then back to a vector removes duplicates,
 
-`u = Vec(Set(v));`
+```clike
+u = Vec(Set(v));
+```
 
 Then, if the length of $u$ is the same as the length of $v$ we know that $v$ contains all unique entries,
 
-`length(v) == length(unique(v));`
+```clike
+length(v) == length(unique(v));
+```
 
 where the `unique` function is defined as
 
-`unique(v) = 
-{
-	u = Vec(Set(v));
-}`
+```clike
+unique(v) = {u = Vec(Set(v));}
+```
 
 Functions are given names (in this case, `unique`), and the code is contained within curly braces. The value returned is either the last value calculated (`u`) or explicitly as `Return(u)`.
 
@@ -141,7 +152,9 @@ In the function `sumPart`, the inputs are `t,c,n,u,e`. Setting `u=1` and `e=[]` 
 
 In the middle section where the partitions are filtered the first line is
 
-`P = [];`
+```clike
+P = [];
+```
 
 which creates the empty vector `P`. Next, the function loops over all `np` partitions, and if it finds one that satisfies the requirements, it concatenates the vector `v[k]` to `P`. The function `kFilt` returns true or false, so the `if` statement checks if `kFilt` is true and if it is, it does the concatenation. If you want something done when `kFilt` is false, put another comma in after `P = concat(P,v[k])` and write the code for the false condition. 
 
@@ -149,16 +162,22 @@ Comments are started with double backslashes, `\\` and block comments contained 
 
 Let's try it out. Click on the links above to get the code, save the files to a local folder, and start PARI/GP in that folder. In PARI/GP type,
 
-`gp> \r sumPart `
+```clike
+gp> \r sumPart 
+```
 
 The `\r` command loads an external function, and PARI/GP will print the entire function when it loads. To find partitions for the cage with $20+$, run
 
-`sumPart(20,4,9,1,[8,9]);`
+```clike
+sumPart(20,4,9,1,[8,9]);
+```
 
 which should return
 
-`[2, 5, 6, 7]
-[3, 4, 6, 7]`.
+```clike
+[2, 5, 6, 7]
+[3, 4, 6, 7]
+```
 
 Instead of searching through 627 possible partitions, we only need to consider two of them. These functions are available on GitHub along with the dependent functions [unique and isunique](https://gist.github.com/XerxesZorgon/409a0cc6364333381d38496591db8627).
 
@@ -190,9 +209,13 @@ The last case assumes that at least one cage dimension is less than or equal to 
 
 To load the two KenKen helper functions, at the *gp* prompt type 
 
-`\r sumPart`
+```clike
+\r sumPart
+```
 
-`\r multPart`
+```clike
+\r multPart
+```
 
 which will give you access to the functions `sumPart`, `multPart`, `mnumbpart`, `mpartitions`, `kFilt`, and `unique` at the PARI/GP command prompt. 
 
@@ -206,11 +229,9 @@ It might be possible to write an extension for PARI/GP in [VSCode](https://code.
 
 And now it's time to present the revised list of things you absolutely don't want to do:
 
-* #3 Play endless games of KenKen
-* #2 Learn number theory
+1. Play endless games of KenKen
+1.  Learn number theory
+1. Writing an editor/debugger for PARI/GP.
+{reversed}
 
-and the winner is
-
-* #1 Writing an editor/debugger for PARI/GP.
-
-Let me know when it's ready.
+We have a winner. Let me know when it's ready.
