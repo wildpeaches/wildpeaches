@@ -12,7 +12,7 @@ Tetsuya Miyamoto (宮本 哲也), a Japanese mathematics teacher invented KenKen
 
 Miyamoto told [Device Plus](https://www.deviceplus.com/others/interviews/kenken-puzzle-inventors-tips-for-engineers/), "Some would say the most important thing in mathematics is calculation. You memorize the formulas and calculate to solve a problem. In my opinion, there is much more than just calculation. I think the process of challenging yourself with different questions and struggling to figure out solutions on your own is what makes solving any kind of problems more fun and meaningful. This is the reason why I never step in to help my students solve puzzles, because I do not want to risk taking away their invaluable learning experiences."
 
-![Tetsuya Miyamoto](/assets/img/kenken/tetsuya-miyamoto.svg)
+![Tetsuya Miyamoto](/assets/img/put-another-kenken-on-the-barbie/tetsuya-miyamoto.svg)
 
 His approach to challenges is, "I make a list of things I do not like to do and I pick one from the list that I absolutely do not want to do. Then, I set a date and get it done." 
 
@@ -26,7 +26,7 @@ Your list might be different.
 
 If you've played [Sudoku](https://www.websudoku.com/), you know that the game is a $9 \times 9$ grid of cells where the cells must be filled with the integers $1 - 9$ such that each digit appears exactly once in each row, column, and $3 \times 3$ block. [KenKen](http://www.kenkenpuzzle.com/) is similar, but Miyamoto added an intriguing twist. 
 
-![KenKen puzzle](/assets/img/kenken/KenKen-puzzle.svg)
+![KenKen puzzle](/assets/img/put-another-kenken-on-the-barbie/KenKen-puzzle.svg)
 
 Instead of square blocks, the board is divided into irregularly shaped cages, outlined in black. Each cage has a number in the upper left square and an arithmetic operator $(+ - \times \div)$. For example, in this puzzle, the cage in the upper left corner is $1 \times 2$ with $1-$ indicating that the difference between the two numbers must be $1$. You could enter $9,8$ or $8,9$ or any other pair that differs by one. The order doesn't matter except that you need to satisfy the rules of Sudoku by having one of each digit in every row and column. 
 
@@ -60,7 +60,7 @@ $$
 $$
 You have to be careful with this one because a $1$, $3$, $5$, or $9$ could appear in each row if it's in two different columns. One possible solution might be
 
-![Solution 4050](/assets/img/kenken/solution-4050.svg)
+![Solution 4050](/assets/img/put-another-kenken-on-the-barbie/solution-4050.svg)
 
 How can we find all of the partitions? Let's take a look at the PARI/GP computer algebra language.
 
@@ -74,17 +74,17 @@ Download the latest version of PARI/GP [here](https://pari.math.u-bordeaux.fr/do
 
 Besides the languages that come with Notepad++, there is a collection of [User Defined Languages (UDL)](https://github.com/notepad-plus-plus/userDefinedLanguages) ([list here](https://github.com/notepad-plus-plus/userDefinedLanguages/blob/master/udl-list.md)), and the PARI/GP definition is available [here](https://github.com/notepad-plus-plus/userDefinedLanguages/blob/master/UDLs/PARI-GP_by-third_maths.xml). Click on "Raw", copy the text into a new tab in Notepad++, and save it as "PariGP.xml" in the UDL folder. Now click on <u>L</u>anguage $\rightarrow$ User Defined Language $\rightarrow$ Define your language... which opens a dialog box. Click on Import... and navigate to the UDL folder. Select PariGP.xml and open it. If you click on <u>L</u>anguage again, you should see a dot next to User-defined at the bottom indicating that the PARI/GP lexer has been loaded. The Notepad++ user manual contains the [complete instructions](https://npp-user-manual.org/docs/user-defined-language-system/) for working with UDLs. 
 
-![PARI_GP UDL](/assets/img/kenken/PARIGP-UDL.svg)
+![PARI_GP UDL](/assets/img/put-another-kenken-on-the-barbie/PARIGP-UDL.svg)
 
 ## The PARI/GP Command Window
 
 Start PARI/GP by clicking on the desktop icon (because you're one of the cool kids). It should look something like this:
 
-![PariGP Command Window](/assets/img/kenken/PariGP-command-window.svg)
+![PariGP Command Window](/assets/img/put-another-kenken-on-the-barbie/PariGP-command-window.svg)
 
 The command prompt `gp >` is where you interact directly with the PARI engine. PARI understands all of the basic mathematical expressions as well as many specific to number theory. If you type `numbpart(20)` at the prompt PARI will return 627, the number of arithmetic partitions of 20. Enter `partitions(5)` to get a list of the partitions of $5$.
 
-![Partitions](/assets/img/kenken/Partitions.svg)
+![Partitions](/assets/img/put-another-kenken-on-the-barbie/Partitions.svg)
 
 You might find it handy to have the [PARI/GP Reference Card](http://math.mit.edu/~brubaker/PARI/PARIrefcard.pdf) open in a browser window to quickly look up the commands, or the [available functions by category](https://pari.math.u-bordeaux.fr/dochtml/html-stable/), which is more current. The `partitions` function is in the Combinatorics section.
 
@@ -142,11 +142,41 @@ Functions are given names (in this case, `unique`), and the code is contained wi
 
 Putting it all together, you can write the function [`sumPart`](https://gist.github.com/XerxesZorgon/472509428d4e8b4b48bbd89fda8549b5) in Notepad++ (save with the extension *.gp* to get syntax highlighting)
 
-![sumPart](/assets/img/kenken/sumPart.svg)
+```clike
+sumPart(t,c,n,u=1,e=[]) = 
+{
+  \\ List of all additive partitions
+  v = partitions(t);
+  np = numbpart(t);
+  
+  \\ Select partitions meeting input requirements
+  P = [];
+  for(k = 1,np,
+    if(kFilt(v[k],c,n,u,e),P = concat(P,[v[k]]))
+  );
+  
+  \\ Print partitions
+  for(k = 1,length(P),
+    print(Vec(P[k]))
+  );
+  
+  return(P)
+  
+}
+```
+
 
 and the filtering function [`kFilt`](https://gist.github.com/XerxesZorgon/3b73557826369e217ab30c1b5f84448a)
 
-![kFilt](/assets/img/kenken/kFilt.svg)
+```clike
+kFilt(v,c,n,u=1,e=[]) = 
+{
+	length(v) == c &   
+	vecmax(v) <= n & 
+	if(u,isunique(v),1) & 
+	length(setintersect(Set(v),Set(e))) == 0;
+}
+```
 
 In the function `sumPart`, the inputs are `t,c,n,u,e`. Setting `u=1` and `e=[]` means that the default value for `u` is true, and the default value for `e` is empty. This means that if there is a cage contained in a row or column and you haven't eliminated any entries yet, you need only supply `sumPart` with the input parameters `t,c,n`.
 
@@ -187,7 +217,7 @@ Instead of searching through 627 possible partitions, we only need to consider t
 
 The [Online Encyclopedia of Integer Sequences (OEIS)](https://oeis.org/) describes a [multiplicative partition function](https://oeis.org/A001055) as the number of ways of factoring $n$ with all factors greater than $1$. This is a pin plot of the [number of partitions](https://oeis.org/A001055/graph) for each integer up to 200:
 
-![Pin plot A001055](/assets/img/kenken/pin-plot-A001055.svg)
+![Pin plot A001055](/assets/img/put-another-kenken-on-the-barbie/pin-plot-A001055.svg){.panel .py-4}
 
 Suppose a cage with four cells has the operation $72 \times$. There are $16$ multiplicative partitions of $72 = 2^3 \times 3^2$, 
 
@@ -203,7 +233,22 @@ PARI/GP doesn't have a multiplicative equivalent of the function `numbpart`, but
 
 With these two functions for multiplicative partitions, we can write a function called [`multPart`](https://gist.github.com/XerxesZorgon/42efdcda67fecf266d03534e50d9098c) that will work like `sumPart` does for additive partitions for KenKen. The only difference is that with multiplicative partitions we need to be able to include $1$'s in the set of possible solutions. To do this, find all of the possible partitions with cage size $c$, then append a $1$ to solutions with length $c-1$, and if the cage spans multiple rows or columns, append two $1$'s  to solutions with length $c-2$.
 
-![multPart_snip](/assets/img/kenken/multPart_snip.svg)
+```clike
+\\ Select partitions meeting input requirements
+P = [];
+for(k = 1,np,
+  \\ Select all solutions with cage length c
+  if(kFilt(v[k],c,n,u,e),P = concat(P,[v[k]]));
+  
+  \\ Select solutions with cage length c-1 and include one 1
+  if(kFilt(v[k],c-1,n,u,e),P = concat(P,[concat(1,v[k])]));
+  
+  \\ If uniqueness is not required, allow two 1's
+  if( u == 0, 
+    if(kFilt(v[k],c-2,n,u,e),P = concat(P,[concat([1,1],v[k])]));
+  );				
+);
+```
 
 The last case assumes that at least one cage dimension is less than or equal to two. 
 
@@ -230,7 +275,7 @@ It might be possible to write an extension for PARI/GP in [VSCode](https://code.
 And now it's time to present the revised list of things you absolutely don't want to do:
 
 1. Play endless games of KenKen
-1.  Learn number theory
+1. Learn number theory
 1. Writing an editor/debugger for PARI/GP.
 {reversed}
 
