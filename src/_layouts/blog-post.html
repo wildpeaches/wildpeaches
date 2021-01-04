@@ -8,20 +8,19 @@ includeSubscription: true
 <main id="main" class="center-l mb-12">
   <article class="stack-l post leading-relaxed">
     <div class="title mt-24 mb-0 flex flex-col">
-      <div class="order-2">
-        <h1
-          class="leading-tighter text-5xl font-inter font-extrabold border-l-8 pl-4 -ml-6 border-gray-200"
-        >
-          {{ title }}
-        </h1>
-        {% if subtitle %}
-        <p class="leading-tight mt-4 text-2xl font-inter">
-          <span class="sr-only">Subtitle:</span>
-          {{ subtitle }}
-        </p>
-        {% endif %}
-      </div>
-      <p class="text-base text-gray-600 font-inter max-w-none order-1">
+      <h1
+        class="leading-tighter text-5xl font-inter font-extrabold border-l-8 pl-4 -ml-6 border-gray-200"
+      >
+        {{ title }}
+      </h1>
+      {% if subtitle %}
+      <p class="leading-tight mt-4 text-2xl font-inter">
+        <span class="sr-only">Subtitle:</span>
+        {{ subtitle }}
+      </p>
+      {% endif %}
+
+      <p class="text-base text-gray-600 font-inter max-w-none order-first">
         <time datetime="{{ page.date | w3DateFilter }}"
           >{{ page.date | dateFilter }}</time
         >
