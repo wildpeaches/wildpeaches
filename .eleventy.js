@@ -1,3 +1,4 @@
+require("dotenv").config();
 const dateFilter = require("./src/filters/date-filter");
 const w3DateFilter = require("./src/filters/w3-date-filter");
 const markdownIt = require("markdown-it");
