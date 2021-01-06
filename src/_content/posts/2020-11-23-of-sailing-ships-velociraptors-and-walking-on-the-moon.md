@@ -2,7 +2,10 @@
 title: Of Sailing Ships, Velociraptors, and Walking on the Moon 
 subtitle: Catamaran Parameters in SMath Studio
 author: John Peach
-lede: How are boats, velociraptors, and walking on the Moon related? We'll find out by designing a catamaran and making a mistake. 
+lede: How are boats, velociraptors, and walking on the Moon related? We'll find out by designing a catamaran and making a mistake.
+hero:
+  url: "/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/hero-image.jpg"
+  alt: "Illustration of a velociraptor walking on the moon with a sailing ship in the background."
 tags: [math]
 keywords: [hull design, units]
 ---

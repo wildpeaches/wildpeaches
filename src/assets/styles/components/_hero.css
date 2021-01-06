@@ -1,0 +1,30 @@
+.hero {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: 0;
+  background: #000;
+}
+
+.hero__wrapper {
+  display: grid;
+}
+
+.hero__wrapper > img {
+  object-fit: cover;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  max-width: 100vmin;
+  grid-area: 1/1/1/1;
+}
+
+.hero__overlay {
+  background-color: hsla(0, 0%, 0%, 0.3);
+  grid-area: 1/1/1/1;
+}
+
+.hero__masthead {
+  color: #fff;
+  margin: 0 auto;
+  grid-area: 1/1/1/1;
+  align-self: end;
+}
