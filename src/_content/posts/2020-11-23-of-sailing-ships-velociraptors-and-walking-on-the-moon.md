@@ -123,14 +123,14 @@ Lucky guess! This is exactly the value Terho Halme chose for the example. Values
 ![Waterplane coefficient](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/waterplane-coefficient.svg)
 
 The final design parameter is the length to beam ratio, $LBRC$, which is the ratio of the overall length to the distance between hull centers or centerline beam,
-$$
-LRBC = \frac{L_H}{B_{CB}}.
-$$
 
+$$
+LBRC = \frac{L_H}{B_{CB}}.
+$$
 
  ![Two hulls top view](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/two-hulls-top-view.svg)
 
-A high value of $LRBC$ means $B_{CB}$ is small relative to the length and will reduce transverse stability, possibly leading to capsize. Low values mean that the boat will be wider and heavier, but able to carry more sail area. For this example, set $LRBC = 2.2$.
+A high value of $LBRC$ means $B_{CB}$ is small relative to the length and will reduce transverse stability, possibly leading to capsize. Low values mean that the boat will be wider and heavier, but able to carry more sail area. For this example, set $LBRC = 2.2$.
 
 Your SMath Studio worksheet should look something like this:
 
