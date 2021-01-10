@@ -3,6 +3,9 @@ title: Marylin and The Goats
 subtitle: Mathematicians fooled by probability, an R experiment to show why they're wrong
 author: John Peach
 lede: Controversial Ask Marylin column about the Monty Hall problem solved. 
+hero:
+ url: /assets/img/marylin-and-the-goats/men-who-stare-at-goats.jpg
+ alt: Still from The Men Who Stare at Goats (movie).
 tags: [math]
 keywords: [probability, simulation, R language]
 ---
@@ -63,13 +66,13 @@ In her column, Marylin said that you should always switch doors. Then the letter
 
 First, you pick a door, any door. Suppose you pick a door with a goat. Then Monty will show you the other goat, and you should switch to the third door. If you pick the door with the car, Monty shows you one of the goats and you shouldn't switch. Since you don't know what's behind the door you initially selected, let's follow Marylin's logic of always switching.
 
-![goat-analysis](/assets/img/marylin-and-the-goats/goat-analysis.svg)
+![Diagram stepping through each scenario, revealing car as outcome 2/3 of the time.](/assets/img/marylin-and-the-goats/goat-analysis-emoji.png)
 
 If you happen to pick a door with a goat, then by switching you end up with the car. Two-thirds of the time you'll be randomly choosing a door with a goat, so by switching you have a $2/3$ chance of getting the car. On the other hand, if you don't switch, you'll get your first choice (the first column) and wind up with the goat two out of three times. What Scott Smith, Ph.D., University of Florida gets wrong is that the chances are fixed after your initial selection. The host always shows you a goat and that doesn't change the odds, it just changes which door you should choose next.
 
 Maybe some people were confused by the last branch where you pick the door with the car and then there's a split depending on which goat Monty chooses. Another way to look at it is that you'll choose the top branch here with probability $2/3$ and the bottom branch with probability $1/3$:
 
-![goat-analysis2](/assets/img/marylin-and-the-goats/goat-analysis2.svg)
+![goat-analysis2](/assets/img/marylin-and-the-goats/goat-analysis-emoji-2.png)
 
 Could you improve your odds of winning the car by randomly choosing to switch or not? Suppose you decide to switch with probability $p$. Then the odds of winning that shiny red car become 
 $$
