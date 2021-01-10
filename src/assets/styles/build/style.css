@@ -24369,7 +24369,7 @@ table {
   line-height: 1.5rem;
 }
 
-pre {
+pre, .table-wrapper {
   overflow-x: scroll;
 }
 

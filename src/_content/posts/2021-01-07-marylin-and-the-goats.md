@@ -91,7 +91,7 @@ Another way to simulate the Monty Hall puzzle is with a pair of dice. You could 
 
 This is what I got after 52 rolls. There are 34 wins, meaning by switching I got the car 65% of the time.
 
-<div class="full-bleed my-16">
+<div class="table-wrapper full-bleed my-16">
 
 | Car  | Chosen | Win   | Car  | Chosen | Win   | Car  | Chosen | Win   | Car  | Chosen | Win   |
 | ---- | ------ | ----- | ---- | ------ | ----- | ---- | ------ | ----- | ---- | ------ | ----- |

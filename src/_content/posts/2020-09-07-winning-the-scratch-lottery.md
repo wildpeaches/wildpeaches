@@ -34,7 +34,7 @@ In this formulation, if $E[x] > 0$ you make money on average, while if the value
 
 Below is an example of the odds and payoffs for each possible winning combination from [Delaware](https://www.delottery.com/Content/images/instant-lottery/instant-details/DE192OSB_V12_05032020.jpg) (slightly different from my card). It's easy to calculate the expectation using Excel. I made a spreadsheet with columns for the payoff amount (Win), the odds, the probability, and the expected value for that combination. I also calculated the adjusted probability and adjusted expectation. I'll explain those in a bit. 
 
-<div class="full-bleed my-16">
+<div class="table-wrapper full-bleed my-16">
 
 | Win  | Odds  | Probability | Expectation | Adjusted Prob | Adjusted Exp |
 |-----:|------:|------------:|------------:|--------------:|-------------:|
