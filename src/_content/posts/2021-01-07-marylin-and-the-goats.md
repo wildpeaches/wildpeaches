@@ -32,7 +32,7 @@ In 1990 a reader of the *Ask Marylin* column wrote, "Suppose you're on a game sh
 
 In 1975 Steve Selvin, a statistician at UC Berkeley, presented the same problem to the *American Statistician*, calling it *The Monty Hall Problem* from the game show *Let's Make a Deal*. 
 
-![game-show](/assets/img/marylin-and-the-goats/game-show.png)
+![game-show](/assets/img/marylin-and-the-goats/game-show.jpg)
 
 Monty Hall is required by the game rules to 
 
