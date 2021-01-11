@@ -8,7 +8,7 @@ hero:
  alt: Still from The Men Who Stare at Goats (movie).
 tags: [math]
 keywords: [probability, simulation, R language]
-socialImage: /assets/img/marylin-and-the-goats/game-show.jpg
+socialImg: /assets/img/marylin-and-the-goats/game-show.jpg
 ---
 
 > Throw out your gold teeth and see how they roll;

@@ -5,6 +5,7 @@ lede: If you like Sudoku, you'll love KenKen!
 author: John Peach
 tags: [math]
 keywords: [KenKen, Pari/GP, Integer Partitions, Number theory]
+socialImg: /assets/img/put-another-kenken-on-the-barbie/tetsuya-miyamoto.jpg
 ---
 ## Tetsuya Miyamoto
 
@@ -12,7 +13,7 @@ Tetsuya Miyamoto (宮本 哲也), a Japanese mathematics teacher invented KenKen
 
 Miyamoto told [Device Plus](https://www.deviceplus.com/others/interviews/kenken-puzzle-inventors-tips-for-engineers/), "Some would say the most important thing in mathematics is calculation. You memorize the formulas and calculate to solve a problem. In my opinion, there is much more than just calculation. I think the process of challenging yourself with different questions and struggling to figure out solutions on your own is what makes solving any kind of problems more fun and meaningful. This is the reason why I never step in to help my students solve puzzles, because I do not want to risk taking away their invaluable learning experiences."
 
-![Tetsuya Miyamoto](/assets/img/put-another-kenken-on-the-barbie/tetsuya-miyamoto.svg)
+![Tetsuya Miyamoto](/assets/img/put-another-kenken-on-the-barbie/tetsuya-miyamoto.jpg)
 
 His approach to challenges is, "I make a list of things I do not like to do and I pick one from the list that I absolutely do not want to do. Then, I set a date and get it done." 
 

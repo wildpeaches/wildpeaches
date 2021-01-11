@@ -1,4 +1,4 @@
-{% set pageTitle = title + ' - ' + site.name %}
+{% set pageTitle = title + ' – ' + site.name %}
 
 {# We don't want any duplication. This is likely for the homepage #}
 {% if site.name === title %} 
@@ -15,7 +15,13 @@
 {% endif %}
 
 {% if not metaDesc %}
-  {% set metaDesc = summary %}
+  {% if subtitle %}
+    {% set metaDesc = subtitle %}
+  {% elseif lede %}  
+    {% set metaDesc = lede %}
+  {% else %}
+    {% set metaDesc = site.tagline %}
+  {% endif %}
 {% endif %}
 
 
@@ -27,10 +33,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ currentUrl }}" />
 
-{% if socialImage %}
+{% if socialImg %}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="{{ site.url + socialImage }}" />
-  <meta name="twitter:image" content="{{ site.url + socialImage }}" />
+  <meta property="og:image" content="{{ site.url + socialImg }}" />
+  <meta name="twitter:image" content="{{ site.url + socialImg }}" />
   <meta property="og:image:alt" content="Page image for {{ site.name }}" />
   <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
 {% endif %}

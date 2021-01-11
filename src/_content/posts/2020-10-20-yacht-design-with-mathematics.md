@@ -5,6 +5,7 @@ author: John Peach
 lede: I'll show you how to design a yacht hull with five Bezier curves and a homotopy. I'll demonstrate how to make a scale model of your boat. Becoming a pirate and sailing the seven seas is left as an exercise to the reader.
 date: 2020-10-19
 tags: [math, yacht design, homotopies, octave, geogebra, delftship]
+socialImg: /assets/img/yacht-design-with-mathematics/cutter-valkyrie.jpg
 ---
 
 > A ship in harbor is safe, but that is not what ships are built for.
@@ -15,7 +16,7 @@ tags: [math, yacht design, homotopies, octave, geogebra, delftship]
 
 Historically, yacht designers drew the outlines of boats on their drafting boards with [French curves](https://www.draftingsteals.com/catalog-drafting---drawing-aides-curves-french-curve-sets.html), [irregular curves](https://www.engineersupply.com/Alvin-1010-24-14-Transparent-Irregular-Curve.aspx), and [weighted battens (or spline weights)](https://edsonmarine.com/products/boating-accessories/spline-weights/). This method produced beautiful boats, such as the British cutter Valkyrie II, the 1893 America's Cup challenger.   
 
-![Valkyrie II yacht](/assets/img/yacht-design-with-mathematics/cutter-valkyrie.svg)
+![Valkyrie II yacht](/assets/img/yacht-design-with-mathematics/cutter-valkyrie.jpg)
 
 
 

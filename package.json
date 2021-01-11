@@ -46,6 +46,7 @@
     "@11ty/eleventy-plugin-rss": "^1.0.9",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
     "@iktakahiro/markdown-it-katex": "^4.0.1",
+    "@jamshop/eleventy-filter-dump": "^1.0.2",
     "clean-css-cli": "^4.3.0",
     "csscomb": "^4.3.0",
     "cssnano": "^4.1.10",

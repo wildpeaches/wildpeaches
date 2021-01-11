@@ -1,6 +1,7 @@
 require("dotenv").config();
 const dateFilter = require("./src/filters/date-filter");
 const w3DateFilter = require("./src/filters/w3-date-filter");
+const dumpFilter = require("@jamshop/eleventy-filter-dump");
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const markdownItFootnote = require("markdown-it-footnote");
@@ -55,6 +56,7 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter("dateFilter", dateFilter);
   eleventyConfig.addFilter("w3DateFilter", w3DateFilter);
+  eleventyConfig.addFilter("dump", dumpFilter);
 
   return {
     dir: {

@@ -8,6 +8,8 @@ hero:
   alt: "Illustration of a velociraptor walking on the moon with a sailing ship in the background."
 tags: [math]
 keywords: [hull design, units]
+eleventyComputed:
+  socialImg: "{{ hero.url }}"
 ---
 
 > In 18 hundred and 59, the engineer Brunel,
