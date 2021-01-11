@@ -44,23 +44,37 @@ Should you stick with your original choice of Door #1, or switch to Door #2?
 
 In her column, Marylin said that you should always switch doors. Then the letters poured in 10,000 of them and 1,000 of those from Ph.D. statisticians and mathematicians. 
 
-> *You blew it, and you blew it big! Since you seem to have difficulty grasping the basic principle at work here, I’ll explain. After the host reveals a goat, you now have a one-in-two chance of being correct. Whether you change your selection or not, the odds are the same. There is enough mathematical illiteracy in this country, and we don’t need the world’s highest IQ propagating more. Shame!*
->—Scott Smith, Ph.D., University of Florida
->
-> *I am sure you will receive many letters on this topic from high school and college students. Perhaps you should keep a few addresses for help with future columns.*
->—W. Robert Smith, Ph.D., Georgia State University
->
-> *You are utterly incorrect about the game show question, and I hope this controversy will call some public attention to the serious national crisis in mathematical education. If you can admit your error, you will have contributed constructively towards the solution of a deplorable situation. How many irate mathematicians are needed to get you to change your mind?*
->—E. Ray Bobo, Ph.D., Georgetown University
->
-> *You made a mistake, but look at the positive side. If all those Ph.D.’s were wrong, the country would be in some very serious trouble.*
->—Everett Harman, Ph.D., U.S. Army Research Institute
->
-> *May I suggest that you obtain and refer to a standard textbook on probability before you try to answer a question of this type again?*
->—Charles Reid, Ph.D., University of Florida
->
-> *You are the goat!*
-> —Glenn Calkins, Western State College
+<div class="lg:letter my-12">
+
+*You blew it, and you blew it big! Since you seem to have difficulty grasping the basic principle at work here, I’ll explain. After the host reveals a goat, you now have a one-in-two chance of being correct. Whether you change your selection or not, the odds are the same. There is enough mathematical illiteracy in this country, and we don’t need the world’s highest IQ propagating more. Shame!*
+—Scott Smith, Ph.D., University of Florida
+
+---
+
+*I am sure you will receive many letters on this topic from high school and college students. Perhaps you should keep a few addresses for help with future columns.*
+—W. Robert Smith, Ph.D., Georgia State University
+
+---
+
+*You are utterly incorrect about the game show question, and I hope this controversy will call some public attention to the serious national crisis in mathematical education. If you can admit your error, you will have contributed constructively towards the solution of a deplorable situation. How many irate mathematicians are needed to get you to change your mind?*
+—E. Ray Bobo, Ph.D., Georgetown University
+
+---
+
+*You made a mistake, but look at the positive side. If all those Ph.D.’s were wrong, the country would be in some very serious trouble.*
+—Everett Harman, Ph.D., U.S. Army Research Institute
+
+---
+
+*May I suggest that you obtain and refer to a standard textbook on probability before you try to answer a question of this type again?*
+—Charles Reid, Ph.D., University of Florida
+
+---
+
+*You are the goat!*
+—Glenn Calkins, Western State College
+
+</div>
 
 ## Goat Analysis
 
