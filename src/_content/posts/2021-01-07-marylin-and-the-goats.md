@@ -19,13 +19,15 @@ keywords: [probability, simulation, R language]
 
 Marylin is very smart, maybe the smartest person in the world. She has written short stories, magazine and newspaper articles, and more than 20 books. She became financially independent by investing in stocks and real estate, and in 1985 was listed in *The Guinness Book of World Records* as the person with the highest IQ in the world with an IQ of 228. She took her mother's name, vos Savant as her last name, and on August 23, 1987, she married Robert Jarvik, who developed the Jarvik-7 artificial heart. She is also a descendent of the physicist Ernst Mach, sometimes going by Marylin Mach vos Savant.
 
-![marilyn-vos-savant](/assets/img/marylin-and-the-goats/marilyn-vos-savant.jpg)
+
+<div class="flex items-center p-2 my-0 font-inter text-2xl font-semibold p-8">
+  <img src="/assets/img/marylin-and-the-goats/marilyn-vos-savant.jpg" alt="Marilyn vos Savant." class="rounded-full w-36 mr-8">
+  <div>
+    <p style="text-indent: -.5ch"><span class="italic">"To acquire knowledge, one must study; but to acquire wisdom, one must observe."</span><br><span class="text-gray-500 inline-block font-medium mt-2">—Marylin vos Savant</span></p>
+  </div>
+</div>
 
 In 1986, Parade Magazine published a profile of her, and it was so popular that they asked her to write a weekly column, [*Ask Marylin*](https://parade.com/tag/ask-marilyn/). The IQ test that made her famous was written by philosopher [Ronald K. Hoeflin](https://en.wikipedia.org/wiki/Ronald_K._Hoeflin), called the *Mega Test* designed to find people with one in a million IQs (99.9999th percentile), which admits them to the [Mega Society](https://en.wikipedia.org/wiki/Mega_Society). The test was first published in the April 1985 issue of [OMNI magazine](https://www.williamflew.com/omni79d.html), and a high score would also admit you into less intelligent groups such as the [Triple Nine Society (99.9%)](https://www.triplenine.org/WelcometoTNS.aspx), [The International Society of Philosophical Enquiry (99.96%)](https://www.thethousand.com), [The Prometheus Society (99.99%)](https://prometheussociety.org/wp/), and the [Titan Society (99.999%)](http://miyaguchi.4sigma.org/hoeflin/titan/titan.html). Pity the poor [Mensans](https://www.mensa.org/)  with IQs merely in the top 98th percentile.
-
-"*To acquire knowledge, one must study; but to acquire wisdom, one must observe.*"
-  —Marylin vos Savant.
-
 ## The Goats
 
 In 1990 a reader of the *Ask Marylin* column wrote, "Suppose you're on a game show, and you're given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No. 1, and the host, who knows what's behind the doors, opens another door, say No. 3, which has a goat. He then says to you, "Do you want to pick door No. 2?" Is it to your advantage to switch your choice?"
@@ -44,7 +46,7 @@ Should you stick with your original choice of Door #1, or switch to Door #2?
 
 In her column, Marylin said that you should always switch doors. Then the letters poured in 10,000 of them and 1,000 of those from Ph.D. statisticians and mathematicians. 
 
-<div class="lg:letter my-12">
+<div class="lg:letter my-12 py-12 text-lg">
 
 *You blew it, and you blew it big! Since you seem to have difficulty grasping the basic principle at work here, I’ll explain. After the host reveals a goat, you now have a one-in-two chance of being correct. Whether you change your selection or not, the odds are the same. There is enough mathematical illiteracy in this country, and we don’t need the world’s highest IQ propagating more. Shame!*
 —Scott Smith, Ph.D., University of Florida
