@@ -18,7 +18,7 @@ socialImg: /assets/img/marylin-and-the-goats/game-show.jpg
 
 ## Marylin
 
-Marylin is very smart, maybe the smartest person in the world. She has written short stories, magazine and newspaper articles, and more than 20 books. She became financially independent by investing in stocks and real estate, and in 1985 was listed in *The Guinness Book of World Records* as the person with the highest IQ in the world with an IQ of 228. She took her mother's name, vos Savant as her last name, and on August 23, 1987, she married Robert Jarvik, who developed the Jarvik-7 artificial heart. She is also a descendent of the physicist Ernst Mach, sometimes going by Marylin Mach vos Savant.
+Marylin is very smart, maybe the smartest person in the world. She has written short stories, magazine and newspaper articles, and more than 20 books. She became financially independent by investing in stocks and real estate, and in 1985 was listed in *The Guinness Book of World Records* as the person with the highest IQ in the world with an IQ of 228. She took her mother's name, vos Savant as her last name, and on August 23, 1987, she married Robert Jarvik, who developed the [Jarvik-7 artificial heart](https://www.si.edu/object/jarvik-7-artificial-heart:nmah_1147093). She is also a descendent of the physicist [Ernst Mach](https://en.wikipedia.org/wiki/Ernst_Mach), sometimes going by Marylin Mach vos Savant.
 
 
 <div class="sm:flex sm:flex-row items-center p-2 my-0 font-inter text-base text-xl md:text-2xl font-semibold p-8">
