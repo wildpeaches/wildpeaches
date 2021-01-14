@@ -6,10 +6,8 @@ h4,
 h5,
 h6,
 li,
-pre,
-code,
 figcaption {
- max-width: 55ch;
+  max-width: 55ch;
 }
 
 /* h1 {@apply text-center;} */
@@ -18,7 +16,12 @@ table {
   @apply text-base;
 }
 
+code[class*="language-"],
+pre[class*="language-"] {
+  @apply text-base;
+}
 
-pre, .table-wrapper {
+pre,
+.table-wrapper {
   overflow-x: scroll;
 }

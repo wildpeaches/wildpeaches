@@ -24356,8 +24356,6 @@ h4,
 h5,
 h6,
 li,
-pre,
-code,
 figcaption {
   max-width: 55ch;
 }
@@ -24369,7 +24367,13 @@ table {
   line-height: 1.5rem;
 }
 
-pre, .table-wrapper {
+code[class*="language-"], pre[class*="language-"]{
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+}
+
+pre,
+.table-wrapper {
   overflow-x: scroll;
 }
 
