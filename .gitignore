@@ -1,7 +1,11 @@
-node_modules
-www
-.cache
+node_modules/
+www/
+tmp/
+.cache/
+.netlify/
 .env
-
+.DS_Store
+package-lock.json
+src/assets/styles/style.min.css
 # Local Netlify folder
 .netlify

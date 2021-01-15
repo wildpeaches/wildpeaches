@@ -3,13 +3,14 @@
   "version": "0.0.1",
   "description": "A shared blog",
   "scripts": {
-    "css:concat": "cat src/assets/styles/_font.css src/assets/styles/_tailwind.css src/assets/styles/_custom.css > src/assets/styles/build/bundle.css",
-    "css:postcss-dev": "npx postcss src/assets/styles/app.css -o src/assets/styles/build/style.css --env development",
-    "css:minify": "npx cleancss src/assets/styles/build/style.css -o src/assets/styles/style.min.css",
-    "build-dev:css": "npm run css:postcss-dev && cp src/assets/styles/build/style.css src/assets/styles/style.min.css",
-    "start": "npx @11ty/eleventy",
+    "css:postcss-dev": "npx postcss src/assets/styles/app.css -o tmp/style.css --env development",
+    "css:postcss-prod": "npx postcss src/assets/styles/app.css -o tmp/style.css --env production",
+    "css:minify": "npx cleancss tmp/style.css -o src/assets/styles/style.min.css",
+    "css:build-dev": "npm run css:postcss-dev && cp tmp/style.css src/assets/styles/style.min.css",
+    "css:build-prod": "NODE_ENV=production && ELEVENTY_PRODUCTION=true && npm run css:postcss-prod && npm run css:minify",
+    "start": "npm run css:build-prod && npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve",
-    "lint:markdown": "markdownlint src/**/*.md"
+    "md:lint:": "markdownlint src/**/*.md"
   },
   "repository": {
     "type": "git",

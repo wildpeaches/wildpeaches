@@ -32,6 +32,12 @@ module.exports = (eleventyConfig) => {
       permalinkBefore: true
     });
 
+    eleventyConfig.setUseGitIgnore(false);
+    eleventyConfig.addWatchTarget("./_tmp/style.css");
+    // eleventyConfig.addPassthroughCopy({ "./_tmp/style.min.css": "src/assets/styles/style.min.css" });
+
+
+
   // Use markdownIt with markdownItAttrs for markdown parsing
   // Allows for classes and id's to be applied in markdown without
   // HTML
