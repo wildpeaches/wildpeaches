@@ -9,7 +9,7 @@
     "css:build-dev": "npm run css:postcss-dev && cp tmp/style.css src/assets/styles/style.min.css",
     "css:build-prod": "NODE_ENV=production && ELEVENTY_PRODUCTION=true && npm run css:postcss-prod && npm run css:minify",
     "start": "npm run css:build-prod && npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve",
+    "serve": "npm run css:build-dev && npx @11ty/eleventy --serve",
     "md:lint:": "markdownlint src/**/*.md"
   },
   "repository": {
