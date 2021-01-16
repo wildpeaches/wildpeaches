@@ -23,20 +23,17 @@ module.exports = (eleventyConfig) => {
   const markdownLib = markdownIt(options)
     .use(markdownItAttrs)
     .use(markdownItFootnote)
-    .use(markdownItKatex, {strict: false})
+    .use(markdownItKatex, { strict: false })
     .use(markdownItImageLazyLoading)
     .use(markdownItAnchor, {
       permalink: true,
       permalinkSymbol: "#",
       permalinkClass: "text-gray-400 border-b-0  hover:border-b-2",
-      permalinkBefore: true
+      permalinkBefore: true,
     });
 
-    eleventyConfig.setUseGitIgnore(false);
-    eleventyConfig.addWatchTarget("./_tmp/style.css");
-    // eleventyConfig.addPassthroughCopy({ "./_tmp/style.min.css": "src/assets/styles/style.min.css" });
-
-
+  eleventyConfig.setUseGitIgnore(false);
+  eleventyConfig.addWatchTarget("./_tmp/style.css");
 
   // Use markdownIt with markdownItAttrs for markdown parsing
   // Allows for classes and id's to be applied in markdown without
@@ -47,8 +44,7 @@ module.exports = (eleventyConfig) => {
 
   // CSS needs to be compiled with `npm run css`
   eleventyConfig.addPassthroughCopy("src/assets/img");
-  eleventyConfig.addPassthroughCopy("src/assets/styles/**/*.min.css");
-  // eleventyConfig.addPassthroughCopy('src/_content/portfolio/**/*.{png|gif|jpg|webp}');
+  eleventyConfig.addPassthroughCopy("src/assets/styles/style.min.css");
   eleventyConfig.addPassthroughCopy({ "src/assets/siteroot": "/" });
 
   //Plugins
