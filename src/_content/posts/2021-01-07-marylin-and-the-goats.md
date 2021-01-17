@@ -195,3 +195,7 @@ After you've written the function, click the "Source" button in the upper right 
 which is just about the $2/3$ expected. 
 
 Today's pop quiz is the Mega Test. You have 15 minutes.
+
+---
+
+*Update January 17, 2021:* [Monty Hall simulation in JavaScript](https://gist.github.com/JanDW/30342afdcd8d51b7fe5eccdf8f541754)
