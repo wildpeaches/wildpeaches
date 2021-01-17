@@ -1,16 +1,14 @@
 ---
 title: Fun with Physics
-subtitle: HeuristicLab solves your problems
+subtitle: "HeuristicLab solves your problems or: how to do physics without all the complicated stuff."
 author: John Peach
-lede: How to do physics without all the complicated stuff  
+hero:
+  url: /assets/img/fun-with-physics/sheldon.jpg
+  alt: Still from the series The Big Bang Theory.
+lede: Have you always wanted to be a real physicist like Sheldon Cooper, but didn't want to spend a lot of time studying? Here's how you can move to the head of the class without cracking open a single textbook.  
 tags: [math, physics]
 keywords: [physics, simulation, Algodoo, HeuristicLab, Octave]
 ---
-
-Have you always wanted to be a real physicist like Sheldon Cooper, but didn't want to spend a lot of time studying? Here's how you can move to the head of the class without cracking open a single textbook.
-
-![sheldon](/assets/img/fun-with-physics/sheldon.png)
-
 ## The Most Famous Equation
 
 Probably the best-known equation is Albert Einstein's relationship between energy and matter,
