@@ -5,7 +5,8 @@ author: John Peach
 hero:
   url: /assets/img/fun-with-physics/sheldon.jpg
   alt: Still from the series The Big Bang Theory.
-lede: Have you always wanted to be a real physicist like Sheldon Cooper, but didn't want to spend a lot of time studying? Here's how you can move to the head of the class without cracking open a single textbook.  
+lede: Have you always wanted to be a real physicist like Sheldon Cooper, but didn't want to spend a lot of time studying? Here's how you can move to the head of the class without cracking open a single textbook.
+socialImg: /assets/img/fun-with-physics/einstein.jpg  
 tags: [math, physics]
 keywords: [physics, simulation, Algodoo, HeuristicLab, Octave]
 ---
