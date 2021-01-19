@@ -22,7 +22,7 @@ It's only got three letters, and the most complicated part is $c^2$. Plot the eq
 
 Other than realizing that energy is related to mass through the speed of light squared, you really phoned that one in, didn't ya Al?
 
-![Albert Einstein.](/assets/img/fun-with-physics/einstein.jpg)
+![Albert Einstein.](/assets/img/fun-with-physics/einstein.jpg){.w-80 .rounded-full}
 
 Usually, scientists don't just think up the correct equation out of thin air. They collect data, test hypotheses, and fit equations to the data. 
 
