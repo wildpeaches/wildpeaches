@@ -4,11 +4,16 @@ subtitle: Mathematicians fooled by probability, an R experiment to show why they
 author: John Peach
 lede: Controversial Ask Marylin column about the Monty Hall problem solved. 
 hero:
- url: /assets/img/marylin-and-the-goats/men-who-stare-at-goats.jpg
- alt: Still from The Men Who Stare at Goats (movie).
+  url: /assets/img/marylin-and-the-goats/men-who-stare-at-goats.jpg
+  alt: Still from The Men Who Stare at Goats (movie).
 tags: [math]
 keywords: [probability, simulation, R language]
 socialImg: /assets/img/marylin-and-the-goats/game-show.jpg
+pullQuote:
+  author: Marylin vos Savant
+  imgUrl: /assets/img/marylin-and-the-goats/marilyn-vos-savant.jpg
+  imgAlt: Headshot of Marylin vos Savant.
+  quote: To acquire knowledge, one must study; but to acquire wisdom, one must observe.
 ---
 
 > Throw out your gold teeth and see how they roll;
@@ -20,13 +25,7 @@ socialImg: /assets/img/marylin-and-the-goats/game-show.jpg
 
 Marylin is very smart, maybe the smartest person in the world. She has written short stories, magazine and newspaper articles, and more than 20 books. She became financially independent by investing in stocks and real estate, and in 1985 was listed in *The Guinness Book of World Records* as the person with the highest IQ in the world with an IQ of 228. She took her mother's name, vos Savant as her last name, and on August 23, 1987, she married Robert Jarvik, who developed the [Jarvik-7 artificial heart](https://www.si.edu/object/jarvik-7-artificial-heart:nmah_1147093). She is also a descendent of the physicist [Ernst Mach](https://en.wikipedia.org/wiki/Ernst_Mach), sometimes going by Marylin Mach vos Savant.
 
-
-<div class="sm:flex sm:flex-row items-center p-2 my-0 font-inter text-base text-xl md:text-2xl font-semibold p-8">
-  <img src="/assets/img/marylin-and-the-goats/marilyn-vos-savant.jpg" alt="Marilyn vos Savant." class="rounded-full sm:w-36 sm:mr-8 mx-auto">
-  <div>
-    <p style="text-indent: -.5ch"><span class="italic">"To acquire knowledge, one must study; but to acquire wisdom, one must observe."</span><br><span class="text-gray-500 inline-block font-medium mt-2">—Marylin vos Savant</span></p>
-  </div>
-</div>
+{% pullquote yaml=pullQuote %}
 
 In 1986, Parade Magazine published a profile of her, and it was so popular that they asked her to write a weekly column, [*Ask Marylin*](https://parade.com/tag/ask-marilyn/). The IQ test that made her famous was written by philosopher [Ronald K. Hoeflin](https://en.wikipedia.org/wiki/Ronald_K._Hoeflin), called the *Mega Test* designed to find people with one in a million IQs (99.9999th percentile), which admits them to the [Mega Society](https://en.wikipedia.org/wiki/Mega_Society). The test was first published in the April 1985 issue of [OMNI magazine](https://www.williamflew.com/omni79d.html), and a high score would also admit you into less intelligent groups such as the [Triple Nine Society (99.9%)](https://www.triplenine.org/WelcometoTNS.aspx), [The International Society of Philosophical Enquiry (99.96%)](https://www.thethousand.com), [The Prometheus Society (99.99%)](https://prometheussociety.org/wp/), and the [Titan Society (99.999%)](http://miyaguchi.4sigma.org/hoeflin/titan/titan.html). Pity the poor [Mensans](https://www.mensa.org/)  with IQs merely in the top 98th percentile.
 ## The Goats

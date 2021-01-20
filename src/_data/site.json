@@ -1,5 +1,6 @@
 {
   "name": "Wild Peaches",
   "url":"https://wildpeaches.xyz",
-  "tagline": "Mind-sized STEM ideas and experiments, beyond the textbook."
+  "tagline": "Mind-sized STEM ideas and experiments, beyond the textbook.",
+  "imgDir": "/assets/img/"
 }

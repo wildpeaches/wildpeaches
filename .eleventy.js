@@ -51,6 +51,12 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
 
+  // Shortcodes
+  eleventyConfig.addNunjucksShortcode(
+    "pullquote",
+    require("./lib/shortcodes/pullquote.js")
+  );
+
   // Add Filters
   eleventyConfig.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;
