@@ -2,7 +2,7 @@ const colors = require("tailwindcss/colors");
 
 module.exports = {
   important: true,
-  purge: ["./src/**/*.html", "./src/**/*.md", "./src/**/*.json"],
+  purge: ["./src/**/*.html", "./src/**/*.md", "./src/**/*.json", "./lib/shortcodes/**/*.js"],
   theme: {
     screens: {
       sm: "640px",
