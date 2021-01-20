@@ -51,7 +51,7 @@ Should you stick with your original choice of Door #1, or switch to Door #2?
 
 In her column, Marylin said that you should always switch doors. Then the letters poured in 10,000 of them and 1,000 of those from Ph.D. statisticians and mathematicians. 
 
-<div id="letters" class="lg:letter my-12 py-12 text-lg">
+{%- letter %}
 
 *You blew it, and you blew it big! Since you seem to have difficulty grasping the basic principle at work here, I’ll explain. After the host reveals a goat, you now have a one-in-two chance of being correct. Whether you change your selection or not, the odds are the same. There is enough mathematical illiteracy in this country, and we don’t need the world’s highest IQ propagating more. Shame!*
 —Scott Smith, Ph.D., University of Florida
@@ -81,7 +81,7 @@ In her column, Marylin said that you should always switch doors. Then the letter
 *You are the goat!*
 —Glenn Calkins, Western State College
 
-</div>
+{% endletter %}
 
 ## Goat Analysis
 
@@ -115,7 +115,7 @@ Another way to simulate the Monty Hall puzzle is with a pair of dice. You could 
 
 This is what I got after 52 rolls. There are 34 wins, meaning by switching I got the car 65% of the time.
 
-<div class="table-wrapper full-bleed my-16">
+{% table %}
 
 | Car  | Chosen | Win   | Car  | Chosen | Win   | Car  | Chosen | Win   | Car  | Chosen | Win   |
 | ---- | ------ | ----- | ---- | ------ | ----- | ---- | ------ | ----- | ---- | ------ | ----- |
@@ -133,9 +133,7 @@ This is what I got after 52 rolls. There are 34 wins, meaning by switching I got
 | 2    | 2      | FALSE | 3    | 2      | TRUE  | 3    | 3      | FALSE | 1    | 1      | FALSE |
 | 3    | 1      | TRUE  | 1    | 2      | TRUE  | 1    | 2      | TRUE  | 1    | 1      | FALSE |
 
-{.w-max-900}
-
-</div>
+{% endtable %}
 
 ## The R Language
 

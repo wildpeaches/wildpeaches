@@ -13,7 +13,7 @@ figcaption {
 /* h1 {@apply text-center;} */
 
 table {
-  @apply text-base;
+  @apply text-base w-full;
 }
 
 code[class*="language-"],
