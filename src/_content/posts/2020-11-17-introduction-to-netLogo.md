@@ -28,7 +28,7 @@ where $\frac{ds}{dt}$ represents the growth rate of the sheep population $s$, $\
 
 The rules for the sheep-agents are pretty simple. First, they move in search of a new patch of grass and this move costs one unit of energy. If they find grass they eat it, but if their energy is too low they die. With sufficient energy, they can reproduce. Wolf rules are the same except they eat sheep instead of grass. At each time step, or "tick" every agent follows it's own set of rules and the system evolves.
 
-```
+```text
   ask sheep [
     move ; sheep turn to a random new direction, move forward one unit
 
@@ -69,21 +69,46 @@ Start NetLogo, and when you see the initial screen, as shown above, click on the
 
 In the setup function which begins with `to setup` and ends with `end`
 
-![to setup](/assets/img/netlogo-introduction/to-setup.svg)
+```text
+to setup
+  setup-circle
+  reset-ticks
+end 
+```
 
 there are two calls, `setup-circle`, and `reset-ticks`. The `reset-ticks`  command resets the timer so the simulation begins at zero ticks. The real action begins with `setup-circle`:
 
-![setup-circle](/assets/img/netlogo-introduction/setup-circle.svg)
+```text
+to setup-circle
+  clear-all
+  set-default-shape turtles "dot"
+  ;; turtles should be evenly spaced around the circle
+  create-ordered-turtles 40 [
+    set size 2 ;; easier to see
+    set speed .35 ;; this is the size of each step the turtles take in a tick
+    fd 20 ;; move turtles to perimeter of circle
+    rt 90 ;; turtles face tangent to the circle
+  ]
+end
+```
 
 The command `clear-all` clears the display window, removing all agents and any background patches. Next, the turtle shapes are set to "dot". The last command creates 40 new turtles with the `create-ordered-turtles` command. Usually, you would use `create-turtles`, but creating ordered turtles gives each agent its own heading with directions spaced evenly between 0 and 360 degrees. When it gets a `fd 20` (forward) command the turtle moves 20 paces outward so they all remain on the edge of a circle with radius 20. The last command is `rt 90` which causes each turtle to turn right 90 degrees. The command `set speed .35` sets the step size every turtle will make during each tick. It effectively sets the speed of the turtle. 
 
 The `to-go` function is pretty simple:
 
-![to go](/assets/img/netlogo-introduction/to-go.svg)
+```text
+to go
+  ;; move forward then turn
+  ask turtles [fd speed rt 1]
+  tick
+end
+```
 
 The turtles are asked to move forward at speed `speed` and then turn right one degree. Next, the tick counter is updated. The variable `speed` is not defined in NetLogo, and we're using it in the context of turtles, so the turtles need to own the speed variable. This is done with a single line at the beginning of the code:
 
-![turtles-own speed](/assets/img/netlogo-introduction/turtles-own-speed.svg)
+```text
+turtles-own [speed]
+```
 
 In the Interface area, we need to add two buttons to run the code just written. Make sure the drop-down next to "Add" is set to "Button" and then click on "Button" followed by a click in the white space which will create a button. A pop-up box will open where you need to enter the command `to-setup` and change the Display name to `Setup`,
 
@@ -93,7 +118,11 @@ Make another button with the command `to-go`, Display name `Go` and check the bo
 
 We'll add in one more bit of code and two more buttons. This code changes the turtle's speed,
 
-![to change-speed](/assets/img/netlogo-introduction/to-change-speed.svg)
+```text
+to change-speed
+  ask turtles [set speed speed -.15] ;; decrease the step-size by .15
+end
+```
 
 reducing the speed from the current speed to speed - .15. Add these two buttons below the "Setup" and "Go" buttons:
 
@@ -125,7 +154,7 @@ Here, you can see the properties of this turtle, including the special turtles-o
 
 ![Observer command](/assets/img/netlogo-introduction/observer-command.svg)
 
-where you can enter single lines of code such as this one to show the speed of turtle #18. In the Command Center, you'll see the results. These commands may be entered even if the program is running.
+where you can enter single lines of code such as `show [speed] of turtle 18` one to show the speed of turtle #18. In the Command Center, you'll see the results. These commands may be entered even if the program is running.
 
 ![Command center](/assets/img/netlogo-introduction/command-center.svg)
 
