@@ -1,7 +1,11 @@
 {
-  "name": "wild-peaches",
+  "name": "wildpeaches.xyz",
   "version": "0.0.1",
-  "description": "A shared blog",
+  "description": "A blog about mind-sized STEM ideas and experiments",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JanDW/wildpeaches.git"
+  },
   "scripts": {
     "css:postcss-dev": "npx postcss src/assets/styles/app.css -o tmp/style.css --env development",
     "css:postcss-prod": "npx postcss src/assets/styles/app.css -o tmp/style.css --env production",
@@ -10,11 +14,8 @@
     "css:build-prod": "NODE_ENV=production && ELEVENTY_PRODUCTION=true && npm run css:postcss-prod && npm run css:minify",
     "start": "npm run css:build-prod && npx @11ty/eleventy",
     "serve": "npm run css:build-dev && npx @11ty/eleventy --serve",
-    "md:lint:": "markdownlint src/**/*.md"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JanDW/wildpeaches.git"
+    "md:lint": "markdownlint src/**/*.md",
+    "build:rm": "rm -rf www/"
   },
   "husky": {
     "hooks": {

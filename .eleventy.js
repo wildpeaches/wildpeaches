@@ -1,16 +1,17 @@
 require("dotenv").config();
+const CleanCSS = require("clean-css");
 const dateFilter = require("./src/filters/date-filter");
-const w3DateFilter = require("./src/filters/w3-date-filter");
 const dumpFilter = require("@jamshop/eleventy-filter-dump");
+const statFilter = require("./src/filters/stat-filter");
 const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAttrs = require("markdown-it-attrs");
 const markdownItFootnote = require("markdown-it-footnote");
-const markdownItKatex = require("@iktakahiro/markdown-it-katex");
 const markdownItImageLazyLoading = require("markdown-it-image-lazy-loading");
-const markdownItAnchor = require("markdown-it-anchor");
-const CleanCSS = require("clean-css");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const markdownItKatex = require("@iktakahiro/markdown-it-katex");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const w3DateFilter = require("./src/filters/w3-date-filter");
 
 module.exports = (eleventyConfig) => {
   // Markdown
@@ -83,6 +84,7 @@ module.exports = (eleventyConfig) => {
   });
   eleventyConfig.addFilter("dateFilter", dateFilter);
   eleventyConfig.addFilter("w3DateFilter", w3DateFilter);
+  eleventyConfig.addFilter("stat", statFilter);
   eleventyConfig.addFilter("dump", dumpFilter);
 
   return {

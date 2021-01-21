@@ -3,5 +3,6 @@
   "permalink": "/docs/{{ title | slug }}/index.html",
   "tags": [
     "docs"
-  ]
+  ],
+  "eleventyExcludeFromCollections": true
 }
