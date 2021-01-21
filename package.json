@@ -15,7 +15,7 @@
     "start": "npm run css:build-prod && npx @11ty/eleventy",
     "serve": "npm run css:build-dev && npx @11ty/eleventy --serve",
     "md:lint": "markdownlint src/**/*.md",
-    "build:rm": "rm -rf www/"
+    "rm:www": "rm -rf www/"
   },
   "husky": {
     "hooks": {

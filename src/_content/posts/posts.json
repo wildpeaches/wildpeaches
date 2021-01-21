@@ -1,6 +1,5 @@
 {
   "layout": "blog-post",
   "permalink": "/blog/{{ title | slug }}/index.html",
-  "tags": ["posts"],
-  "lastModified": "Last Modified"
+  "tags": ["posts"]
 }
