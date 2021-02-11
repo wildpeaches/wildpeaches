@@ -3,24 +3,24 @@ layout: default
 title: Wild Peaches
 author: Jan De Wilde & John Peach
 permalink: /
-bodyClass: text-blue-900 bg-blue-50 font-inter
-subClass: text-teal-200 bg-blue-900
+bodyClass: text-gray-800 bg-gray-50 font-inter
+subClass: text-gray-200 bg-gray-800
 includeSubscription: true 
 ---
  
 <section class="my-24 stack-l center-l">
-  <h1 class="leading-tighter text-5xl font-inter font-extrabold mb-4 border-l-8 pl-4 -ml-6 border-blue-200 sr-only">{{ site.name }}</h1>
+  <h1 class="leading-tighter text-5xl font-inter font-extrabold mb-4 border-l-8 pl-4 -ml-6 border-gray-200 sr-only">{{ site.name }}</h1>
 
-  <p class="mb-12 text-2xl font-medium">
+  <p class="mb-12 text-2xl font-medium max-w-md">
     {{ site.tagline }}
   </p>
 
-  <ul class="divide-y divide-blue-400 list-none">
+  <ul class="divide-y divide-gray-400 list-none">
     {% for post in collections.posts | reverse %}
 
     <li class="py-4 leading-snug">
       <a
-        class="border-b-0 text-blue-900 flex"
+        class="border-b-0 flex"
         href="{{ post.url }}"
       >
         <!-- <time datetime="{{ post.date | w3DateFilter }}"
@@ -29,18 +29,20 @@ includeSubscription: true
         <div>
           <div class="font-medium text-xl">{{ post.data.title }}</div>
           {% if post.data.subtitle %}
-          <div class="text-blue-900 text-opacity-75 text-lg font-inter">
+          <div class="text-gray-600 text-lg font-inter">
             {{ post.data.subtitle }}
           </div>
           {% endif %}
-          <!-- {% if post.data.tags %}
-          <div class="text-blue-900 text-opacity-75 font-inter text-sm">
+          {#
+           {% if post.data.tags %}
+          <div class="text-gray-500 font-inter text-sm">
           {% for tag in post.data.tags %}
             #{{ tag }}
           {% endfor %}
 
           </div>
-          {% endif %} -->
+          {% endif %}
+          #}
         </div>
       </a>
     </li>
