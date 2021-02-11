@@ -2,11 +2,15 @@
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-top: 0;
-  background: #000;
+  background-image: var(--hero-img);
+  backdrop-filter: blur(40px);
+  background-size: cover;
 }
 
 .hero__wrapper {
   display: grid;
+  background-color: hsla(0, 0%, 0%, 0.6);
+  backdrop-filter: blur(40px);
 }
 
 .hero__wrapper > img {
