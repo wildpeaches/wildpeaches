@@ -4,20 +4,20 @@ bodyClass: text-gray-700 bg-gray-50
 includeSubscription: true
 ---
 
-{% set ledeTopMargin = "" %}
+{%- set ledeTopMargin = "" %}
 <main id="main" class="o-center mb-12">
   <article class="o-stack s-post leading-relaxed">
-    {% if not hero %}
+    {%- if not hero %}
     <div class="mt-24">
-      {% include "post-masthead.html" %}
+      {%- include "post-masthead.html" %}
     </div>
-    {% else %} 
-      {% set ledeTopMargin = "mt-16" %}
-      {% include "post-hero.html" %}
-    {% endif %} 
-    {% if lede %}
+    {%- else %} 
+      {%- set ledeTopMargin = "mt-16" %}
+      {%- include "post-hero.html" %}
+    {%- endif %} 
+    {%- if lede %}
     <p class="lede {{ ledeTopMargin }}">{{ lede }}</p>
-    {% endif %} 
+    {%- endif %} 
     {{ content | safe }}
   </article>
 </main>

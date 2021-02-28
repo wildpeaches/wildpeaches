@@ -22,7 +22,7 @@ metadata:
     <name>{{ metadata.author.name }}</name>
     <email>{{ metadata.author.email }}</email>
   </author>
-  {%- for post in collections.posts %} {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url)}}{% endset %}
+  {%- for post in collections.posts %} {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url)}}{%- endset %}
   <entry>
     <title>{{ post.data.title }}</title> 
     <link href="{{ absolutePostUrl }}" />
@@ -34,13 +34,13 @@ metadata:
     <summary>
       {%- if post.data.subtitle %}
       {{ post.data.subtitle }}
-      {% endif %}
+      {%- endif %}
       {%- if post.data.subtitle and post.data.lede %}
       —
-      {% endif %}
+      {%- endif %}
       {%- if post.data.lede %}
       {{ post.data.lede }}
-      {% endif %}
+      {%- endif %}
     </summary>
   </entry>
   {%- endfor %}

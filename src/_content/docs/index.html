@@ -6,7 +6,7 @@ bodyClass: text-blue-900 bg-blue-50
 
 <section class="my-6 o-stack">
   <ul class="divide-y divide-blue-400">
-    {% for doc in collections.docs | reverse %}
+    {%- for doc in collections.docs | reverse %}
 
     <li class="py-3 text-xl">
       <a
@@ -17,15 +17,15 @@ bodyClass: text-blue-900 bg-blue-50
           >{{ doc.date | dateFilter }}</time
         > -->
         <div>
-          {{ doc.data.title }} {% if doc.data.subtitle %}
+          {{ doc.data.title }} {%- if doc.data.subtitle %}
           <div class="text-blue-900 text-opacity-75 text-base">
             {{ doc.data.subtitle }}
           </div>
-          {% endif %}
+          {%- endif %}
         </div>
       </a>
     </li>
 
-    {% endfor %}
+    {%- endfor %}
   </ul>
 </section>

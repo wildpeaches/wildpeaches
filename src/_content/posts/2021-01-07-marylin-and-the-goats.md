@@ -25,7 +25,7 @@ pullQuote:
 
 Marylin is very smart, maybe the smartest person in the world. She has written short stories, magazine and newspaper articles, and more than 20 books. She became financially independent by investing in stocks and real estate, and in 1985 was listed in _The Guinness Book of World Records_ as the person with the highest IQ in the world with an IQ of 228. She took her mother's name, vos Savant as her last name, and on August 23, 1987, she married Robert Jarvik, who developed the [Jarvik-7 artificial heart](https://www.si.edu/object/jarvik-7-artificial-heart:nmah_1147093). She is also a descendent of the physicist [Ernst Mach](https://en.wikipedia.org/wiki/Ernst_Mach), sometimes going by Marylin Mach vos Savant.
 
-{% pullquote
+{%- pullquote
   pullQuote.quote,
   pullQuote.author,
   pullQuote.imgUrl,
@@ -82,7 +82,7 @@ _May I suggest that you obtain and refer to a standard textbook on probability b
 _You are the goat!_
 —Glenn Calkins, Western State College
 
-{% endletter %}
+{%- endletter %}
 
 ## Goat Analysis
 
@@ -118,7 +118,7 @@ Another way to simulate the Monty Hall puzzle is with a pair of dice. You could 
 
 This is what I got after 52 rolls. There are 34 wins, meaning by switching I got the car 65% of the time.
 
-{% table %}
+{%- table %}
 
 | Car | Chosen | Win   | Car | Chosen | Win   | Car | Chosen | Win   | Car | Chosen | Win   |
 | --- | ------ | ----- | --- | ------ | ----- | --- | ------ | ----- | --- | ------ | ----- |
@@ -136,7 +136,7 @@ This is what I got after 52 rolls. There are 34 wins, meaning by switching I got
 | 2   | 2      | FALSE | 3   | 2      | TRUE  | 3   | 3      | FALSE | 1   | 1      | FALSE |
 | 3   | 1      | TRUE  | 1   | 2      | TRUE  | 1   | 2      | TRUE  | 1   | 1      | FALSE |
 
-{% endtable %}
+{%- endtable %}
 
 ## The R Language
 

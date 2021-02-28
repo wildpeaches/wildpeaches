@@ -1,6 +1,6 @@
   <nav id="top" class="bg-white">
     <ul class="justify-center flex o-center py-3 list-none font-sans text-current">
-      {% for item in navigation.items %}
+      {%- for item in navigation.items %}
       <li class="{{ item.listClass }}">
         <a
           href="{{ item.url }}"
@@ -14,6 +14,6 @@
           >{{ item.text }}</a
         >
       </li>
-      {% endfor %}
+      {%- endfor %}
     </ul>
   </nav>

@@ -15,7 +15,7 @@ includeSubscription: true
   </p>
 
   <ul class="divide-y divide-gray-400 list-none">
-    {% for post in collections.posts | reverse %}
+    {%- for post in collections.posts | reverse %}
 
     <li class="py-4 leading-snug">
       <a
@@ -27,25 +27,25 @@ includeSubscription: true
         > -->
         <div>
           <div class="font-medium text-xl">{{ post.data.title }}</div>
-          {% if post.data.subtitle %}
+          {%- if post.data.subtitle %}
           <div class="text-gray-600 text-lg font-sans">
             {{ post.data.subtitle }}
           </div>
-          {% endif %}
+          {%- endif %}
           {#
-           {% if post.data.tags %}
+           {%- if post.data.tags %}
           <div class="text-gray-500 font-sans text-sm">
-          {% for tag in post.data.tags %}
+          {%- for tag in post.data.tags %}
             #{{ tag }}
-          {% endfor %}
+          {%- endfor %}
 
           </div>
-          {% endif %}
+          {%- endif %}
           #}
         </div>
       </a>
     </li>
 
-    {% endfor %}
+    {%- endfor %}
   </ul>
 </section>

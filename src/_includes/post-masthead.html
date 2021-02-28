@@ -4,12 +4,12 @@
   >
     {{ title }}
   </h1>
-  {% if subtitle %}
+  {%- if subtitle %}
   <p class="leading-tight mt-4 text-2xl font-sans pb-8">
     <span class="sr-only">Subtitle:</span>
     {{ subtitle }}
   </p>
-  {% endif %}
+  {%- endif %}
 
   <p class="text-base font-sans max-w-none order-first">
     <time datetime="{{ page.date | w3DateFilter }}"
