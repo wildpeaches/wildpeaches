@@ -4,28 +4,30 @@ author: Jan De Wilde
 date: 2020-08-06
 ---
 
-*This post demoes the capabilities of Markdown and added extensions. This post was created in the United States of America, anno 2020. Not that it matters.*
+_This post demoes the capabilities of Markdown and added extensions. This post was created in the United States of America, anno 2020. Not that it matters._
 
-***
+---
 
 ## KaTeX
 
-There are those who go by the moniker of mathematician. 
+There are those who go by the moniker of mathematician.
 
 They are known to like to try and impress everyone by making up symbols like $\varphi$. Sometimes they'll write stuff like ${3x-1}+(1+x)^2$ and feel quite chuffed with themselves. When they really start peacocking they'll regurgitate this incomprehensible drivel:
 
-$$\begin{array}{c}
+$$
+\begin{array}{c}
 \nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
 = \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
 \nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
 \nabla \cdot \vec{\mathbf{B}} & = 0
-\end{array}$$
+\end{array}
+$$
 
 I kid, I kid! I have great respect for mathematicians! I'll take them over serial killers any day. Although there is some overlap. Alright, that's demoes the KaTeX extension in Markdown. Time to move on.
 
 ## Syntax highlighting
 
-Code can be useful, can't it? I can really see it coming into widespread use one day! 
+Code can be useful, can't it? I can really see it coming into widespread use one day!
 
 After all the unwarranted rudeness, let me extend an olive branch and use MATLAB to show syntax highlighting.
 
@@ -47,16 +49,16 @@ Have a look at the [full list of supported languages](https://prismjs.com/#suppo
 - which is of course hard to accept
 - for the mathematician
 
-1. neutral 
+1. neutral
 1. even
 1. 14159 irrational
 1. not even a prime, ugh, gross
 
 ## Quotes
 
-> Q: What is the difference between a mathematician and a philosopher? 
+> Q: What is the difference between a mathematician and a philosopher?
 >
->A: The mathematician only needs paper, pencil, and a trash bin for his work. The philosopher can do without the trash bin.
+> A: The mathematician only needs paper, pencil, and a trash bin for his work. The philosopher can do without the trash bin.
 
 ## Inline stuff
 
@@ -125,6 +127,3 @@ HTML does just fine embedded in markdown. Here's a table. It's not very useful.
     </tr>
   </tbody>
 </table>
-
-
-

@@ -1,19 +1,18 @@
 /* https://every-layout.dev/layouts/stack/ */
 /*  */
 
-
-.stack-l {
+.o-stack {
   --space: 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.stack-l > * {
+.o-stack > * {
   margin-top: 0;
   margin-bottom: 0;
-} 
+}
 
-.stack-l > * + * {
+.o-stack > * + * {
   margin-top: var(--space);
 }

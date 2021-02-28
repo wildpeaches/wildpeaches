@@ -1,14 +1,12 @@
 ---
 layout: default
 bodyClass: text-gray-700 bg-gray-50
-subClass: text-gray-200 bg-gray-800
 includeSubscription: true
 ---
 
 {% set ledeTopMargin = "" %}
-
-<main id="main" class="center-l mb-12">
-  <article class="stack-l post leading-relaxed">
+<main id="main" class="o-center mb-12">
+  <article class="o-stack s-post leading-relaxed">
     {% if not hero %}
     <div class="mt-24">
       {% include "post-masthead.html" %}
@@ -17,7 +15,6 @@ includeSubscription: true
       {% set ledeTopMargin = "mt-16" %}
       {% include "post-hero.html" %}
     {% endif %} 
-    
     {% if lede %}
     <p class="lede {{ ledeTopMargin }}">{{ lede }}</p>
     {% endif %} 

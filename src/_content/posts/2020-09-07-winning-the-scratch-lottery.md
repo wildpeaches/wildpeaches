@@ -2,7 +2,7 @@
 title: Winning the Scratch Lottery
 subtitle: An Experiment in OCR, Robotics, and Statistics
 author: John Peach
-lede: I know someone who has won the million-dollar lottery. Twice. Ask any mathematician about playing the lottery and you'll likely be told not to waste your money because you can't win. That would be bad advice because the lottery is rigged. In your favor. 
+lede: I know someone who has won the million-dollar lottery. Twice. Ask any mathematician about playing the lottery and you'll likely be told not to waste your money because you can't win. That would be bad advice because the lottery is rigged. In your favor.
 tags: [math]
 keywords: [Gambling, Statistics, Expectation, Optical Character Recognition]
 socialImg: /assets/img/winning-the-scratch-lottery/bingo-card.jpg
@@ -12,70 +12,73 @@ socialImg: /assets/img/winning-the-scratch-lottery/bingo-card.jpg
 
 Mohan Srivastava is a geological statistician from Toronto who helps mining companies find gold. In 2003, he struck gold in another way by figuring out how to beat the Canadian scratch lottery, as he explained to [Jonah Lehrer of Wired Magazine](https://www.wired.com/2011/01/ff-lottery/). People think the lottery is a completely random game, but it isn't. The lottery commission knows a priori how much it expects to earn from each game by controlling the number of winning tickets.
 
-Printing companies need to produce the right number of winning tickets at each payoff level. Let's look at a typical bingo ticket, one that I bought in Delaware several years ago. 
+Printing companies need to produce the right number of winning tickets at each payoff level. Let's look at a typical bingo ticket, one that I bought in Delaware several years ago.
 
 ![A scratch lottery bingo card.](/assets/img/winning-the-scratch-lottery/bingo-card.jpg)
 
 To play, you scratch off all the "?'s" in the area labeled "Caller's Card" and then scratch off matching numbers in each of the four Bingo cards above. If you complete any horizontal, vertical, or diagonal line you've got a winner. Srivastava figured that for a winning ticket, each number in a winning row, column or diagonal can only appear once on any of the cards. Otherwise, it would be difficult to keep track of where the winning numbers appear and how they contribute to winning cards.
 
-On my ticket, the number 11 shows up in the upper left corner of cards 1 through 3, so 11 is not likely to be part of a winning Bingo. So, Srivastava's method is simple. First, count how many times each number appears in each of the four cards. Second, check to see if any numbers that appear only once form a winning Bingo pattern. He found that by using this method, he could predict winners about 90% of the time. He estimated it would take him about 45 seconds to crack each ticket, and he thought he could make about \$600 a day. 
+On my ticket, the number 11 shows up in the upper left corner of cards 1 through 3, so 11 is not likely to be part of a winning Bingo. So, Srivastava's method is simple. First, count how many times each number appears in each of the four cards. Second, check to see if any numbers that appear only once form a winning Bingo pattern. He found that by using this method, he could predict winners about 90% of the time. He estimated it would take him about 45 seconds to crack each ticket, and he thought he could make about \$600 a day.
 
 ## Expectations
 
 We need to talk about expectations. Mathematically, the expected value of a random process is the sum of the probability times the payoff for each possible outcome,
+
 $$
 E[x] = \sum_{i=1}^n p_i x_i
 $$
-where   $p_i$ is the probability of event $i$ and $x_i$ is the payoff for the event. Another formulation is to include the cost, $C$, of the ticket in the expectation and then divide by the cost to get the expected return per dollar wagered,
+
+where $p_i$ is the probability of event $i$ and $x_i$ is the payoff for the event. Another formulation is to include the cost, $C$, of the ticket in the expectation and then divide by the cost to get the expected return per dollar wagered,
 
 $$
-E[x] = \frac{\sum_{i=1}^n p_i x_i - C}{C} = \frac{\sum_{i=1}^n p_i x_i}{C} - 1. 
+E[x] = \frac{\sum_{i=1}^n p_i x_i - C}{C} = \frac{\sum_{i=1}^n p_i x_i}{C} - 1.
 $$
+
 In this formulation, if $E[x] > 0$ you make money on average, while if the value is negative you lose.
 
-Below is an example of the odds and payoffs for each possible winning combination from [Delaware](https://www.delottery.com/Content/images/instant-lottery/instant-details/DE192OSB_V12_05032020.jpg) (slightly different from my card). It's easy to calculate the expectation using Excel. I made a spreadsheet with columns for the payoff amount (Win), the odds, the probability, and the expected value for that combination. I also calculated the adjusted probability and adjusted expectation. I'll explain those in a bit. 
+Below is an example of the odds and payoffs for each possible winning combination from [Delaware](https://www.delottery.com/Content/images/instant-lottery/instant-details/DE192OSB_V12_05032020.jpg) (slightly different from my card). It's easy to calculate the expectation using Excel. I made a spreadsheet with columns for the payoff amount (Win), the odds, the probability, and the expected value for that combination. I also calculated the adjusted probability and adjusted expectation. I'll explain those in a bit.
 
 {% table %}
-| Win  | Odds  | Probability | Expectation | Adjusted Prob | Adjusted Exp |
+| Win | Odds | Probability | Expectation | Adjusted Prob | Adjusted Exp |
 |-----:|------:|------------:|------------:|--------------:|-------------:|
-| 3    | 10    | 0.1000      | 0.3000      | 0.3579        | 1.0736       |
-| 3    | 20    | 0.0500      | 0.1500      | 0.1789        | 0.5368       |
-| 4    | 50    | 0.0200      | 0.0800      | 0.0716        | 0.2863       |
-| 4    | 50    | 0.0200      | 0.0800      | 0.0716        | 0.2863       |
-| 8    | 200   | 0.0050      | 0.0400      | 0.0179        | 0.1432       |
-| 8    | 200   | 0.0050      | 0.0400      | 0.0179        | 0.1432       |
-| 8    | 200   | 0.0050      | 0.0400      | 0.0179        | 0.1432       |
-| 8    | 200   | 0.0050      | 0.0400      | 0.0179        | 0.1432       |
-| 10   | 400   | 0.0025      | 0.0250      | 0.0089        | 0.0895       |
-| 10   | 200   | 0.0050      | 0.0500      | 0.0179        | 0.1789       |
-| 10   | 400   | 0.0025      | 0.0250      | 0.0089        | 0.0895       |
-| 15   | 200   | 0.0050      | 0.0750      | 0.0179        | 0.2684       |
-| 15   | 200   | 0.0050      | 0.0750      | 0.0179        | 0.2684       |
-| 20   | 400   | 0.0025      | 0.0500      | 0.0089        | 0.1789       |
-| 20   | 400   | 0.0025      | 0.0500      | 0.0089        | 0.1789       |
-| 20   | 400   | 0.0025      | 0.0500      | 0.0089        | 0.1789       |
-| 20   | 400   | 0.0025      | 0.0500      | 0.0089        | 0.1789       |
-| 30   | 750   | 0.0013      | 0.0400      | 0.0048        | 0.1432       |
-| 30   | 750   | 0.0013      | 0.0400      | 0.0048        | 0.1432       |
-| 30   | 250   | 0.0040      | 0.1200      | 0.0143        | 0.4295       |
-| 50   | 2500  | 0.0004      | 0.0200      | 0.0014        | 0.0716       |
-| 50   | 3000  | 0.0003      | 0.0167      | 0.0012        | 0.0596       |
-| 50   | 750   | 0.0013      | 0.0667      | 0.0048        | 0.2386       |
-| 50   | 1500  | 0.0007      | 0.0333      | 0.0024        | 0.1193       |
-| 60   | 3000  | 0.0003      | 0.0200      | 0.0012        | 0.0716       |
-| 60   | 3000  | 0.0003      | 0.0200      | 0.0012        | 0.0716       |
-| 60   | 1500  | 0.0007      | 0.0400      | 0.0024        | 0.1432       |
-| 100  | 3000  | 0.0003      | 0.0333      | 0.0012        | 0.1193       |
-| 100  | 3000  | 0.0003      | 0.0333      | 0.0012        | 0.1193       |
-| 500  | 30000 | 0.0000      | 0.0167      | 0.0001        | 0.0596       |
-| 500  | 30000 | 0.0000      | 0.0167      | 0.0001        | 0.0596       |
-| 5000 | 60000 | 0.0000      | 0.0833      | 0.0001        | 0.2982       |
-|      |       | 0.2515      | -0.3933     | 0.9000        | 1.1711       |
+| 3 | 10 | 0.1000 | 0.3000 | 0.3579 | 1.0736 |
+| 3 | 20 | 0.0500 | 0.1500 | 0.1789 | 0.5368 |
+| 4 | 50 | 0.0200 | 0.0800 | 0.0716 | 0.2863 |
+| 4 | 50 | 0.0200 | 0.0800 | 0.0716 | 0.2863 |
+| 8 | 200 | 0.0050 | 0.0400 | 0.0179 | 0.1432 |
+| 8 | 200 | 0.0050 | 0.0400 | 0.0179 | 0.1432 |
+| 8 | 200 | 0.0050 | 0.0400 | 0.0179 | 0.1432 |
+| 8 | 200 | 0.0050 | 0.0400 | 0.0179 | 0.1432 |
+| 10 | 400 | 0.0025 | 0.0250 | 0.0089 | 0.0895 |
+| 10 | 200 | 0.0050 | 0.0500 | 0.0179 | 0.1789 |
+| 10 | 400 | 0.0025 | 0.0250 | 0.0089 | 0.0895 |
+| 15 | 200 | 0.0050 | 0.0750 | 0.0179 | 0.2684 |
+| 15 | 200 | 0.0050 | 0.0750 | 0.0179 | 0.2684 |
+| 20 | 400 | 0.0025 | 0.0500 | 0.0089 | 0.1789 |
+| 20 | 400 | 0.0025 | 0.0500 | 0.0089 | 0.1789 |
+| 20 | 400 | 0.0025 | 0.0500 | 0.0089 | 0.1789 |
+| 20 | 400 | 0.0025 | 0.0500 | 0.0089 | 0.1789 |
+| 30 | 750 | 0.0013 | 0.0400 | 0.0048 | 0.1432 |
+| 30 | 750 | 0.0013 | 0.0400 | 0.0048 | 0.1432 |
+| 30 | 250 | 0.0040 | 0.1200 | 0.0143 | 0.4295 |
+| 50 | 2500 | 0.0004 | 0.0200 | 0.0014 | 0.0716 |
+| 50 | 3000 | 0.0003 | 0.0167 | 0.0012 | 0.0596 |
+| 50 | 750 | 0.0013 | 0.0667 | 0.0048 | 0.2386 |
+| 50 | 1500 | 0.0007 | 0.0333 | 0.0024 | 0.1193 |
+| 60 | 3000 | 0.0003 | 0.0200 | 0.0012 | 0.0716 |
+| 60 | 3000 | 0.0003 | 0.0200 | 0.0012 | 0.0716 |
+| 60 | 1500 | 0.0007 | 0.0400 | 0.0024 | 0.1432 |
+| 100 | 3000 | 0.0003 | 0.0333 | 0.0012 | 0.1193 |
+| 100 | 3000 | 0.0003 | 0.0333 | 0.0012 | 0.1193 |
+| 500 | 30000 | 0.0000 | 0.0167 | 0.0001 | 0.0596 |
+| 500 | 30000 | 0.0000 | 0.0167 | 0.0001 | 0.0596 |
+| 5000 | 60000 | 0.0000 | 0.0833 | 0.0001 | 0.2982 |
+| | | 0.2515 | -0.3933 | 0.9000 | 1.1711 |
 {% endtable %}
 
-Looking at the first row corresponding to a Bingo on line 1 of card 1, the payoff is \$3 and the odds are 1 in 10 which makes the probability 1/10 = 0.1. Multiplying the payoff by the probability gives the expectation for that Bingo of \$0.30. Sum the expectations and then divide by the \$3 cost of the card (minus 1) to calculate the overall expectation of about -39 cents. In other words, you can expect to lose \$0.39 of every dollar that you play. 
+Looking at the first row corresponding to a Bingo on line 1 of card 1, the payoff is \$3 and the odds are 1 in 10 which makes the probability 1/10 = 0.1. Multiplying the payoff by the probability gives the expectation for that Bingo of \$0.30. Sum the expectations and then divide by the \$3 cost of the card (minus 1) to calculate the overall expectation of about -39 cents. In other words, you can expect to lose \$0.39 of every dollar that you play.
 
-What if Mohan is right that you can improve your odds so you're picking winners 90\% of the time? At the bottom of the probability column, you'll see that I summed all of the probabilities and found the chances of getting a winning ticket are 0.2515 without using his method. In the adjusted probability column, I multiplied each probability by a factor of 0.9 / 0.2515 = 3.58 to adjust the total probability to 0.9. Next, I recalculated the expectations with these new probabilities and summed them to get the adjusted expectation of \$1.17. Winning \$1.17 for every dollar spent is a pretty decent return. 
+What if Mohan is right that you can improve your odds so you're picking winners 90\% of the time? At the bottom of the probability column, you'll see that I summed all of the probabilities and found the chances of getting a winning ticket are 0.2515 without using his method. In the adjusted probability column, I multiplied each probability by a factor of 0.9 / 0.2515 = 3.58 to adjust the total probability to 0.9. Next, I recalculated the expectations with these new probabilities and summed them to get the adjusted expectation of \$1.17. Winning \$1.17 for every dollar spent is a pretty decent return.
 
 How much time and money would Mohan have to spend on this? To clear \$600 per day at \$1.17 per winning ticket, he'd have to turn in 171 winning tickets. (171 tickets $\times$ \$3 per ticket = \$513, and \$513 $\times$ \$1.17 = \$600.) But, he'd have to buy 3.58 times that many and weed out the losers, which means he'd be buying 679 total tickets for \$2037. At 45 seconds per ticket, it would take him 8.5 hours per day. Ugh. Tedious.
 
@@ -97,7 +100,7 @@ Image processing in [Python](https://www.anaconda.com/) will let us remove the l
 
 ![Comparison of Bingo Card and OCR results.](/assets/img/winning-the-scratch-lottery/bingo-card-ocr-results.svg)
 
-There are errors, but Tesseract even correctly converted the "FREE" at the center of each Bingo card. Cleaning up the images before running the OCR should take care of most of the errors. 
+There are errors, but Tesseract even correctly converted the "FREE" at the center of each Bingo card. Cleaning up the images before running the OCR should take care of most of the errors.
 
 The next step is to identify the singleton occurrences of numbers on the cards. We'll set up a $100 \times 1$ zero vector for each number from 0 to 99, and then add 1 to the index corresponding to each number found on the cards. So, the 11 in the upper left corner of Cards 1-3 will mean a 3 will appear in the 12th entry of the vector. After every number has been counted, we can search the index vector for 1's. We'll set up four $5 \times 5$ zero arrays corresponding to each of the four cards, and put 1's into locations containing the singleton numbers.
 
@@ -113,4 +116,4 @@ Many states have adopted scratch lotteries as a way to pay for their schools, bu
 
 ---
 
-*Update December 16, 2020:* [An elderly mathematician hacked the lottery for 26 million](https://entrepreneurshandbook.co/an-elderly-mathematician-hacked-the-lottery-for-26-million-121c28faa88b)
+_Update December 16, 2020:_ [An elderly mathematician hacked the lottery for 26 million](https://entrepreneurshandbook.co/an-elderly-mathematician-hacked-the-lottery-for-26-million-121c28faa88b)

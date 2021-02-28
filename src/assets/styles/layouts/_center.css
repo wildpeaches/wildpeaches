@@ -1,6 +1,6 @@
 /* https://every-layout.dev/layouts/center/ */
 
-.center-l {
+.o-center {
   max-width: 55ch;
   @apply ml-auto mr-auto px-8 box-content;
 }

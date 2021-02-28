@@ -9,3 +9,5 @@ package-lock.json
 src/assets/styles/style.min.css
 # Local Netlify folder
 .netlify
+.vscode/
+.eslintcache

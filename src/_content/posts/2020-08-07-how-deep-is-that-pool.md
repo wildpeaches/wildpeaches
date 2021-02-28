@@ -29,25 +29,33 @@ Even worse, until you start testing you don't know what fraction of the populati
 Let's say you want to test a population of $N$ people using pool sizes of $n$ people (the depth of the pool) where the probability of being infected is $p$. You'll begin by forming $P = N/n$ pools (with some rounding if $n$ doesn't go into $N$ evenly). Of those, some fraction $\alpha \; (0 \leq \alpha \leq 1)$ of them will be positive. Again, ignoring rounding $\alpha P$ pools will be positive, so you'll need to retest $\alpha P n$ individual samples. In other words, the total number of tests run will be $P + \alpha P n$. What is the optimal value for $n$ as a function of $P$ and $p$?
 
 What we need to do is to find the minimum of the function $T(n,p)$ where $T$ represents the number of required tests,
+
 $$
-T(n,p) = P + \alpha P n = P (1 + \alpha n) = N \left( \frac{1}{n} + \alpha \right) 
+T(n,p) = P + \alpha P n = P (1 + \alpha n) = N \left( \frac{1}{n} + \alpha \right)
 $$
+
 where $\alpha$ will be a function of the probability of a positive test. This is a [Binomial distribution](https.//en.m.wikipedia.org/wiki/Binomial_distribution),
+
 $$
 \alpha(k,n,p) = Pr(k;n,p) = \binom{n}{k} p^k (1 - p)^{n-k}
 $$
+
 for $k = 0,1, \ldots, n$ which gives the probability of $k$ failures in $n$ tests when the probability of failure (infection) for a single individual is $p$.
 
 For our case, all we're concerned about is the case $k = 0$, $Pr(0;n,p) = (1-p)^n$ when the test returns a negative result since $1-p$ is the probability someone is not infected and $(1-p)^n$ means all $n$ people in the pool test negative.
 
 The test function $T$ is then
+
 $$
  T(n,p) = \frac{N}{n} \left( 1 + ( 1 - (1-p)^n ) n \right)
 $$
+
 or
+
 $$
 T(n,p) =  N \left( \frac{1}{n} + 1 - (1-p)^n \right).
 $$
+
 To recap, the term $1 - (1-p)^n$ comes from the fact that each person has a probability $p$ of being infected or $1-p$ of being virus-free. We're assuming everyone's chances of being infected are independent of everyone else, so the probability that all $n$ people in the pool are not infected is the product $(1-p)$ $n$ times, which gives $(1-p)^n$. But if one or more are infected then the test for that pool will fail, which is the complement, or $1 - (1-p)^n$.
 
 Of course, people don't become infected independently of everyone else, but for this example, we'll assume independence. We're also assuming the tests are perfect, which they aren't. This can make a big difference to the estimate of infection rate.
@@ -63,9 +71,11 @@ To find the number of tests required for a given infection rate $p$ means we nee
 ## Optimum pool sizes
 
 A little calculus here—we need to find
+
 $$
 \frac{dT(n,p)}{dn} = -(1-p)^n \log(1-p) - \frac{1}{n^2} = 0
 $$
+
 for some value of $n$. That is, we're looking for the point on the curve where the slope is zero which will indicate either a minimum, a maximum, or an inflection point. Without going into any more, it turns out these points are the minimum values we're looking for.
 
 Solving $\frac{dT}{dn} = 0$ for various values of $p$ gives this plot: ([python code here](https://gist.github.com/JanDW/2d555feb2967fd7fb3bb7525e03c2506))
@@ -78,7 +88,7 @@ Once we have the optimal number of people per pool then for each infection proba
 
 ![Tests required](/assets/img/how-deep-is-the-pool/tests-required.svg){.blend-multiply}
 
-If you'd like a review of derivatives Grant Sanderson's ["Derivative formulas through geometry"](https://www.youtube.com/watch?v=S0_qX4VJhMQ) video is a very good start and is part of his [The Essence of Calculus](https://www.youtube.com/watch?v=WUvTyaaNkzM) series. A complete calculus course is also available from Khan Academy's [Calculus I](https://www.khanacademy.org/math/calculus-1). 
+If you'd like a review of derivatives Grant Sanderson's ["Derivative formulas through geometry"](https://www.youtube.com/watch?v=S0_qX4VJhMQ) video is a very good start and is part of his [The Essence of Calculus](https://www.youtube.com/watch?v=WUvTyaaNkzM) series. A complete calculus course is also available from Khan Academy's [Calculus I](https://www.khanacademy.org/math/calculus-1).
 
 ## The need for more testing
 
@@ -97,4 +107,4 @@ This shows that to make COVID-19 pool testing worthwhile the test will need to b
   </figcaption>
 </figure>
 
-Usama Kadri from Cardiff University has developed a [linear algebra method](https://www.tandfonline.com/doi/full/10.1080/20476965.2020.1817801) that tests samples from the same person in different pools multiple times to identify infected people, but it requires automated testing methods that may not be available to many hospitals. You can read about his technique in the 7 Oct 2020 edition of [SciTechDaily](https://scitechdaily.com/simple-algebra-enables-faster-large-volume-covid-19-testing/). 
+Usama Kadri from Cardiff University has developed a [linear algebra method](https://www.tandfonline.com/doi/full/10.1080/20476965.2020.1817801) that tests samples from the same person in different pools multiple times to identify infected people, but it requires automated testing methods that may not be available to many hospitals. You can read about his technique in the 7 Oct 2020 edition of [SciTechDaily](https://scitechdaily.com/simple-algebra-enables-faster-large-volume-covid-19-testing/).
