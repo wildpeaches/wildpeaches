@@ -1,5 +1,6 @@
   <nav id="top" class="bg-white">
-    <ul class="justify-center flex o-center py-3 list-none font-sans text-current">
+    {# adding role=list because of this circular reasoning 🤬 https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html #}
+    <ul role="list" class="justify-center flex o-center py-3 list-none font-sans text-current">
       {%- for item in navigation.items %}
       <li class="{{ item.listClass }}">
         <a
