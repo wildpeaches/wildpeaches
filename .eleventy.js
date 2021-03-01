@@ -45,6 +45,7 @@ module.exports = (eleventyConfig) => {
 
   // CSS needs to be compiled with `npm run css`
   eleventyConfig.addPassthroughCopy('src/assets/img');
+  eleventyConfig.addPassthroughCopy('src/assets/vectors');
   eleventyConfig.addPassthroughCopy('src/assets/styles/style.min.css');
   eleventyConfig.addPassthroughCopy({ 'src/assets/siteroot': '/' });
 

@@ -1,0 +1,14 @@
+a[rel~='external']::after {
+  background: url('/assets/vectors/external.svg') no-repeat;
+  block-size: 0.75em;
+  content: '';
+  display: inline-block;
+  inline-size: 0.5em;
+  margin-inline: 0.125em;
+  opacity: 0.8;
+  vertical-align: baseline;
+}
+
+a[rel~='external']:hover::after {
+  opacity: 1;
+}
