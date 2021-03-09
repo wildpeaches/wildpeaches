@@ -19,5 +19,44 @@ includeSubscription: true
     <p class="lede {{ ledeTopMargin }}">{{ lede }}</p>
     {% endif %} 
     {{ content | safe }}
+
+    {#
+      <!-- @TODO show tags-->
+
+    {% if not loop.length == 0 %}
+    <span id="articleTags" class="font-sans">Tags</span>
+    <ul role="list" aria-labelledby="articleTags">
+    </ul>
+
+    </ul>
+    {%- for tag in tags %}
+    {{ tag }}
+    {%- if not loop.last %},{%- endif %}
+    {%- endfor %}
+    <br>
+    Keywords:
+    {%- for keyword in keywords %}
+    {{ keyword }}
+    {%- if not loop.last %},{%- endif %}
+    {%- endfor %}
+
+  #}
+
   </article>
 </main>
+
+{% if relatedPosts %}
+<aside class="o-center font-sans">
+  <h2 class="u-no-indent font-bold text-base">Similar articles</h2>
+  <ul role="list" class="mb-24 mt-6">
+  {%- for relatedPost in relatedPosts %}
+    <li class="my-5 text-base">
+      {# <img src="{{ relatedPost.hero.url }}" alt="{{ relatedPost.hero.alt }}"> #}
+      <a href="{{ relatedPost.url }}"><span class="font-semibold">{{ relatedPost.title }}</span> <span class="text-gray-600 block text-sm">{{ relatedPost.subtitle }}</span></a>
+    </li>
+  {% endfor %}
+  </ul>
+</aside>
+{% endif %}
+    
+
