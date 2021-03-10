@@ -89,13 +89,13 @@ Use the mesh processing tool [CloudCompare](https://www.danielgm.net/cc/) to rea
 
 The first step is to take measurements in the 3D mesh and corresponding points in Google Earth. Use the [Point Picking](http://www.cloudcompare.org/doc/wiki/index.php?title=Point_picking) tool to select two points that are visible in both the data and Google Earth. The _2 Points Label_ in CloudCompare will display the distance between the points just as the _Ruler_ does in Google Earth. Taking the ratio of the distances, I found that the points in the mesh needed to be scaled up by a factor of 13.947.
 
-Scale the points in the mesh by selecting Edit $/rightarrow$ [Multiply/Scale](http://www.cloudcompare.org/doc/wiki/index.php?title=Multiply/Scale) (make sure "Mesh" is highlighted in the DB Tree menu). In the dialog box, enter the scale factor found in the previous step. If you re-measure the points in the mesh they should match the distances in Google Earth. The scale factor could be improved by taking measurements between several pairs of points and averaging, but we're just trying to estimate the volume of some dirt here.
+Scale the points in the mesh by selecting Edit $\rightarrow$ [Multiply/Scale](http://www.cloudcompare.org/doc/wiki/index.php?title=Multiply/Scale) (make sure "Mesh" is highlighted in the DB Tree menu). In the dialog box, enter the scale factor found in the previous step. If you re-measure the points in the mesh they should match the distances in Google Earth. The scale factor could be improved by taking measurements between several pairs of points and averaging, but we're just trying to estimate the volume of some dirt here.
 
 The SfM tool doesn't have any information about direction, so we need to provide a local reference system. We need to set an $x,y,z$ coordinate system, so I chose the $x$-axis to align with the edge of the road closest to the ocean, and the $z$-axis perpendicular to the road. To align the road with the CloudCompare coordinate system, the first step is to select one point to be the origin $(0,0,0)$. Pick a point on the white line close to the washout area such as point #1 shown here.
 
 ![](/assets/img/california-tumbles-into-the-sea/vector-alignment.jpg)
 
-All points will be rotated around this point, so it needs to be close to the opening, but on the edge of the road. Click Edit $/rightarrow$ Apply Transformation $/rightarrow$ Axis, Angle in the dialog box. Make sure that Rotation axis and Rotation angle values are all set to zero, then enter the coordinates for the first point in Translation, check "Apply inverse transformation" and then OK.
+All points will be rotated around this point, so it needs to be close to the opening, but on the edge of the road. Click Edit $\rightarrow$ Apply Transformation $\rightarrow$ Axis, Angle in the dialog box. Make sure that Rotation axis and Rotation angle values are all set to zero, then enter the coordinates for the first point in Translation, check "Apply inverse transformation" and then OK.
 
 ![translation](/assets/img/california-tumbles-into-the-sea/translation.png)
 
@@ -133,7 +133,7 @@ Once the $z$-axis is aligned with the local up direction, rotate the edge of the
 theta = acosd(dot(unit(P2),P3))
 ```
 
-Reset the transformation parameters (Ctrl-t) $/rightarrow$ Reset and then enter the value calculated for _theta_ as the rotation angle. In this case, the $z$-value should be 1 because we need to rotate about the $z$-axis.
+Reset the transformation parameters (Ctrl-t) $\rightarrow$ Reset and then enter the value calculated for _theta_ as the rotation angle. In this case, the $z$-value should be 1 because we need to rotate about the $z$-axis.
 
 The mesh also needs to be rescaled. The most accurate points are on the white lines along the edge of the road, so pick a point like #3 shown above. The $x$ and $z$ coordinates don't matter, but the $y$ value might be something like 1.532193​. To get the scale factor, divide this into the true road width,
 
@@ -142,11 +142,11 @@ The mesh also needs to be rescaled. The most accurate points are on the white li
 ans = 13.947
 ```
 
-In CloudCompare select Tools $/rightarrow$ Multiply/Scale, enter the scale factor in Scale(x), and make sure that "Same scale for all dimensions" is checked, then click OK. The $y$-coordinates for points on the white line should now match the road width.
+In CloudCompare select Tools $\rightarrow$ Multiply/Scale, enter the scale factor in Scale(x), and make sure that "Same scale for all dimensions" is checked, then click OK. The $y$-coordinates for points on the white line should now match the road width.
 
 The structure from motion algorithm will miss some points that need to be filled, seen as dark patches. To fill in the missing points, [rasterize](http://www.cloudcompare.org/doc/wiki/index.php?title=Rasterize#Interpolating_empty_cells) the point cloud. Use a step size of 0.5, the projection direction _z_, and for empty cells set "Fill with" to "interpolate". Click "Update Grid" and then "Export Mesh". Highlight the new Vertices field in the DB tree and save it as a newly named file.
 
-The last preprocessing step is to reduce the number of points in the 3D mesh. Import the mesh into [Meshlab](https://www.meshlab.net/), then click Filters $/rightarrow$ Remeshing, Simplification and Reconstruction $/rightarrow$ Delaunay Triangulation, then from the same menu choose Surface Reconstruction: Screened Poisson. This step can be repeated several times until the number of points in the mesh is about 100,000. Save the results as a .ply file. Details of the triangulation process are [here](https://meshlabstuff.blogspot.com/2009/09/meshing-point-clouds.html).
+The last preprocessing step is to reduce the number of points in the 3D mesh. Import the mesh into [Meshlab](https://www.meshlab.net/), then click Filters $\rightarrow$ Remeshing, Simplification and Reconstruction $\rightarrow$ Delaunay Triangulation, then from the same menu choose Surface Reconstruction: Screened Poisson. This step can be repeated several times until the number of points in the mesh is about 100,000. Save the results as a .ply file. Details of the triangulation process are [here](https://meshlabstuff.blogspot.com/2009/09/meshing-point-clouds.html).
 
 ## Calculating the volume of the washout
 
@@ -171,14 +171,14 @@ Now the volume under the rectangle can be calculated by summing the volume of ea
 The volume is approximately the area $A$ of the triangle times the height. The height of each vertex $(h_1,h_2,h_3)$ may be different from the others, so an easy estimate is to take the median or middle value. We're just estimating some dirt here. To calculate the area of the triangle first create vectors
 
 $$
-V_{12} = P_2 - P_1 //
+V_{12} = P_2 - P_1 \\
 V_{13} = P_3 - P_1
 $$
 
 and then the area is half the absolute value of the [cross product](https://en.wikipedia.org/wiki/Cross_product#:~:text=The%20cross%20product%20a%20%C3%97,parallelogram%20that%20the%20vectors%20span.),
 
 $$
-A = /frac{1}{2} |V_{12} /times V_{13}|.
+A = \frac{1}{2} |V_{12} \times V_{13}|.
 $$
 
 In Octave, run the function
@@ -202,13 +202,13 @@ In Octave,
 ans = 119592
 ```
 
-which is pretty close to the volume estimated using the mesh of $120,330 /; ft^3$. The data on the right end is a bit ratty, which may indicate more damage or possibly the road slopes downwards there.
+which is pretty close to the volume estimated using the mesh of $120,330 \; ft^3$. The data on the right end is a bit ratty, which may indicate more damage or possibly the road slopes downwards there.
 
 If you want to be useful to CalTrans, they might want an estimate that is slightly wider than the roadway and slopes down away from the shoulders:
 
 ![](/assets/img/california-tumbles-into-the-sea/extended-volume.png)
 
-Extending the width of the rectangle by 10 feet on either side to include the shoulders gives a volume of $224320 /; ft^3 = 8308 /; yd^3$. If the sloped region is extended 20 feet on either side of the end of the shoulder the volumes are $V_{left} = 148,250 /; ft^3 = 5491 /; yd^3$ and $V_{right} = 79,208 /; ft^3 = 2934 /; yd^3$ giving a total fill volume of $V_{total} = 451,780 /; ft^3 = 16730 /; yd^3$.
+Extending the width of the rectangle by 10 feet on either side to include the shoulders gives a volume of $224320 \; ft^3 = 8308 \; yd^3$. If the sloped region is extended 20 feet on either side of the end of the shoulder the volumes are $V_{left} = 148,250 \; ft^3 = 5491 \; yd^3$ and $V_{right} = 79,208 \; ft^3 = 2934 \; yd^3$ giving a total fill volume of $V_{total} = 451,780 \; ft^3 = 16730 \; yd^3$.
 
 This shows that with some open-source software and freely available drone videos it's possible to reconstruct a 3D model of a scene and to perform volumetric calculations. Using this technique also keeps survey crews at a safe distance from the opening of the washout. For a much nicer 3D model, check out [Kathleen Tuite's](http://www.superfiretruck.com/) [Sketchfab reconstruction](https://sketchfab.com/3d-models/highway-1-washed-out-at-rat-creek-1e67868b52fc44219e29c32a4c327809).
 
@@ -230,26 +230,26 @@ suggesting that OpenDroneMap, AliceVision, and VIsualSFM might be good alternati
 
 The point cloud needs to be rotated to get the direction vertical to the road aligned with the $z$-axis first, then the $x$-axis. As explained above, the first step is to shift all of the points so that the origin is located at a point near the edge of the road just before the washout. Do this by using the translation option and applying an inverse transform equal to the values of this point.
 
-Select two other points, and convert them to unit vectors. A vector is a triplet of numbers describing the direction from one point to another in $(x,y,z)$-coordinates. A unit vector has length $1$, meaning that if $V = [x,y,z]$ then the length of $V$ is $||V|| = /sqrt{x^2+y^2+z^2} = 1$.
+Select two other points, and convert them to unit vectors. A vector is a triplet of numbers describing the direction from one point to another in $(x,y,z)$-coordinates. A unit vector has length $1$, meaning that if $V = [x,y,z]$ then the length of $V$ is $||V|| = \sqrt{x^2+y^2+z^2} = 1$.
 
 The Octave function _norm_ calculates the length of a vector, so dividing by the norm gives a vector of length $1$, or unit vector. Using these new unit vectors we need to calculate the [cross](https://mathworld.wolfram.com/CrossProduct.html) and [dot products](https://mathworld.wolfram.com/DotProduct.html). The cross product gives a vector perpendicular to the first two, and the dot product is used to calculate the angle between two vectors.
 
 ![](/assets/img/california-tumbles-into-the-sea/cross-dot-product.png)
 
-The cross product of $V_1$ and $V_2$ gives $V_3$ which we need to align with the local up direction, or $z$-axis. Taking the cross product of $V_3$ with the $z$-axis $([0,0,1])$ gives a vector perpendicular to both, $/omega$, which is the axis of rotation required to transform all points so that the road becomes horizontal. CloudCompare uses a [Rodrigues rotation](https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula) to rotate points about the origin using information contained in the rotation vector $/omega$ and the rotation angle $/theta$.
+The cross product of $V_1$ and $V_2$ gives $V_3$ which we need to align with the local up direction, or $z$-axis. Taking the cross product of $V_3$ with the $z$-axis $([0,0,1])$ gives a vector perpendicular to both, $\omega$, which is the axis of rotation required to transform all points so that the road becomes horizontal. CloudCompare uses a [Rodrigues rotation](https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula) to rotate points about the origin using information contained in the rotation vector $\omega$ and the rotation angle $\theta$.
 
 ![](/assets/img/california-tumbles-into-the-sea/omega-theta.png)
 
 After the roadway plane has been aligned with the $x-y$ plane, the edge of the road can be rotated into alignment with the $x$-axis by calculating the angle between them, using the dot product. Pick a point on the white line across the damaged area, but on the same side as the origin, and convert it to a unit vector. The dot product of two vectors is
 
 $$
-V = V_1 /cdot V_2 = V_{1x}V_{2x} + V_{1y}V_{2y} + V_{1z}V_{2z}
+V = V_1 \cdot V_2 = V_{1x}V_{2x} + V_{1y}V_{2y} + V_{1z}V_{2z}
 $$
 
 or the sum of the products of each component of the two vectors. The $x$-axis is the unit vector $[1,0,0]$, so the dot product of any unit vector with the $x$-axis is just the first component of the vector. This means that the angle of rotation required to align to the $x$-axis is
 
 $$
-/theta = /cos^{-1}(V_{2x}).
+\theta = \cos^{-1}(V_{2x}).
 $$
 
-CloudCompare requires the angle to be in degrees, so either multiply by $/frac{180}{/pi}$ or use the Octave function `acosd`.
+CloudCompare requires the angle to be in degrees, so either multiply by $\frac{180}{\pi}$ or use the Octave function `acosd`.
