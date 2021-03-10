@@ -2,10 +2,8 @@
 permalink: "/site-urls.json"
 eleventyExcludeFromCollections: true
 ---
-{
-  urls: [
-    {%- for pages in collections.all %}
-    "{{site.url}}{{ pages.url }}",
-    {%- endfor %}
-  ]
-}
+[
+  {%- for pages in collections.all %}
+  "{{site.url}}{{ pages.url }}",
+  {%- endfor %}
+]
