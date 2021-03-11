@@ -2,18 +2,18 @@
 title: California Tumbles Into The Sea
 subtitle: Disaster at Rat Creek
 author: John Peach
-lede: A method to estimate volumes from 3D point clouds
+lede: Arson, drugs, murder? (maybe) lead to $11.5M damage on CA Hwy 1. TV drone video and some math tricks calculate the volume of the washout.
 hero:
   url: /assets/img/california-tumbles-into-the-sea/coastal-convection-landscape.jpg
   alt: Photo from NOAA "What are atmospheric rivers".
 tags: [math]
-keywords: [structure from motion, volume estimation]
+keywords: [structure from motion, volume estimation, drone video]
 socialImg: /assets/img/california-tumbles-into-the-sea/coastal-convection-landscape.jpg
 ---
 
 ## Fire and Rain
 
-When he was arrested he confessed to five murders and to setting the fire to cover up evidence. Police booked him on ["charges of arson on forest land, cultivating marijuana, battery on a person, exhibiting a deadly weapon and throwing something at a vehicle intending to cause great bodily injury"](https://www.thecalifornian.com/story/news/2020/09/18/california-wildfires-dolan-fire-arson-murders-mental-health-evaluation/5825074002/), but they never found the bodies. His attorney presented evidence that he may not be mentally competent to stand trial, and while the police still believe the origins of the fire were suspicious, they haven't been able to pin an arson charge on him. Firefighters in the area accused him of throwing rocks at their vehicles.
+When he was arrested, Ivan Gomez confessed to five murders and setting the fire to cover up evidence. Police booked him on ["charges of arson on forest land, cultivating marijuana, battery on a person, exhibiting a deadly weapon and throwing something at a vehicle intending to cause great bodily injury"](https://www.thecalifornian.com/story/news/2020/09/18/california-wildfires-dolan-fire-arson-murders-mental-health-evaluation/5825074002/), but they never found the bodies. His attorney presented evidence that he may not be mentally competent to stand trial, and while the police still believe the origins of the fire were suspicious, they haven't been able to pin an arson charge on him. Firefighters in the area accused him of throwing rocks at their vehicles.
 
 The Dolan Fire on California's central coast near Big Sur began in the evening of August 18th, 2020, and wasn't fully contained until December 31st. Fifteen firefighters were [injured](https://www.ksby.com/weather/fire-watch/15-firefighters-injured-during-shelter-deployment-situation-while-battling-the-dolan-fire) battling the fire on September 8th, one of them critically, when they were forced to deploy fire shelters at [Nacimiento Station](https://naturalatlas.com/ranger-stations/nacimiento-1543344) in Los Padres National Forest. By the time the fire was fully contained it had burned 128,050 acres.
 
@@ -73,7 +73,7 @@ The volume lost directly under the roadway was about 120,000 cubic feet or 4500 
 
 To estimate the volume we first need to get a copy of the drone video and then run it through a Structure from Motion (SfM) tool to get the 3D mesh. Download the [drone video](https://www.youtube.com/watch?v=WxuPIrbAx8Q) using a downloader app such as [youtube-dl](https://youtube-dl.org/), and crop the video using [Trim Video](https://online-video-cutter.com/) or [Online Converter](https://www.onlineconverter.com/video-to-jpg). Online Converter exports individual frames which are useful in a subsequent step. I found that the best results were obtained from the sequence 2:45 to 3:06. During this time the drone followed the path of Rat Creek across the road and towards the ocean with the camera pointing straight down.
 
-Several SfM tools are available: [AliceVision/Meshroom](https://alicevision.org/#meshroom), [Regard3D](http://www.regard3d.org/index.php), [VisualSFM](http://ccwu.me/vsfm/), but I found that the online tool [VisualSize](http://www.visualsize.com/) worked very well. Submit your video clip to [PhotoModel3D](http://excelsior.cs.ucsb.edu/PhotoModel3D/webUpload.html), provide your email address, and in a couple of hours the completed 3D model is available for download in [.ply format](<https://en.wikipedia.org/wiki/PLY_(file_format)>), a standard ASCII structure that captures mesh vertex locations and colors.
+Several SfM tools are available: [AliceVision/Meshroom](https://alicevision.org/#meshroom), [Regard3D](http://www.regard3d.org/index.php), [VisualSFM](http://ccwu.me/vsfm/), but I found that the online tool [VisualSize](http://www.visualsize.com/) worked very well. Submit your video clip to [PhotoModel3D](http://excelsior.cs.ucsb.edu/PhotoModel3D/webUpload.html), provide your email address, and in a couple of hours the completed 3D model is available for download in [.ply format](<https://en.wikipedia.org/wiki/PLY_(file_format)>), a standard ASCII structure that captures mesh vertex locations and colors. For a very nice 3D model, check out [Kathleen Tuite's](http://www.superfiretruck.com/) [Sketchfab reconstruction](https://sketchfab.com/3d-models/highway-1-washed-out-at-rat-creek-1e67868b52fc44219e29c32a4c327809).
 
 Start [Google Earth](https://www.google.com/earth/versions/), type "Rat Creek, CA" in the search bar, and click "Search". Next, select a frame from the video that shows a clear view of the damaged roadway, click the "Image Overlay" icon, and import the frame. Set the transparency to about 50% and adjust the size and position of the overlay to match the location.
 
@@ -210,9 +210,7 @@ If you want to be useful to CalTrans, they might want an estimate that is slight
 
 Extending the width of the rectangle by 10 feet on either side to include the shoulders gives a volume of $224320 \; ft^3 = 8308 \; yd^3$. If the sloped region is extended 20 feet on either side of the end of the shoulder the volumes are $V_{left} = 148,250 \; ft^3 = 5491 \; yd^3$ and $V_{right} = 79,208 \; ft^3 = 2934 \; yd^3$ giving a total fill volume of $V_{total} = 451,780 \; ft^3 = 16730 \; yd^3$.
 
-This shows that with some open-source software and freely available drone videos it's possible to reconstruct a 3D model of a scene and to perform volumetric calculations. Using this technique also keeps survey crews at a safe distance from the opening of the washout. For a much nicer 3D model, check out [Kathleen Tuite's](http://www.superfiretruck.com/) [Sketchfab reconstruction](https://sketchfab.com/3d-models/highway-1-washed-out-at-rat-creek-1e67868b52fc44219e29c32a4c327809).
-
-This analysis was inspired by work at [MIT Lincoln Laboratory](https://www.ll.mit.edu/) where I spent about 8 months helping the [Humanitarian Assistance and Disaster Relief Group](https://news.mit.edu/2020/lidar-and-ai-road-status-clears-after-disaster-0415) analyze [LiDAR](https://en.wikipedia.org/wiki/Lidar) (Light detection and ranging) data collected from an aircraft flying over [Puerto Rico](https://www.ll.mit.edu/news/lincoln-laboratory-team-uses-lidar-assess-damage-puerto-rico) after Hurricane Maria came ashore as a very strong CAT-4 in September 2017. The LiDAR data was more accurate than the 3D reconstruction shown here, and we had better analysis software, but it follows the basic concept of evaluating the volume of the washed-out roadway so that FEMA could estimate repair costs. I also made three trips to the FEMA field office in Guaynabo PR, to train FEMA personnel. We performed the same analysis after [Hurricane Florence](https://lidarmag.com/2019/05/18/how-lidar-could-transform-disaster-recovery/) devastated eastern North Carolina and South Carolina a year later, and demonstrated the utility of the method during a meeting at the FEMA office in Research Triangle Park, NC.
+This shows that with some open-source software and freely available drone videos it's possible to reconstruct a 3D model of a scene and to perform volumetric calculations. Not only is it relatively fast, but using this technique keeps survey crews at a safe distance from the opening of the washout. 
 
 ## Appendix A: Using your drone
 
