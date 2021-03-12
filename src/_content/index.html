@@ -7,39 +7,39 @@ bodyClass: text-gray-800 bg-gray-50 font-sans
 includeSubscription: true
 ---
 
-<section class="my-24 o-stack o-center">
-  <h1 class="leading-tighter text-5xl font-sans font-extrabold mb-4 border-l-8 pl-4 -ml-6 border-gray-200 sr-only">
-    {{ site.name }}
+<main id="main" class="my-24 o-stack o-center">
+  <h1 id="toc" class="leading-tighter text-5xl font-sans font-extrabold mb-4 border-l-8 pl-4 -ml-6 border-gray-200 sr-only">
+    Contents {{ site.name }}
   </h1>
 
-  <p class="mb-12 text-2xl font-medium max-w-md">{{ site.tagline }}</p>
+  <p class="mb-12 text-2xl font-medium max-w-md"><span class="sr-only">subtitle:</span>{{ site.tagline }}</p>
 
-  <ul class="divide-y divide-gray-400 list-none">
-    {%- for post in collections.posts | reverse %}
-
-    <li class="py-4 leading-snug">
-      <a class="border-b-0 flex" href="{{ post.url }}">
-        <div>
-          <div class="font-medium text-xl">{{ post.data.title }}</div>
-          {%- if post.data.subtitle %}
-          <div class="text-gray-600 text-lg font-sans">
+  <nav aria-labelledby="toc">
+    <ul class="divide-y divide-gray-400 list-none">
+      {%- for post in collections.posts | reverse %}
+      <li class="py-4 leading-snug">
+        <a class="border-b-0 flex" href="{{ post.url }}">
+          <div>
+            <div class="font-medium text-xl">{{ post.data.title }}</div>
+            {%- if post.data.subtitle %}
+            <div class="text-gray-600 text-lg font-sans">
             {{ post.data.subtitle }}
-          </div>
-          {%- endif %}
-          {#
-           {%- if post.data.tags %}
-          <div class="text-gray-500 font-sans text-sm">
-          {%- for tag in post.data.tags %}
+            </div>
+            {%- endif %}
+
+            {#
+            {%- if post.data.tags %}
+            <div class="text-gray-500 font-sans text-sm">
+            {%- for tag in post.data.tags %}
             #{{ tag }}
-          {%- endfor %}
-
+            {%- endfor %}
+            </div>
+            {%- endif %}
+            #}
           </div>
-          {%- endif %}
-          #}
-        </div>
-      </a>
-    </li>
-
-    {%- endfor %}
-  </ul>
-</section>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </nav>
+</main>

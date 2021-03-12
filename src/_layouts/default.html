@@ -7,13 +7,18 @@ socialImg: /assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/he
 <html lang="en-US" dir="ltr">
   {%- include 'head.html' %}
   <body
-    class="text-base sm:text-lg md:text-xl overflow-x-hidden home-font-features {%- if bodyClass %} {{ bodyClass }}{%- endif %}"
+    class="text-base sm:text-lg md:text-xl overflow-x-hidden home-font-features {%- if bodyClass %}{{ bodyClass }}{%- endif %}"
   >
-    {%- include 'global-nav.html' %} 
+    <a href="#main">skip to main content</a>
+
+    {%- include 'global-nav.html' %}
+    
     {{ content | safe }}
+
     {%- if includeSubscription %}
-      {%- include "subscription-form.html" %}
+    {%- include "subscription-form.html" %}
     {%- endif%}
+    
     {%- include 'footer.html' %}
     {%- include 'analytics.html' %}
   </body>
