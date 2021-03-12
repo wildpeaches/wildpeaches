@@ -1,0 +1,9 @@
+---
+permalink: "/site-urls.json"
+eleventyExcludeFromCollections: true
+---
+[
+  {%- for pages in collections.all %}
+  "{{site.url}}{{ pages.url }}",
+  {%- endfor %}
+]

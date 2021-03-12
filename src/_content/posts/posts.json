@@ -1,5 +1,8 @@
 {
   "layout": "blog-post",
-  "permalink": "/blog/{{ title | slug }}/index.html",
-  "tags": ["posts"]
+  "eleventyComputed": {
+    "permalink": "/blog/{{ title | slug }}/index.html"
+  },
+  "tags": [],
+  "keywords": []
 }

@@ -1,5 +1,6 @@
 require('dotenv').config();
 const CleanCSS = require('clean-css');
+const collections = require('./src/utils/collections');
 const dateFilter = require('./src/filters/date-filter');
 const dumpFilter = require('@jamshop/eleventy-filter-dump');
 const statFilter = require('./src/filters/stat-filter');
@@ -48,6 +49,11 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy('src/assets/vectors');
   eleventyConfig.addPassthroughCopy('src/assets/styles/style.min.css');
   eleventyConfig.addPassthroughCopy({ 'src/assets/siteroot': '/' });
+
+  // Collections
+  Object.entries(collections).map(([key, value]) => {
+    eleventyConfig.addCollection(key, value);
+  });
 
   // Plugins
   eleventyConfig.addPlugin(syntaxHighlight);
