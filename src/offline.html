@@ -4,7 +4,23 @@ permalink: /offline.html
 layout: default
 ---
 
-
 <main id="main" class="o-center mb-12">
   <h1>Offline!</h1>
+  <p>You can still read these pages:</p>
+  <ul id="history"></ul>
+  <script>
+    // Open the cache of pages
+    caches.open('pages').then((pagesCache) => {
+      pagesCache.keys().then((keys) => {
+        let markup = '';
+        // Loop through each item in the cache
+        keys.forEach((request) => {
+          // Make a link to the URL of each page
+          markup += `<li><a href="${request.url}">${request.url}</a></li>`;
+        });
+        // Display the list of links
+        document.getElementById('history').innerHTML = markup;
+      }); // end keys then
+    }); // end open
+  </script>
 </main>

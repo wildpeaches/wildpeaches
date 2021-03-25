@@ -1,7 +1,7 @@
----
-eleventyExcludeFromCollections: true
-permalink: /service-worker.js
----
+// ---
+// eleventyExcludeFromCollections: true
+// permalink: /service-worker.js
+// ---
 
 const version = 'v0.0.1';
 
@@ -31,6 +31,36 @@ addEventListener('install', (installEvent) => {
 
 addEventListener('fetch', (fetchEvent) => {
   const request = fetchEvent.request;
+
+  // is blogpost?
+  if (request.url.includes('/blog/')) {
+    fetchEvent.respondWith(
+      caches
+        .match(request)
+        .then((responseFromCache) => {
+          if (responseFromCache) {
+            fetchEvent.waitUntil(fetch(request)).then((responseFromFetch) => {
+              caches.open(pagesCacheName).then((pagesCache) => {
+                return pagesCache.put(request, responseFromFetch);
+              });
+            });
+            return responseFromCache;
+          }
+          return fetch(request).then((responseFromFetch) => {
+            const clone = responseFromCache.clone();
+            fetchEvent.waitUntil(
+              caches.open(pagesCacheName).then((pagesCache) => {
+                return pagesCache.put(request, clone);
+              })
+            );
+            return responseFromFetch;
+          });
+        })
+        .catch((error) => {
+          return caches.match('/offline.html');
+        })
+    );
+  }
 
   // is HTML?
   if (request.headers.get('Accept').includes('text/html')) {
@@ -103,6 +133,7 @@ addEventListener('fetch', (fetchEvent) => {
       })
   );
 });
+
 addEventListener('activate', (activateEvent) => {
   activateEvent.waitUntil(
     caches
