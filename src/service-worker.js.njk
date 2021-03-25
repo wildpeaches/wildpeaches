@@ -1,0 +1,123 @@
+---
+eleventyExcludeFromCollections: true
+permalink: /service-worker.js
+---
+
+const version = 'v0.0.1';
+
+const staticCacheName = version + 'staticfiles';
+const imageCacheName = 'images';
+const pagesCacheName = 'pages';
+
+const cacheList = [staticCacheName, imageCacheName, pagesCacheName];
+
+addEventListener('install', (installEvent) => {
+  skipWaiting();
+  installEvent.waitUntil(
+    caches
+      .open(staticCacheName)
+      .then((staticCache) => {
+        staticCache.addAll(['/apple-touch-icon.png']);
+        return staticCache.addAll([
+          '/assets/styles/style.min.css',
+          '/confirmed.html',
+          'offline.html',
+          '/assets/vectors/no-image.svg',
+        ]);
+      })
+      .catch((error) => console.error('Failure'))
+  );
+});
+
+addEventListener('fetch', (fetchEvent) => {
+  const request = fetchEvent.request;
+
+  // is HTML?
+  if (request.headers.get('Accept').includes('text/html')) {
+    fetchEvent.respondWith(
+      fetch(request)
+        .then((responseFromFetch) => {
+          const clone = responseFromFetch.clone();
+          fetchEvent.waitUntil(
+            caches.open(pagesCacheName).then((pagesCache) => {
+              return pagesCache.put(request, clone);
+            })
+          );
+          return responseFromFetch;
+        })
+        .catch((error) => {
+          return caches.match(request).then((responseFromCache) => {
+            return responseFromCache || caches.match('/offline.html');
+          });
+        })
+    );
+    return;
+  }
+
+  // is image?
+  if (request.headers.get('Accept').includes('image')) {
+    fetchEvent.respondWith(
+      // Image cached?
+      caches.match(request).then((responseFromCache) => {
+        if (responseFromCache) {
+          fetchEvent.waitUntil(
+            fetch(request).then((responseFromFetch) => {
+              caches.open(imageCacheName).then((imageCache) => {
+                return imageCache.put(request, responseFromFetch);
+              });
+            })
+          );
+          return responseFromCache;
+        }
+        // No, fetch image
+        return fetch(request)
+          .then((responseFromFetch) => {
+            const clone = responseFromFetch.clone();
+
+            // Put clone in cache
+            fetchEvent.waitUntil(
+              caches.open(imageCacheName).then((imageCache) => {
+                imageCache.put(request, clone);
+              })
+            );
+            return responseFromFetch;
+          })
+          .catch((error) => {
+            console.log(error);
+            return caches.match('/assets/vectors/no-image.svg');
+          });
+      })
+    );
+    return;
+  }
+
+  // Everything else
+  fetchEvent.respondWith(
+    caches
+      .match(request)
+      .then((responseFromCache) => {
+        return responseFromCache || fetch(request);
+      })
+      .catch((error) => {
+        return caches.match('/offline.html');
+      })
+  );
+});
+addEventListener('activate', (activateEvent) => {
+  activateEvent.waitUntil(
+    caches
+      .keys()
+      .then((cacheNames) => {
+        return Promise.all(
+          cacheNames.map((cacheName) => {
+            if (!cacheList.includes(cacheName)) {
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      })
+      .then(() => {
+        return clients.claim();
+      })
+  );
+});
