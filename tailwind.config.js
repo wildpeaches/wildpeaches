@@ -4,11 +4,24 @@ module.exports = {
   // prefix: 't-', /* BEM utility scoping */
   important: true,
   darkMode: 'media',
-  purge: ['./.eleventy.js', './src/**/*.html', './src/**/*.md', './src/**/*.json', './lib/shortcodes/**/*.js'],
+  purge: [
+    './.eleventy.js',
+    './src/**/*.html',
+    './src/**/*.md',
+    './src/**/*.json',
+    './lib/shortcodes/**/*.js',
+  ],
   theme: {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
-      serif: ['ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
+      serif: [
+        'ui-serif',
+        'Georgia',
+        'Cambria',
+        'Times New Roman',
+        'Times',
+        'serif',
+      ],
       mono: [
         'ui-monospace',
         'SFMono-Regular',
@@ -33,6 +46,8 @@ module.exports = {
       green: colors.green,
       red: colors.red,
       teal: colors.teal,
+      primary: colors.warmGray[700],
+      backgroundColor: colors.warmGray[50],
     },
     listStyleType: {
       none: 'none',
