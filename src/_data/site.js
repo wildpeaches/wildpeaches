@@ -4,13 +4,20 @@ const tailwindConfig = require('../../tailwind.config.js');
 const cssConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
-  lang: 'en-US',
+  language: 'en-US',
+  directionality: 'ltr',
   name: 'Wild Peaches',
   url: 'https://wildpeaches.xyz',
   tagline: 'Mind-sized STEM ideas and experiments, beyond the textbook.',
-  imgDir: '/assets/img/',
+  icon: {
+    url: '/icon.png',
+    sizes: '512x512',
+    type: 'image/png',
+  },
+  favicon: '/favicon.svg',
   themeColor: cssConfig.theme.colors.primary,
   backgroundColor: cssConfig.theme.colors.backgroundColor,
+  imageDirectory: '/assets/img/',
 
   authors: [
     {

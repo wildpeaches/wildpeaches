@@ -3,10 +3,9 @@ eleventyExcludeFromCollections: true
 permalink: /service-worker.js
 ---
 
-
 const version = 'v0.0.1';
 
-const staticCacheName = version + 'staticfiles';
+const staticCacheName = version + '-staticfiles';
 const imageCacheName = 'images';
 const pagesCacheName = 'pages';
 
@@ -18,7 +17,7 @@ addEventListener('install', (installEvent) => {
     caches
       .open(staticCacheName)
       .then((staticCache) => {
-        staticCache.addAll(['/apple-touch-icon.png']);
+        staticCache.addAll(['{{ site.icon.url }}']);
         return staticCache.addAll([
           // @todo add fonts
           '/assets/styles/style.min.css',
@@ -37,26 +36,22 @@ addEventListener('fetch', (fetchEvent) => {
   // is blogpost?
 
   if (request.url.includes('/blog/')) {
-    // When the requested page is an article
     fetchEvent.respondWith(
-      // Look in the cache
       caches.match(request).then((responseFromCache) => {
         if (responseFromCache) {
-          // Fetch a fresh version from the network
           fetchEvent.waitUntil(
             fetch(request).then((responseFromFetch) => {
-              // Update the cache
               caches.open(pagesCacheName).then((pagesCache) => {
                 return pagesCache.put(request, responseFromFetch);
               });
             })
           );
+          console.info('Returned from cache');
           return responseFromCache;
         }
-        // Otherwise fetch the page from the network
+
         return fetch(request)
           .then((responseFromFetch) => {
-            // Put a copy in the cache
             const copy = responseFromFetch.clone();
             fetchEvent.waitUntil(
               caches.open(pagesCacheName).then((pagesCache) => {
@@ -66,7 +61,6 @@ addEventListener('fetch', (fetchEvent) => {
             return responseFromFetch;
           })
           .catch((error) => {
-            // Otherwise show the fallback page
             return caches.match('/offline.html');
           });
       })
