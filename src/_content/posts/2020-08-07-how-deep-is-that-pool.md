@@ -34,7 +34,7 @@ $$
 T(n,p) = P + \alpha P n = P (1 + \alpha n) = N \left( \frac{1}{n} + \alpha \right)
 $$
 
-where $\alpha$ will be a function of the probability of a positive test. This is a [Binomial distribution](https.//en.m.wikipedia.org/wiki/Binomial_distribution),
+where $\alpha$ will be a function of the probability of a positive test. This is a [Binomial distribution](https://en.m.wikipedia.org/wiki/Binomial_distribution),
 
 $$
 \alpha(k,n,p) = Pr(k;n,p) = \binom{n}{k} p^k (1 - p)^{n-k}

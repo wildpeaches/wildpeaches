@@ -109,7 +109,7 @@ The Boonie Conundrum shows that while conspiracies do exist, eventually there's 
 
 ## Conspiracy theory resources
 
-With so many conspiracy theories running around on the internet we need a way to check and debunk stories. A good start is to [Google](www.google.com) it to see what comes up. For breaking news check multiple sources around the world (see [List of news agencies](https://en.wikipedia.org/wiki/List_of_news_agencies)). For in-depth analysis, scholarly articles are often good although they are sometimes locked behind paywalls.
+With so many conspiracy theories running around on the internet we need a way to check and debunk stories. A good start is to [Google](https://www.google.com) it to see what comes up. For breaking news check multiple sources around the world (see [List of news agencies](https://en.wikipedia.org/wiki/List_of_news_agencies)). For in-depth analysis, scholarly articles are often good although they are sometimes locked behind paywalls.
 
 The list below contains fact-checking organizations, and some articles on how to deal with conspiracy theories and people who believe them. But, even these should be taken with a grain of salt. Question everything!
 
