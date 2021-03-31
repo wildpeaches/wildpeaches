@@ -43,6 +43,10 @@
   @apply list-square;
 }
 
+.s-post li:not(:last-child) {
+  @apply mb-4;
+}
+
 .s-post p {
   @apply my-5;
 }
