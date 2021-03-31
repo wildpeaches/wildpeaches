@@ -161,9 +161,9 @@ The trick to finding a solution for $x^2 - ny^2 = 1$ is to start with an "almost
 - Look for $a+bm$ divisible by $k$ and then select the $m$ that minimizes $|m^2-n|$
 - Get new values $a',b'$ and $k'$ from
   $$
-  \begin{aligned}
-  a' &= \frac{ma+nb}{|k|} \\
-  b' &= \frac{a+bm}{|k|} \\
+  \begin{aligned} \\
+  a' &= \frac{ma+nb}{|k|} \\[1.5em]
+  b' &= \frac{a+bm}{|k|} \\[1.5em]
   k' &= \frac{m^2-n}{k}.
   \end{aligned}
   $$
@@ -401,7 +401,7 @@ If $gcd(n,y) = d > 1$ and $x$ is an integer multiple of $d$, then
 
 $$
 \begin{aligned}
-z &= r + t \frac{n}{d} \\
+z &= r + t \frac{n}{d} \\[1.5em]
 k &= s - t \frac{y}{d},
 \end{aligned}
 $$
@@ -423,8 +423,8 @@ for a given positive integer $n$, start with values for $[a,b,k]$ and $gcd(a,b)=
 
 $$
 \begin{aligned}
-a' &\leftarrow \frac{ma+nb}{|k|} \\
-b' &\leftarrow \frac{a+bm}{|k|} \\
+a' &\leftarrow \frac{ma+nb}{|k|} \\[1.5em]
+b' &\leftarrow \frac{a+bm}{|k|} \\[1.5em]
 k' &\leftarrow \frac{m^2-n}{k}
 \end{aligned}
 $$
@@ -461,8 +461,8 @@ When $b=1$ the problem is trivial because $m$ has to be in the set $\{3,11,19,27
 
 $$
 \begin{aligned}
-a' &\leftarrow \frac{ma+nb}{|k|} = \frac{3 \times 5 + 17 \times 1}{|8|} = 4 \\
-b' &\leftarrow \frac{a+bm}{|k|} = \frac{5 + 1 \times 3}{|8|} = 1 \\
+a' &\leftarrow \frac{ma+nb}{|k|} = \frac{3 \times 5 + 17 \times 1}{|8|} = 4 \\[1.5em]
+b' &\leftarrow \frac{a+bm}{|k|} = \frac{5 + 1 \times 3}{|8|} = 1 \\[1.5em]
 k' &\leftarrow \frac{m^2-n}{k} = \frac{3^2 - 17}{8} = -1
 \end{aligned}
 $$
