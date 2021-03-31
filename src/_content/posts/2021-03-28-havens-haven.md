@@ -2,7 +2,7 @@
 title: Havens' Haven
 subtitle: Chakravala in a Taxicab
 author: John Peach
-lede: I have never done anything "useful". No discovery of mine has made, or is likely to make, directly or indirectly, for good or ill, the least difference to the amenity of the world. - G. H. Hardy
+lede:
 hero:
   url: /assets/img/havens-haven/havens-hardy-ramanujan.jpg
   alt: Drawing by Chris Havens of Hardy and Ramanujan.
@@ -11,13 +11,17 @@ keywords: [Number Theory, Pell's Equation, Prison Math Project]
 socialImg: /assets/img/havens-haven/havens-hardy-ramanujan.jpg
 ---
 
+> I have never done anything "useful". No discovery of mine has made, or is likely to make, directly or indirectly, for good or ill, the least difference to the amenity of the world.
+>
+> — G. H. Hardy
+
 ## Christopher Havens
 
 If you were facing a 25 year stretch for murder and had landed in solitary for a while, you might think to yourself, "Maybe this would be a good time to catch up on some number theory". Something like this occurred to Christopher Havens when he was convicted of [murdering Randen Robinson](https://www.theolympian.com/news/local/crime/article25250860.html 'Two suspected of murdering man found in Capitol State Forest | The Olympian') and sent to the Washington State [Monroe Correctional Complex northeast of Seattle](https://www.cbc.ca/radio/thecurrent/the-current-for-oct-15-2020-1.5763055/how-a-convicted-killer-s-passion-for-math-inspired-him-to-change-his-life-and-others-1.5753905 "How a convicted killer's passion for math inspired him to change his life — and others' | CBC Radio"). He had dropped out of high school, began using drugs, and killed Robinson during a drug-related dispute. After his conviction, bad behavior sent him to solitary confinement for a year.
 
 While in solitary, Havens started working puzzles and then realized that the guards were handing out math problems to other prisoners. He did as much math as they could provide, quickly learning calculus and number theory, but eventually exceeded the guards' ability to keep up with his level.
 
-![Chris Havens](/assets/img/havens-haven/chris-havens.jpg)
+![Chris Havens](/assets/img/havens-haven/chris-havens.jpg){.panel}
 
 That's when he sent this letter that eventually arrived on the desk of Matthew Cargo, editor for [Mathematical Sciences Publishers](https://msp.org/), whose partner [Marta Cerruti](https://theconversation.com/an-inmates-love-for-math-leads-to-new-discoveries-130123 "An inmate's love for math leads to new discoveries") is Associate Professor of Materials Engineering at McGill University.
 
@@ -484,7 +488,7 @@ Using the [PARI/GP](http://pari.math.u-bordeaux.fr/ 'PARI/GP Development Headqua
 
 The Prison Mathematics Projects likes to hear from people willing to volunteer time to help inmates improve their math skills. From the website,
 
-"In early 2012, a prisoner by the name [Christopher Havens](https://www.christopherhavensmath.com/) began studying mathematics for the very first time within the prison inside of prison. Christopher was in a form of isolation that we call solitary confinement… prisoners know it as “the hole”. Having no other form of stimulation, mathematics occupied every hour of Christopher’s days, lasting the better part of a year until he was released back into the general population. In so many cases, the negative effects of prolonged isolation manifests itself through the behaviors in both the short and the long term. However, this case is one where a mix of isolation and the transformative powers of mathematics caused Christopher to undergo a steady chain of personal growth while igniting within him a passion for mathematics. "
+> In early 2012, a prisoner by the name [Christopher Havens](https://www.christopherhavensmath.com/) began studying mathematics for the very first time within the prison inside of prison. Christopher was in a form of isolation that we call solitary confinement… prisoners know it as “the hole”. Having no other form of stimulation, mathematics occupied every hour of Christopher’s days, lasting the better part of a year until he was released back into the general population. In so many cases, the negative effects of prolonged isolation manifests itself through the behaviors in both the short and the long term. However, this case is one where a mix of isolation and the transformative powers of mathematics caused Christopher to undergo a steady chain of personal growth while igniting within him a passion for mathematics.
 
 If you have some ability in mathematics and would like to volunteer, you can [submit your name](https://www.prisonmathproject.org/volunteer/ 'Volunteer – Prison Math Project') and email address, and the PMP will connect you with an inmate to become their "pen pal". [Donations](https://www.prisonmathproject.org/donate/ 'Donate – Prison Math Project') are also greatly appreciated.
 
