@@ -424,14 +424,13 @@ for a given positive integer $n$, start with values for $[a,b,k]$ and $gcd(a,b)=
 
 - Find values of $m$ such that $k$ divides $a + bm$, and select the $m$ that minimizes $|m^2 - n|$.
 - Recompute
-
-$$
-\begin{aligned}
-a' &\leftarrow \frac{ma+nb}{|k|} \\[1.5em]
-b' &\leftarrow \frac{a+bm}{|k|} \\[1.5em]
-k' &\leftarrow \frac{m^2-n}{k}
-\end{aligned}
-$$
+  $$
+  \begin{aligned}
+  a' &\leftarrow \frac{ma+nb}{|k|} \\[1.5em]
+  b' &\leftarrow \frac{a+bm}{|k|} \\[1.5em]
+  k' &\leftarrow \frac{m^2-n}{k}
+  \end{aligned}
+  $$
 
 If $k' = 1$ we have a solution, otherwise find a new $m$ satisfying the constraint and iterate until $k' = 1$.
 
