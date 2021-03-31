@@ -32,6 +32,6 @@ a:hover {
   }
   /* @TODO Not present in TailwindCSS though it should be? */
   .u-border-current {
-    border-color: current;
+    border-color: currentColor;
   }
 }
