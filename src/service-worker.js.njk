@@ -1,57 +1,80 @@
----
-eleventyExcludeFromCollections: true
-permalink: /service-worker.js
----
+// ---
+// eleventyExcludeFromCollections: true
+// permalink: /service-worker.js
+// ---
 
 const version = 'v0.0.1';
 
-const staticCacheName = version + '-staticfiles';
+const staticCacheName = `${version}-staticfiles`;
 const imageCacheName = 'images';
 const pagesCacheName = 'pages';
+const maxPages = 20; // maximum number of pages to cache
+const maxImages = 50; // maximum number of images to cache
 
 const cacheList = [staticCacheName, imageCacheName, pagesCacheName];
 
+function updateStaticCache() {
+  // eslint-disable-next-line no-undef
+  return caches.open(staticCacheName).then((staticCache) => {
+    staticCache.addAll(['{{ site.icon.url }}']);
+    return staticCache.addAll([
+      // @todo add fonts
+      '/assets/styles/style.min.css',
+      '/confirmed.html',
+      'offline.html',
+      '/assets/vectors/no-image.svg',
+    ]);
+  });
+}
+
+function clearOldCaches() {
+  return caches.keys().then((cacheNames) => {
+    Promise.all(
+      cacheNames
+        .filter((cacheName) => !cacheList.includes(cacheName))
+        .map((cacheName) => caches.delete(cacheName))
+    );
+  });
+}
+
+function trimCaches(cacheName, maxItems) {
+  cacheName.open( cache => {
+    cache.keys().then( (items) => {
+      if items.length > maxItems {
+        cache.delete(items[0])
+        .then(
+          trimCache(cacheName, maxItems)
+        )
+      }
+    })
+  })
+}
+
 addEventListener('install', (installEvent) => {
-  skipWaiting();
-  installEvent.waitUntil(
-    caches
-      .open(staticCacheName)
-      .then((staticCache) => {
-        staticCache.addAll(['{{ site.icon.url }}']);
-        return staticCache.addAll([
-          // @todo add fonts
-          '/assets/styles/style.min.css',
-          '/confirmed.html',
-          'offline.html',
-          '/assets/vectors/no-image.svg',
-        ]);
-      })
-      .catch((error) => console.error('Failure'))
-  );
+  installEvent.waitUntil(updateStaticCache()).then(skipWaiting());
 });
 
 addEventListener('fetch', (fetchEvent) => {
   const request = fetchEvent.request;
 
-  // is blogpost?
+  // is HTML?
+  if (request.headers.get('Accept').includes('text/html')) {
+    if (request.url.includes('/blog/')) {
+      fetchEvent.respondWith(
+        caches.match(request).then((responseFromCache) => {
+          if (responseFromCache) {
+            fetchEvent.waitUntil(
+              fetch(request).then((responseFromFetch) => {
+                caches.open(pagesCacheName).then((pagesCache) => {
+                  return pagesCache.put(request, responseFromFetch);
+                });
+              })
+            );
+            console.info('Returned from cache');
+            return responseFromCache;
+          }
 
-  if (request.url.includes('/blog/')) {
-    fetchEvent.respondWith(
-      caches.match(request).then((responseFromCache) => {
-        if (responseFromCache) {
-          fetchEvent.waitUntil(
-            fetch(request).then((responseFromFetch) => {
-              caches.open(pagesCacheName).then((pagesCache) => {
-                return pagesCache.put(request, responseFromFetch);
-              });
-            })
-          );
-          console.info('Returned from cache');
-          return responseFromCache;
-        }
-
-        return fetch(request)
-          .then((responseFromFetch) => {
+          return fetch(request).then((responseFromFetch) => {
             const copy = responseFromFetch.clone();
             fetchEvent.waitUntil(
               caches.open(pagesCacheName).then((pagesCache) => {
@@ -59,19 +82,9 @@ addEventListener('fetch', (fetchEvent) => {
               })
             );
             return responseFromFetch;
-          })
-          .catch((error) => {
-            return caches.match('/offline.html');
           });
-      })
-    );
-    return;
-  }
-
-  // is HTML?
-  if (request.headers.get('Accept').includes('text/html')) {
-    if (request.url.includes('/blog/')) {
-      //@TODO keep going here
+        })
+      );
     }
     fetchEvent.respondWith(
       fetch(request)
@@ -143,21 +156,6 @@ addEventListener('fetch', (fetchEvent) => {
   );
 });
 
-addEventListener('activate', (activateEvent) => {
-  activateEvent.waitUntil(
-    caches
-      .keys()
-      .then((cacheNames) => {
-        return Promise.all(
-          cacheNames.map((cacheName) => {
-            if (!cacheList.includes(cacheName)) {
-              return caches.delete(cacheName);
-            }
-          })
-        );
-      })
-      .then(() => {
-        return clients.claim();
-      })
-  );
+self.addEventListener('activate', (activateEvent) => {
+  activateEvent.waitUntil();
 });
