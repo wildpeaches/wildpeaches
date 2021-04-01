@@ -492,3 +492,7 @@ The Prison Mathematics Projects likes to hear from people willing to volunteer t
 If you have some ability in mathematics and would like to volunteer, you can [submit your name](https://www.prisonmathproject.org/volunteer/ 'Volunteer – Prison Math Project') and email address, and the PMP will connect you with an inmate to become their "pen pal". [Donations](https://www.prisonmathproject.org/donate/ 'Donate – Prison Math Project') are also greatly appreciated.
 
 ![pmp](/assets/img/havens-haven/pmp.jpg){.blend-multiply}
+
+## Reach out!
+
+If you have any questions or comments regarding this article you can visit [this thread on GitHub discussions](https://github.com/JanDW/wildpeaches/discussions/131) or [email us directly](mailto:hi@wildpeaches.xyz).
