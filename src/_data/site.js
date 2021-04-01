@@ -1,6 +1,7 @@
 module.exports = {
   name: 'Wild Peaches',
   url: 'https://wildpeaches.xyz',
+  email: 'hi@wildpeaches.xyz',
   tagline: 'Mind-sized STEM ideas and experiments, beyond the textbook.',
   imgDir: '/assets/img/',
   authors: [
