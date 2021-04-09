@@ -68,7 +68,7 @@ The equations are hyperbolic functions and have solutions at points where both $
 
 ![pells-equation-x^2-2y^2=1](/assets/img/havens-haven/pells-equation-x^2-2y^2=1.png)
 
-In the 12th century, [Bhāskara II](https://www.thefamouspeople.com/profiles/bhskara-ii-6835.php 'Bhāskara II Biography - Childhood, Life Achievements & Timeline (thefamouspeople.com)'), also known as Bhaskara or as,quantities, including the length of the sidereal year. (1114–1185) continued the work of Brahmagupta (598–670) and developed an algorithm for finding solutions that he called the _Chakravala Method_.
+In the 12th century, [Bhāskara II](https://www.thefamouspeople.com/profiles/bhskara-ii-6835.php) (1114–1185) continued the work of Brahmagupta (598–670) and developed an algorithm for finding solutions that he called the _Chakravala Method_.
 
 ## The Chakravala
 
@@ -197,7 +197,7 @@ $$
 a = r \text{ mod}(n)
 $$
 
-meaning that the remainder when $a$ is divided by $n$ is $r$, or "$a$ equals $r$ modulo $n$".
+meaning that the remainder when $a$ is divided by $n$ is $r$, or "$a$ equals $r$ modulo $n$". The $q$ is missing in the equation because it's the integer number of times that $n$ divides $a$, and we're only interested in the remainder $r$.
 
 If $a = r_1 \text{ mod}(n)$ and $b = r_2 \text{ mod}(n)$ then $a+b = r_1 + r_2 \text{ mod}(n)$, since
 
@@ -373,7 +373,7 @@ x &= y z \\
 \end{aligned}
 $$
 
-In other words, if the solution to dividing $x$ by $y$ is $z$, then in modular arithmetic terms (modulo $n$), $x$ is $y$ times $z$ plus some constant multiple $k$ of $n$. This is exactly the extended Euclidean algorithm for the gcd that we just did. If $y$ and $n$ are coprime ($gcd(n,y)=1$) then there are integers $r$ and $s$ such that
+In other words, if the solution to dividing $x$ by $y$ is $z$, then in modular arithmetic terms (modulo $n$), $x$ is $y$ times $z$ plus some constant multiple $k$ of $n$. This is exactly the extended Euclidean algorithm for the gcd that we just did. If $y$ and $n$ are coprime, meaning $gcd(n,y)=1$, then from the extended Euclidean algorithm there are integers $r$ and $s$ such that
 
 $$
 1 = ry + sn
@@ -411,7 +411,9 @@ k &= s - t \frac{y}{d},
 \end{aligned}
 $$
 
-but there won't be a unique solution modulo $n$ (but there will be modulo $n/d$). This means that we have methods for calculating addition, subtraction, multiplication, and under special conditions, division modulo $n$.
+but there won't be a unique solution modulo $n$ (but there will be modulo $n/d$). 
+
+We now have methods for calculating addition, subtraction, multiplication, and under special conditions, division modulo $n$, and with the Chakravala algorithm we can find the solution to any Pell's equation.
 
 ## The algorithm
 
