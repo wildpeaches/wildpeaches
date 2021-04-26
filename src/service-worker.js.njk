@@ -1,7 +1,7 @@
-// ---
-// eleventyExcludeFromCollections: true
-// permalink: /service-worker.js
-// ---
+---
+eleventyExcludeFromCollections: true
+permalink: /service-worker.js
+---
 
 const version = 'v0.0.1';
 
@@ -12,9 +12,9 @@ const maxPages = 20; // maximum number of pages to cache
 const maxImages = 50; // maximum number of images to cache
 
 const cacheList = [staticCacheName, imageCacheName, pagesCacheName];
+const noImage = 
 
 function updateStaticCache() {
-  // eslint-disable-next-line no-undef
   return caches.open(staticCacheName).then((staticCache) => {
     staticCache.addAll(['{{ site.icon.url }}']);
     return staticCache.addAll([
@@ -36,6 +36,9 @@ function clearOldCaches() {
     );
   });
 }
+
+
+ 
 
 function trimCaches(cacheName, maxItems) {
   cacheName.open( cache => {
