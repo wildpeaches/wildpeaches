@@ -8,6 +8,7 @@ module.exports = {
   directionality: 'ltr',
   name: 'Wild Peaches',
   url: 'https://wildpeaches.xyz',
+  email: 'hi@wildpeaches.xyz',
   tagline: 'Mind-sized STEM ideas and experiments, beyond the textbook.',
   icon: {
     url: '/icon.png',

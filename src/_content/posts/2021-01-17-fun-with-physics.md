@@ -9,6 +9,7 @@ lede: Have you always wanted to be a real physicist like Sheldon Cooper, but did
 socialImg: /assets/img/fun-with-physics/einstein.jpg
 tags: [math, physics]
 keywords: [physics, simulation, Algodoo, HeuristicLab, Octave]
+ghDiscussion: 134
 ---
 
 ## The Most Famous Equation

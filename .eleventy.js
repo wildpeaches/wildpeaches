@@ -1,18 +1,23 @@
 require('dotenv').config();
 const CleanCSS = require('clean-css');
-const collections = require('./src/utils/collections');
-const dateFilter = require('./src/filters/date-filter');
-const dumpFilter = require('@jamshop/eleventy-filter-dump');
-const statFilter = require('./src/filters/stat-filter');
+
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const markdownItAttrs = require('markdown-it-attrs');
 const markdownItFootnote = require('markdown-it-footnote');
 const markdownItImageLazyLoading = require('markdown-it-image-lazy-loading');
 const markdownItKatex = require('@iktakahiro/markdown-it-katex');
+
+const collections = require('./src/utils/collections');
+
+const dateFilter = require('./src/filters/date-filter');
+const statFilter = require('./src/filters/stat-filter');
+const w3DateFilter = require('./src/filters/w3-date-filter');
+const dumpFilter = require('@jamshop/eleventy-filter-dump');
+const betterSlugFilter = require('./src/filters/better-slug');
+
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const w3DateFilter = require('./src/filters/w3-date-filter');
 
 module.exports = (eleventyConfig) => {
   // Markdown
@@ -90,6 +95,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('w3DateFilter', w3DateFilter);
   eleventyConfig.addFilter('stat', statFilter);
   eleventyConfig.addFilter('dump', dumpFilter);
+  eleventyConfig.addFilter('slug', betterSlugFilter);
 
   return {
     dir: {

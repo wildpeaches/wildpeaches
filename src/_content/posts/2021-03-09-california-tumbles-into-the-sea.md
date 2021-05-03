@@ -9,6 +9,7 @@ hero:
 tags: [math]
 keywords: [structure from motion, volume estimation, drone video]
 socialImg: /assets/img/california-tumbles-into-the-sea/coastal-convection-landscape.jpg
+ghDiscussion: 133
 ---
 
 ## Fire and Rain
@@ -210,7 +211,7 @@ If you want to be useful to CalTrans, they might want an estimate that is slight
 
 Extending the width of the rectangle by 10 feet on either side to include the shoulders gives a volume of $224320 \; ft^3 = 8308 \; yd^3$. If the sloped region is extended 20 feet on either side of the end of the shoulder the volumes are $V_{left} = 148,250 \; ft^3 = 5491 \; yd^3$ and $V_{right} = 79,208 \; ft^3 = 2934 \; yd^3$ giving a total fill volume of $V_{total} = 451,780 \; ft^3 = 16730 \; yd^3$.
 
-This shows that with some open-source software and freely available drone videos it's possible to reconstruct a 3D model of a scene and to perform volumetric calculations. Not only is it relatively fast, but using this technique keeps survey crews at a safe distance from the opening of the washout. 
+This shows that with some open-source software and freely available drone videos it's possible to reconstruct a 3D model of a scene and to perform volumetric calculations. Not only is it relatively fast, but using this technique keeps survey crews at a safe distance from the opening of the washout.
 
 ## Appendix A: Using your drone
 

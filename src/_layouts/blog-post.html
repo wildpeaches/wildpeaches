@@ -42,6 +42,15 @@ includeSubscription: true
 
   #}
 
+  {% if ghDiscussion %}
+  <h2 id="reach-out">
+    <a class="text-gray-400 border-b-0  hover:border-b-2" href="#reach-out">#</a>
+    Reach out!
+  </h2>
+  <p>If you have any questions or comments regarding this article you can visit <a href="https://github.com/JanDW/wildpeaches/discussions/{{ghDiscussion}}">this thread on GitHub discussions</a> or <a href="mailto:{{site.email}}">email us directly</a>
+  </p>
+  {% endif %}
+
   </article>
 </main>
 
