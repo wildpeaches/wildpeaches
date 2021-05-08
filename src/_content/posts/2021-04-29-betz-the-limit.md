@@ -70,27 +70,27 @@ p = mv \; \left( kg \frac{m}{s} \right).
 $$
 Sometimes it's useful to be able to write the change in velocity as a function of distance. The final velocity is the initial velocity plus acceleration over a time interval,
 $$
-v_f = v_i + a t. \label{ref1}\tag{1}
+v_f = v_i + a t. \tag{1}
 $$
 During constant acceleration, the distance traveled is the average of the initial and final velocity,
 $$
-d = \frac{1}{2} (v_i + v_f) t, \label{ref2}\tag{2}
+d = \frac{1}{2} (v_i + v_f) t, \tag{2}
 $$
 and the distance can also be written as 
 $$
-d = v_it + \frac{1}{2} at^2. \label{ref3}\tag{3}
+d = v_it + \frac{1}{2} at^2. \tag{3}
 $$
 Multiply both sides of $\ref{ref3}$ by twice the acceleration $2a$ to get
 $$
-2ad = 2v_i at + a^2 t^2. \label{ref4}\tag{4}
+2ad = 2v_i at + a^2 t^2. \tag{4}
 $$
 Now, expand $\ref{ref1}$ to get
 $$
-v_f^2 = v_i^2 + 2v_iat + a^2t^2 \label{ref5}\tag{5}
+v_f^2 = v_i^2 + 2v_iat + a^2t^2 \tag{5}
 $$
 and notice that the right side of $\ref{ref4}$ is the exactly the $2^{nd}$ and $3^{rd}$ terms of $\ref{ref5}$ so we can make a substitution to get
 $$
-v_f^2 = v_i^2 + 2ad. \label{ref6}\tag{6}
+v_f^2 = v_i^2 + 2ad. \tag{6}
 $$
 What makes this form useful is that we can get the final velocity $v_f$ in terms of the initial velocity $v_i$ and the acceleration $a$ through a distance $d$ without having to know explicitly the time required.
 
