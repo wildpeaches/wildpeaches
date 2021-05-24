@@ -13,10 +13,10 @@ socialImg: /assets/img/betz-the-limit/wind-turbines-in-the-field.jpg
 
 
 
-> Idiot wind
+> *Idiot wind
 > Blowing every time you move your mouth
 > Blowing down the back roads headin' south
-> Idiot wind
+> Idiot wind*
 >
 > ~ Bob Dylan
 
@@ -80,15 +80,15 @@ and the distance can also be written as
 $$
 d = v_it + \frac{1}{2} at^2. \tag{3}
 $$
-Multiply both sides of $\ref{ref3}$ by twice the acceleration $2a$ to get
+Multiply both sides of $(3)$ by twice the acceleration $2a$ to get
 $$
 2ad = 2v_i at + a^2 t^2. \tag{4}
 $$
-Now, expand $\ref{ref1}$ to get
+Now, expand $(1)$ to get
 $$
 v_f^2 = v_i^2 + 2v_iat + a^2t^2 \tag{5}
 $$
-and notice that the right side of $\ref{ref4}$ is the exactly the $2^{nd}$ and $3^{rd}$ terms of $\ref{ref5}$ so we can make a substitution to get
+and notice that the right side of $(4)$ is the exactly the $2^{nd}$ and $3^{rd}$ terms of $(5)$ so we can make a substitution to get
 $$
 v_f^2 = v_i^2 + 2ad. \tag{6}
 $$
@@ -182,7 +182,7 @@ because they had applied Computational Fluid Dynamics (CFD) to Betz' Law. CFD us
 - The air is incompressible, and there is no heat transfer.
 - The rotor experiences a uniform thrust across the disk.
 
-With CFD methods, Gorban, Gorlov, and Silantyev were able to show that the air mass spins up as it passes through the disk, thus wasting energy. Their maximum turned out to be $30.1 \%$ of the total available energy. Nevertheless, wind turbines do work, they extract useful energy and we can use them to power *The Ultra Hyper Totally Amazing Push Me Pull You*.
+With CFD methods, Gorban, Gorlov, and Silantyev were able to show that the air mass spins up as it passes through the disk, thus wasting energy. Their maximum turned out to be $30.1 \%$ of the total available energy. In "[*Wind Turbine Power: The Betz Limit and Beyond*](https://cdn.intechopen.com/pdfs/41078/InTech-Wind_turbine_power_the_betz_limit_and_beyond.pdf)", Mahmoud Huleihil and Gedalya Mazor found that the maximum thermodynamic efficiency is $\frac{8}{27} \approx 29.6 \%$.  Nevertheless, wind turbines do work, they extract useful energy and we can use them to power *The Ultra Hyper Totally Amazing Push Me Pull You*.
 
 
 
