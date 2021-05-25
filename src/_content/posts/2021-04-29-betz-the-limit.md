@@ -1,6 +1,6 @@
 ---
-title: The Ultra Hyper Totally Amazing Push Me Pull You Supercavitating Surface Effect Flying Machine
-subtitle: Part I - Betz The Limit
+title: Betz The Limit
+subtitle: The Ultra Hyper Totally Amazing Push Me Pull You Supercavitating Surface Effect Flying Machine · Part I
 author: John Peach
 lede:
 hero:
@@ -11,12 +11,12 @@ keywords: [Betz Limit, Wind Energy]
 socialImg: /assets/img/betz-the-limit/wind-turbines-in-the-field.jpg
 ---
 
-> _Idiot wind
+> Idiot wind
 > Blowing every time you move your mouth
 > Blowing down the back roads headin' south
-> Idiot wind_
+> Idiot wind
 >
-> ~ Bob Dylan
+> —Bob Dylan
 
 ## Idiot Wind
 
