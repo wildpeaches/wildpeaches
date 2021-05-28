@@ -176,7 +176,7 @@ V_{12} = P_2 - P_1 \\
 V_{13} = P_3 - P_1
 $$
 
-and then the area is half the absolute value of the [cross product](https://en.wikipedia.org/wiki/Cross_product#:~:text=The%20cross%20product%20a%20%C3%97,parallelogram%20that%20the%20vectors%20span.),
+and then the area is half the absolute value of the [cross product](https://en.wikipedia.org/wiki/Cross_product),
 
 $$
 A = \frac{1}{2} |V_{12} \times V_{13}|.
