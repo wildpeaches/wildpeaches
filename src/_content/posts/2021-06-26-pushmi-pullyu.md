@@ -4,11 +4,11 @@ subtitle: The Ultra Hyper Totally Amazing Push Me Pull You Supercavitating Surfa
 author: John Peach
 lede:
 hero:
-  url: /assets/img/pushmi-pullyu/pushmi-pullyu.png
+  url: /assets/img/pushmi-pullyu/pushmi-pullyu.jpeg
   alt:
 tags: [math, physics]
 keywords: [Betz Limit, Wind Energy]
-socialImg: /assets/img/pushmi-pullyu/pushmi-pullyu.png
+socialImg: /assets/img/pushmi-pullyu/pushmi-pullyu.jpeg
 ---
 
 > "Excuse me, surely you are related to the Deer Family, are you not?"
@@ -25,7 +25,7 @@ The three [Laws of Thermodynamics](http://physicsforidiots.com/physics/thermodyn
 2. The most you can hope for is to break even. Given a pair of systems touching with different temperatures, heat will flow from hot to cold until the [temperature](https://kids.kiddle.co/Temperature) of the systems becomes equal. Energy flows from a more energetic system to a less energetic system, and entropy always increases.
 3. You can't break even and you can't stop playing. When a system has a [temperature](https://kids.kiddle.co/Temperature) of [absolute zero](https://kids.kiddle.co/Absolute_zero) (on the Kelvin temperature scale) the [entropy](https://kids.kiddle.co/Entropy) is zero. Entropy is the energy that cannot be used to do [work](https://kids.kiddle.co/Work). Entropy approaches a constant as the system temperature approaches absolute zero.
 
-<img src="/assets/img/pushmi-pullyu/sf-obey.jpg" alt="sf-obey" style="zoom: 25%;" />
+![sf-obey](/assets/img/pushmi-pullyu/sf-obey.jpg)
 
 The Push-me-pull-you is a boat with two propellers connected by a drive shaft. One propeller is above the water and spins with the wind. It turns the drive shaft which rotates a second propeller in the water. If you let the air propeller face the wind, then it will cause the propeller in the water to pull the boat forward into the wind. Now the apparent wind speed is the speed of the wind plus the speed of the boat, so the air propeller spins faster, spinning the water propeller faster and moving the boat more quickly through the water - into the wind! Now the apparent wind is even greater, so the boat goes faster and faster!
 
@@ -41,15 +41,15 @@ Is it possible for a boat to sail downwind faster than the wind? If the boat hea
 
 Ice boats speed along at many times the true wind speed when sailing at an angle to the wind direction. According to [this article](https://wiki2.org/en/Wind-powered_vehicle), "Iceboats can sail as close as 7 degrees off the apparent wind. Ice boats can achieve speeds as high as ten times the [wind speed](https://wiki2.org/en/Wind_speed) in good conditions."
 
-<img src="/assets/img/pushmi-pullyu/sailing-vectors.png" alt="sailing-vectors" style="zoom:50%;" />
+![sailing-vectors](/assets/img/pushmi-pullyu/sailing-vectors.png)
 
 If the iceboat sails at an angle to the true wind direction with velocity vector $V$, then the sailor will feel an apparent wind force in the opposite direction, $-V$. Combine $-V$ with the true wind vector $W$ to get $W-V$, the apparent wind on the iceboat (shown as the red vector). The boat will only be able to sail within some angle $\alpha$ to this apparent wind vector. If we assume $V = 5W$ (which seems more reasonable than the $10 \times$ from the link above), we can use the [law of sines](https://en.wikipedia.org/wiki/Law_of_sines) to calculate the other angles in the triangle,
 
-<img src="/assets/img/pushmi-pullyu/law-of-sines.png" alt="law-of-sines" style="zoom:48%;" />
+![law-of-sines](/assets/img/pushmi-pullyu/law-of-sines.png)
 
 For the iceboat, the angle between the boat direction and the apparent wind is $\alpha = 7^\circ$, and we have sides $a$, the wind vector, and $c = 5W$, the boat travel direction. Using the law of sines, we can calculate angle $\gamma$,
 
-<img src="/assets/img/pushmi-pullyu/iceboat-vectors.png" alt="iceboat-vectors" style="zoom:48%;" />
+![iceboat-vectors](/assets/img/pushmi-pullyu/iceboat-vectors.png)
 
 $$
 \begin{aligned}
@@ -96,7 +96,7 @@ where $q$ is the dynamic pressure, $q = \frac{1}{2}\rho v^2$, $p$ is called the 
 
 Using Bernoulli's Principle we can calculate the change in pressure through the wind turbine. In 1978, B. L. Blackford published a paper titled ["_The physics of a push-me pull-you boat_"](http://202.38.64.11/~cxyu/AJP_pushmepullyouboat.pdf). It wasn't the first to talk about connecting a wind turbine to a propeller to move the boat directly into the wind, but his paper is an early example. The equations here are based on his paper.
 
-<img src="/assets/img/pushmi-pullyu/bernoulli.png" alt="bernoulli" style="zoom:67%;" />
+![bernoulli](/assets/img/pushmi-pullyu/bernoulli.png)
 
 Far upstream and far downstream of the wind turbine, the pressure is $P_\infty$. The wind speed upstream is $v_u$, and downstream it's $v_d$. Directly in front of the turbine, (to the left) the pressure is $P_L$ and the speed is $v_L$ while just behind the turbine (to the right) the pressure is $P_R$ and the speed is $v_R$. Using Bernoulli's Principle,
 
@@ -144,7 +144,7 @@ $$
 
 where $v$ is the wind velocity through the turbine.
 
-<img src="/assets/img/pushmi-pullyu/turbine-propeller-physics.png" alt="turbine-propeller-physics" style="zoom:50%;" />
+![turbine-propeller-physics](/assets/img/pushmi-pullyu/turbine-propeller-physics.png)
 
 The same equations can be applied to the propeller in the water by using the density of water, $\rho_{water}  = 997 \frac{kg}{m^3}$. Usually, currents are flowing, but we can take the reference frame to be a particle of water, so the boat moves relative to that point. In any case, the wind speed and the boat speed will generally be quite a bit faster than the speed of the water.
 
@@ -450,4 +450,4 @@ Rick Cavallaro and his team built the [Blackbird](https://www.lockhaven.edu/~dsi
 
 Even after building the Blackbird and having the North American Land Sailing Association certify it went 2.8 times the speed of the wind downwind, not everyone was convinced. Rick wrote an article for Wired Magazine in 2010 called ["A Long, Strange Trip Downwind Faster Than the Wind"](https://www.wired.com/2010/08/ddwfttw/) where he describes the reaction from aerodynamicists and physicists detailing all of the violations of the Laws of Thermodynamics, and the impossibility of such a vehicle. A friend told him, “Someday one of these will hang from the rafters of the Air and Space Museum with a plaque which will read, ‘In the early part of the century, this device caused physics and aero professors everywhere to storm out of their classrooms in absolute frustration.’”
 
-<img src="/assets/img/pushmi-pullyu/ddwfttw.jpg" alt="ddwfttw" style="zoom:150%;" />
+![ddwfttw](/assets/img/pushmi-pullyu/ddwfttw.jpg)
