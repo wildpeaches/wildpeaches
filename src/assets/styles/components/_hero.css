@@ -3,32 +3,24 @@
   margin-left: calc(50% - 50vw);
   margin-top: 0;
   background-image: var(--hero-img);
-  backdrop-filter: blur(40px);
   background-size: cover;
-}
-
-.hero__wrapper {
-  display: grid;
-  background-color: hsla(0, 0%, 0%, 0.6);
-  backdrop-filter: blur(40px);
-}
-
-.hero__wrapper > img {
-  object-fit: cover;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  max-width: 100vmin;
-  grid-area: 1/1/1/1;
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
 }
 
 .hero__overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   background-color: hsla(0, 0%, 0%, 0.3);
-  grid-area: 1/1/1/1;
+  z-index: 1;
 }
 
 .hero__masthead {
   color: #fff;
-  margin: 0 auto;
-  grid-area: 1/1/1/1;
-  align-self: end;
+  z-index: 2;
 }
