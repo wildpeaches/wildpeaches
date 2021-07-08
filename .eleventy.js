@@ -60,6 +60,13 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addCollection(key, value);
   });
 
+  // Browsersync Configuration
+  eleventyConfig.setBrowserSyncConfig({
+    // Disable ghostMode so it does not interfere
+    // with syncing in Sizzy browser.
+    ghostMode: false,
+  });
+
   // Plugins
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
