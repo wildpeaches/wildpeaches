@@ -54,6 +54,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy('src/assets/vectors');
   eleventyConfig.addPassthroughCopy('src/assets/styles/style.min.css');
   eleventyConfig.addPassthroughCopy({ 'src/assets/siteroot': '/' });
+  eleventyConfig.addPassthroughCopy({ 'node_modules/katex/dist/fonts': 'assets/fonts' });
 
   // Collections
   Object.entries(collections).map(([key, value]) => {
