@@ -1,8 +1,8 @@
-.post h2,
-.post h3,
-.post h4,
-.post h5,
-.post h6 {
+.s-post h2,
+.s-post h3,
+.s-post h4,
+.s-post h5,
+.s-post h6 {
   text-indent: -1em; /* account for markdown-it-anchor permlink */
 }
 
