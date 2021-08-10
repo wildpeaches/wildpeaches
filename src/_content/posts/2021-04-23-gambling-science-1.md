@@ -1,6 +1,6 @@
 ---
 title: Gambling for Fun, Profit, Amusement, Money, General Contentment and Extra Cash
-subtitle: Part I - The Options
+subtitle: The Options · Part I
 author: John Peach
 lede:
 hero:
