@@ -8,7 +8,7 @@ keywords: [Monte Carlo simulation, conspiracies, Gompertz Survival Function]
 socialImg: /assets/img/the-boonie-conundrum/boonie-graph.png
 ---
 
-## The Boonie story
+## The Boonie Story
 
 The high school is an imposing brick building with soaring white columns and a semi-circular drive enclosing an expansive lawn with tall shady oak trees. Go around to the back and you'll find the sports field where Boonie led the boys' soccer team.
 
@@ -30,7 +30,7 @@ Now, if Boonie had kept this to himself maybe nobody would have noticed. The pri
 
 This is Boonie's conundrum. As soon as he started telling his close friends, the word got around the school and everyone could read and decode the hidden message. And Boonie had signed his name to the letter.
 
-## Modeling the spread of rumors, lies, and innuendo
+## Modeling the Spread of Rumors, Lies, and Innuendo
 
 As soon as the rumor leaped across the nearly impenetrable student/parent information barrier, Roger and I sketched up a graph something like this on my whiteboard and began estimating how long Boonie had until he faced the wrath of Principal S. a second time.
 
@@ -60,7 +60,7 @@ Transmission from students to teachers is a matrix with the same number of rows 
 
 To recap, the simulation generates a random student Friends matrix, a Teacher friends matrix, and a Student-Teacher crossover matrix. The code generates rumor knowledge vectors for students and teachers, and a scalar for Principal S. They are all set to false except for the Boonie entry. Every day, the rumor spreads using the friends matrices and random opportunity matrices until it reaches Principal S. and Boonie gets a second trip to the office.
 
-## Experimental results
+## Experimental Results
 
 To run the simulation we need estimates of the interactions between students, teachers, and Principal S. I used these:
 
@@ -107,7 +107,7 @@ The Boonie Conundrum shows that while conspiracies do exist, eventually there's 
 
 ---
 
-## Conspiracy theory resources
+## Conspiracy Theory Resources
 
 With so many conspiracy theories running around on the internet we need a way to check and debunk stories. A good start is to [Google](https://www.google.com) it to see what comes up. For breaking news check multiple sources around the world (see [List of news agencies](https://en.wikipedia.org/wiki/List_of_news_agencies)). For in-depth analysis, scholarly articles are often good although they are sometimes locked behind paywalls.
 

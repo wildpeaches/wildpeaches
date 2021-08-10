@@ -8,7 +8,7 @@ tags: [math, covid-19]
 
 To control the COVID-19 pandemic requires rapid testing of many people. One way to do this is to perform a single test on the combined samples taken from a group of people, called pool testing. [The American Society for Microbiology thinks it's time to jump in the pool](https://asm.org/Articles/2020/July/COVID-19-Pool-Testing-Is-It-Time-to-Jump-In) and [STAT agrees](https://www.statnews.com/2020/06/26/pool-testing-covid-19/).
 
-## How pool testing works
+## How Pool Testing Works
 
 Here's an example of how pool testing works. Suppose the test requires a drawn blood sample. If the combined sample from a group of people comes back negative then with one test we've eliminated everyone in the group from further testing. In cases where a large fraction of the population remains susceptible, this can reduce the number of tests needed.
 
@@ -24,7 +24,7 @@ But how do you decide how many people to include in each pool? If you make the s
 
 Even worse, until you start testing you don't know what fraction of the population is infected so you might over or under estimate the background rate. How deep should you make the pool?
 
-## Pool probabilities
+## Pool Probabilities
 
 Let's say you want to test a population of $N$ people using pool sizes of $n$ people (the depth of the pool) where the probability of being infected is $p$. You'll begin by forming $P = N/n$ pools (with some rounding if $n$ doesn't go into $N$ evenly). Of those, some fraction $\alpha \; (0 \leq \alpha \leq 1)$ of them will be positive. Again, ignoring rounding $\alpha P$ pools will be positive, so you'll need to retest $\alpha P n$ individual samples. In other words, the total number of tests run will be $P + \alpha P n$. What is the optimal value for $n$ as a function of $P$ and $p$?
 
@@ -68,7 +68,7 @@ To find the number of tests required for a given infection rate $p$ means we nee
 
 ![Pool size for p = 7.5%](/assets/img/how-deep-is-the-pool/pool-size-p-seven-half.svg){.blend-multiply}
 
-## Optimum pool sizes
+## Optimum Pool Sizes
 
 A little calculus here—we need to find
 
@@ -90,7 +90,7 @@ Once we have the optimal number of people per pool then for each infection proba
 
 If you'd like a review of derivatives Grant Sanderson's ["Derivative formulas through geometry"](https://www.youtube.com/watch?v=S0_qX4VJhMQ) video is a very good start and is part of his [The Essence of Calculus](https://www.youtube.com/watch?v=WUvTyaaNkzM) series. A complete calculus course is also available from Khan Academy's [Calculus I](https://www.khanacademy.org/math/calculus-1).
 
-## The need for more testing
+## The Need for More Testing
 
 Johns Hopkins University has been tracking [COVID-19 cases and testing](https://coronavirus.jhu.edu/testing/individual-states) which shows the current positivity rate for the U.S. is about 7.5% (as of August 7th), and there's also a [state-by-state breakdown](https://coronavirus.jhu.edu/testing/tracker/overview) which shows the positivity rates running from -4.6% to 20.9%. The negative positivity rate (does that even make sense?) is a result of how the scoring is done and the fact that reporting isn't fully available for all states. But what this shows is for a 7.5% positivity rate, the optimal pool size is around 4 and we'll need 50 tests for every 100 people. So, sure we'll save half the number of tests, but it's not a big reduction. By the time the background rate is 20%, it's hardly worth bothering with pool testing.
 

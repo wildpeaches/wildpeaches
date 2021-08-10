@@ -13,7 +13,7 @@ Claude Shannon is known as "the father of information theory" for a paper he pub
 
 John Kelly, Jr. was a mathematician from Texas who met Shannon when they both worked at AT&T's Bell Labs in Murray Hill, NJ during the 1950s. He read Shannon's paper on information theory and realized it could be applied to gambling. He published his idea in the Bell System Technical Journal in 1956, calling it, ["A New Interpretation of Information Rate."](https://www.princeton.edu/~wbialek/rome/refs/kelly_56.pdf) Using Shannon's theory, Kelly understood that depending on the probability of winning the bet, you should adjust how big a wager to make.
 
-## Information theory
+## Information Theory
 
 Shannon wanted to know how much information could be transmitted through a channel, where a channel is any form of communication media such as a telephone wire, a transmission from a satellite, or a wink from one spy to another at the ambassador's fancy cocktail party. Shannon considered it from the recipient's point of view, and wondered how much information could be obtained from a message sent through a noisy channel.
 
@@ -160,13 +160,13 @@ Putting $b = \frac{1}{4}$ into the function $R(b,p,w)$ gives a maximum return ra
 
 Notice for $b=0$ the return ratio is 1 meaning if you don't play you can't win. At the other end, $b=1$ which is when you gamble everything. Unless the outcome is certain, you'll lose it all sooner or later. For $b=0.5$ the curve has come down to 1 and for all values of $b>0.5, $ $R<1$. Even though you might correctly predict the outcome and have a positive expectation, you can still lose money if you bet too large a fraction of your money.
 
-## A Monte Carlo experiment
+## A Monte Carlo Experiment
 
 Here's a [Monte Carlo](https://gist.github.com/XerxesZorgon/33d4fb8d521a1508d52d0792a5c7204c) experiment of the Kelly Criterion. By Monte Carlo, I mean the outcomes of each game are randomly chosen by the computer so it's very much like a real coin toss game. The values for $p$ and $w$ are still the same as before, but each outcome is unknown before the bet. I ran three different cases for the value of $b$. There's the optimal value of $b_{opt}=0.25$ and two other cases, Bet- and Bet+ where $b = b_{opt} \mp 0.05$. At the end of the experiment, the stash for the optimal case is \$361.1, but for the other two, it's only \$289 starting with an initial amount of just \$1. It's a little hard to see because the curves are wiggling around a lot, but there is quite a difference in the outcome.
 
 ![Graph for Monte Carlo Kelly experiment.](/assets/img/the-kelly-criterion/kelly-monte-carlo.png){.blend-multiply}
 
-## Breaking the bank
+## Breaking the Bank
 
 Claude Shannon left Bell Labs to become chairman of the Mathematics Department at MIT. One day a junior faculty member, Ed Thorp, asked Shannon for help getting a paper published. Roger Baldwin, a mathematician working at the Army's Aberdeen Proving Ground in Aberdeen, MD along with three associates, used an Army computer to calculate the odds when playing blackjack. The computer was supposed to calculate the ballistic trajectories of gunnery shells, but they took advantage of downtimes at night and discovered that by playing an optimal game the house odds could be brought down to just 0.62.
 

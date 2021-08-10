@@ -44,7 +44,7 @@ How much of California tumbled into the sea at [Rat Creek?](https://blogs.agu.or
 
 CalTrans public information officer [Kevin Dabrinski](https://www.mercurynews.com/2021/02/11/caltrans-explains-repair-options-for-washout-of-highway-1-in-big-sur/) said, “It put into perspective my question about, ‘Hey when are you guys going to get this done?’ Because you’re literally standing on a road and you’re looking back up a canyon and there’s marking on the trees about 20 feet up where the mud had risen,” he said. “One of our geotech teams said if we hadn’t had debris flow like if it wasn’t for the debris flow from the Dolan Fire (burn scar), it’s likely that the culvert would have operated as usual and we wouldn’t have had the loss of road.”
 
-## Structure from Motion
+## Structure From Motion
 
 Local news outlets arrived on the scene soon after the washout and flew drones over the area. Even though each video frame is a 2D representation, we can use the combined information from a sequence to reconstruct a 3D model of the washout. With the 3D model, it will be possible to estimate the total volume of the washed-out area.
 
@@ -70,7 +70,7 @@ The volume lost directly under the roadway was about 120,000 cubic feet or 4500 
 
 ![](/assets/img/california-tumbles-into-the-sea/road-section-measurements.png){.blend-multiply}
 
-## Processing the data
+## Processing the Data
 
 To estimate the volume we first need to get a copy of the drone video and then run it through a Structure from Motion (SfM) tool to get the 3D mesh. Download the [drone video](https://www.youtube.com/watch?v=WxuPIrbAx8Q) using a downloader app such as [youtube-dl](https://youtube-dl.org/), and crop the video using [Trim Video](https://online-video-cutter.com/) or [Online Converter](https://www.onlineconverter.com/video-to-jpg). Online Converter exports individual frames which are useful in a subsequent step. I found that the best results were obtained from the sequence 2:45 to 3:06. During this time the drone followed the path of Rat Creek across the road and towards the ocean with the camera pointing straight down.
 
@@ -149,7 +149,7 @@ The structure from motion algorithm will miss some points that need to be filled
 
 The last preprocessing step is to reduce the number of points in the 3D mesh. Import the mesh into [Meshlab](https://www.meshlab.net/), then click Filters $\rightarrow$ Remeshing, Simplification and Reconstruction $\rightarrow$ Delaunay Triangulation, then from the same menu choose Surface Reconstruction: Screened Poisson. This step can be repeated several times until the number of points in the mesh is about 100,000. Save the results as a .ply file. Details of the triangulation process are [here](https://meshlabstuff.blogspot.com/2009/09/meshing-point-clouds.html).
 
-## Calculating the volume of the washout
+## Calculating the Volume of the Washout
 
 The volume and cross-section functions were written in [Octave](https://www.gnu.org/software/octave/index), and saved to [GitHub](https://gist.github.com/XerxesZorgon/711c64f4fc230a8fa7b5af7bb847fcaf). Load the .ply file using the function `openMesh`. This will take a while even with a reduced mesh file. Next, we'll find points in the mesh contained within a rectangle containing the washed-out section of the road. Using CloudCompare, pick a point on the road near Point #2 where the road isn't damaged, and note the $x$-coordinate (about 180 feet). Set the values for `upper_right` to the length of the section (180 feet) and the known width of the roadway (22 feet).
 
@@ -213,7 +213,7 @@ Extending the width of the rectangle by 10 feet on either side to include the sh
 
 This shows that with some open-source software and freely available drone videos it's possible to reconstruct a 3D model of a scene and to perform volumetric calculations. Not only is it relatively fast, but using this technique keeps survey crews at a safe distance from the opening of the washout.
 
-## Appendix A: Using your drone
+## Appendix A: Using Your Drone
 
 If you own a drone calculations such as these may be easier since GPS data is captured with each frame. First, check that your image data contains GPS using the [ExifTool](https://exiftool.org/). The blog [trek view](https://www.trekview.org/) provides more details on [metadata, EXIF, and XMP](https://www.trekview.org/blog/2020/metadata-exif-xmp-360-photo-files/). [Isaac Ullah](https://anthropology.sdsu.edu/people/ullah) teaches anthropology at San Diego State University and has posted YouTube videos on constructing [3D point clouds from drone imagery](https://www.youtube.com/watch?v=0zVtZxWyBsw) using [WebODM](https://www.opendronemap.org/), [Meshlab](https://www.meshlab.net/), and [Grass 7.4](https://grass.osgeo.org/), and [Basic 3d point cloud analysis in Meshlab, QGIS, and GRASS](https://www.youtube.com/watch?v=X2qsaLWpx3E). [OpenDroneMap (ODM)](https://www.opendronemap.org/odm/) is an "open-source toolkit for processing aerial imagery", able to convert georeferenced imagery into 3D point cloud models. [QGIS](https://www.qgis.org/en/site/) is an open-source geographic information system (GIS) that integrates other GIS packages including GRASS (Geographic Resources Analysis Support System).
 
@@ -225,7 +225,7 @@ suggesting that OpenDroneMap, AliceVision, and VIsualSFM might be good alternati
 
 [LiDAR](https://en.wikipedia.org/wiki/Lidar) may also be used on [drones](https://www.dronezon.com/learn-about-drones-quadcopters/best-lidar-sensors-for-drones-great-uses-for-lidar-sensors/) to create elevation point clouds. LiDAR measures distances from the drone to points on the ground by [timing a laser pulse](https://youtu.be/H2-Yp30TGk4) transmitted from the drone as the pulse reflects from a point and returns to the sensor. LiDAR only measures distances, so point colors are not available as they are in photogrammetry, but combining LiDAR with data from a camera can restore some sense of color, as [Aleks Buczkowski](https://geoawesomeness.com/author/geoa0578/) explains in his article, ["Drone LiDAR or Photogrammetry? Everything you need to know."](http://geoawesomeness.com/drone-lidar-or-photogrammetry-everything-your-need-to-know/) Other useful introductory articles are, ["Drone photogrammetry vs. LIDAR: what sensor to choose for a given application"](https://wingtra.com/drone-photogrammetry-vs-lidar/) and ["Should you Choose LiDAR or Photogrammetry for Aerial Drone Surveys?"](https://www.commercialuavnews.com/construction/choose-lidar-photogrammetry-aerial-drone-surveys).
 
-## Appendix B: Align points to an axis
+## Appendix B: Align Points to an Axis
 
 The point cloud needs to be rotated to get the direction vertical to the road aligned with the $z$-axis first, then the $x$-axis. As explained above, the first step is to shift all of the points so that the origin is located at a point near the edge of the road just before the washout. Do this by using the translation option and applying an inverse transform equal to the values of this point.
 

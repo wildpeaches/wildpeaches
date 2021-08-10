@@ -4,7 +4,7 @@ author: Jan De Wilde
 date: 2020-08-06
 ---
 
-## Installing git and nodeJS
+## Installing Git and NodeJS
 
 To run your local instance you need to have [git](https://git-scm.com/download/) and [nodeJS](https://nodejs.org/en/download/)
 installed. Pick your poison—I prefer to install them via the [brew](https://brew.sh/) package manager for MacOS, so that’s the documented approach.
@@ -31,7 +31,7 @@ node -v # should return version number
 
 Make sure you’ve been added to the repository as a contributor, next, it’s time to clone.
 
-## Cloning the repository
+## Cloning the Repository
 
 Use your favorite client, or if you opt for the CLI, make sure you’re in the parent directory and clone:
 
@@ -55,7 +55,7 @@ cd wildpeaches && npm install
 
 If you see some warnings, don’t be too alarmed, as long as you make it through 🤓
 
-## Local development
+## Local Development
 
 Among the dependencies is a web server, so you’re all set to spin up the site locally.
 

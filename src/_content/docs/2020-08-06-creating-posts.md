@@ -37,7 +37,7 @@ No need to duplicate the title (main heading) or author name in the markdown. It
 
 Browsersync watches the file system and upon each save of your Markdown, the browser will update and reflect the latest changes.
 
-## Checking into git
+## Checking Into Git
 
 ```bash
 git add -A && git commit -m "Commit message"

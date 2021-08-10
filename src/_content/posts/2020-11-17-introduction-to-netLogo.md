@@ -62,7 +62,7 @@ The black square is the environment or world where agents move and follow the in
 
 You write agent commands in the Code tab, and the Info tab is where you document your model.
 
-## A sample problem
+## A Sample Problem
 
 When you install NetLogo you'll get hundreds of agent-based model examples. This sample problem is a slight variant of the "Turtles Circliing Simple.nlogo" program from Uri Wilensky and William Rand's book, ["An Introduction to Agent-Based Modeling: Modeling Natural, Social, and Engineered Complex Systems with NetLogo"](http://www.intro-to-abm.com/). In NetLogo, agents are called "turtles" unless you rename them (to sheep or wolves or something).
 

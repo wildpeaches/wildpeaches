@@ -25,7 +25,7 @@ $$
 
 I kid, I kid! I have great respect for mathematicians! I'll take them over serial killers any day. Although there is some overlap. Alright, that's demoes the KaTeX extension in Markdown. Time to move on.
 
-## Syntax highlighting
+## Syntax Highlighting
 
 Code can be useful, can't it? I can really see it coming into widespread use one day!
 
@@ -60,7 +60,7 @@ Have a look at the [full list of supported languages](https://prismjs.com/#suppo
 >
 > A: The mathematician only needs paper, pencil, and a trash bin for his work. The philosopher can do without the trash bin.
 
-## Inline stuff
+## Inline Stuff
 
 This is **bold**. Here's a [link](https://jandewilde.org), I always forgot how to create them in markdown until I used the mnemonic device: b before p, brackets before parens.
 

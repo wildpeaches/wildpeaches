@@ -273,7 +273,7 @@ To load the two KenKen helper functions, at the _gp_ prompt type
 
 which will give you access to the functions `sumPart`, `multPart`, `mnumbpart`, `mpartitions`, `kFilt`, and `unique` at the PARI/GP command prompt.
 
-## What's next?
+## What's Next?
 
 Tetsuya Miyamoto would likely say that this takes away from your opportunity to explore the logic of KenKen, so it would probably be a good idea to try a few puzzles before using this PARI/GP code. These functions won't solve the puzzle, but they significantly reduce the number of possible partitions for a cage. If you'd like to try to build a KenKen solver, Vardges Melkonian wrote, ["An Integer Programming Model for the KenKen Problem"](https://file.scirp.org/Html/1-1040464_66317.htm). He provides code written in [AMPL](https://ampl.com/) (A Mathematical Programming Language). AMPL is proprietary, but it may be possible to run some code [online](https://ampl.com/try-ampl/start/) or to use the open-source subset of AMPL, [GNU MathProg](http://web.mit.edu/lpsolve_v5525/doc/MathProg.htm).
 

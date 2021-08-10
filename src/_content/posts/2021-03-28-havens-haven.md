@@ -415,7 +415,7 @@ but there won't be a unique solution modulo $n$ (but there will be modulo $n/d$)
 
 We now have methods for calculating addition, subtraction, multiplication, and under special conditions, division modulo $n$, and with the Chakravala algorithm we can find the solution to any Pell's equation.
 
-## The algorithm
+## The Algorithm
 
 To solve the equation
 

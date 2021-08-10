@@ -8,7 +8,7 @@ keywords: [Gambling, Statistics, Expectation, Optical Character Recognition]
 socialImg: /assets/img/winning-the-scratch-lottery/bingo-card.jpg
 ---
 
-## Mohan Srivastava's discovery
+## Mohan Srivastava's Discovery
 
 Mohan Srivastava is a geological statistician from Toronto who helps mining companies find gold. In 2003, he struck gold in another way by figuring out how to beat the Canadian scratch lottery, as he explained to [Jonah Lehrer of Wired Magazine](https://www.wired.com/2011/01/ff-lottery/). People think the lottery is a completely random game, but it isn't. The lottery commission knows a priori how much it expects to earn from each game by controlling the number of winning tickets.
 
@@ -84,7 +84,7 @@ How much time and money would Mohan have to spend on this? To clear \$600 per da
 
 These numbers may be somewhat different from his because I was using expected values for the Delaware lottery. Still, it seems like a lot of time spent to collect \$600, and there's no getting around the tedium of looking at a bunch of lottery tickets all day long. Or is there?
 
-## How to beat the lottery
+## How to Beat the Lottery
 
 I'll describe a potential path to scamming the lottery. First, you need to buy a lot of lottery tickets. After taking pictures of them, convert the images into useful numbers with [Optical Character Recognition](https://en.wikipedia.org/wiki/Optical_character_recognition) (OCR). Count of how many times each number appears on any of the four cards. We'll only keep track of those appearing exactly once. For the unique numbers, create a binary array of their positions on each card. Identify Bingos by summing rows, columns, and diagonals. Finally, scrape the dots in the Caller's Card and the corresponding numbers on each of the four cards to reveal winners. Return the unused cards to the store for refunds and cash in the winning tickets.
 

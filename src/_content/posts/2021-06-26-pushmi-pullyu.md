@@ -35,7 +35,7 @@ Turn the boat so it faces downwind, and then drag forces on the boat will begin 
 
 The Push-me-pull-you is clearly a perpetual motion machine violating at least one of those Laws of Thermodynamics. But if your ancestors are Abyssinian Gazelles and Unicorns maybe you've got some magic.
 
-## An iceboat faster than the wind downwind
+## An Iceboat Faster than the Wind Downwind
 
 Is it possible for a boat to sail downwind faster than the wind? If the boat heads directly downwind, then at best, it could reach the same speed as the wind if no other drag forces were acting on the boat. A balloon floating in the air travels at the same speed as the wind, but a boat would have trouble achieving wind speed because of the drag forces of the water on the hull.
 
@@ -251,7 +251,7 @@ $$
 
 The second solution, $v_d = v_u$ happens only if nothing happens to slow the wind down, and no energy is extracted.
 
-## Power extracted and net forward thrust
+## Power Extracted and Net Forward Thrust
 
 The downstream wind velocity through the turbine has slowed to
 
@@ -332,7 +332,7 @@ $$
 
 or, the ratio of the wind turbine diameter to the propeller diameter needs to be more than $22.4$.
 
-## Faster than the wind in any direction
+## Faster than the Wind in Any Direction
 
 ### Downwind
 

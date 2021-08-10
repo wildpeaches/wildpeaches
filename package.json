@@ -14,7 +14,7 @@
     "css:build-prod": "NODE_ENV=production && ELEVENTY_PRODUCTION=true && npm run css:postcss-prod && npm run css:minify",
     "start": "npm run css:build-prod && npx @11ty/eleventy",
     "serve": "npm run css:build-dev && npx @11ty/eleventy --serve",
-    "md:lint": "markdownlint src/**/*.md",
+    "md:lint": "markdownlint src/**/*.md --rules \"markdownlint-rule-titlecase\"",
     "rm:www": "rimraf www/"
   },
   "husky": {
@@ -74,6 +74,7 @@
     "husky": "^7.0.1",
     "lint-staged": "^11.1.2",
     "markdownlint-cli": "^0.28.1",
+    "markdownlint-rule-titlecase": "^0.1.0",
     "prettier": "2.3.2"
   }
 }

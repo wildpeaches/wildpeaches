@@ -91,7 +91,7 @@ since $0^0 = 1$ but $0^k = 0$ for all $k > 0$. Similarly, when $t = 1$, $B(t) = 
 
 The Bezier curve (red) starts at $P_0$ when $t=0$ and ends at $P_4$ when $t=1$.
 
-## Drawing the curves
+## Drawing the Curves
 
 We'll be using [Geogebra Classic 6](https://www.geogebra.org/download) to draw the curves. After you install it and start it the first time you should see a screen like this:
 
@@ -155,7 +155,7 @@ At some point, you'll want to design your own yacht, but it's useful to have a s
 
 The homotopy function $A(x)$ is the least intuitive and won't show up in other designers' plans, but is also the most forgiving. How the hull transitions from one section curve to the next isn't critical to the overall plan. Letcher drew his yacht plan with the aft section $\eta_2$ bowing outward and then curving in towards the freeboard (called tumblehome). You can decide where you want the tumblehome to begin, and adjust $A(x)$ accordingly.
 
-## Generating functions
+## Generating Functions
 
 After you have copied the control point data from each curve into the spreadsheet, save the spreadsheet to your local folder naming it something like "Letcher curves.xlsx". In [Octave](https://www.gnu.org/software/octave/index), open the function `BezierHull`^[[Source code for BezierHull() on GitHub Gist](https://gist.github.com/XerxesZorgon/c92272ec4dead2e19e4c7ab3eb2593b6)] and run it from the command line,
 
@@ -219,7 +219,7 @@ If you click on "Gauss" and "Both sides" you'll see the complete hull. Gauss ind
 
 This figure shows a view of Letcher's six curve yacht from the stern with "Both sides" turned on and the "Environment map" set to "Sky". There are many more features to DELFTship you may want to explore.
 
-## Building a model
+## Building a Model
 
 You can build a model of your yacht design from styrofoam using a hot wire cutter. Jan found instructions for building a [hot wire cutter](https://www.flitetest.com/articles/hot-wire-cutting-foam) from [FliteTest](https://www.flitetest.com/), a group that helps amateur model aircraft builders and flyers. To use the cutter you need a rigid template attached to opposite sides of a foam block. The template guides the hot wire as it cuts through the foam, as shown here.
 
@@ -227,7 +227,7 @@ You can build a model of your yacht design from styrofoam using a hot wire cutte
 
 Using the sections generated from the code you can create templates for your hot wire cutter. Of course, you don't want to use templates for each cross-section, but a few along the length of the boat should be sufficient for a model. Most of the templates will be used twice during the cutting, once for each cut of adjacent blocks. After cutting all of the blocks, glue them together with a hot glue gun, and sand down the edges to smooth the surface.
 
-## Understanding the code (tl;dr)
+## Understanding the Code (TL;DR)
 
 As mentioned above, you can adjust the density of points in the model by setting `dx` and `dz`. The code reads in the Excel Bezier points file for each of the six defining curves which are stored in a structure with the curve name and $x$ and $y$ coordinates of each point. The homotopy function $A$ is scaled so the $y$ values fall between 0 and 1.
 
