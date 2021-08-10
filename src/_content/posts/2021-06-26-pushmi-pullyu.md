@@ -119,7 +119,7 @@ $$
 
 The change in pressure is half the density times the difference of the squares of the air velocities upstream and downstream of the turbine.
 
-In the previous post, [Betz the Limit](https://wildpeaches.xyz/blog/the-ultra-hyper-totally-amazing-push-me-pull-you-supercavitating-surface-effect-flying-machine/), we found the force of the wind on the turbine,
+In the previous post, [Betz the Limit](/blog/betz-the-limit/), we found the force of the wind on the turbine,
 
 $$
 F = \frac{1}{2} \rho A (v_u^2 - v_d^2)
