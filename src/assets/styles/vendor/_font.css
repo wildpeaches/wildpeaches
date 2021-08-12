@@ -1,8 +1,6 @@
 /* Inter variable font import */
 /* https://rsms.me/inter/ */
 
-@import url('https://rsms.me/inter/inter.css');
-
 :root {
   @apply font-serif text-lg;
 }
