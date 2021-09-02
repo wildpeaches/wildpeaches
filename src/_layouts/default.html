@@ -2,12 +2,11 @@
 title: Wild Peaches
 socialImg: /assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/hero-image.jpg
 ---
-
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   {% include 'head.html' %}
   <body
-    class="text-base sm:text-lg md:text-xl overflow-x-hidden home-font-features {% if bodyClass %}{{ bodyClass }}{% endif %}"
+    class="overflow-x-hidden {% if bodyClass %}{{ bodyClass }}{% endif %}"
   >
     {% include 'global-nav.html' %} 
     {{ content | safe }}

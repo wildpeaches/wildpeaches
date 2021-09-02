@@ -3,7 +3,7 @@ layout: default
 title: Wild Peaches
 author: Jan De Wilde & John Peach
 permalink: /
-bodyClass: text-gray-800 bg-gray-50 font-sans
+bodyClass: text-primary bg-white font-sans
 includeSubscription: true
 ---
 
@@ -14,14 +14,14 @@ includeSubscription: true
 
   <p class="mb-12 text-2xl font-medium max-w-md">{{ site.tagline }}</p>
 
-  <ul class="divide-y divide-gray-300 list-none">
+  <ul class="divide-y divide-yellow-500 list-none">
     {% for post in collections.posts | reverse %}
     <li class="py-4 leading-snug">
       <a class="border-b-0 flex" href="{{ post.url }}">
         <article>
           <h2 class="font-medium text-lg">{{ post.data.title }}</h2>
           {% if post.data.subtitle %}
-          <p class="text-gray-600 text-base font-sans">{{ post.data.subtitle }}</p>
+          <p class="font-normal text-base text-gray-600">{{ post.data.subtitle }}</p>
           {% endif %}
         </article>
       </a>

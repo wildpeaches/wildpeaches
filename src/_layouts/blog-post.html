@@ -1,12 +1,12 @@
 ---
 layout: default
-bodyClass: text-gray-700 bg-gray-50
+bodyClass: text-primary bg-white
 includeSubscription: true
 ---
 
 {% set ledeTopMargin = "" %}
 <main id="main" class="o-center mb-12">
-  <article class="o-stack s-post leading-relaxed">
+  <article class="o-stack s-post">
     {% if not hero %}
     <div class="mt-24">
       {% include "post-masthead.html" %}
@@ -16,9 +16,16 @@ includeSubscription: true
       {% include "post-hero.html" %}
     {% endif %} 
     {% if lede %}
-    <p class="lede {{ ledeTopMargin }}">{{ lede }}</p>
-    {% endif %} 
+    <div class="lede {{ ledeTopMargin }}">
+      {{ lede }}
+    </div>
+      {{ content | safe }}
+    {% else %}
+    <div class="{{ ledeTopMargin }}"></div>
     {{ content | safe }}
+    {% endif %} 
+
+    
 
     {#
       <!-- @TODO show tags-->
@@ -44,7 +51,7 @@ includeSubscription: true
 
   {% if ghDiscussion %}
   <h2 id="reach-out">
-    <a class="text-gray-400 border-b-0  hover:border-b-2" href="#reach-out">#</a>
+    <a class="text-blue-400 border-b-0  hover:border-b-2" href="#reach-out">#</a>
     Reach out!
   </h2>
   <p>If you have any questions or comments regarding this article you can visit <a href="https://github.com/JanDW/wildpeaches/discussions/{{ghDiscussion}}">this thread on GitHub discussions</a> or <a href="mailto:{{site.email}}">email us directly</a>
@@ -61,7 +68,7 @@ includeSubscription: true
   {%- for relatedPost in relatedPosts %}
     <li class="my-5 text-base">
       {# <img src="{{ relatedPost.hero.url }}" alt="{{ relatedPost.hero.alt }}"> #}
-      <a href="{{ relatedPost.url }}"><span class="font-semibold">{{ relatedPost.title }}</span> <span class="text-gray-600 block text-sm">{{ relatedPost.subtitle }}</span></a>
+      <a href="{{ relatedPost.url }}"><span class="font-semibold">{{ relatedPost.title }}</span> <span class="text-gray-700 block text-sm">{{ relatedPost.subtitle }}</span></a>
     </li>
   {% endfor %}
   </ul>

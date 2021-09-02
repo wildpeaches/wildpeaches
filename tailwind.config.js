@@ -27,12 +27,15 @@ module.exports = {
       lg: '80em', // 1280px
     },
     colors: {
-      gray: colors.warmGray,
+      transparent: 'transparent',
+      current: 'currentColor',
+      gray: colors.coolGray,
       blue: colors.blue,
       white: colors.white,
       green: colors.green,
       red: colors.red,
-      teal: colors.teal,
+      yellow: colors.yellow,
+      primary: 'var(--color-primary)',
     },
     listStyleType: {
       none: 'none',

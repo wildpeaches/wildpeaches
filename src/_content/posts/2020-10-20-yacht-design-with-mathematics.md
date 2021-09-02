@@ -21,7 +21,7 @@ Historically, yacht designers drew the outlines of boats on their drafting board
 As computers became more widely available, designers turned to them to handle the difficult problems of yacht design. Now, high-performance yachts such as these by [Team Oracle USA](https://en.wikipedia.org/wiki/Oracle_Team_USA), are drawn with supercomputers calculating [Computational Fluid Dynamics](https://en.wikipedia.org/wiki/Computational_fluid_dynamics).
 
 ![Team Oracle high-performance yachts](/assets/img/yacht-design-with-mathematics/ac-72-team-oracle-boats-photo-d-ramey-logan.svg){.mb-1}[Photograph](https://commons.wikimedia.org/w/index.php?curid=27731307) by [D Ramey Logan](http://don.logan.com/), [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en){.mb-1}
-{.mb-12 .text-sm .text-gray-600}
+{.mb-12 .text-sm .text-blue-600}
 
 In 1972, John S. Letcher published a paper, [A New Approach to Numerical Fairing and Lofting](https://www.semanticscholar.org/paper/A-NEW-APPROACH-TO-NUMERICAL-FAIRING-AND-LOFTING-Letcher/56549810b9af3839dd1feec77cce063d3689feb8), where he showed how to calculate the surface of the hull using just six curves. We can combine Letcher's method with some computer power to create the 3D shape of a hull easily. It isn't up to the level of CFD on a supercomputer, but it makes the designing process much easier than spending hours carefully drawing the outline by hand.
 

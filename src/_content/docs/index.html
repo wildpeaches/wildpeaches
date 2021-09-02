@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /docs/
-bodyClass: text-blue-900 bg-blue-50
+bodyClass: text-primary bg-blue-50
 ---
 
 <section class="my-6 o-stack">
@@ -10,7 +10,7 @@ bodyClass: text-blue-900 bg-blue-50
 
     <li class="py-3 text-xl">
       <a
-        class="no-underline text-blue-900 font-medium flex"
+        class="no-underline text-primary font-medium flex"
         href="{{ doc.url }}"
       >
         <!-- <time datetime="{{ doc.date | w3DateFilter }}"
@@ -18,7 +18,7 @@ bodyClass: text-blue-900 bg-blue-50
         > -->
         <div>
           {{ doc.data.title }} {% if doc.data.subtitle %}
-          <div class="text-blue-900 text-opacity-75 text-base">
+          <div class="text-primary text-opacity-75 text-base">
             {{ doc.data.subtitle }}
           </div>
           {% endif %}

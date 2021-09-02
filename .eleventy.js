@@ -10,11 +10,12 @@ const markdownItKatex = require('@iktakahiro/markdown-it-katex');
 
 const collections = require('./src/utils/collections');
 
+const betterSlugFilter = require('./src/filters/better-slug');
 const dateFilter = require('./src/filters/date-filter');
+const dumpFilter = require('@jamshop/eleventy-filter-dump');
+const markdownFilter = require('./src/filters/markdown-filter');
 const statFilter = require('./src/filters/stat-filter');
 const w3DateFilter = require('./src/filters/w3-date-filter');
-const dumpFilter = require('@jamshop/eleventy-filter-dump');
-const betterSlugFilter = require('./src/filters/better-slug');
 
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
@@ -35,7 +36,7 @@ module.exports = (eleventyConfig) => {
     .use(markdownItAnchor, {
       permalink: true,
       permalinkSymbol: '#',
-      permalinkClass: 'text-gray-400 border-b-0  hover:border-b-2',
+      permalinkClass: 'text-gray-300 border-b-4 border-transparent  hover:border-gray-200 hover:text-gray-500',
       permalinkBefore: true,
     });
 
@@ -79,8 +80,10 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPairedShortcode('letter', function (contents) {
     const parsedMarkDown = markdownLib.render(contents);
     const html = `
-    <div id="letter" class="md:letter">
+    <div class="full-bleed">
+      <div id="letter" class="text-sm text-gray-00 md:letter w-max-800">
       ${parsedMarkDown}
+      </div>
     </div>`;
     return html.replace(/(\r\n|\n|\r)(\s\s)*/gm, '');
   });
@@ -90,8 +93,8 @@ module.exports = (eleventyConfig) => {
     const html = `
     <div class="table-wrapper full-bleed my-16">
       <div class="w-max-900">
-      ${parsedMarkDown}
-      </div>
+        ${parsedMarkDown}
+      </div>  
     </div>`;
     return html.replace(/(\r\n|\n|\r)(\s\s)*/gm, '');
   });
@@ -101,10 +104,11 @@ module.exports = (eleventyConfig) => {
     return new CleanCSS({}).minify(code).styles;
   });
   eleventyConfig.addFilter('dateFilter', dateFilter);
-  eleventyConfig.addFilter('w3DateFilter', w3DateFilter);
-  eleventyConfig.addFilter('stat', statFilter);
   eleventyConfig.addFilter('dump', dumpFilter);
+  eleventyConfig.addFilter('markdownFilter', markdownFilter);
   eleventyConfig.addFilter('slug', betterSlugFilter);
+  eleventyConfig.addFilter('stat', statFilter);
+  eleventyConfig.addFilter('w3DateFilter', w3DateFilter);
 
   return {
     dir: {

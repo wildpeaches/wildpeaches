@@ -2,31 +2,8 @@
 /* https://rsms.me/inter/ */
 
 :root {
-  @apply font-serif text-lg;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6,
-blockquote {
-  @apply font-sans;
-}
-
-@supports (font-variation-settings: normal) {
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  blockquote,
-  .font-sans {
-    font-family: 'Inter var', sans-serif;
-  }
-}
-
-/* Inter font */
-.home-font-features {
-  font-feature-settings: 'ss01', 'cv01', 'cv11';
+  @apply font-sans text-base sm:text-lg md:text-xl;
+  line-height: 1.7;
+  text-rendering: optimizeSpeed;
+  font-feature-settings: 'ss01', 'ss03', 'cv01';
 }
