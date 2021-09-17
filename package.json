@@ -60,6 +60,7 @@
     "postcss-logical": "^4.0.2",
     "postcss-media-minmax": "^5.0.0",
     "postcss-preset-env": "^6.7.0",
+    "prism-themes": "^1.9.0",
     "rimraf": "^3.0.2",
     "slugify": "^1.6.0",
     "tailwindcss": "^2.2.7"
