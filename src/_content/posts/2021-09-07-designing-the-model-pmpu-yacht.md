@@ -1,6 +1,6 @@
 ---
 title: Designing the Model
-subtitle: T.U.H.T.A.P.M.P.Y.S.S.E.F.M. · Part III
+subtitle: The Ultra Hyper Totally Amazing Push Me Pull You Supercavitating Surface Effect Flying Machine · Part III
 author: John Peach
 lede:
 hero:
