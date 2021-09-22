@@ -14,14 +14,14 @@ includeSubscription: true
 
   <p class="mb-12 text-2xl font-medium max-w-md">{{ site.tagline }}</p>
 
-  <ul class="divide-y divide-yellow-500 list-none">
+  <ul class="divide-y-2 divide-yellow-200 list-none">
     {% for post in collections.posts | reverse %}
-    <li class="py-4 leading-snug">
+    <li class="py-4">
       <a class="border-b-0 flex" href="{{ post.url }}">
         <article>
-          <h2 class="font-medium text-lg">{{ post.data.title }}</h2>
+          <h2 class="font-medium text-lg leading-tight">{{ post.data.title }}</h2>
           {% if post.data.subtitle %}
-          <p class="font-normal text-base text-gray-600">{{ post.data.subtitle }}</p>
+          <p class="font-normal text-sm text-gray-600 leading-snug mt-1">{{ post.data.subtitle }}</p>
           {% endif %}
         </article>
       </a>
