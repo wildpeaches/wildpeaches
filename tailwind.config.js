@@ -4,7 +4,14 @@ module.exports = {
   // prefix: 't-', /* BEM utility scoping */
   important: true,
   darkMode: 'media',
-  purge: ['./.eleventy.js', './src/**/*.html', './src/**/*.md', './src/**/*.json', './lib/shortcodes/**/*.js'],
+  purge: [
+    './.eleventy.js',
+    './src/**/*.html',
+    './src/**/*.md',
+    './src/**/*.json',
+    './src/**/*.js',
+    './lib/shortcodes/**/*.js',
+  ],
   theme: {
     fontFamily: {
       sans: ['Inter Var', 'sans-serif'],
