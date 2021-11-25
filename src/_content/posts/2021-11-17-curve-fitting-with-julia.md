@@ -1,24 +1,22 @@
 ---
-title: Curve fitting with Julia
-subtitle: Why oil production may not follow a Gaussian function
+title: Curve Fitting with Julia
+subtitle: Why Oil Production May Not Follow a Gaussian Function
 author: John Peach
 lede:
 hero:
-  url: /assets/img/curve-fitting-with-julia/huntington-beach.png
+  url: /assets/img/curve-fitting-with-julia/huntington-beach.jpeg
   alt:
+  class: hero--contain
 tags: [math]
 keywords: [curve fitting, Julia, Weierstrass approximation, Hubbert peak theory, Seneca cliff]
-socialImg: /assets/img/curve-fitting-with-julia/huntington-beach.png
+socialImg: /assets/img/curve-fitting-with-julia/huntington-beach.jpeg
 ---
 
 
-
-> ```
-> “How did you go bankrupt?” Bill asked. 
-> “Two ways,” Mike said. “Gradually, then suddenly.” 
-> ```
-
-Ernest Hemingway, *The Sun Also Rises*
+>“How did you go bankrupt?” Bill asked.
+>“Two ways,” Mike said. “Gradually, then suddenly.”
+>
+>—Ernest Hemingway, The Sun Also Rises
 
 ## The Weierstrass Approximation Theorem
 
@@ -141,7 +139,9 @@ where $\alpha$ represents the peak amount produced, $\mu$ is the time of peak pr
 
 Is it possible to generate Bardi's Seneca Cliff with a series of Gaussians? Using [Julia](https://juliacomputing.com/), the Seneca Cliff can be modeled as
 
-`f(x) = 0 < x <= 1 ? x : 0`
+```julia
+f(x) = 0 < x <= 1 ? x : 0
+```
 
 which asks the question, Is $x$ between $0$ and $1$? If it is, $f(x) = x$, otherwise it's zero.
 
@@ -151,15 +151,21 @@ If oil production mimicked this $f(x)$, the rate would increase linearly until s
 
 First we need to create a vector of $x-$values,
 
-`x = Array(-0.5:0.01:1.5));`
+```julia
+x = Array(-0.5:0.01:1.5));
+```
 
 and then the corresponding $y-$values using a [list comprehension](https://sodocumentation.net/julia-lang/topic/5477/comprehensions)
 
-`y = [f(x_i) for x_i in x];`
+```julia
+y = [f(x_i) for x_i in x];
+```
 
 Next, for each value of the parameters $\alpha, \mu$ and $\sigma$ we can define a function $g$ and evaluate it over $x$,
 
-`g(x,α,μ,σ) = sum( α[i] * exp( - (x-μ[i])^2/(2*σ[i]^2) ) for i = 1:n)`
+```julia
+g(x,α,μ,σ) = sum( α[i] * exp( - (x-μ[i])^2/(2*σ[i]^2) ) for i = 1:n)
+```
 
 or
 $$
@@ -169,7 +175,9 @@ $$
 
 which gives an estimate for $y$ using the sum of $n$ Gaussians
 
-`y_fit = [g(x_i,α,μ,σ) for x_i in x]`
+```julia
+y_fit = [g(x_i,α,μ,σ) for x_i in x]
+```
 
 Using the [LsqFit.jl](https://github.com/JuliaNLSolvers/LsqFit.jl) package, we'll get the best parameters to fit $f(x)$. LsqFit requires an initial estimate, so I chose
 $$
@@ -181,7 +189,9 @@ $$
 $$
 and then created an initial vector $p_0 = [\alpha; \mu; \sigma];$ with $n=4$. To get the fit, LsqFit uses the function curve_fit
 
-`fit = curve_fit(gaussSum, x, y, p₀, lower = lb, upper = ub)`  
+```julia
+fit = curve_fit(gaussSum, x, y, p₀, lower = lb, upper = ub)
+```  
 
 where `gaussSum` contains the definition for $g$, extracts the parameters from $p_0$, and generates $y\_\text{fit}$. The values of the parameters $\alpha, \mu$ and $\sigma$ are required to be between the lower bound `lb` and the upper bound `ub` which were set to zero and one for this example. 
 

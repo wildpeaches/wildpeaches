@@ -67,7 +67,6 @@ includeSubscription: true
   <ul role="list" class="mb-24 mt-6">
   {%- for relatedPost in relatedPosts %}
     <li class="my-5 text-base">
-      {# <img src="{{ relatedPost.hero.url }}" alt="{{ relatedPost.hero.alt }}"> #}
       <a href="{{ relatedPost.url }}"><span class="font-semibold">{{ relatedPost.title }}</span> <span class="text-gray-700 block text-sm">{{ relatedPost.subtitle }}</span></a>
     </li>
   {% endfor %}

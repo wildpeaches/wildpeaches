@@ -3,8 +3,10 @@
   margin-left: calc(50% - 50vw);
   margin-top: 0;
   background-image: var(--hero-img);
-  background-size: cover;
-  min-height: 80vh;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important;
+  background-size: auto 100%;
+  min-height: 80vmin;
   display: flex;
   align-items: flex-end;
   position: relative;

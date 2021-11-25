@@ -1,6 +1,6 @@
 ---
 title: Marylin and The Goats
-subtitle: Mathematicians fooled by probability, an R experiment to show why they're wrong
+subtitle: Mathematicians Fooled by Probability, an R Experiment To Show Why They’re Wrong
 author: John Peach
 lede: Controversial Ask Marylin column about the Monty Hall problem solved.
 hero:

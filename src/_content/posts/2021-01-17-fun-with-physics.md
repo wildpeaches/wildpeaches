@@ -1,6 +1,6 @@
 ---
 title: Fun with Physics
-subtitle: 'HeuristicLab solves your problems or: how to do physics without all the complicated stuff.'
+subtitle: 'HeuristicLab Solves Your Problems or: How To Do Physics Without All the Complicated Stuff'
 author: John Peach
 hero:
   url: /assets/img/fun-with-physics/sheldon.jpg
