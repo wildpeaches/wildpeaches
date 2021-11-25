@@ -16,7 +16,7 @@
     "css:minify": "npx cleancss tmp/style.css -o src/assets/styles/style.min.css",
     "css:build-dev": "npm run css:postcss-dev && ncp tmp/style.css src/assets/styles/style.min.css",
     "css:build-prod": "NODE_ENV=production && ELEVENTY_PRODUCTION=true && npm run css:postcss-prod && npm run css:minify",
-    "start": "npm run css:build-prod && npx @11ty/eleventy",
+    "start": "npm run css:build-prod && node -r esm node_modules/@11ty/eleventy/cmd.js",
     "serve": "npm run css:build-dev && npx @11ty/eleventy --serve",
     "md:lint": "markdownlint src/**/*.md --rules \"markdownlint-rule-titlecase\"",
     "rm:www": "rimraf www/"
@@ -47,6 +47,7 @@
     "cssnano": "^5.0.11",
     "dotenv": "^10.0.0",
     "escape-string-regexp": "^4.0.0",
+    "esm": "^3.2.25",
     "markdown-it": "^12.2.0",
     "markdown-it-anchor": "^8.4.1",
     "markdown-it-attrs": "^4.1.0",
