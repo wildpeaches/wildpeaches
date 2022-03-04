@@ -1,35 +1,44 @@
 ---
 title: A Research Rubric
-subtitle: Software to search, sort, store and summarize science
+subtitle: 'Software to search, sort, store and summarize science'
 author: John Peach
-lede:
+lede: null
 hero:
   url: /assets/img/a-research-rubric/VOSviewer2.png
-  alt:
-tags: [math]
-keywords: [literature review, reference manager, keyword search, review paper, meta paper, citation mapping, summarizers]
+  alt: null
+tags:
+  - math
+keywords:
+  - literature review
+  - reference manager
+  - keyword search
+  - review paper
+  - meta paper
+  - citation mapping
+  - summarizers
 socialImg: /assets/img/a-research-rubric/VOSviewer2.png
+lastmod: '2022-03-04T21:13:44.581Z'
 ---
 
 ## The Perfect Bet
 
-You want to learn something new. How do you do it? With easy access to the Internet, your first thought might be to let Google do the searching. Searching for terms about a subject often turns up more commonly used terms, and these new phrases may lead to areas you hadn't thought about initially. You can bookmark your searches, organize them into folders, and add [tags](https://support.mozilla.org/en-US/kb/categorizing-bookmarks-make-them-easy-to-find) to identify them using keywords in your bookmark manager. 
+You want to learn something new. How do you do it? With easy access to the Internet, your first thought might be to let Google do the searching. Searching for terms about a subject often turns up more commonly used terms, and these new phrases may lead to areas you hadn't thought about initially. You can bookmark your searches, organize them into folders, and add [tags](https://support.mozilla.org/en-US/kb/categorizing-bookmarks-make-them-easy-to-find) to identify them using keywords in your bookmark manager.
 
 Your search can be more organized than just collecting web page links into bookmarks. With the many new software tools available, you can search a topic efficiently, add tags and annotations to scientific papers, and automatically summarize the key concepts. To illustrate these ideas, I'm going to demonstrate the process by finding literature on predicting the outcomes of soccer matches.
 
-The [goodreads summary](https://www.goodreads.com/book/show/26195954-the-perfect-bet) of Adam Kucharski's *The Perfect Bet: How Science and Math Are Taking the Luck Out of Gambling* says,
+The [goodreads summary](https://www.goodreads.com/book/show/26195954-the-perfect-bet) of Adam Kucharski's _The Perfect Bet: How Science and Math Are Taking the Luck Out of Gambling_ says,
 
-> For the past 500 years,  gamblers - led by mathematicians and scientists - have been trying to figure out how to pull the rug out from under Lady Luck. In *The Perfect Bet*, mathematician and award-winning writer Adam Kucharski tells the  astonishing story of how the experts have succeeded, revolutionizing  mathematics and science in the process. The house can seem unbeatable.  Kucharski shows us just why it isn't. Even better, he demonstrates how  the search for the perfect bet has been crucial for the scientific  pursuit of a better world.
+> For the past 500 years, gamblers - led by mathematicians and scientists - have been trying to figure out how to pull the rug out from under Lady Luck. In _The Perfect Bet_, mathematician and award-winning writer Adam Kucharski tells the astonishing story of how the experts have succeeded, revolutionizing mathematics and science in the process. The house can seem unbeatable. Kucharski shows us just why it isn't. Even better, he demonstrates how the search for the perfect bet has been crucial for the scientific pursuit of a better world.
 
-The book shows how to beat casino games,  bet on sports, and gives optimal stock trading techniques. We thought that soccer might be a fun way to begin learning about predicting the outcome and betting on the results. But as Jan pointed out, soccer games are typically low-scoring. Kucharski's solution is in-game betting. Which team will take the next shot at the goal? Which team will control the ball the longest over the next five minutes?
+The book shows how to beat casino games, bet on sports, and gives optimal stock trading techniques. We thought that soccer might be a fun way to begin learning about predicting the outcome and betting on the results. But as Jan pointed out, soccer games are typically low-scoring. Kucharski's solution is in-game betting. Which team will take the next shot at the goal? Which team will control the ball the longest over the next five minutes?
 
-Kucharski quoted an article from [The Post Game](https://www.thepostgame.com/#who-we-are), [*Betting After The Games Are Underway*](http://www.thepostgame.com/blog/spread-sheet/201101/betting-after-games-are-underway) about Cantor Fitzgerald, an entrepreneur who started CG Technology to handle these bets. A 2016 [ESPN article](https://www.espn.com/chalk/story/_/id/17707481/las-vegas-sportsbook-cg-technology-was-fined-225m-illegal-gambling-money-laundering-scheme) says that CG Technology was fined $22.5M for illegal gambling and money laundering. It appears that William Hill Race & Sportsbook has [acquired parts of CG Technology](https://www.williamhill.us/william-hill-acquisition-of-select-assets-of-cg-technology-formerly-cantor-gaming-faqs/), but it's not clear if in-game betting on soccer is still available. So, maybe we won't be able to bet on games, but even if we can, we still need to figure out how to do it. We need the prediction part first.
+Kucharski quoted an article from [The Post Game](https://www.thepostgame.com/#who-we-are), [_Betting After The Games Are Underway_](http://www.thepostgame.com/blog/spread-sheet/201101/betting-after-games-are-underway) about Cantor Fitzgerald, an entrepreneur who started CG Technology to handle these bets. A 2016 [ESPN article](https://www.espn.com/chalk/story/_/id/17707481/las-vegas-sportsbook-cg-technology-was-fined-225m-illegal-gambling-money-laundering-scheme) says that CG Technology was fined $22.5M for illegal gambling and money laundering. It appears that William Hill Race & Sportsbook has [acquired parts of CG Technology](https://www.williamhill.us/william-hill-acquisition-of-select-assets-of-cg-technology-formerly-cantor-gaming-faqs/), but it's not clear if in-game betting on soccer is still available. So, maybe we won't be able to bet on games, but even if we can, we still need to figure out how to do it. We need the prediction part first.
 
 ## The Process
 
-Aaron Tay's [Musings about librarianship](https://musingsaboutlibrarianship.blogspot.com/) is a marvelous blog about conducting online research. Aaron is a Library Analytics Manager at Singapore Management University and is the founder of [Initiative for Open Abstracts](https://i4oa.org/) to promote unrestricted access to scholarly research. One of his blog posts, [*Navigating the literature review*](https://musingsaboutlibrarianship.blogspot.com/2020/12/navigating-literature-review-metaphors.html?q=google+search) describes the process of literature review, and contains some useful online tools. At the end of this post, I'll provide a more complete set of tools, but since Aaron has already picked out the ones he thinks are likely to be the most useful, we'll go through his process.
+Aaron Tay's [Musings about librarianship](https://musingsaboutlibrarianship.blogspot.com/) is a marvelous blog about conducting online research. Aaron is a Library Analytics Manager at Singapore Management University and is the founder of [Initiative for Open Abstracts](https://i4oa.org/) to promote unrestricted access to scholarly research. One of his blog posts, [_Navigating the literature review_](https://musingsaboutlibrarianship.blogspot.com/2020/12/navigating-literature-review-metaphors.html?q=google+search) describes the process of literature review, and contains some useful online tools. At the end of this post, I'll provide a more complete set of tools, but since Aaron has already picked out the ones he thinks are likely to be the most useful, we'll go through his process.
 
-Normally, I'd recommend finding an expert or two as a first step, but "soccer gambling" is such an esoteric concept it's unlikely that you'd find a real expert in both soccer and gambling. We'll resort to doing online searches for this project. Aaron also has a post, [*Top new tools for researchers worth looking at*](https://aarontay.medium.com/top-new-tools-for-researchers-worth-looking-at-9d7d494761b0) with many good searching methods.
+Normally, I'd recommend finding an expert or two as a first step, but "soccer gambling" is such an esoteric concept it's unlikely that you'd find a real expert in both soccer and gambling. We'll resort to doing online searches for this project. Aaron also has a post, [_Top new tools for researchers worth looking at_](https://aarontay.medium.com/top-new-tools-for-researchers-worth-looking-at-9d7d494761b0) with many good searching methods.
 
 Simply reading about a subject doesn't make you an expert, though. You have to experiment with and practice the new concept. "How do you get to [Carnegie Hall?](https://www.carnegiehall.org/Explore/Articles/2020/04/10/The-Joke)", "Practice, man, practice."
 
@@ -45,33 +54,33 @@ Briefly, an outline of the method is
 
 Before beginning the search, we need to be able to save journal articles. Create a PDF folder somewhere on your hard drive. You can add subfolders if it helps keep some sort of organization to the papers. Most good reference managers will be able to handle a jumble of papers thrown into a single folder.
 
-Aaron recommends [Zotero](https://www.zotero.org/), but alternatives I like are [Qiqqa](http://www.qiqqa.com/) and [Docear](https://docear.org/). The site [AlternativeTo](https://alternativeto.net/) recommends [Mendeley](https://www.mendeley.com/reference-management/reference-manager) as another good reference manager with [ features similar](https://www.library.yorku.ca/web/research-learn/citing-your-work-academic-integrity/citations/zotero-vs-mendeley-comparison/) to Zotero. Of course, Qiqqa claims it's [much better](http://www.qiqqa.com/About/Compare#) than Zotero, and since I've been using Qiqqa for a while I'll explain how it works. Qiqqa recently became [open source,](https://github.com/jimmejardine/qiqqa-open-source) so the latest version is available on [Github](https://github.com/GerHobbelt/qiqqa-open-source/releases), a quick tutorial is available on [YouTube](https://www.youtube.com/watch?v=b01GdtlyOmE), and the [Qiqqa manual](http://www.qiqqa.com/Content/Client/The%20Qiqqa%20Manual.pdf) is also online. 
+Aaron recommends [Zotero](https://www.zotero.org/), but alternatives I like are [Qiqqa](http://www.qiqqa.com/) and [Docear](https://docear.org/). The site [AlternativeTo](https://alternativeto.net/) recommends [Mendeley](https://www.mendeley.com/reference-management/reference-manager) as another good reference manager with [ features similar](https://www.library.yorku.ca/web/research-learn/citing-your-work-academic-integrity/citations/zotero-vs-mendeley-comparison/) to Zotero. Of course, Qiqqa claims it's [much better](http://www.qiqqa.com/About/Compare#) than Zotero, and since I've been using Qiqqa for a while I'll explain how it works. Qiqqa recently became [open source,](https://github.com/jimmejardine/qiqqa-open-source) so the latest version is available on [Github](https://github.com/GerHobbelt/qiqqa-open-source/releases), a quick tutorial is available on [YouTube](https://www.youtube.com/watch?v=b01GdtlyOmE), and the [Qiqqa manual](http://www.qiqqa.com/Content/Client/The%20Qiqqa%20Manual.pdf) is also online.
 
 After you have saved articles to your PDF folder, start Qiqqa, click on "Guest" and at the top left corner you should see "Add PDFs or References". Click the drop-down arrow and then "Add Folder". Navigate to your PDF folder and select it, allowing subfolders. Qiqqa will then read each of the PDFs in your PDF folder using OCR, automatically adding tags and creating bibliographies for each paper. It may take a few minutes depending on how many papers you've downloaded, but when Qiqqa is finished you can select papers by tag, author, publisher, year, or custom search criteria. Double-clicking on the paper brings it up in a new tab.
 
-When downloading a new PDF, you'll often find that the file name is something like *PhysRevX.7.041052.pdf* when the title of the paper is *Quantum-Assisted Learning of Hardware-Embedded Probabilistic Graphical Models*. You don't need to change the file name title to match the paper title because Qiqqa will read the title and store it using the more readable form.
+When downloading a new PDF, you'll often find that the file name is something like _PhysRevX.7.041052.pdf_ when the title of the paper is _Quantum-Assisted Learning of Hardware-Embedded Probabilistic Graphical Models_. You don't need to change the file name title to match the paper title because Qiqqa will read the title and store it using the more readable form.
 
 ## Top Level or Keyword Searching
 
-We want to figure out how to gamble on soccer. Or should we be betting on football? The Northeastern University Library recommends combining key terms and truncating search words in their list of the [top ten search tips](https://library.northeastern.edu/get-help/research-tutorials/effective-database-searches/top-ten-search-tips). Since we're not sure that in-game gambling is still possible, we might be better off looking for a method or strategy to predict the outcome using something like "soccer AND prediction". Synonyms for "prediction" found in a [thesaurus](https://www.thesaurus.com) are "forecast", "guess", "indicator", "prognosis" and "indicator" so we could try combinations of those as well. 
+We want to figure out how to gamble on soccer. Or should we be betting on football? The Northeastern University Library recommends combining key terms and truncating search words in their list of the [top ten search tips](https://library.northeastern.edu/get-help/research-tutorials/effective-database-searches/top-ten-search-tips). Since we're not sure that in-game gambling is still possible, we might be better off looking for a method or strategy to predict the outcome using something like "soccer AND prediction". Synonyms for "prediction" found in a [thesaurus](https://www.thesaurus.com) are "forecast", "guess", "indicator", "prognosis" and "indicator" so we could try combinations of those as well.
 
 A Google search for "soccer prediction" returns lots of predictions other people are making about soon-to-be played games such as these from [FiveThirtyEight](https://projects.fivethirtyeight.com/soccer-predictions/). FiveThirtyEight gives a detailed description of how they [produce their predictions](https://fivethirtyeight.com/methodology/how-our-club-soccer-predictions-work/) which mostly rely on [ESPN's Soccer Power Index](https://www.espn.com/world-cup/story/_/id/4447078/ce/us/guide-espn-spi-ratings) (SPI). James Curley provided the data and [R](https://www.r-project.org/) code used by FiveThirtyEight on [GitHub](https://github.com/jalapic/engsoccerdata).
 
-Arthur Caldas wrote an article on Medium, [*Beating soccer odds using Machine Learning — Project Walkthrough*](https://medium.com/analytics-vidhya/beating-soccer-odds-using-machine-learning-project-walkthrough-a1c3445b285a) that shows how to scrape data from the web,  clean the downloaded data, and generate good features to use in the prediction.
+Arthur Caldas wrote an article on Medium, [_Beating soccer odds using Machine Learning — Project Walkthrough_](https://medium.com/analytics-vidhya/beating-soccer-odds-using-machine-learning-project-walkthrough-a1c3445b285a) that shows how to scrape data from the web, clean the downloaded data, and generate good features to use in the prediction.
 
 A search on [Google Scholar](https://scholar.google.com/schhp?hl=en&as_sdt=0,34) shows additional terms like "machine learning", "neural network", "model", "bayesian", and "results". This search returns papers such as
 
-- *[Incorporating domain knowledge in machine learning for soccer outcome prediction](https://link.springer.com/article/10.1007/s10994-018-5747-8)* 
-- [*Neural underpinnings of superior action prediction abilities in soccer players*](https://academic.oup.com/scan/article/10/3/342/1651945?login=true)
-- [*Optimizing the Prediction Process: From Statistical Concepts to the Case Study of Soccer*](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0104647)
+- _[Incorporating domain knowledge in machine learning for soccer outcome prediction](https://link.springer.com/article/10.1007/s10994-018-5747-8)_
+- [_Neural underpinnings of superior action prediction abilities in soccer players_](https://academic.oup.com/scan/article/10/3/342/1651945?login=true)
+- [_Optimizing the Prediction Process: From Statistical Concepts to the Case Study of Soccer_](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0104647)
 
 Other search engines such as [Microsoft Academic](https://academic.microsoft.com/home), [BASE](https://www.base-search.net/), and [Science Open](https://www.scienceopen.com/) provide alternate searching methods. BASE returned these links to very relevant papers,
 
-- [*The Open International Soccer Database for machine learning.*](https://push-zb.helmholtz-muenchen.de/frontdoor.php?source_opus=53951)
-- [*The 2017 Soccer Prediction Challenge*](https://osf.io/ftuva/)
-- [*pi-football: A Bayesian network model for forecasting Association Football match outcomes*](https://qmro.qmul.ac.uk/xmlui/handle/123456789/10780)
+- [_The Open International Soccer Database for machine learning._](https://push-zb.helmholtz-muenchen.de/frontdoor.php?source_opus=53951)
+- [_The 2017 Soccer Prediction Challenge_](https://osf.io/ftuva/)
+- [_pi-football: A Bayesian network model for forecasting Association Football match outcomes_](https://qmro.qmul.ac.uk/xmlui/handle/123456789/10780)
 
-We should also take advantage of the papers referenced in *The Perfect Bet*:
+We should also take advantage of the papers referenced in _The Perfect Bet_:
 
 - [The birth process model for association football matches](https://www.jstor.org/stable/2988632)
 - [A mixed-effects model for identifying goal-scoring ability of footballers](https://www.jstor.org/stable/43965702)
@@ -88,7 +97,7 @@ We should also take advantage of the papers referenced in *The Perfect Bet*:
 - [Why the power of one is overhyped in football](https://www.theguardian.com/football/blog/2013/mar/24/gareth-bale-one-man-team-overhyped)
 - [World Cup Stats Prof: I was right all along](https://www.theregister.com/2010/07/13/world_cup_stats/)
 
-*The Perfect Bet* also mentions the [Journal of Quantitative Analysis in Sports](https://www.degruyter.com/journal/key/jqas/html?lang=en) and the MIT Sloan [Sports Analytics Conference](https://www.sloansportsconference.com/?p=9607), which may provide useful insights.
+_The Perfect Bet_ also mentions the [Journal of Quantitative Analysis in Sports](https://www.degruyter.com/journal/key/jqas/html?lang=en) and the MIT Sloan [Sports Analytics Conference](https://www.sloansportsconference.com/?p=9607), which may provide useful insights.
 
 ## Review Papers
 
@@ -96,11 +105,11 @@ Review or "meta" papers are written by experts on a particular subject, and desc
 
 ![2Dsearch](/assets/img/a-research-rubric/2Dsearch.png)
 
-When you go to the 2Dsearch website, you'll see a blank area on the left and a results window on the right. Enter terms anywhere in the search term window. I chose "soccer", "review", and "prediction". Right-click on any word to bring up a list of suggested terms, and choose the most relevant ones. You can group similar terms by dragging a box around them, so in the Forecasting box I have "prediction", "forecast", "estimation", and "projections". 
+When you go to the 2Dsearch website, you'll see a blank area on the left and a results window on the right. Enter terms anywhere in the search term window. I chose "soccer", "review", and "prediction". Right-click on any word to bring up a list of suggested terms, and choose the most relevant ones. You can group similar terms by dragging a box around them, so in the Forecasting box I have "prediction", "forecast", "estimation", and "projections".
 
 In the upper right corner of each box you can set the Boolean operator to "AND" or "OR" (upper case). Group all the search terms into a single box, labeled here as "Meta-analysis of soccer games prediction", and choose the Boolean "AND".
 
-In the results window, choose the search space such as Lens.org. Other possibilities are Google, Google Scholar, PubMed, IEEE Xplore, and others. Double click on any paper to bring it up in a new tab. The three lines with a red dot in the upper left corner opens the global menu. A very useful starting point is the "How to use" button which will present introductory videos. 
+In the results window, choose the search space such as Lens.org. Other possibilities are Google, Google Scholar, PubMed, IEEE Xplore, and others. Double click on any paper to bring it up in a new tab. The three lines with a red dot in the upper left corner opens the global menu. A very useful starting point is the "How to use" button which will present introductory videos.
 
 Using the search terms shown as well as "NOT injury" led to several useful papers,
 
@@ -118,50 +127,41 @@ Another useful search tool is [Semantic Scholar](https://www.semanticscholar.org
 
 ## Citation Mapping
 
-Aaron's post *[More research/literature mapping tools - Connected Papers and CoCites](https://musingsaboutlibrarianship.blogspot.com/2020/06/more-researchliterature-mapping-tools_16.html)* reviews several citation mapping tools, and I liked Connected Papers best because it's browser-based and very fast. Type the name of a paper in the search bar and Connected Papers will display the abstract. Click on the abstract to get a graph of related papers,
+Aaron's post _[More research/literature mapping tools - Connected Papers and CoCites](https://musingsaboutlibrarianship.blogspot.com/2020/06/more-researchliterature-mapping-tools_16.html)_ reviews several citation mapping tools, and I liked Connected Papers best because it's browser-based and very fast. Type the name of a paper in the search bar and Connected Papers will display the abstract. Click on the abstract to get a graph of related papers,
 
 ![connected-papers](/assets/img/a-research-rubric/connected-papers.png)
 
 Hovering over one of the circles displays the title, authors, and abstract of that paper, and lets you open it in a new tab. The closer a circle is to the original paper, the more similar it is in content. Darker colors represent newer papers. This is a similarity graph, not a citation tree, but [Citation Gecko](https://www.citationgecko.com/) is a way to see how papers are linked through citations. When you start Citation Gecko, it asks for a seed paper
 
-
-
 ![citation-gecko-seed-papers.png](/assets/img/a-research-rubric/citation-gecko-seed-papers.png)
 
-
-
-and after entering [*Dolores: a model that predicts football match outcomes from all over the world*](https://link.springer.com/content/pdf/10.1007/s10994-018-5703-7.pdf) other recommended seed papers are listed in a new pop-up window. After selecting the most relevant papers, click "Add selected seed papers" at the bottom of the window, which opens a new view.
-
-
+and after entering [_Dolores: a model that predicts football match outcomes from all over the world_](https://link.springer.com/content/pdf/10.1007/s10994-018-5703-7.pdf) other recommended seed papers are listed in a new pop-up window. After selecting the most relevant papers, click "Add selected seed papers" at the bottom of the window, which opens a new view.
 
 ![citation-gecko-recommended-papers.png](/assets/img/a-research-rubric/citation-gecko-recommended-papers.png)
-
-
 
 This lets you see links between your seed papers and others. You can add some of these as new seed papers, or you can follow the link to the paper. In many cases, you can download the paper by following the link.
 
 Another useful search tool is the [Local Citation Network](https://timwoelfle.github.io/Local-Citation-Network/) that generates a list of citations based on a [DOI](https://www.doi.org/) (Digital Object Identifier) or list of DOI's and provides a graphical representation of the linked papers. Tim Wölfle, the author of Local Citation Network explains the differences between it and Citation Gecko on the [Leiden Madtrics](https://leidenmadtrics.nl/articles/local-citation-network-and-citation-gecko-making-literature-discovery-fun) site.
 
-Ujjal Marjit wrote a nice blog post describing the tool, [*Free Visualization Tool to Support Literature Survey*](https://researcherssite.com/free-visualization-tool-to-support-literature-survey/).
+Ujjal Marjit wrote a nice blog post describing the tool, [_Free Visualization Tool to Support Literature Survey_](https://researcherssite.com/free-visualization-tool-to-support-literature-survey/).
 
 ![local-citation-network.png](/assets/img/a-research-rubric/local-citation-network.png)
 
 ## Summarizing and Annotating
-Finding and downloading a lot of papers is pretty pointless by itself. *The readings will continue until morale improves*. You might have collected weeks worth of reading material, so we'll need a quick way to extract important points from each paper. 
+
+Finding and downloading a lot of papers is pretty pointless by itself. _The readings will continue until morale improves_. You might have collected weeks worth of reading material, so we'll need a quick way to extract important points from each paper.
 
 Unlike reading a novel, you shouldn't read a paper from start to finish. Read the abstract and key terms, then look for the important topics in each section. Look up any terms you don't understand, and summarize the main points. Elsevier has an [infographic](https://www.elsevier.com/connect/infographic-how-to-read-a-scientific-paper) outlining the process with links to papers that go into more depth.
 
-[Scholarcy](https://www.scholarcy.com/) developed an AI paper summarizer extension for [Chrome](https://chrome.google.com/webstore/detail/scholarcy-research-paper/oekgknkmgmaehhpegfeioenikocgbcib?hl=en-GB) and [Edge](https://microsoftedge.microsoft.com/addons/detail/scholarcy-research-pape/bcghmjggkikigjnehajdkhnhddfmkbbd) that reads the paper currently open in your browser and generates tag words of key concepts, writes a summary, and gives an overview of the paper's methods, results, discussion, conclusions, and future work sections. 
+[Scholarcy](https://www.scholarcy.com/) developed an AI paper summarizer extension for [Chrome](https://chrome.google.com/webstore/detail/scholarcy-research-paper/oekgknkmgmaehhpegfeioenikocgbcib?hl=en-GB) and [Edge](https://microsoftedge.microsoft.com/addons/detail/scholarcy-research-pape/bcghmjggkikigjnehajdkhnhddfmkbbd) that reads the paper currently open in your browser and generates tag words of key concepts, writes a summary, and gives an overview of the paper's methods, results, discussion, conclusions, and future work sections.
 
-The summary is in Markdown format that can be read into editors like [Zettlr](https://www.zettlr.com/) or [Obsidian](https://obsidian.md/). Key concepts highlighted by Scholarcy have links to Wikipedia articles to quickly understand unfamiliar terms. Click on a reference in the Markdown summary and a link will open in Google Scholar, scite_, or it will open the paper. Scholarcy mangles equations, but it does a pretty good job of giving you the gist of the article. 
+The summary is in Markdown format that can be read into editors like [Zettlr](https://www.zettlr.com/) or [Obsidian](https://obsidian.md/). Key concepts highlighted by Scholarcy have links to Wikipedia articles to quickly understand unfamiliar terms. Click on a reference in the Markdown summary and a link will open in Google Scholar, scite\_, or it will open the paper. Scholarcy mangles equations, but it does a pretty good job of giving you the gist of the article.
 
 ![scholarcy.png](/assets/img/a-research-rubric/scholarcy.png)
 
-An alternate to Scholarcy is [paper-digest](https://www.paper-digest.com/) described by Ujjal Marjit in [*How to Generate an Automatic Summary of Research Paper*](https://researcherssite.com/how-to-generate-an-automatic-summary-of-research-paper/). The summary is sparser than Scholarcy's but may be useful for a quick understanding of the basic outline.
+An alternate to Scholarcy is [paper-digest](https://www.paper-digest.com/) described by Ujjal Marjit in [_How to Generate an Automatic Summary of Research Paper_](https://researcherssite.com/how-to-generate-an-automatic-summary-of-research-paper/). The summary is sparser than Scholarcy's but may be useful for a quick understanding of the basic outline.
 
 ![paper-digest.png](/assets/img/a-research-rubric/paper-digest.png)
-
-
 
 As mentioned earlier, [Qiqqa](https://github.com/jimmejardine/qiqqa-open-source) (open source) manages your documents, but also has many tools for searching and annotating your documents. After starting Qiqqa, the home screen opens. Click on the drop-down icon "Add PDFs or References" and select "Add Folder" to import your library into Qiqqa. Qiqqa uses OCR to read the documents. If you have added new documents since you first started Qiqqa, it reads those as well. When it has finished, you will have a "Guest" library, which looks something like this:
 
@@ -169,7 +169,7 @@ As mentioned earlier, [Qiqqa](https://github.com/jimmejardine/qiqqa-open-source)
 
 In the left column are common tags and the number of papers with those tags. You can filter by Qiqqa Autotags (tags Qiqqa assigned), author, publication, year, theme (groups of common tags), or publication type such as article, book, or proceedings.
 
-A search box in the upper right corner lets you find articles containing specific words or phrases. Here, I've searched for "pi-rating" and Qiqqa found seven papers with that term, sorting them by relevancy. Click on the search score block (yellow to red with percentages to the left of the title) to see page numbers where the term occurs in the paper. 
+A search box in the upper right corner lets you find articles containing specific words or phrases. Here, I've searched for "pi-rating" and Qiqqa found seven papers with that term, sorting them by relevancy. Click on the search score block (yellow to red with percentages to the left of the title) to see page numbers where the term occurs in the paper.
 
 ![qiqqa-search-score.png](/assets/img/a-research-rubric/qiqqa-search-score.png)
 
@@ -188,9 +188,9 @@ Annotations become searchable so you don't need to remember where they are in th
 
 Hopefully, you'll be able to use some of these tools to improve your research skills. They won't make you an [expert](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect), but at least you'll be better informed.
 
-___
+---
 
-## A more complete list of tools
+## A More Complete List of Tools
 
 Below is a more complete list of software tools available for research. You may find some to be better than the ones described above for your work.
 
@@ -198,12 +198,12 @@ Below is a more complete list of software tools available for research. You may 
 
 [Top new tools for researchers worth looking at](https://aarontay.medium.com/top-new-tools-for-researchers-worth-looking-at-9d7d494761b0): Search tools, statistics software, data cleaning and machine learning.
 
-### Top level searches
+### Top Level Searches
 
 [Top Ten Search Tips](https://library.northeastern.edu/get-help/research-tutorials/effective-database-searches/top-ten-search-tips)
 
 - [2Dsearch](https://www.2dsearch.com/) Instead of entering Boolean strings into one-dimensional search boxes, queries are formulated by manipulating objects on a two-dimensional canvas.
-- [Academia.edu](https://www.academia.edu/) Download  28 million PDFs for free
+- [Academia.edu](https://www.academia.edu/) Download 28 million PDFs for free
 - [arXiv](https://arxiv.org/) a free distribution service and an open-access archive for 1,978,106 scholarly articles in the fields of physics, mathematics, computer science, quantitative biology, quantitative finance, statistics, electrical engineering and systems science, and economics.
 - [BASE](https://www.base-search.net/) is one of the world's most voluminous search engines especially for academic web resources.
 - [Digital Library of the Commons](https://dlc.dlib.indiana.edu/dlc/) is a gateway to the international literature on the commons.
@@ -236,7 +236,8 @@ Below is a more complete list of software tools available for research. You may 
 - [ResearchRabbit](https://www.researchrabbit.ai/) is a citation network graph (network and timeline), co-authorship graph (requires institutional email).
 - [VOSviewer](https://www.vosviewer.com/) is a software tool for constructing and visualizing bibliometric networks
 
-### Secondary (deeper) searches
+### Secondary (Deeper) Searches
+
 - [CoCites](https://www.cocites.com/) uses keywords to find relevant articles
 - [CrossRef](https://www.crossref.org/) makes research outputs easy to find, cite, link, assess, and reuse.
 - [dblp](https://dblp.org/) provides open bibliographic information on major computer science journals and proceedings.
@@ -257,7 +258,7 @@ Below is a more complete list of software tools available for research. You may 
 
 ### Retreival
 
-[Seven ways to download papers](https://www.bestsevenreviews.com/7-ways-download-research-papers/) 
+[Seven ways to download papers](https://www.bestsevenreviews.com/7-ways-download-research-papers/)
 
 - [CORE](https://core.ac.uk/) is an aggregator of open access research published in research repositories and journals worldwide.
 - [Directory of Open Access Journals](https://doaj.org/) is a community-curated website that lists high quality, peer-reviewed open access journals.
@@ -266,9 +267,9 @@ Below is a more complete list of software tools available for research. You may 
 - [Open Access Button](https://openaccessbutton.org/) provides public repositories of research papers to make publicly funded research accessible to all.
 - [ScienceOpen](https://www.scienceopen.com/) is a professional networking platform for scholars that offers access to over 40 million research papers in all areas of science.
 
-
 ### Summarizers
-[Academic related browser extensions](https://musingsaboutlibrarianship.blogspot.com/2019/09/this-is-updated-version-of-this-medium.html?q=summarizer) 
+
+[Academic related browser extensions](https://musingsaboutlibrarianship.blogspot.com/2019/09/this-is-updated-version-of-this-medium.html?q=summarizer)
 
 - [Crammer](https://crammer.app/) Provides text analytics to the webpage using artificial intelligence to quickly find what you are looking for and save time
 - [esummarizer](http://esummarizer.com/) Automatically summarize any text in a few seconds.
@@ -284,11 +285,13 @@ Below is a more complete list of software tools available for research. You may 
 - [synopsis](https://synopsis.saasify.sh/) AI-powered content extraction and summarization for webpages and articles.
 
 ### Citations
+
 - [CiteAs](https://citeas.org/) is a convenient tool to obtain the correct citation for any publication, preprint, software or dataset in one click.
 - [citationchaser](https://estech.shinyapps.io/citationchaser/) An input article list can be used to return a list of all referenced records, and/or all citing records in the Lens.org database
-- [scite](https://addons.mozilla.org/en-US/firefox/addon/scite/) displays the context of the citation and describes whether the article provides supporting or contrasting evidence. 
+- [scite](https://addons.mozilla.org/en-US/firefox/addon/scite/) displays the context of the citation and describes whether the article provides supporting or contrasting evidence.
 
 ### Organizers
+
 - [BibSonomy](https://www.bibsonomy.org/) helps you to manage your publications and bookmarks, to collaborate with your colleagues and to find new interesting material for your research.
 - [Docear](https://docear.org/) helps you organizing, creating, and discovering academic literature.
 - [JabRef](https://www.jabref.org/) Easily retrieve and link full-text articles.
@@ -300,6 +303,7 @@ Below is a more complete list of software tools available for research. You may 
 - [Zotero](https://www.zotero.org/) is a free, easy-to-use tool to help you collect, organize, cite, and share research.
 
 ### Data Sources
+
 - [Aminer](https://www.aminer.org/) is a free online service used to index, search, and mine big scientific data.
 - [CIA World Factbook](https://www.cia.gov/the-world-factbook/) provides basic intelligence on the history, people, government, economy, energy, geography, environment, communications, transportation, military, terrorism, and transnational issues for 266 world entities.
 - [Common Crawl](https://commoncrawl.org/) is an open repository of web crawl data that can be accessed and analyzed by anyone.
