@@ -34,10 +34,11 @@ module.exports = (eleventyConfig) => {
     .use(markdownItKatex, { strict: false })
     .use(markdownItImageLazyLoading)
     .use(markdownItAnchor, {
-      permalink: true,
-      permalinkSymbol: '#',
-      permalinkClass: 'text-gray-300 border-b-4 border-transparent  hover:border-gray-200 hover:text-gray-500',
-      permalinkBefore: true,
+      permalink: markdownItAnchor.permalink.ariaHidden({
+        symbol: '#',
+        class: 'text-gray-300 border-b-4 border-transparent  hover:border-gray-200 hover:text-gray-500',
+        placement: 'before'
+      }),
     });
 
   eleventyConfig.setUseGitIgnore(false);
