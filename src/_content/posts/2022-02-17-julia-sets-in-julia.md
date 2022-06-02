@@ -1,6 +1,6 @@
 ---
 title: Julia Sets in Julia
-subtitle: null
+subtitle: Completely invariant iterations of the holomorphic function
 author: John Peach
 lede: null
 hero:

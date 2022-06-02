@@ -1,6 +1,6 @@
 ---
 title: Economics and the Stefan Boltzmann Law
-subtitle: 
+subtitle: Why do economists want us to live in a searing, burning, flaming apocalyptic hellscape?
 author: John Peach
 lede:
 hero:
@@ -11,9 +11,15 @@ keywords: []
 socialImg: /assets/img/economics-and-the-stefan-boltzmann-law/heronimus-bosch-the-harrowing-of-hell.jpg
 ---
 
-Why do economists want us to live in a searing, burning, flaming apocalyptic hellscape? The answer is quite simply, profits.
+ Profits. 
 
 ![underpantsgnomes1](/assets/img/economics-and-the-stefan-boltzmann-law/underpantsgnomes1.png)
+
+In 1972, an MIT study called [*The Limits to Growth*](https://www.clubofrome.org/publication/the-limits-to-growth/) was published, warning
+
+> The earth’s interlocking resources – the global system of nature in  which we all live – probably cannot support present rates of economic  and population growth much beyond the year 2100, if that long, even with advanced technology.
+
+Here, I'll show how continued economic growth could turn the Earth into an inferno as hot as the surface of the Sun.
 
 ## World GDP
 
@@ -297,6 +303,8 @@ The Great Simplification podcast ["Minerals Blindness"](https://www.thegreatsimp
 [The Party’s Over: Oil, War, and the Fate of Industrial Society](https://richardheinberg.com/bookshelf/partys-over), Richard Heinberg
 
 [Power: Limits and Prospects for Human Survival](https://power.postcarbon.org/), Richard Heinberg
+
+GrowthBusters podcast [Paul Ehrlich on The Limits to Growth](https://www.growthbusters.org/ehrlich-limits-to-growth/) 
 
 [Through the Eye of a Needle: An Eco-Heterodox Perspective on the Renewable Energy Transition](https://www.mdpi.com/1996-1073/14/15/4508), Megan Seibert, William Rees
 
