@@ -193,7 +193,7 @@ Albert Bartlett taught nuclear physics at the University of Colorado at Boulder.
 
 ![earthmelting](/assets/img/economics-and-the-stefan-boltzmann-law/earthmelting.jpg)
 
-I haven't presented definitive proof that the economy depends linearly on energy, but it should be obvious there is a strong connection. So far, there isn't any evidence the economy is anything but a direct function of the energy input.
+Since economic growth depends on increasing energy inputs, and all of the energy eventually is converted to waste heat, we can calculate the temperature of the Earth as a function of exponential growth.
 
 In 2019, the World consumed 160,000 TWh of energy $(1 \; TWh = 10^{12} \; \text{watt-hours})$. The surface area of the Earth is about $5 \times 10^8 \; km^2 = 5 \times 10^{14} \; m^2$, and there are $365 \times 24 = 8760$ hours in a year. Divide total energy consumed by the number of hours in a year to get the average power 
 $$
