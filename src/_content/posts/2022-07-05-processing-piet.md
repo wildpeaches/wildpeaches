@@ -14,7 +14,7 @@ keywords:
   - Piet
   - Java
 socialImg: /assets/img/processing-piet/torus-earth.jpg
-lastmod: 2022-07-07T17:50:58.362Z
+lastmod: 2022-07-07T19:38:41.438Z
 ---
 
 > Thus mathematics may be defined as the subject in which we never know what we are talking about, nor whether what we are saying is true.
@@ -61,7 +61,7 @@ The width of the lines separating the rectangles is about 4 pixels. I numbered e
 
 In the IDE, we need to tell _Processing_ the dimensions of the image, and the color of the background, which is $0$ for black. Setting `rectMode` to `CORNERS` means that we want to define rectangles by the coordinates of the corners, rather than one corner and width and height. In `CORNERS` mode, the first two coordinates are the upper left corner, and the next two are the lower right, corresponding to the line locations.
 
-```python
+```processing
 size(721,703);
 background(0);
 rectMode(CORNERS);
@@ -69,14 +69,14 @@ rectMode(CORNERS);
 
 Next, I set the width of the lines between rectangles.
 
-```python
-/ Line width
+```processing
+// Line width
 int LW = 4;
 ```
 
 The coordinates of the origin are $(550,372)$, so we'll have to shift everything in _Processing_ by subtracting $x_0$ and $y_0$ from the line coordinates. In _Processing_, we can define variables as
 
-```python
+```processing
 int left_side = 550;
 int x0 = 1;
 int x1 = 594 - left_side;
@@ -92,8 +92,8 @@ Pure red is red $= 255$ green $= 0$, and blue $= 0$. Halfway between red and gre
 
 Colors can be defined as variables using vector notation `color(red,green,blue)`:
 
-```python
-/ Colors
+```processing
+// Colors
 color red = color(228,61,52);
 color yellow = color(253,238,0);
 color blue = color(87,70,182);
@@ -115,8 +115,8 @@ Rectangles with an edge on either the left side or top of the image should have 
 
 Each rectangle can be defined by the lines that surround it, and the color by the _fill_ command,
 
-```python
-/ Rectangle #1
+```processing
+// Rectangle #1
 fill(gray);
 rect(x1,y0,x3-LW,y1-LW);
 ```
@@ -181,7 +181,7 @@ Everything you need is built-in. Decide how big you want the image to be, and se
 
 Let's jump right in and try to code something. Many beginning programs start by printing "Hello World", which Gabrielle has included in her slides. A slight modification could be "Welcome" for your front door welcome mat. The ASCII code for "W" is 87, so we could create a block with area 87, push it onto the stack, and then use the "out(char)" command to get "W" in the output window.
 
-<img src="/assets/img/processing-piet/w.png" alt="w" style="zoom: 200%;" />
+![w](/assets/img/processing-piet/w.png)
 
 I filled in an area of 87 squares in red, then made a few blocks to the right in dark red ("push") and finally made one square magenta for "out(char)". Clicking the green run button pushes 87 onto the stack and then writes the character "W" in the output window.
 
@@ -201,7 +201,7 @@ For example, if you roll a die, the probability of getting any one of the six po
 
 Using [R](https://www.rstudio.com/), it's possible to estimate a good fit to the data. First, read in the data. Next, plot the empirical density and cumulative distribution:
 
-```python
+```r
 rectDims <- read.csv("../rectangle-dimensions.csv")
 library(fitdistrplus)
 plotdist(rectDims$Ratio, histo = TRUE, demp = TRUE, breaks = 40)
@@ -211,7 +211,7 @@ plotdist(rectDims$Ratio, histo = TRUE, demp = TRUE, breaks = 40)
 
 The dotted curve in the _Empirical density_ plot is the function we'd like to approximate. Applying the function `descdist`,
 
-```python
+```r
 descdist(rectDims$Ratio, discrete=FALSE, boot=500)
 summary statistics
 ------
@@ -249,7 +249,7 @@ Both the observational data and the bootstrap values fall into the region covere
 
 using the commands
 
-```python
+```r
 # Estimate distribution parameters
 fitRect <- list()
 fitRect$lnorm <- fitdist(RR,"lnorm")
@@ -267,7 +267,7 @@ ppcomp  (fitRect, legendtext = plot.legend)
 
 Summary statistics for the log-normal distribution are returned using
 
-```python
+```r
 > summary(fitRect$lnorm)
 Fitting of the distribution ' lnorm ' by maximum likelihood
 Parameters :
@@ -283,7 +283,7 @@ sdlog   -2.296957e-11  1.000000e+00
 
 which says that the mean of the log-normal fit is $\mu = 0.8492164$ and the standard deviation is $\sigma = 0.7437608$. As a check, plot the log-normal distribution using the fitted parameters,
 
-```python
+```r
 curve(dlnorm(x, meanlog=0.8492164, sdlog=0.7437608), from=0, to=40)
 ```
 
@@ -301,7 +301,7 @@ Looking at the ASCII table, the codes corresponding to each letter are
 
 Letter "W" needs 87 blocks, which could be either $1 \times 87$ or $3 \times 29$. But, if we're willing to relax the requirements a little, we can generate a few random log-normal distributed numbers using `rlnorm`,
 
-```python
+```r
 nIter <- 5
 meanlog <- 0.8492164
 sdlog <- 0.7437608
@@ -324,7 +324,7 @@ Since the random number $r$ isn't likely to be a whole number, and the square ro
 
 Rather than calculating the values for $x$ and $y$ for each letter, the function [`printRects`](https://gist.github.com/XerxesZorgon/b0e4fe201f51851572551c4458397574) prints several possible combinations of rectangle dimensions, and the associated remainder.
 
-```python
+```r
 inStr <- "Welcome"
 nIter <- 5
 meanlog <- 0.8492164
@@ -341,7 +341,7 @@ printRects(inStr,nIter,meanlog,sdlog)
 
 For "W" we could make a $13 \times 6 = 78$ rectangle, followed by a $3 \times 3 = 9$ rectangle. The code in _Piet_ would be
 
-```python
+```r
 push(78)
 push(9)
 add
