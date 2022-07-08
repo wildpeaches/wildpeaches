@@ -14,18 +14,25 @@ keywords:
   - Piet
   - Java
 socialImg: /assets/img/processing-piet/torus-earth.jpg
-lastmod: 2022-07-07T19:38:41.438Z
+lastmod: 2022-07-08T15:09:37.851Z
+pullQuote:
+  author: Bertrand Russell
+  imgUrl: /assets/img/processing-piet/Bertrand_Russell_1957.jpg
+  imgAlt: Headshot of Bertrand Russel.
+  quote: Thus mathematics may be defined as the subject in which we never know
+    what we are talking about, nor whether what we are saying is true.
 ---
 
-> Thus mathematics may be defined as the subject in which we never know what we are talking about, nor whether what we are saying is true.
->
-> - Bertrand Russell
-
----
+{% pullquote
+  pullQuote.quote,
+  pullQuote.author,
+  pullQuote.imgUrl,
+  pullQuote.imgAlt
+%}
 
 Jan is the artist of this blog. He drew the velociraptor walking on the moon for an earlier [post](/blog/of-sailing-ships-velociraptors-and-walking-on-the-moon/). For anyone artistically challenged (me), computers come to the rescue. We tried using the [Hotpot.ai](https://hotpot.ai/) artificial intelligence software to generate some art. The input to the program is a description of what you'd like the painting to look like. Since we'd been talking about Werner Herzog who once said,
 
-> “Look into the eyes of a chicken and you will see real stupidity. It is a kind of bottomless stupidity, a fiendish stupidity. They are the most horrifying, cannibalistic and nightmarish creatures in the world.”
+> Look into the eyes of a chicken and you will see real stupidity. It is a kind of bottomless stupidity, a fiendish stupidity. They are the most horrifying, cannibalistic and nightmarish creatures in the world.
 
 Jan suggested we use "The chicken contemplates Werner Herzog" which produced this watercolor using only the text as input.
 
