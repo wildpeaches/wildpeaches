@@ -3,6 +3,9 @@ title: The Kelly Criterion
 subtitle: Information Theory Reimagined
 author: John Peach
 lede: Two mathematicians from MIT team up with a New Jersey mobster to take down a casino.
+hero:
+  url: /assets/img/the-kelly-criterion/kelly.png
+  alt:
 tags: [math]
 keywords: [Gambling, Statistics, Expectation, Optical Character Recognition]
 ---

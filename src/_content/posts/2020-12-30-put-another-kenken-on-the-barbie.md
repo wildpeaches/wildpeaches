@@ -1,8 +1,11 @@
 ---
 title: Put Another KenKen on the Barbie
 subtitle: Partitions with Pari/GP
-lede: If you like Sudoku, you'll love KenKen!
 author: John Peach
+lede: If you like Sudoku, you'll love KenKen!
+hero:
+  url: /assets/img/put-another-kenken-on-the-barbie/shrimp-on-the-barbie.png
+  alt:
 tags: [math]
 keywords: [KenKen, Pari/GP, Integer Partitions, Number theory]
 socialImg: /assets/img/put-another-kenken-on-the-barbie/tetsuya-miyamoto.jpg

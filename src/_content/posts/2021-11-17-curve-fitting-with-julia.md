@@ -131,11 +131,11 @@ Between $-\frac{\pi}{2}$ and $\frac{\pi}{2}$ the fit is pretty good, but outside
 
 ## A Naive Approach to Approximations
 
-Suppose you knew nothing about approximation theory and decided to try fitting one function (or data) with the sum of a simpler function? Marion King Hubbert
+Suppose you knew nothing about approximation theory and decided to try fitting one function (or data) with the sum of a simpler function? 
 
 ![marion-king-hubbert](/assets/img/curve-fitting-with-julia/marion-king-hubbert.jpg)
 
-was a geologist, mathematician, and physicist who worked for Shell Oil, the USGS, and taught at Columbia, Stanford, and UC Berkeley. In 1956, he looked at oil production data and proposed a model for the amount of oil extracted from a field,
+Marion King Hubbert was a geologist, mathematician, and physicist who worked for Shell Oil, the USGS, and taught at Columbia, Stanford, and UC Berkeley. In 1956, he looked at oil production data and proposed a model for the amount of oil extracted from a field,
 
 $$
 Q(t) = \frac{Q_{\text{max}}}{1+ae^{-bt}}

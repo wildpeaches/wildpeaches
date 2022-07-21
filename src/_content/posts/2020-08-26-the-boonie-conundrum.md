@@ -3,9 +3,12 @@ title: The Boonie Conundrum
 subtitle: Monte Carlo Simulation of a Conspiracy
 author: John Peach
 lede: This is the tale of the Great Boonie Conspiracy in which we show through the mathematics of the Gompertz Survival Function that all conspiracies must fail. It's the story of a coverup by people who didn't cover up and were exposed in the end.
+hero:
+  url: /assets/img/the-boonie-conundrum/conspiracy.png
+  alt:
 tags: [math]
 keywords: [Monte Carlo simulation, conspiracies, Gompertz Survival Function]
-socialImg: /assets/img/the-boonie-conundrum/boonie-graph.png
+socialImg: /assets/img/the-boonie-conundrum/conspiracy.png
 ---
 
 ## The Boonie Story
@@ -127,3 +130,7 @@ The list below contains fact-checking organizations, and some articles on how to
 - [List of topics characterized as pseudoscience](https://en.wikipedia.org/wiki/List_of_topics_characterized_as_pseudoscience)
 - [MIT Technology Review "How to talk to conspiracy theorists—and still be kind"](https://www.technologyreview.com/2020/07/15/1004950/how-to-talk-to-conspiracy-theorists-and-still-be-kind/)
 - [Techniques of Science Denial](https://upload.wikimedia.org/wikipedia/commons/6/61/FLICC_Taxonomy_of_Logical_Fallacies.jpg?fbclid=IwAR3jMZJT2os4If5wy-zF1tYPzzkxWlUfHmp-Rm8ew3rBxGb4ahffN-JzF8E)
+
+Abbie Richards created the [Conspiracy Chart](https://www.bostonglobe.com/2021/11/29/metro/this-chart-conspiracy-theories-has-gone-viral-freebritney-qanon-local-disinformation-researcher-breaks-down-what-know/) to test your level of belief in reality.
+
+![the-conspiracy-chart](/assets/img/the-boonie-conundrum/the-conspiracy-chart.jpg)

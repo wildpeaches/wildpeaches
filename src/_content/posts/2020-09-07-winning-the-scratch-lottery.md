@@ -3,6 +3,9 @@ title: Winning the Scratch Lottery
 subtitle: An Experiment in OCR, Robotics, and Statistics
 author: John Peach
 lede: I know someone who has won the million-dollar lottery. Twice. Ask any mathematician about playing the lottery and you'll likely be told not to waste your money because you can't win. That would be bad advice because the lottery is rigged. In your favor.
+hero:
+  url: /assets/img/winning-the-scratch-lottery/playing-the-lottery.jpg
+  alt:
 tags: [math]
 keywords: [Gambling, Statistics, Expectation, Optical Character Recognition]
 socialImg: /assets/img/winning-the-scratch-lottery/bingo-card.jpg

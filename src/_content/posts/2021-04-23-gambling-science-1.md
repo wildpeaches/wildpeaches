@@ -21,7 +21,7 @@ It's all about outsmarting the house. Is it possible? Don't know! But we've alre
 
 ![exp](/assets/img/gambling-science-1/exp.png){.blend-multiply}
 
-Not understanding the exponential function will end civilization (soon!) but meanwhile, we should use it to get rich quick to buy toys!, a yacht!, a vacation home!, a new car! (fully electric, of course).
+Not understanding the exponential function will end civilization ([soon!](https://wildpeaches.xyz/blog/economics-and-the-stefan-boltzmann-law/)) but meanwhile, we should use it to get rich quick to buy toys!, a yacht!, a vacation home!, a new car! (fully electric, of course).
 
 Several factors come into play when considering gambling venues:
 
