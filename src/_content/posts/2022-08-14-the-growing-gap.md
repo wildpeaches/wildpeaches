@@ -11,10 +11,13 @@ keywords: [logistic function]
 socialImg: /assets/img/the-growing-gap/pulling-on-the-gas-guage.jpg
 ---
 
-> When the music's over
-> Turn out the lights
->
-> - The Doors
+A recent paper by Jean Laherrère, Charles Hall, and Roger Bentley asks the question, ["How much oil remains for the world to produce? Comparing assessment methods, and separating fact from fiction"](https://www.sciencedirect.com/science/article/pii/S2666049022000524#s0110). 
+
+The answer depends on how much oil has been discovered, how much more we might expect to be discovered, and how much we've already used. 
+
+![laherrere-hall-bentley](/assets/img/the-growing-gap/laherrere-hall-bentley.png)
+
+Laherrère is a petroleum geologist, Hall a systems ecologist, and Bentley is in the cybernetics department at the University of Reading.
 
 ## Oil. What's it good for?
 
@@ -30,11 +33,13 @@ During the first World War, Haber proposed and oversaw the deployment of poison 
 
 Mix [ammonium nitrate fertilizer](https://theconversation.com/ammonium-nitrate-and-iodine-a-look-back-at-the-explosive-history-of-two-essential-substances-146448) with some diesel fuel and you've got a [powerful explosive](https://www.fbi.gov/history/famous-cases/oklahoma-city-bombing), which may have been Haber's real purpose.
 
-His pacifist wife, [Clara Immerwahr](https://en.wikipedia.org/wiki/Clara_Immerwahr), shot herself with Haber's military pistol on May 2nd, 1915, and died in their twelve-year-old son's arms the next day. Haber left for the Eastern Front that day to gas the Russians. What a guy.
+His pacifist wife, [Clara Immerwahr](https://en.wikipedia.org/wiki/Clara_Immerwahr), shot herself with Haber's military pistol on May 2nd, 1915, and died in their twelve-year-old son's arms the next day. Haber left for the Eastern Front that day to gas the Russians. 
+
+What a guy.
 
 ![products-from-barrel-crude-oil](/assets/img/the-growing-gap/products-from-barrel-crude-oil.png)
 
-Oil [formed](https://education.nationalgeographic.org/resource/petroleum) from the lipids of animals and plants called diatoms over a period of millions of years. It is the ultimate biofuel. Without oil we wouldn't have [global warming](https://climate.nasa.gov/global-warming-vs-climate-change/) or be able to wipe out the [plankton in the oceans](https://www.goesfoundation.com/).
+Oil [formed](https://education.nationalgeographic.org/resource/petroleum) from the lipids of diatoms over a period of millions of years. It is the ultimate biofuel. Without oil we wouldn't have [global warming](https://climate.nasa.gov/global-warming-vs-climate-change/) or be able to wipe out the [plankton in the oceans](https://www.goesfoundation.com/).
 
 > The real problem of humanity is the following: We have Paleolithic emotions, medieval institutions and godlike technology. And it is terrifically dangerous, and it is now approaching a point of crisis  overall.
 >
@@ -52,7 +57,7 @@ Many people confuse the terms "hypothesis" and "theory". From Merriam-Webster:
 >
 > Theory: a [plausible](https://www.merriam-webster.com/dictionary/plausible) or scientifically acceptable general principle or body of principles offered to explain phenomena
 
-Accepting that the quantity of oil is finite, a maximum production rate is provable and isn't merely hypothetical. Actually new oil is being formed somewhere, but the rate is so slow it can be considered effectively zero. 
+Accepting that the quantity of oil is finite, a maximum production rate is provable and isn't merely hypothetical. 
 
 There are at least two ways to prove that a peak in production must occur. The more complicated method is to use Rolle's Theorem:
 
@@ -87,11 +92,7 @@ There are several sources for data:
 
 ## Discoveries
 
-A recent paper by Jean Laherrère, Charles Hall, and Roger Bentley asks the question, ["How much oil remains for the world to produce? Comparing assessment methods, and separating fact from fiction"](https://www.sciencedirect.com/science/article/pii/S2666049022000524#s0110). Laherrère is a petroleum geologist, Hall a systems ecologist, and Bentley is in the cybernetics department at the University of Reading.
 
-![laherrere-hall-bentley](/assets/img/the-growing-gap/laherrere-hall-bentley.png)
-
-The answer depends on how much oil has been discovered, how much more we might expect to be discovered, and how much we've already used. 
 
 How much oil has been discovered? It's kind of a [squishy](http://large.stanford.edu/courses/2013/ph240/zaydullin2/docs/petrobjects.pdf) number. Petroleum geologists [estimate](https://www.rferl.org/a/How_Do_Experts_Estimate_The_Size_Of_Oil_And_Gas_Fields/1330630.html) the volume of oil in a field using [seismic imaging](http://www.cpeo.org/techtree/ttdescript/seisim.htm) and by calculating how much oil is produced from nearby wells. If you want lots of [equations](https://wiki.aapg.org/Reserves_estimation) for reserve estimation, the [AAPI](https://wiki.aapg.org/Main_Page) wiki provides them, but the equations may not help without an accurate assessment of the methods used.
 
@@ -278,7 +279,7 @@ The rapid increase in production comes from fracking, or tight oil, which has ma
 
 There's been a lot of hype about the "fracking revolution" and how new technology enabled it to happen. This is generally untrue. Hydraulic fracturing began in the 1960s in Texas and Louisiana, and the other key component, horizontal drilling, started being used in the early 1990s. While there have been improvements in the chemical mixes used to break open oil-bearing shales, most of what enabled the "fracking revolution" was easy money.
 
-After the 2008 economic crash, the Federal Reserve lowered interest rates and loaned trillions of dollars to large banks. Billions went into the fracking industry and operators drilled thousands of wells. The problem was that the lifespan of each well is very short, typically declining in output by 90% in the first three years, so to keep producing, the oil companies frantically drilled new areas.
+After the 2008 economic crash, the Federal Reserve lowered interest rates and loaned trillions of dollars to large banks. Billions went into the fracking industry and operators drilled thousands of wells. The problem was that the lifespan of each well is very short, with output typically declining by 90% in the first three years, so to keep producing, the oil companies frantically drilled new wells.
 
 The operators were very good at finding the "sweet spots" in each field, so they started in the middle and worked their way outward, but as they went the production from newer wells was less than previous wells. It became a kind of Ponzi scheme that eventually cost investors an estimated $300 billion. Investor backlash has forced oil companies to significantly scale back new drilling operations.
 
@@ -292,7 +293,7 @@ Even if U.S. oil production almost matches consumption, an overlooked issue is t
 
 Of course, this assumes that some form of domestic energy is available.
 
-Why not include the extra heavy oils from Athabasca and Orinoco? The EROI of tar sands is likely very low, and without external funding, they probably won't see significant production. Looked at from an EROI perspective, though, any government or investor money is nothing more than an expectation of future energy, and that may not exist. 
+Why not include the extra heavy oils from Athabasca and Orinoco? The EROI of tar sands is very low, and without external funding, they probably won't see significant production. Looked at from an EROI perspective, though, any government or investor money is nothing more than an expectation of future energy, and that may not exist. 
 
 The projections for oil production from fracking and tar sands seems to be a reality gap. 
 
@@ -318,7 +319,7 @@ This may be true at a reductionist level, but on a larger scale, Jevons still ap
 
 Efficiency without degrowth is pointless. Remember the story of the [grains of rice and the chessboard](https://purposefocuscommitment.medium.com/the-rice-and-the-chess-board-story-the-power-of-exponential-growth-b1f7bd70aaca)? The sage asks the king for a grain of rice on the first square, two on the second, four on the third, and so on. This is an example of exponential growth. 
 
-Now think about what would happen if the king was twice as efficient with his rice. On a second chess board, he puts half a grain on the first square, one on the second, and two on the third. But, this is equivalent to the rice on the squares of the first board shifted one place up. The half grain could be placed beside the board, and then everything remains the same as in the first case.
+Now think about what would happen if the king was twice as efficient with his rice. On a second chess board, he puts half a grain on the first square, one on the second, and two on the third. But, this is equivalent to the rice on the squares of the first board shifted one place over. The half grain could be placed beside the board, and then everything remains the same as in the first case.
 
 The king is twice as efficient dispensing grains of rice, but delays the inevitable by just one day.
 
