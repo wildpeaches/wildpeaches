@@ -43,7 +43,7 @@ A consistent set of units helps the designer keep track of the parameters. If th
 
 The length overall $L_H$ (often abbreviated as LOA) is the maximum length dimension. The waterline length $L_{WL}$ is the maximum length touching the water if the water is still. In this example, they are nearly the same, $L_H = 12.2 \; m$ and $L_{WL} = 12.0 \; m$. The canoe body draft (often just called draft), $T_C$, which is the maximum depth below the waterline, will be derived later.
 
-![Side view](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/side-view.svg)
+![Side view](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/side-view.png)
 
 In SMath Studio you can enter values for total length and waterline length like this:
 
