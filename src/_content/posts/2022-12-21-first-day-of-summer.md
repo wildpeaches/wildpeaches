@@ -18,7 +18,7 @@ socialImg: /assets/img/first-day-of-summer/children-on-the-beach-by-winslow-home
 
 Wouldn't it be great if every day was the first day of summer? With a little math and some astronomy, it's easy to do.
 
-![Calvin-Summer-days-are-just-Packed](/assets/img/first-day-of-summer/Calvin-Summer-days-are-just-Packed.jpg)
+![](/assets/img/first-day-of-summer/calvin-the-days-are-just-packed.webp)
 
 ## The Summer Solstice
 
