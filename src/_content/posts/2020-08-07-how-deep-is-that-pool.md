@@ -106,11 +106,10 @@ People ask to be tested because they don't feel well or think they may have been
 
 This shows that to make COVID-19 pool testing worthwhile the test will need to be very accurate and we'll need to test a lot of people even if they have no reason to think that they may be sick or have been exposed.
 
-<figure class="my-12">
-  <iframe title="Embed" src="https://coronavirus.jhu.edu/embed/testing/state-data/testing_per_state_US.html" width="736" height="466" allowfullscreen="" frameborder="no" style="max-width: 100%" class="panel"></iframe>
-  <figcaption>
-  <small class="text-blue-600">Visualization by <a href="https://coronavirus.jhu.edu/testing/individual-states" rel="external">John Hopkins University &amp; Medicine &middot; Coronavirus Resource Center</a></small>
-  </figcaption>
-</figure>
+The CRC [stopped collecting test data](https://coronavirus.jhu.edu/testing/individual-states) on September 21, 2022. The description of the final plot says, 
+
+> This graph shows the total daily number of virus tests conducted in each state and of those tests, how many were positive each day. The trend line in blue shows the average percentage of tests that were positive over the last 7 days. The rate of positivity is an important indicator because it can provide insights into whether a community is conducting enough testing to find cases. 
+
+![covid-positivity](/assets/img/how-deep-is-the-pool/covid-positivity.png)
 
 Usama Kadri from Cardiff University has developed a [linear algebra method](https://www.tandfonline.com/doi/full/10.1080/20476965.2020.1817801) that tests samples from the same person in different pools multiple times to identify infected people, but it requires automated testing methods that may not be available to many hospitals. You can read about his technique in the 7 Oct 2020 edition of [SciTechDaily](https://scitechdaily.com/simple-algebra-enables-faster-large-volume-covid-19-testing/).
