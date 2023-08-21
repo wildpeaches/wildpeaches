@@ -12,11 +12,17 @@ keywords: [Gambling, Statistics, Expectation, Optical Character Recognition]
 
 ## Shannon and Kelly at Bell Labs
 
+Imagine using a secret formula to win big at blackjack, roulette, and other casino games. That's what two MIT mathematicians, Claude Shannon and John Kelly, Jr., did in the 1950s and 1960s, with the help of a mobster who wanted revenge on the casino owners. In this article, we'll explore how they applied information theory, probability, and the first wearable computer to beat the odds and make a fortune.
+
 Claude Shannon is known as "the father of information theory" for a paper he published in 1948, ["A Mathematical Theory of Communication."](http://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf) For his master's thesis at MIT, he showed that logical operators in electric circuits may by implemented using Boolean algebra. Without these two ideas, the digital information age could not exist.
 
 John Kelly, Jr. was a mathematician from Texas who met Shannon when they both worked at AT&T's Bell Labs in Murray Hill, NJ during the 1950s. He read Shannon's paper on information theory and realized it could be applied to gambling. He published his idea in the Bell System Technical Journal in 1956, calling it, ["A New Interpretation of Information Rate."](https://www.princeton.edu/~wbialek/rome/refs/kelly_56.pdf) Using Shannon's theory, Kelly understood that depending on the probability of winning the bet, you should adjust how big a wager to make.
 
 ## Information Theory
+
+![claude-shannon](/assets/img/the-kelly-criterion/claude-shannon.jpg)
+
+<p align = "center"><b>Claude Shannon</b></p>
 
 Shannon wanted to know how much information could be transmitted through a channel, where a channel is any form of communication media such as a telephone wire, a transmission from a satellite, or a wink from one spy to another at the ambassador's fancy cocktail party. Shannon considered it from the recipient's point of view, and wondered how much information could be obtained from a message sent through a noisy channel.
 
@@ -149,7 +155,7 @@ bw-pw-b+1=0 \\
 b = \frac{pw-1}{w-1}.
 $$
 
-If the product $p \times w > 1$ you can expect to win in the long run if you use the Kelly optimization. Here's an example where $p=1/2$ and $w = 3$. The [Python](https://www.anaconda.com/) function to plot this is [plotReturnRatio.py](https://gist.github.com/XerxesZorgon/33d4fb8d521a1508d52d0792a5c7204c).
+If the product $p \times w > 1$ you can expect to win in the long run if you use the Kelly optimization. Here's an example where $p=1/2$ and $w = 3.$ The [Python](https://www.anaconda.com/) function to plot this is [plotReturnRatio.py](https://gist.github.com/XerxesZorgon/33d4fb8d521a1508d52d0792a5c7204c).
 
 ![Graph plotting return ratio against bet fraction, maximum return is 1.0607.](/assets/img/the-kelly-criterion/return-ratio.png){.blend-multiply}
 
@@ -171,7 +177,13 @@ Here's a [Monte Carlo](https://gist.github.com/XerxesZorgon/33d4fb8d521a1508d52d
 
 ## Breaking the Bank
 
-Claude Shannon left Bell Labs to become chairman of the Mathematics Department at MIT. One day a junior faculty member, Ed Thorp, asked Shannon for help getting a paper published. Roger Baldwin, a mathematician working at the Army's Aberdeen Proving Ground in Aberdeen, MD along with three associates, used an Army computer to calculate the odds when playing blackjack. The computer was supposed to calculate the ballistic trajectories of gunnery shells, but they took advantage of downtimes at night and discovered that by playing an optimal game the house odds could be brought down to just 0.62.
+Claude Shannon left Bell Labs to become chairman of the Mathematics Department at MIT. One day a junior faculty member, Ed Thorp, asked Shannon for help getting a paper published. 
+
+![edward-o-thorp](/assets/img/the-kelly-criterion/edward-o-thorp.jpg)
+
+<p align = "center"><b>Edward O. Thorp</b></p>
+
+Roger Baldwin, a mathematician working at the Army's Aberdeen Proving Ground in Aberdeen, MD along with three associates, used an Army computer to calculate the odds when playing blackjack. The computer was supposed to calculate the ballistic trajectories of gunnery shells, but they took advantage of downtimes at night and discovered that by playing an optimal game the house odds could be brought down to just 0.62.
 
 Thorp read their paper and realized they had assumed the dealer shuffled after every play. Casinos don't want to slow the game down, so multiple hands are dealt before reshuffling. Thorp recalculated the optimal strategy when the dealer doesn't shuffle which gave the player the edge when the player counts cards.
 
@@ -180,3 +192,19 @@ As a mathematical paper, Thorp's didn't make a big impression. But word got out 
 Manny Kimmel, a mobster from Newark, NJ ran a numbers racket. He also held a grudge against the owners of some Reno casinos. Watching Thorp play mock blackjack games, Kimmel became convinced that Thorp could beat the casinos. Kimmel wanted to front Thorp and Shannon \$100,000, but Thorp talked him down to \$10,000. They flew into Reno one weekend and after about 30 hours of play, they were up to about \$21,000 and could have been over \$30,000 except that Kimmel was betting on the side and losing.
 
 Shannon and Thorp later built the first wearable computer to beat roulette. John Kelly developed a speech synthesizer while working at Bell Labs, and used it to create the song "Daisy Bell" which Arthur C. Clarke included in the movie "2001: A Space Odyssey". He died of a stroke at age 41 in 1965 and never used his method to make money. Thorp is now president of Edward O. Thorp & Associates where his investments have yielded an average growth of 20% for almost 30 years.
+
+![wearable-computer](/assets/img/the-kelly-criterion/wearable-computer.jpg)
+
+<p align = "center"><b>The first wearable computer</b></p>
+
+## References and further reading
+
+- [How Claude Shannon Invented the Future](https://www.quantamagazine.org/how-claude-shannons-information-theory-invented-the-future-20201222/)
+- [A Mathematical Theory of Communication](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf)
+- [A New Interpretation of Information Rate](https://www.princeton.edu/~wbialek/rome/refs/kelly_56.pdf) 
+- [Fortune's Formula: The Untold Story of the Scientific Betting System That Beat the Casinos and Wall Street](https://www.amazon.com/exec/obidos/tg/detail/-/0809046377/qid=1115820284/sr=8-6/ref=sr_8_xs_ap_i6_xgl14/103-1496598-9039823?v=glance&s=books&n=507846)
+- [Edward O. Thorp](http://www.edwardothorp.com/)
+- [“He Was The First Man To Realize That The Electronic Computer Was Capable Of Analyzing All The Millions Of Possibilities”](https://afflictor.com/2016/05/02/he-was-the-first-man-to-realize-that-the-electronic-computer-was-capable-of-analyzing-all-the-million-s-of-possibilities/)
+- [The Mathematics of Gambling](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/http://www.edwardothorp.com/wp-content/uploads/2016/11/TheKellyMoneyManagementSystem.pdf)
+- [The Kelly Criterion and the Stock Market](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/http://www.edwardothorp.com/wp-content/uploads/2016/11/TheKellyCriterionAndTheStockMarket.pdf)
+- [The Invention of the First Wearable Computer](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.cs.virginia.edu/~evans/thorp.pdf)
