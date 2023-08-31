@@ -3,8 +3,13 @@ title: The Wreck at Blossom and Sunset
 subtitle: The Intersection of Poisson and Exponential Distributions 
 author: John Peach
 lede:
+<<<<<<< Updated upstream
 hero: 
   url: /assets/img/2020-08-01-blossom-and-sunset/Blossom-and-Sunset.png
+=======
+hero: /assets/img/2020-08-01-blossom-and-sunset/Blossom-and-Sunset.png
+  url: 
+>>>>>>> Stashed changes
   alt:
 tags: [math,Poisson,Exponential]
 keywords: [science, technology, engineering, mathematics, computing]
@@ -43,6 +48,7 @@ $$
 $$
 For Blossom, 24 cars entered the intersection so the rate is $\lambda_B = 24/17100 = 0.00140351$, and for Sunset the rate is $\lambda_S = 14/17100 = 0.0008187135.$ 
 
+<<<<<<< Updated upstream
 If a wreck is going to happen, two events need to occur simultaneously. A car needs to enter the intersection from Blossom at the same moment (1/3 second interval) that a car enters from Sunset. One way of thinking about the rate at which cars enter the intersection is to consider the rate as a probability. So, for Blossom, the probability that a car arrives is 24 observations divided by 17100 1/3-second long intervals. Since we're assuming independence of the events, then the probability of a crash is 
 $$
 \lambda_B \times \lambda_S = \lambda = \frac{24}{17100} \times \frac{14}{17100} = 1.491 \times 10^{-6}.
@@ -52,11 +58,23 @@ $$
 \frac{8 \text{ hrs}}{\text{day}} \times \frac{60 \text{ min}}{\text{ hr}} \times \frac{60 \text{ sec}}{\text{ min}}  \times \frac{3 \text{ intervals}}{\text{ sec}} = 86400 \frac{\text{intervals}}{\text{day}}.
 $$
 Now we can estimate the probability of a wreck happening sometime during a day using the formula for the Poisson distribution. The chance of one accident is
+=======
+If a wreck is going to happen, two events need to occur simultaneously. A car needs to enter the intersection from Blossom at the same moment (1/3 second interval) that a car enters from Sunset. One way of thinking about the rate that cars enter the intersection is to consider it as a probability. So, for Blossom, the probability that a car arrives is 24 observations divided by 17100 1/3 second long intervals. Since we're assuming independence of the events, then the probability of a crash is 
+$$
+\lambda_B \times \lambda_S = \lambda = \frac{24}{17100} \times \frac{14}{17100} = 1.491 \times 10^{-6}.
+$$
+The 17100 intervals represents 95 minutes of observation, but a more convenient time period might be in days. Most of the traffic on Blossom and Sunset happens during daylight hours, and usually between 8 AM and 4 PM since there's an elementary school a block away on Blossom. Since there are $8 \times 60 = 480 $ minutes in this 8 hour period, then the number of intervals will be
+$$
+\frac{8 \text{ hrs}}{\text{day}} \times \frac{60 \text{ min}}{\text{ hr}} \times \frac{60 \text{ sec}}{\text{ min}}  \times \frac{3 \text{ intervals}}{\text{ sec}} = 86400 \frac{\text{intervals}}{\text{day}}.
+$$
+Now we can estimate the probability of a wreck happening sometime during the course of a day, using the formula for the Poisson distribution. The chance of one accident is
+>>>>>>> Stashed changes
 $$
 P(k,\lambda,t) = P(1,1.491 \times 10^{-6}, 86400) = 0.09.
 $$
 
 
+<<<<<<< Updated upstream
 Let's call the number of 1/3-second intervals in a day $n_I = 86400$. Then the probability of two accidents in the same day is,
 $$
 P(2,\lambda,n_I t) = 0.00446.
@@ -70,6 +88,15 @@ $$
 which is the probability that no accidents happen. Then the probability that one or more wrecks occur is $1 - P(0,\lambda,n_I) =  0.0945.$ To calculate the probability of an accident in 10 days, use $1 - P(0,\lambda,10 n_I) = 0.629$, and in 100 days, $1 - P(0,\lambda,100 n_I) = 0.99995.$ 
 
 Hmmm. Maybe we should have mentioned something to someone.
+=======
+Let's call the number of 1/3 second intervals in a day $n_I = 86400$. Then the probability of finding two cars in the intersection at the same time,
+$$
+P(2,\lambda,n_I t) = 0.00446.
+$$
+Suppose we'd like to know the probability of one or more accidents in the intersection of Blossom and Sunset during the 8 hour period. You'd have to sum up all of the probabilities for $k = 1,2,3, \dots$ to infinity. 
+
+But, there's an easier way which is to calculate $P(0,\lambda,n_I) =  e^{-n_I \lambda} = 0.9055$ which is the probability that no accidents happen. Then, the probability that one or more wrecks occur is $1 - P(0,\lambda,n_I) =  0.0945.$ To calculate the probability of an accident in a 10 day period, use $1 - P(0,\lambda,10 n_I) = 0.629$, and in 100 days, $1 - P(0,\lambda,100 n_I) = 0.99995.$ Hmmm. Maybe we should have mentioned something to someone.
+>>>>>>> Stashed changes
 
 ![crash-prob](/assets/img/2020-08-01-blossom-and-sunset/crash-prob.png)
 
@@ -105,4 +132,16 @@ If you'd like to run this experiment for an intersection nearby, install the [An
 
 ![navigator](/assets/img/2020-08-01-blossom-and-sunset/navigator.png)
 
+<<<<<<< Updated upstream
 Launch [JupyterLab](https://jupyter.org/) and select the Python kernel. Save a copy of the [Blossom_and_Sunset.ipynb](https://gist.github.com/XerxesZorgon/16bd83e8c5ff0053b12ec40e8c6e8471) notebook locally, and then open it in JupyterLab. You can change the parameters in the notebook to fit your conditions, and then calculate the probability of a crash coming to a neighborhood near you!
+=======
+Launch [JupyterLab](https://jupyter.org/) and select the Python kernel. Save a copy of the [Blossom_and_Sunset.ipynb](https://gist.github.com/XerxesZorgon/16bd83e8c5ff0053b12ec40e8c6e8471) notebook locally, and then open it in JupyterLab. You can change the parameters in the notebook to fit your conditions, and then calculate the probability of a crash coming to a neighborhood near you!
+
+## Further Reading
+
+- [Exponential Distribution: Uses, Parameters & Examples](https://statisticsbyjim.com/probability/exponential-distribution/)
+- [Poisson Distribution EXPLAINED in UNDER 15 MINUTES!](https://youtu.be/cPOChr_kuQs)
+- [Exponential Distribution! AWESOME EXPLANATION. Why is it called "Exponential"?](https://youtu.be/2kg1O0j1J9c)
+- [Probability in Computing](https://www.cs.bu.edu/fac/snyder/cs237/)
+- [The Poisson and Exponential Distributions](https://neurophysics.ucsd.edu/courses/physics_171/exponential.pdf)
+>>>>>>> Stashed changes
