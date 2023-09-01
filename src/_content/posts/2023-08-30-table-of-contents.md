@@ -1,14 +1,14 @@
 ---
 title: Table of Contents
 subtitle: Links to all of the Wild Peaches posts
-author: John Peach
+author: John Peach and Jan De Wilde
 lede:
 hero:
-  url: /assets/img/mohammad-naderi-zveMakq36UM-unsplash.jpg
+  url: /assets/img/0001-wild-peaches/mohammad-naderi-zveMakq36UM-unsplash.jpg
   alt:
 tags: [math]
 keywords: [science, technology, engineering, mathematics, computing]
-socialImg: /assets/img/mohammad-naderi-zveMakq36UM-unsplash.jpg
+socialImg: /assets/img/0001-wild-peaches/mohammad-naderi-zveMakq36UM-unsplash.jpg
 ---
 
 # Table of Contents
