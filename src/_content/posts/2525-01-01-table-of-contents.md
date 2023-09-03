@@ -7,9 +7,13 @@ hero:
   url: /assets/img/0001-wild-peaches/mohammad-naderi-zveMakq36UM-unsplash.jpg
   alt:
 tags: [math]
-keywords: [science, technology, engineering, mathematics, computing]
+keywords: [cience, technology, engineering, mathematics, computing]
 socialImg: /assets/img/0001-wild-peaches/mohammad-naderi-zveMakq36UM-unsplash.jpg
 ---
+
+
+
+
 
 # Table of Contents
 
