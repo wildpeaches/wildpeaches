@@ -4,11 +4,11 @@ subtitle: Links to all of the Wild Peaches posts
 author: John Peach and Jan De Wilde
 lede:
 hero:
-  url: /assets/img/0001-wild-peaches/mohammad-naderi-zveMakq36UM-unsplash.jpg
+  url: /assets/img/0001-wild-peaches/mohammad-naderi.jpg
   alt:
 tags: [math]
-keywords: [cience, technology, engineering, mathematics, computing]
-socialImg: /assets/img/0001-wild-peaches/mohammad-naderi-zveMakq36UM-unsplash.jpg
+keywords: [Science, technology, engineering, mathematics, computing]
+socialImg: /assets/img/0001-wild-peaches/mohammad-naderi.jpg
 ---
 
 
