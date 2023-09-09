@@ -34,7 +34,6 @@
   },
   "homepage": "https://github.com/JanDW/wildpeaches#readme",
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-rss": "^1.1.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.2",
     "@iktakahiro/markdown-it-katex": "^4.0.1",
@@ -66,6 +65,7 @@
     "tailwindcss": "^2.2.7"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
