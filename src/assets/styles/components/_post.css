@@ -50,7 +50,7 @@
 }
 
 .s-post p {
-  @apply my-5;
+  @apply mt-5;
 }
 
 .s-post > img {
@@ -125,13 +125,13 @@
 /* @TODO in use for table, extend in Tailwind */
 
 .s-post .w-max-800 {
+  margin: 0 auto;
   max-width: 800px;
   width: 100%;
-  margin: 0 auto;
 }
 
 .s-post .w-max-900 {
+  margin: 0 auto;
   max-width: 900px;
   width: 100%;
-  margin: 0 auto;
 }

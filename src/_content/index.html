@@ -12,21 +12,39 @@ includeSubscription: true
     {{ site.name }}
   </h1>
 
-  <p class="mb-12 text-2xl font-medium max-w-md">{{ site.tagline }}</p>
+  <p class="mb-12 text-2xl font-medium max-w-md">{{ site.tagline | safe }}</p>
 
-  <ul class="divide-y-2 divide-yellow-200 list-none">
-    {% for post in collections.posts | reverse %}
-    <li class="py-4">
-      <a class="border-b-0 flex" href="{{ post.url }}">
-        <article>
-          <h2 class="font-medium text-lg leading-tight">{{ post.data.title }}</h2>
-          {% if post.data.subtitle %}
-          <p class="font-normal text-sm text-gray-600 leading-snug mt-1">{{ post.data.subtitle }}</p>
-          {% endif %}
-        </article>
-      </a>
-    </li>
+    {%- for year, yearPosts in collections.postsByYear %}
+        {%- if loop.index === 1 %}
+          <h2>Latest post</h2>
+            {%- from "macros/card.njk" import card -%}
+            {%- set imgSrc = yearPosts[yearPosts.length - 1].data.hero.url %}
+            {%- set imgAlt = yearPosts[yearPosts.length - 1].data.hero.url %}
+            {%- set title = yearPosts[yearPosts.length - 1].data.title %}
+            {%- set subtitle = yearPosts[yearPosts.length - 1].data.subtitle %}
+            {%- set permalink = yearPosts[yearPosts.length - 1].data.permalink %}
+            {%- call card(imgSrc, imgAlt, title, subtitle, permalink) %}
+            {%- endcall %}
+        {%- endif %}
 
-    {% endfor %}
-  </ul>
+        {%- if not loop.index === 1 or yearPosts.length > 1 %}
+          <h2><time datetime="{{ year }}">{{ year }}</time></h2>
+        {%- endif %}
+
+        <ul class="divide-y-2 divide-yellow-200 list-none">
+          {% for post in yearPosts | reverse %}
+
+          <li class="py-4">
+            <a class="border-b-0 flex" href="{{ post.url }}">
+              <article>
+                <h3 class="font-medium text-lg leading-tight">{{ post.data.title }}</h3>
+                {% if post.data.subtitle %}
+                <p class="font-normal text-sm text-gray-600 leading-snug mt-1">{{ post.data.subtitle }}</p>
+                {% endif %}
+              </article>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
 </section>

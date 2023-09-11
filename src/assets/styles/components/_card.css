@@ -1,0 +1,35 @@
+/* https://smolcss.dev/#smol-card-component */
+.c-card {
+  --img-ratio: 3/2;
+  --inner-radius: 36px;
+  --padding: 12px;
+  border: 2px solid hsl(0, 0%, 85%);
+  border-radius: calc(var(--inner-radius) + var(--padding));
+
+  display: flex;
+  flex-direction: column;
+  /* Supported for flexbox in modern browsers since April 2021 */
+  gap: 1rem;
+  padding: var(--padding);
+}
+
+.c-card > img {
+  aspect-ratio: var(--img-ratio);
+  border-radius: var(--inner-radius);
+  object-fit: cover;
+  width: 100%;
+}
+.c-card > :not(img) {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/* Enhanced `:not()` accepts a selector list,
+but as a fallback you can chain `:not()` instead */
+.c-card > :last-of-type:not(img, h2, h3, h4) {
+  margin-bottom: 1rem;
+}
+
+.c-card > a {
+  align-self: start;
+}

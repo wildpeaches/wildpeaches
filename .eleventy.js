@@ -101,6 +101,30 @@ module.exports = (eleventyConfig) => {
     return html.replace(/(\r\n|\n|\r)(\s\s)*/gm, '');
   });
 
+  eleventyConfig.addNunjucksGlobal('currentYear', () => {
+     return new Date().getFullYear().toString();
+   });
+
+  // Collections
+  eleventyConfig.addCollection('postsByYear', async (collection) => {
+    const posts = await collection.getFilteredByGlob('./src/_content/posts/*.md');
+    const groupedPosts = {};
+
+    posts.forEach((post) => {
+      const year = post.date.getFullYear();
+      if (!groupedPosts[year]) {
+        groupedPosts[year] = [];
+      }
+      groupedPosts[year].push(post);
+    });
+
+    const pairs = Object.entries(groupedPosts);
+    const reversedPairs = pairs.reverse();
+
+    return reversedPairs;
+  });
+
+
   // Filters
   eleventyConfig.addFilter('cssmin', function (code) {
     return new CleanCSS({}).minify(code).styles;
