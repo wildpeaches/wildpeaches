@@ -3,14 +3,14 @@ title: Tools of Chaos
 subtitle: Orbits
 author: John Peach
 hero:
-  url: /assets/img/tools-of-chaos-orbits/orbits.png
+  url: /assets/img/2022-09-28-tools-of-chaos-orbits/orbits.png
   alt:
 tags: [math]
 keywords: [chaos, orbits, Julia, Pluto]
-socialImg: /assets/img/tools-of-chaos-orbits/orbits.png
+socialImg: /assets/img/2022-09-28-tools-of-chaos-orbits/orbits.png
 pullQuote:
   author: Buckaroo Banzai
-  imgUrl: /assets/img/tools-of-chaos-orbits/buckaroo-banzai.jpeg
+  imgUrl: /assets/img/2022-09-28-tools-of-chaos-orbits/buckaroo-banzai.jpeg
   imgAlt: Illustration Headshot of Buckaroo Banzai.
   quote: No matter where you go, there you are.
 ---
@@ -32,7 +32,7 @@ $$
 
 The previous post, [_Easy Chaos with Pluto_](https://wildpeaches.xyz/blog/easy-chaos-with-pluto/) showed how to run a Pluto notebook in Julia. A more in-depth introduction is on the MIT open course _[Introduction to Computational Thinking](https://computationalthinking.mit.edu/Spring21/)_ which describes the [first-time setup of Julia and Pluto](https://computationalthinking.mit.edu/Spring21/installation/) and provides a [Cheatsheets](https://computationalthinking.mit.edu/Spring21/cheatsheets/) page.
 
-From _[JuliaDynamics](https://juliadynamics.github.io/JuliaDynamics/)_ we'll use _[ChaosTools](https://juliapackages.com/p/chaostools)_, _[DynamicalSystems](https://juliadynamics.github.io/DynamicalSystems.jl/dev/)_, _[InteractiveDynamics](https://juliadynamics.github.io/InteractiveDynamics.jl/dev/)_, and _[DrWatson](https://juliadynamics.github.io/DrWatson.jl/dev/)_. You should also add _[DifferentialEquations](https://diffeq.sciml.ai/stable/)_, [_Plots_](https://docs.juliaplots.org/stable/), and _[GLMakie](https://makie.juliaplots.org/stable/documentation/backends/glmakie/)_ with [_Pkg_](https://docs.julialang.org/en/v1/stdlib/Pkg/), the Julia package manager.
+From _[JuliaDynamics](https://juliadynamics.github.io/JuliaDynamics/)_ we'll use _[ChaosTools](https://juliapackages.com/p/chaostools)_, _[DynamicalSystems](https://juliadynamics.github.io/DynamicalSystems.jl/dev/)_, _[InteractiveDynamics](https://juliadynamics.github.io/InteractiveDynamics.jl/dev/)_, and _[DrWatson](https://juliadynamics.github.io/DrWatson.jl/dev/)_. You should also add _[DifferentialEquations](https://diffeq.sciml.ai/stable/)_, [_Plots_](https://docs.juliaplots.org/stable/), and _[GLMakie](https://docs.makie.org/stable/explanations/backends/glmakie/index.html)_ with [_Pkg_](https://docs.julialang.org/en/v1/stdlib/Pkg/), the Julia package manager.
 
 Download the Pluto notebook, _[Orbits.jl](https://gist.github.com/XerxesZorgon/aefccd2321bb1e717b648a66a8fe1187)_ used for this post.
 
@@ -46,7 +46,7 @@ $$
 
 is an example of a discrete system. For $x_0 = 0.2$ and $r = 4$, this formula gives $x_1 = 0.64$. The sequence is $\{0.2, 0.64, 0.9216, 0.289, \ldots \}$ which makes discrete steps between iterations.
 
-![logistic-map-fixed-point-iteration](/assets/img/tools-of-chaos-orbits/logistic-map-fixed-point-iteration.png)
+![logistic-map-fixed-point-iteration](/assets/img/2022-09-28-tools-of-chaos-orbits/logistic-map-fixed-point-iteration.png)
 
 Continuous functions are often written in terms of time, such as the [Van der Pol equation](https://en.wikipedia.org/wiki/Van_der_Pol_oscillator)
 
@@ -94,7 +94,7 @@ Not all of the points in $U$ will map into $V$, and not all of the points in $V$
 
 A consequence of topological transitivity is that an orbit is never two or more independent orbits. Even if the orbit appears to have distinct branches, eventually points in one branch will iterate into every other branch.
 
-![topological-transitivity](/assets/img/tools-of-chaos-orbits/topological-transitivity.png)
+![topological-transitivity](/assets/img/2022-09-28-tools-of-chaos-orbits/topological-transitivity.png)
 
 A [periodic orbit](http://www.scholarpedia.org/article/Periodic_orbit) is one where $f^n(x_0) = x_0$, so $x_0$ comes back to itself after $n$ iterations of $f$. The cars go around the track and return to the points where they started. The analogy with race cars isn't quite accurate because the lateral position on the track changes from lap to lap, but maybe you can imagine the propagation of points to be a little like a car race. Dense periodic orbits mean that at any point in the orbit of one point, you can always find the orbit of another point nearby.
 
@@ -124,7 +124,7 @@ and plotting the result
 plot(traj_henon[:,1],traj_henon[:,2], seriestype = :scatter, aspect_ratio = :equal)
 ```
 
-![henon-map](/assets/img/tools-of-chaos-orbits/henon-map.png)
+![henon-map](/assets/img/2022-09-28-tools-of-chaos-orbits/henon-map.png)
 
 The equations for the Hénon Map are
 
@@ -150,6 +150,14 @@ end
 After setting the initial condition $u$ and the parameter vector $p$, we could generate the trajectory and plot it just as we did with the built-in version. The rule requires a step counter $n$ for discrete systems, or a time $t$ for continuous systems even if these variables don't show up in the equations.
 
 The _[Orbits.jl](https://gist.github.com/XerxesZorgon/aefccd2321bb1e717b648a66a8fe1187)_ notebook is fully documented so you should be able to change parameters and extend equations or even create new systems. Have fun experimenting!
+
+------
+
+#### Image credits
+
+Hero: [Iconic Arecibo Observatory’s 1000-feet telescope is beyond repair, will be demolished amid safety concerns](https://meaww.com/iconic-arecibo-observatory-1000-feet-telescope-beyond-repair-demolished-safety-concerns-decommission) [Mihika Basu](https://meaww.com/writer/mihika-b-0), MEAWW Nov 19, 2020.
+
+Buckaroo Bonzai: [Buckaroo Bonzai](https://www.writeups.org/buckaroo-banzai-peter-weller/), Writeups.org
 
 ---
 

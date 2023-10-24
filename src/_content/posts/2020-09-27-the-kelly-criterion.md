@@ -4,7 +4,7 @@ subtitle: Information Theory Reimagined
 author: John Peach
 lede: Two mathematicians from MIT team up with a New Jersey mobster to take down a casino.
 hero:
-  url: /assets/img/the-kelly-criterion/kelly.png
+  url: /assets/img/2020-09-27-the-kelly-criterion/kelly.png
   alt:
 tags: [math]
 keywords: [Gambling, Statistics, Expectation, Optical Character Recognition]
@@ -20,7 +20,7 @@ John Kelly, Jr. was a mathematician from Texas who met Shannon when they both wo
 
 ## Information Theory
 
-![claude-shannon](/assets/img/the-kelly-criterion/claude-shannon.jpg)
+![claude-shannon](/assets/img/2020-09-27-the-kelly-criterion/claude-shannon.jpg)
 
 <p align = "center"><b>Claude Shannon</b></p>
 
@@ -157,7 +157,7 @@ $$
 
 If the product $p \times w > 1$ you can expect to win in the long run if you use the Kelly optimization. Here's an example where $p=1/2$ and $w = 3.$ The [Python](https://www.anaconda.com/) function to plot this is [plotReturnRatio.py](https://gist.github.com/XerxesZorgon/33d4fb8d521a1508d52d0792a5c7204c).
 
-![Graph plotting return ratio against bet fraction, maximum return is 1.0607.](/assets/img/the-kelly-criterion/return-ratio.png){.blend-multiply}
+![Graph plotting return ratio against bet fraction, maximum return is 1.0607.](/assets/img/2020-09-27-the-kelly-criterion/return-ratio.png){.blend-multiply}
 
 The red dot is where the ratio reaches a maximum and happens when
 
@@ -173,13 +173,13 @@ Notice for $b=0$ the return ratio is 1 meaning if you don't play you can't win. 
 
 Here's a [Monte Carlo](https://gist.github.com/XerxesZorgon/33d4fb8d521a1508d52d0792a5c7204c) experiment of the Kelly Criterion. By Monte Carlo, I mean the outcomes of each game are randomly chosen by the computer so it's very much like a real coin toss game. The values for $p$ and $w$ are still the same as before, but each outcome is unknown before the bet. I ran three different cases for the value of $b$. There's the optimal value of $b_{opt}=0.25$ and two other cases, Bet- and Bet+ where $b = b_{opt} \mp 0.05$. At the end of the experiment, the stash for the optimal case is \$361.1, but for the other two, it's only \$289 starting with an initial amount of just \$1. It's a little hard to see because the curves are wiggling around a lot, but there is quite a difference in the outcome.
 
-![Graph for Monte Carlo Kelly experiment.](/assets/img/the-kelly-criterion/kelly-monte-carlo.png){.blend-multiply}
+![Graph for Monte Carlo Kelly experiment.](/assets/img/2020-09-27-the-kelly-criterion/kelly-monte-carlo.png){.blend-multiply}
 
 ## Breaking the Bank
 
 Claude Shannon left Bell Labs to become chairman of the Mathematics Department at MIT. One day a junior faculty member, Ed Thorp, asked Shannon for help getting a paper published. 
 
-![edward-o-thorp](/assets/img/the-kelly-criterion/edward-o-thorp.jpg)
+![edward-o-thorp](/assets/img/2020-09-27-the-kelly-criterion/edward-o-thorp.jpg)
 
 <p align = "center"><b>Edward O. Thorp</b></p>
 
@@ -193,9 +193,23 @@ Manny Kimmel, a mobster from Newark, NJ ran a numbers racket. He also held a gru
 
 Shannon and Thorp later built the first wearable computer to beat roulette. John Kelly developed a speech synthesizer while working at Bell Labs, and used it to create the song "Daisy Bell" which Arthur C. Clarke included in the movie "2001: A Space Odyssey". He died of a stroke at age 41 in 1965 and never used his method to make money. Thorp is now president of Edward O. Thorp & Associates where his investments have yielded an average growth of 20% for almost 30 years.
 
-![wearable-computer](/assets/img/the-kelly-criterion/wearable-computer.jpg)
+![wearable-computer](/assets/img/2020-09-27-the-kelly-criterion/wearable-computer.jpg)
 
 <p align = "center"><b>The first wearable computer</b></p>
+
+------
+
+#### Image credits
+
+Forcing Function: John Kelly, [Optimizing Investment Sizing with the Kelly Criterion](https://www.forcingfunction.com/appearances/kelly-criterion)
+
+Quanta Magazine: Claude Shannon, [How Claude Shannon Invented the Future](https://www.quantamagazine.org/how-claude-shannons-information-theory-invented-the-future-20201222/)
+
+Life Magazine: Edward O. Thorp, [The Professor Who Breaks the Bank](https://books.google.com/books?id=AFQEAAAAMBAJ&lpg=PA84&dq=computer&pg=PA1#v=onepage&q&f=false), March 27 1964, pg 80
+
+UCI Libraries: First Wearable Computer, [A Spin of the Wheel](https://www.lib.uci.edu/online-exhibits/finding-edge-work-and-insights-edward-o-thorp/spin-wheel) 
+
+------
 
 ## References and further reading
 

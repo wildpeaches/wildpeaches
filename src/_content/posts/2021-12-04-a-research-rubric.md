@@ -4,7 +4,7 @@ subtitle: 'Software to search, sort, store and summarize science'
 author: John Peach
 lede: null
 hero:
-  url: /assets/img/a-research-rubric/VOSviewer2.png
+  url: /assets/img/2021-12-04-a-research-rubric/VOSviewer2.png
   alt: null
 tags:
   - math
@@ -16,7 +16,7 @@ keywords:
   - meta paper
   - citation mapping
   - summarizers
-socialImg: /assets/img/a-research-rubric/VOSviewer2.png
+socialImg: /assets/img/2021-12-04-a-research-rubric/VOSviewer2.png
 lastmod: '2022-03-04T21:13:44.581Z'
 ---
 
@@ -62,7 +62,7 @@ When downloading a new PDF, you'll often find that the file name is something li
 
 ## Top Level or Keyword Searching
 
-We want to figure out how to gamble on soccer. Or should we be betting on football? The Northeastern University Library recommends combining key terms and truncating search words in their list of the [top ten search tips](https://library.northeastern.edu/get-help/research-tutorials/effective-database-searches/top-ten-search-tips). Since we're not sure that in-game gambling is still possible, we might be better off looking for a method or strategy to predict the outcome using something like "soccer AND prediction". Synonyms for "prediction" found in a [thesaurus](https://www.thesaurus.com) are "forecast", "guess", "indicator", "prognosis" and "indicator" so we could try combinations of those as well.
+We want to figure out how to gamble on soccer. Or should we be betting on football? The [University of Reading Library](https://libguides.reading.ac.uk/database-searching/techniques) recommends combining key terms and truncating search words and using wildcards, combining search terms, and using  phrase and proximity searching. Since we're not sure that in-game gambling is still possible, we might be better off looking for a method or strategy to predict the outcome using something like "soccer AND prediction". Synonyms for "prediction" found in a [thesaurus](https://www.thesaurus.com) are "forecast", "guess", "indicator", "prognosis" and "indicator" so we could try combinations of those as well.
 
 A Google search for "soccer prediction" returns lots of predictions other people are making about soon-to-be played games such as these from [FiveThirtyEight](https://projects.fivethirtyeight.com/soccer-predictions/). FiveThirtyEight gives a detailed description of how they [produce their predictions](https://fivethirtyeight.com/methodology/how-our-club-soccer-predictions-work/) which mostly rely on [ESPN's Soccer Power Index](https://www.espn.com/world-cup/story/_/id/4447078/ce/us/guide-espn-spi-ratings) (SPI). James Curley provided the data and [R](https://www.r-project.org/) code used by FiveThirtyEight on [GitHub](https://github.com/jalapic/engsoccerdata).
 
@@ -103,7 +103,9 @@ _The Perfect Bet_ also mentions the [Journal of Quantitative Analysis in Sports]
 
 Review or "meta" papers are written by experts on a particular subject, and describe the current state of science on that topic. Review papers typically describe the work by many scientists with references to papers they've written. Review papers can be found with [2Dsearch](https://www.2dsearch.com/), using methods discussed by Aaron Tay in a [Medium article](https://medium.com/a-academic-librarians-thoughts-on-open-access/4-ways-to-find-review-papers-systematic-reviews-meta-analysis-and-other-rich-sources-of-82898aebb6e7).
 
-![2Dsearch](/assets/img/a-research-rubric/2Dsearch.png)
+![2Dsearch](/assets/img/2021-12-04-a-research-rubric/2Dsearch.png)
+
+<p align = "center"><b>2DSEARCH</b></p>
 
 When you go to the 2Dsearch website, you'll see a blank area on the left and a results window on the right. Enter terms anywhere in the search term window. I chose "soccer", "review", and "prediction". Right-click on any word to bring up a list of suggested terms, and choose the most relevant ones. You can group similar terms by dragging a box around them, so in the Forecasting box I have "prediction", "forecast", "estimation", and "projections".
 
@@ -129,15 +131,21 @@ Another useful search tool is [Semantic Scholar](https://www.semanticscholar.org
 
 Aaron's post _[More research/literature mapping tools - Connected Papers and CoCites](https://musingsaboutlibrarianship.blogspot.com/2020/06/more-researchliterature-mapping-tools_16.html)_ reviews several citation mapping tools, and I liked Connected Papers best because it's browser-based and very fast. Type the name of a paper in the search bar and Connected Papers will display the abstract. Click on the abstract to get a graph of related papers,
 
-![connected-papers](/assets/img/a-research-rubric/connected-papers.png)
+![connected-papers](/assets/img/2021-12-04-a-research-rubric/connected-papers.png)
+
+<p align = "center"><b>Connected Papers</b></p>
 
 Hovering over one of the circles displays the title, authors, and abstract of that paper, and lets you open it in a new tab. The closer a circle is to the original paper, the more similar it is in content. Darker colors represent newer papers. This is a similarity graph, not a citation tree, but [Citation Gecko](https://www.citationgecko.com/) is a way to see how papers are linked through citations. When you start Citation Gecko, it asks for a seed paper
 
-![citation-gecko-seed-papers.png](/assets/img/a-research-rubric/citation-gecko-seed-papers.png)
+![citation-gecko-seed-papers.png](/assets/img/2021-12-04-a-research-rubric/citation-gecko-seed-papers.png)
+
+<p align = "center"><b>Citation Gecko Seeds</b></p>
 
 and after entering [_Dolores: a model that predicts football match outcomes from all over the world_](https://link.springer.com/content/pdf/10.1007/s10994-018-5703-7.pdf) other recommended seed papers are listed in a new pop-up window. After selecting the most relevant papers, click "Add selected seed papers" at the bottom of the window, which opens a new view.
 
-![citation-gecko-recommended-papers.png](/assets/img/a-research-rubric/citation-gecko-recommended-papers.png)
+![citation-gecko-recommended-papers.png](/assets/img/2021-12-04-a-research-rubric/citation-gecko-recommended-papers.png)
+
+<p align = "center"><b>Citation Gecko Recommended Papers</b></p>
 
 This lets you see links between your seed papers and others. You can add some of these as new seed papers, or you can follow the link to the paper. In many cases, you can download the paper by following the link.
 
@@ -145,7 +153,9 @@ Another useful search tool is the [Local Citation Network](https://timwoelfle.gi
 
 Ujjal Marjit wrote a nice blog post describing the tool, [_Free Visualization Tool to Support Literature Survey_](https://researcherssite.com/free-visualization-tool-to-support-literature-survey/).
 
-![local-citation-network.png](/assets/img/a-research-rubric/local-citation-network.png)
+![local-citation-network.png](/assets/img/2021-12-04-a-research-rubric/local-citation-network.png)
+
+<p align = "center"><b>Local Citation Network</b></p>
 
 ## Summarizing and Annotating
 
@@ -157,32 +167,47 @@ Unlike reading a novel, you shouldn't read a paper from start to finish. Read th
 
 The summary is in Markdown format that can be read into editors like [Zettlr](https://www.zettlr.com/) or [Obsidian](https://obsidian.md/). Key concepts highlighted by Scholarcy have links to Wikipedia articles to quickly understand unfamiliar terms. Click on a reference in the Markdown summary and a link will open in Google Scholar, scite\_, or it will open the paper. Scholarcy mangles equations, but it does a pretty good job of giving you the gist of the article.
 
-![scholarcy.png](/assets/img/a-research-rubric/scholarcy.png)
+![scholarcy.png](/assets/img/2021-12-04-a-research-rubric/scholarcy.png)
+
+<p align = "center"><b>Scholarcy</b></p>
 
 An alternate to Scholarcy is [paper-digest](https://www.paper-digest.com/) described by Ujjal Marjit in [_How to Generate an Automatic Summary of Research Paper_](https://researcherssite.com/how-to-generate-an-automatic-summary-of-research-paper/). The summary is sparser than Scholarcy's but may be useful for a quick understanding of the basic outline.
 
-![paper-digest.png](/assets/img/a-research-rubric/paper-digest.png)
+![paper-digest.png](/assets/img/2021-12-04-a-research-rubric/paper-digest.png)
+
+<p align = "center"><b>Paper Digest</b></p>
 
 As mentioned earlier, [Qiqqa](https://github.com/jimmejardine/qiqqa-open-source) (open source) manages your documents, but also has many tools for searching and annotating your documents. After starting Qiqqa, the home screen opens. Click on the drop-down icon "Add PDFs or References" and select "Add Folder" to import your library into Qiqqa. Qiqqa uses OCR to read the documents. If you have added new documents since you first started Qiqqa, it reads those as well. When it has finished, you will have a "Guest" library, which looks something like this:
 
-![qiqqa-guest.png](/assets/img/a-research-rubric/qiqqa-guest.png)
+![qiqqa-guest.png](/assets/img/2021-12-04-a-research-rubric/qiqqa-guest.png)
+
+<p align = "center"><b>Qiqqa</b></p>
 
 In the left column are common tags and the number of papers with those tags. You can filter by Qiqqa Autotags (tags Qiqqa assigned), author, publication, year, theme (groups of common tags), or publication type such as article, book, or proceedings.
 
 A search box in the upper right corner lets you find articles containing specific words or phrases. Here, I've searched for "pi-rating" and Qiqqa found seven papers with that term, sorting them by relevancy. Click on the search score block (yellow to red with percentages to the left of the title) to see page numbers where the term occurs in the paper.
 
-![qiqqa-search-score.png](/assets/img/a-research-rubric/qiqqa-search-score.png)
+![qiqqa-search-score.png](/assets/img/2021-12-04-a-research-rubric/qiqqa-search-score.png)
+
+<p align = "center"><b>Qiqqa Search Score</b></p>
 
 You can highlight a reference, right-click and search the web for the paper using the built-in Qiqqa browser.
-![qiqqa-browser.png](/assets/img/a-research-rubric/qiqqa-browser.png)
+
+![qiqqa-browser.png](/assets/img/2021-12-04-a-research-rubric/qiqqa-browser.png)
+
+<p align = "center"><b>Qiqqa Browser</b></p>
 
 As you read the paper, you can highlight important sections,
 
-![qiqqa-highlighting.png](/assets/img/a-research-rubric/qiqqa-highlighting.png)
+![qiqqa-highlighting.png](/assets/img/2021-12-04-a-research-rubric/qiqqa-highlighting.png)
+
+<p align = "center"><b>Qiqqa Highlighting</b></p>
 
 and add annotations and tags.
 
-![qiqqa-annotation.png](/assets/img/a-research-rubric/qiqqa-annotation.png)
+![qiqqa-annotation.png](/assets/img/2021-12-04-a-research-rubric/qiqqa-annotation.png)
+
+<p align = "center"><b>Qiqqa Annotation and Tags</b></p>
 
 Annotations become searchable so you don't need to remember where they are in the paper. Qiqqa has many more features described in the online [manual](http://www.qiqqa.com/Content/Client/The%20Qiqqa%20Manual.pdf).
 
@@ -213,7 +238,6 @@ Below is a more complete list of software tools available for research. You may 
 - [Google search](https://www.google.com/) Free search engine provided by Google
 - [Google scholar](https://scholar.google.com/) indexes the full text or [metadata](https://en.wikipedia.org/wiki/Metadata) of [scholarly literature](https://en.wikipedia.org/wiki/Academic_publishing) across an array of publishing formats and disciplines.
 - [OpenDOAR](https://v2.sherpa.ac.uk/opendoar/) is the quality-assured, global Directory of Open Access Repositories.
-- [papergraph](http://papergraph.res.ibm.com/?term=Artificial+Intelligence&size=30&affiliations=&viewMode=landing) is an online visual tool to understand the latest litterature in a given research community.
 - [PLOS](https://plos.org/) a nonprofit, Open Access publisher empowering researchers to accelerate progress in science and medicine by leading a transformation in research communication.
 - [Read by QXMD](https://read.qxmd.com/) lets you create a personalised feed that is updated daily with new papers on research topics or from journals of your choice.
 - [refseek](https://www.refseek.com/) locates relevant academic search results from web pages, books, encyclopedias, and journals.
@@ -321,3 +345,14 @@ Below is a more complete list of software tools available for research. You may 
 - [Open Access Button](https://openaccessbutton.org/) links to free, legal research articles delivered instantly or automatically requested from authors.
 - [Sci-Hub](http://sci-hub.se/) provides access to academic papers and articles using educational institution access and its own cache of downloaded papers and articles. Illegal in some countries, use a [VPN](https://alternativeto.net/software/nordvpn/?license=free), [TOR](https://www.torproject.org/download/), or [Whonix](https://www.whonix.org/) to conceal your location if you still want to use Sci-Hub.
 - [Unpaywall](https://unpaywall.org/) is a massive open database of more than 21 million free scholarly articles.
+
+------
+
+#### Image credits
+
+Hero: [VOSviewer](https://www.vosviewer.com/).
+
+
+
+
+

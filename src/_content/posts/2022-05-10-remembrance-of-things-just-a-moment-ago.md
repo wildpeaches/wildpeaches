@@ -4,11 +4,11 @@ subtitle: In Search Of Time Lost Playing This Game
 author: John Peach
 lede: We don't receive wisdom; we must discover it for ourselves after a journey that no one can take for us or spare us. - Marcel Proust
 hero:
-  url: /assets/img/remembrance-of-things/proust.png
+  url: /assets/img/2022-05-10-remembrance-of-things/proust.png
   alt:
 tags: [math, Monte Carlo]
 keywords: []
-socialImg: /assets/img/remembrance-of-things/proust.png
+socialImg: /assets/img/2022-05-10-remembrance-of-things/proust.png
 ---
 
 
@@ -17,11 +17,13 @@ socialImg: /assets/img/remembrance-of-things/proust.png
 
 Jan created an online version of the [Memory Puzzle](https://jandw.github.io/memory-puzzle/) for his daughter Sofie and son Senne, which he calls **Shinkei-Suijaku**, Japanese for "nervous breakdown". The game consists of $n$ pairs of cards placed randomly face down on a table. The player selects two cards to flip over, and if they match the player scores a point. The game may be played in solitaire mode, or with two players alternating turns.   
 
-![the-memory-game](/assets/img/remembrance-of-things/the-memory-game.png)
+![the-memory-game](/assets/img/2022-05-10-remembrance-of-things/the-memory-game.png)
+
+<p align = "center"><b>Shinkei-Suijaku</b></p>
 
 Jan built a timer into the game, so you've got 60 seconds to find all eight pairs. When you win, the crowd cheers, confetti falls down your screen and your reward is:
 
-![you-win](/assets/img/remembrance-of-things/you-win.png)
+![you-win](/assets/img/2022-05-10-remembrance-of-things/you-win.png)
 
 Not satisfied with simply playing the game, Jan and I had to analyze it.
 
@@ -144,7 +146,9 @@ Imagine the cards are laid out in a line. We flip the first two, then the next t
 
 But, two things might happen that will shorten the game. First, we might get lucky and two successive cards would match. More likely, when we flip the first of the pair, we might recognize a match from a card we saw earlier. This is a screen capture from a game I played where I flipped pairs along each row beginning in the top left corner.
 
-![game-play](/assets/img/remembrance-of-things/game-play.png)
+![game-play](/assets/img/2022-05-10-remembrance-of-things/game-play.png)
+
+<p align = "center"><b>Matching Images</b></p>
 
 Amazingly, everything matched and I even got a matching pair on the second try. In the lower right, the first card flipped was the orangutan which I was able to match with a card seen earlier, and then the last card matched the first. So, this took six total trials to find four matches.
 
@@ -189,7 +193,9 @@ The more likely path, with probability $\frac{2}{3}$, is the two cards won't mat
 
 For a game with three pairs labeled $\{ 6,5,4,3,2,1 \}$, there's a $\frac{1}{5}$ probability of a match on the first turn, and then we can copy the paths we took previously. Otherwise, we need to check every possible outcome when the first two cards aren't a match. As you can see, the number of possible paths grows rapidly, and my calculations are probably wrong somewhere!
 
-![plays](/assets/img/remembrance-of-things/plays.png)
+![plays](/assets/img/2022-05-10-remembrance-of-things/plays.png)
+
+<p align = "center"><b>Probability Tree</b></p>
 
 ## A Monte Carlo Experiment
 
@@ -219,9 +225,9 @@ Continue this process until you've looked at everything but the last two cards. 
 
 Here's the flowchart of the process made with the free [Flowchart Maker & Online Diagram Software](https://app.diagrams.net/):
 
-![game-flowchart](/assets/img/remembrance-of-things/game-flowchart.svg)
+![game-flowchart](/assets/img/2022-05-10-remembrance-of-things/game-flowchart.svg)
 
-
+<p align = "center"><b>Game Flowchart</b></p>
 
 Put this into a loop, run it a bunch of times and you've got a Monte Carlo experiment. How many times is a "bunch"? One way to think about this is to ask how many ways can you shuffle $c$ cards? The answer is you can select the first card $c$ different ways, the second card $(c-1)$ ways, and so on. 
 
@@ -244,10 +250,21 @@ I wrote the [code](https://gist.github.com/XerxesZorgon/c4744fb75f98f40874be8cc0
 
 Using [Veusz](https://veusz.github.io/), I plotted $E[X]$ per match for each of the experiments:
 
-![shinkei-suijaku-monte-carlo](/assets/img/remembrance-of-things/shinkei-suijaku-monte-carlo.png)
+![shinkei-suijaku-monte-carlo](/assets/img/2022-05-10-remembrance-of-things/shinkei-suijaku-monte-carlo.png)
 
 which shows the ratio is a bit over $1.5$. For the case with four cards, $E[X] = 2.6$, a bit lower than the analytic estimate of $2.667$, and for six cards the Monte Carlo estimate was $E[X] = 4.559$, while the analytic solution was $5.8$. So, the analytic method seems to be a bit off.
 
 But, enough Shinkei-Suijaku. This is your
 
-![19th-Nervous-Breakdown-Rolling-Stones](/assets/img/remembrance-of-things/19th-Nervous-Breakdown-Rolling-Stones.png)
+![19th-Nervous-Breakdown-Rolling-Stones](/assets/img/2022-05-10-remembrance-of-things/19th-Nervous-Breakdown-Rolling-Stones.png)
+
+------
+
+#### Image credits
+
+Hero: [Remembrance of Things Past](https://www.midtownscholar.us/product/111967382/Remembrance-of-Things-Past-Combray-Remembrance-of-Things-Past-Graphic-Novels), Marcel Proust. Midtown Scholar Bookstore.
+
+Shinkei-Suijaku, You Win!, Matching Images: Jan De Wilde
+
+The Rolling Stones – 19th Nervous Breakdown, [Discogs](https://www.discogs.com/release/2640743-The-Rolling-Stones-19th-Nervous-Breakdown)
+

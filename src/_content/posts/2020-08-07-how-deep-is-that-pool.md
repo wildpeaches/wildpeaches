@@ -4,12 +4,12 @@ subtitle: The Mathematics of COVID-19 Testing
 author: John Peach
 lede:
 hero:
-  url: /assets/img/how-deep-is-the-pool/covid-virus.png
+  url: /assets/img/2020-08-07-how-deep-is-the-pool/covid-virus.png
   alt:
 date: 2020-08-07
 tags: [math, covid-19]
-keywords: []
-socialImg: /assets/img/how-deep-is-the-pool/covid-virus.png
+keywords: [Pool Testing, Covid, Opt]
+socialImg: /assets/img/2020-08-07-how-deep-is-the-pool/covid-virus.png
 ---
 
 To control the COVID-19 pandemic requires rapid testing of many people. One way to do this is to perform a single test on the combined samples taken from a group of people, called pool testing. [The American Society for Microbiology thinks it's time to jump in the pool](https://asm.org/Articles/2020/July/COVID-19-Pool-Testing-Is-It-Time-to-Jump-In) and [STAT agrees](https://www.statnews.com/2020/06/26/pool-testing-covid-19/).
@@ -72,7 +72,7 @@ So now it appears that 4 out of 100 or 4% are infected. Since we need to know th
 
 To find the number of tests required for a given infection rate $p$ means we need to find the value of $n$ that makes $T(n,p)$ the smallest.
 
-![Pool size for p = 7.5%](/assets/img/how-deep-is-the-pool/pool-size-p-seven-half.svg){.blend-multiply}
+![Pool size for p = 7.5%](/assets/img/2020-08-07-how-deep-is-the-pool/pool-size-p-seven-half.svg){.blend-multiply}
 
 ## Optimum Pool Sizes
 
@@ -86,13 +86,13 @@ for some value of $n$. That is, we're looking for the point on the curve where t
 
 Solving $\frac{dT}{dn} = 0$ for various values of $p$ gives this plot: ([python code here](https://gist.github.com/JanDW/2d555feb2967fd7fb3bb7525e03c2506))
 
-![Pool sizes](/assets/img/how-deep-is-the-pool/pool-sizes.svg){.blend-multiply}
+![Pool sizes](/assets/img/2020-08-07-how-deep-is-the-pool/pool-sizes.svg){.blend-multiply}
 
 shows that for infection rates above about 1% the pool sizes are less than 10 people, and by the time the positivity is above 5% the pool size needs to drop to 5 people or fewer.
 
 Once we have the optimal number of people per pool then for each infection probability $p$ we can calculate the number of required tests $T(n,p)$ shown here:
 
-![Tests required](/assets/img/how-deep-is-the-pool/tests-required.svg){.blend-multiply}
+![Tests required](/assets/img/2020-08-07-how-deep-is-the-pool/tests-required.svg){.blend-multiply}
 
 If you'd like a review of derivatives Grant Sanderson's ["Derivative formulas through geometry"](https://www.youtube.com/watch?v=S0_qX4VJhMQ) video is a very good start and is part of his [The Essence of Calculus](https://www.youtube.com/watch?v=WUvTyaaNkzM) series. A complete calculus course is also available from Khan Academy's [Calculus I](https://www.khanacademy.org/math/calculus-1).
 
@@ -110,6 +110,14 @@ The CRC [stopped collecting test data](https://coronavirus.jhu.edu/testing/indiv
 
 > This graph shows the total daily number of virus tests conducted in each state and of those tests, how many were positive each day. The trend line in blue shows the average percentage of tests that were positive over the last 7 days. The rate of positivity is an important indicator because it can provide insights into whether a community is conducting enough testing to find cases. 
 
-![covid-positivity](/assets/img/how-deep-is-the-pool/covid-positivity.png)
+![covid-positivity](/assets/img/2020-08-07-how-deep-is-the-pool/covid-positivity.png)
 
 Usama Kadri from Cardiff University has developed a [linear algebra method](https://www.tandfonline.com/doi/full/10.1080/20476965.2020.1817801) that tests samples from the same person in different pools multiple times to identify infected people, but it requires automated testing methods that may not be available to many hospitals. You can read about his technique in the 7 Oct 2020 edition of [SciTechDaily](https://scitechdaily.com/simple-algebra-enables-faster-large-volume-covid-19-testing/).
+
+------
+
+#### Image credits
+
+Hero: [peterschreiber.media](https://www.peterschreiber.media/) / Shutterstock
+
+Daily state-by-state testing trends chart: [Johns Hopkins](https://coronavirus.jhu.edu/testing/individual-states)

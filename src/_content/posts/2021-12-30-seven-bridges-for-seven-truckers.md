@@ -4,7 +4,7 @@ subtitle: An Eulerian circuit through the neighborhood
 author: John Peach
 lede: null
 hero:
-  url: /assets/img/seven-bridges-for-seven-truckers/seven-brides.png
+  url: /assets/img/2021-12-30-seven-bridges-for-seven-truckers/seven-brides.png
   alt: null
   class: hero--contain
 tags:
@@ -13,7 +13,7 @@ keywords:
   - graph theory
   - Euler circuit
   - Königsberg bridge problem
-socialImg: /assets/img/seven-bridges-for-seven-truckers/seven-brides.png
+socialImg: /assets/img/2021-12-30-seven-bridges-for-seven-truckers/seven-brides.png
 lastmod: '2022-03-04T21:11:23.175Z'
 ---
 
@@ -21,7 +21,7 @@ lastmod: '2022-03-04T21:11:23.175Z'
 
 We live in a small, quiet neighborhood. Still, trucks come fairly often.
 
-![seven-trucks](/assets/img/seven-bridges-for-seven-truckers/seven-trucks.png)
+![seven-trucks](/assets/img/2021-12-30-seven-bridges-for-seven-truckers/seven-trucks.png)
 
 Once a week the trash truck drives through, and the next day the recycling truck comes. The town provides street maintenance with three trucks. The leaf-eater truck is a giant Roomba for leaves, the stick-picker truck picks up large branches and sticks, and the gutter-sucker truck is a combination street sweeper and debris vacuum. FedEx and Amazon send trucks around several times a day, too.
 
@@ -33,7 +33,9 @@ One day, I watched the recycling truck come around and saw it make an efficient 
 
 Königsberg (now Kaliningrad) used to be in Prussia before the Soviet Union annexed the city on 9 April 1945. Königsberg was the home of philosopher Immanuel Kant, mathematician David Hilbert, and author Hannah Arendt.
 
-![konigsberg-bridges](/assets/img/seven-bridges-for-seven-truckers/konigsberg-plain.png)
+![konigsberg-bridges](/assets/img/2021-12-30-seven-bridges-for-seven-truckers/konigsberg-plain.png)
+
+<p align = "center"><b>Konigsberg Bridges</b></p>
 
 Six bridges connect the city on either side of the river to the two islands in the river, and one bridge connects the two islands. People in Königsberg wondered if you could find a walking path that crossed all seven bridges exactly once. Swimming back across the river is not allowed. They tried all sorts of routes through the city, but no one ever found a path that didn't require crossing at least one of the bridges twice.
 
@@ -41,15 +43,17 @@ Six bridges connect the city on either side of the river to the two islands in t
 
 Leonhard Euler, seen here wearing a pillowcase on his head (allegedly!), lived in nearby St. Petersburg. He proved why it isn't possible to cross all of the bridges exactly once, publishing his results in 1736, thus beginning the era of graph theory and topology.
 
-![leonhard-euler](/assets/img/seven-bridges-for-seven-truckers/leonhard-euler.jpg)
+![leonhard-euler](/assets/img/2021-12-30-seven-bridges-for-seven-truckers/leonhard-euler.jpg)
+
+<p align = "center"><b>Leonhard Euler</b></p>
 
 Euler's insight was that each of the four areas could be condensed down to a point or node, and the bridges could be represented as lines or edges connecting the nodes. The locations of the bridges didn't matter, but Euler realized the number of edges had to match the number of bridges connected to each node. Here's the way he thought about it, with land areas as red nodes and bridges as yellow arcs connecting them.
 
-![konigsberg-graph-overlay](/assets/img/seven-bridges-for-seven-truckers/konigsberg-graph-overlay.png)
+![konigsberg-graph-overlay](/assets/img/2021-12-30-seven-bridges-for-seven-truckers/konigsberg-graph-overlay.png)
 
 Can you start at any node and make a path to trace each yellow arc exactly once? Let's start with some simpler cases. If you doodle around with two or three nodes you might come up with these possible node-edge connections.
 
-![digraphs-two-three-nodes](/assets/img/seven-bridges-for-seven-truckers/digraphs-two-three-nodes.png)
+![digraphs-two-three-nodes](/assets/img/2021-12-30-seven-bridges-for-seven-truckers/digraphs-two-three-nodes.png)
 
 Notice the first graph in the top row is essentially identical to the third one in the top row. They both connect two nodes with a single edge, although in the second example, a third unconnected node can't be reached.
 
@@ -69,11 +73,11 @@ The Königsberg problem requires four nodes. The river divides the city into two
 
 With one edge, any orientation of the four nodes is equivalent to every other orientation. A rotation by $90\degree$ doesn't change the problem, and you can make a diagonal into an edge of the square by switching two vertices.
 
-![digraphs-four-nodes-one-edge](/assets/img/seven-bridges-for-seven-truckers/digraphs-four-nodes-one-edge.png)
+![digraphs-four-nodes-one-edge](/assets/img/2021-12-30-seven-bridges-for-seven-truckers/digraphs-four-nodes-one-edge.png)
 
 Flipping the square vertically or horizontally doesn't change anything, nor do flips along the diagonals. Here are all the unique combinations of zero or one edge on four nodes. I included the number of edges at each node at the top of each graph, and a red "X" indicates graphs without solutions.
 
-![digraphs-four-nodes](/assets/img/seven-bridges-for-seven-truckers/digraphs-four-nodes.png)
+![digraphs-four-nodes](/assets/img/2021-12-30-seven-bridges-for-seven-truckers/digraphs-four-nodes.png)
 
 ## Euler's Solution
 
@@ -83,13 +87,13 @@ Your path will need to either start or end at that node because once you've pass
 
 This is how Euler showed that the Königsberg bridge problem couldn't be solved. On the left is the original graph shown in the overlay above. In the middle, I shifted the nodes to the vertices of a square, and on the right I removed paired edges. Now you can see this is the impossible case $(1,1,1,3)$. Removing edge pairs doesn't change whether a solution exists or not, but it declutters the problem.
 
-![konigsberg-graph-reduced](/assets/img/seven-bridges-for-seven-truckers/konigsberg-graph-reduced.png)
+![konigsberg-graph-reduced](/assets/img/2021-12-30-seven-bridges-for-seven-truckers/konigsberg-graph-reduced.png)
 
 ## Digraphs
 
 Digraphs, or directed graphs, are one-way streets meaning you can only travel from one node to the other if the edge points in the right direction. Intersections are nodes, and each side of the street is a directed edge between the nodes.
 
-![directed-graph-in-nbrhd](/assets/img/seven-bridges-for-seven-truckers/directed-graph-in-nbrhd.png)
+![directed-graph-in-nbrhd](/assets/img/2021-12-30-seven-bridges-for-seven-truckers/directed-graph-in-nbrhd.png)
 
 The recycling truck made a U-turn at the intersection of Creekview Circle and Waterside Drive (in the upper right corner of the map). I didn't see the full route through the neighborhood, but the truck seemed to need only one trip per side of a street. It may have used Rock Spring Court to reverse direction rather than making two U-turns.
 
@@ -97,7 +101,9 @@ The numbers next to each node are the total number of connections. In parenthese
 
 Using the [Strava](https://www.strava.com/) app on my phone, I walked a path connecting all of the nodes using each edge exactly once.
 
-![strava-path](/assets/img/seven-bridges-for-seven-truckers/strava-path.png)
+![strava-path](/assets/img/2021-12-30-seven-bridges-for-seven-truckers/strava-path.png)
+
+<p align = "center"><b>Strava Path</b></p>
 
 If the graph makes a closed loop, it's called an Eulerian graph. I didn't quite close the gap at the intersection of Pathway Drive and Spring Valley Road in my Strava hike, but this path is an Eulerian circuit.
 
@@ -105,19 +111,25 @@ If the graph makes a closed loop, it's called an Eulerian graph. I didn't quite 
 
 Every time you type a word or phrase into Google, the search algorithm uses graph theory to find relevant web pages. It uses the number and importance of other websites connected to a site to determine how high to rank the page relative to other pages.
 
-![pageranks-example](/assets/img/seven-bridges-for-seven-truckers/pageranks-example.svg)
+![pageranks-example](/assets/img/2021-12-30-seven-bridges-for-seven-truckers/pageranks-example.svg)
+
+<p align = "center"><b>Page Ranks Example</b></p>
 
 Since page $B$ is considered very important, page $C$ receives a higher rank than page $E$ even though there are only two links to $C$, but nine to $E$.
 
 Social networking sites like LinkedIn and Facebook connect people and groups forming online graphs. Manufacturing supply chains connect manufacturers of subassemblies to factories performing final assembly. Printed circuit boards form graphs through the connections between components.
 
-![circuit-board-blue](/assets/img/seven-bridges-for-seven-truckers/circuit-board-blue.jpg)
+![circuit-board-blue](/assets/img/2021-12-30-seven-bridges-for-seven-truckers/circuit-board-blue.jpg)
+
+<p align = "center"><b>Circuit Board</b></p>
 
 In our previous post, ["A Research Rubric"](https://wildpeaches.xyz/blog/a-research-rubric/) we showed citation tools like [Connected Papers](https://www.connectedpapers.com/) and [Citation Gecko](https://www.citationgecko.com/) that use graphs to link scientific papers through citations, or similar topics. [VOSviewer](https://www.vosviewer.com/) is a tool to construct and visualize bibliographic networks.
 
 Other applications include scheduling, molecular and genomic biology, Feynman graphs in physics, and [chemical modeling](https://avogadro.cc/) where atoms are nodes and bonds form the edges of the graph.
 
-![avogadro-molecule](/assets/img/seven-bridges-for-seven-truckers/avogadro-molecule.png)
+![avogadro-molecule](/assets/img/2021-12-30-seven-bridges-for-seven-truckers/avogadro-molecule.png)
+
+<p align = "center"><b>Molecule in Avogadro</b></p>
 
 In 1956, [Edsger Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra) created an algorithm to find the [shortest path](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) between any two nodes in a graph, and it can even be used to find your way out of a [maze](https://towardsdatascience.com/solving-mazes-with-python-f7a412f2493f)!
 
@@ -136,7 +148,7 @@ K = \left[
 \right]
 $$
 
-![konigsberg-graph-unreduced](/assets/img/seven-bridges-for-seven-truckers/konigsberg-graph-unreduced.png)
+![konigsberg-graph-unreduced](/assets/img/2021-12-30-seven-bridges-for-seven-truckers/konigsberg-graph-unreduced.png)
 
 The top row says node $a$ is connected once to node $b$, zero times to node $c$, and twice to node $d$. These matrices are called sparse because often most of the entries are zero, especially in graphs with many nodes.
 
@@ -159,3 +171,21 @@ Some standalone open-source or free packages are:
 A free online textbook by Robin J. Wilson, "Introduction to Graph Theory" is available [here](https://www.maths.ed.ac.uk/~v1ranick/papers/wilsongraph.pdf).
 
 Graph theory has a lot to offer mathematically, and there are many applications for you to explore.
+
+------
+
+#### Image credits
+
+Hero: [Seven Brides for Seven Brothers (1954 poster)](https://commons.wikimedia.org/wiki/File:Seven_Brides_for_Seven_Brothers_(1954_poster).jpg), Wikimedia Commons.
+
+Konigsberg Bridges: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Konigsberg_Bridge.png).
+
+Leonhard Euler: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Leonhard_Euler.jpg). 
+
+Strava Path: Generated with [Strava App](https://www.strava.com/).
+
+Page Ranks Example: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:PageRanks-Example.svg).
+
+Circuit Board: Álvaro Marques, [Man Cave Office](https://www.pinterest.com/pin/wallpapers--395472411039455654/), Pinterest.
+
+Molecule in Avogadro: [Avogadro](https://avogadro.cc/): an open-source molecular builder and visualization tool. 

@@ -4,11 +4,11 @@ subtitle: Physics of Catastrophic Underwater Implosions
 author: John Peach
 lede: An introduction to the Wolfram Language
 hero:
-  url: /assets/img/big-squish-theory/nautilus.jpg
+  url: /assets/img/2023-08-22-big-squish-theory/nautilus.jpg
   alt:
 tags: [math]
 keywords: [Mathematica, Wave, Burgers' and Euler equations]
-socialImg: /assets/img/big-squish-theory/nautilus.jpg
+socialImg: /assets/img/2023-08-22-big-squish-theory/nautilus.jpg
 ---
 
 > Pressure pushing down on me
@@ -41,7 +41,9 @@ Your foot would be painfully squished, but nothing like what you'd feel dipping 
 
 In physics, there's a joke that starts, "Assume a [spherical cow](https://en.wikipedia.org/wiki/Spherical_cow)". The idea behind the spherical cow is that you should reduce assumptions to the minimum that allow the problem to still make sense, but also make it easy to solve.
 
-![SphericalCow2](/assets/img/big-squish-theory/SphericalCow2.gif)
+![SphericalCow2](/assets/img/2023-08-22-big-squish-theory/SphericalCow2.gif)
+
+<p align = "center"><b>Spherical Cow</b></p>
 
 So, let's assume a spherical bubble of air that we can somehow magically transport 3800 meters under the sea while maintaining standard atmospheric pressure typical at the surface. A spherical bubble is perfect because the pressure at the edge will be the same everywhere and a sphere is the best shape to counter that pressure. Now, let's say that whatever container you used to get the bubble down to the bottom instantly disappears. What happens to the bubble?
 
@@ -102,7 +104,9 @@ You'll need to install [Anaconda](https://www.anaconda.com/) because the [Wolfra
 
 After installing everything, launch the [Anaconda Navigator](https://docs.anaconda.com/free/navigator/index.html) and click on the "Launch" button under JupyterLab. This will open a new tab in your browser that will look something like this:
 
-![jupyter-wolfram](/assets/img/big-squish-theory/jupyter-wolfram.png)
+![jupyter-wolfram](/assets/img/2023-08-22-big-squish-theory/jupyter-wolfram.png)
+
+<p align = "center"><b>JupyterLab Notebook</b></p>
 
 Click on the Wolfram Language icon under "Notebook" to start a new Wolfram notebook. 
 
@@ -144,7 +148,7 @@ The wave equation gives the height of the wave $u(x,t)$ as a function of the pos
 $$
 u_{tt} = c^2 \nabla^2 u = c^2 u_{xx}
 $$
-says that the acceleration of a particle of fluid $u_{tt}$ is proportional to its displacement $\nabla^2 u$ relative to neighboring particles. (See *[The mathematics of PDEs and the wave equation](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://mathtube.org/sites/default/files/lecture-notes/Lamoureux_Michael.pdf)* by Michael P. Lamoureaux). This equation can be written as 
+says that the acceleration of a particle of fluid $u_{tt}$ is proportional to its displacement $\nabla^2 u$ relative to neighboring particles. (See *[The mathematics of PDEs and the wave equation](https://mathtube.org/sites/default/files/lecture-notes/Lamoureux_Michael.pdf)* by Michael P. Lamoureaux). This equation can be written as 
 $$
 u_{tt} - c^2 u_{xx} = \left( \frac{\partial}{\partial t} - c \frac{\partial}{\partial x}\right) \left( \frac{\partial}{\partial t} + c \frac{\partial}{\partial x}\right) u = 0.
 $$
@@ -154,9 +158,11 @@ u(x,t) = f(x+ct)+g(x-ct)
 $$
  where $f$ and $g$ are any functions of a single variable. Think of $f$ and $g$ as the outline of the wave and these outlines move left ($f$) and right ($g$) from their starting positions with velocity $c$. This is an [example](https://chem.libretexts.org/Courses/Pacific_Union_College/Quantum_Chemistry/02%3A_The_Classical_Wave_Equation/2.01%3A_The_One-Dimensional_Wave_Equation) of a wave where $f=0$:
 
-![string-pulse-redline](/assets/img/big-squish-theory/string-pulse-redline.gif)
+![string-pulse-redline](/assets/img/2023-08-22-big-squish-theory/wave-x-t.gif)
 
-It looks like the wave is moving from the left to the right, but any point on the wave just moves up and down. Watch the dot on the left side as it moves along the red line. From Newton's second law, $F = ma$, the term $u_{tt}$ describes the vertical acceleration (using $m = 1$) because it's the second derivative of position with respect to time.
+<p align = "center"><b>Wave Equation</b></p>
+
+It looks like the wave is moving from the left to the right, but any point on the wave just moves up and down. Watch the red dot as it moves along the white line. From Newton's second law, $F = ma$, the term $u_{tt}$ describes the vertical acceleration (using $m = 1$) because it's the second derivative of position with respect to time.
 
 The term $u_{xx}$ measures the steepness of the wave at any point $x$ and says that the steeper the wave, the faster it's accelerating. This is derived from [Hooke's Law](https://en.wikipedia.org/wiki/Hooke%27s_law) which says that the force of a spring scales linearly with how far it's been stretched. It helps to think of the wave as a plucked guitar string. The points where the wave is steepest are also the points where the guitar string has been stretched the most.
 
@@ -211,7 +217,9 @@ sol = NDSolve[waveEqnWithICs, u, {x, x0, xf}, {t, t0, tf}];
 
 and then plot the wave $u(x,t)$ against $x$ and $t$.
 
-![wave3D](/assets/img/big-squish-theory/wave3D.png)
+![wave3D](/assets/img/2023-08-22-big-squish-theory/wave3D.png)
+
+<p align = "center"><b>Wave in 3D</b></p>
 
 You can also show the wave in motion using
 
@@ -225,7 +233,9 @@ animation = ListAnimate[frames];
 animation
 ```
 
-![wave](/assets/img/big-squish-theory/wave.gif)
+![wave](/assets/img/2023-08-22-big-squish-theory/wave.gif)
+
+<p align = "center"><b>Standing Wave</b></p>
 
 This version of the wave equation simulates a plucked string where the ends of the string are fixed. This is done by setting the boundary conditions at the endpoints to $0$ for all times. To generate a traveling wave like the one shown above, you'll need to rewrite the boundary conditions.
 
@@ -235,21 +245,27 @@ Shocks are related to waves, and the PDE describing them is called [Burgers' Equ
 $$
 u_t + u u_x = 0.
 $$
-Burgers' is a simplification of the Navier-Stokes equations. Provide a proof of Navier-Stokes and the [Clay Mathematics Institute](https://www.claymath.org/millennium/navier-stokes-equation/) will award you one million dollars! 
+[Burgers](https://wikiwaves.org/Burgers_Equation)' is a simplification of the Navier-Stokes equations. Provide a proof of Navier-Stokes and the [Clay Mathematics Institute](https://www.claymath.org/millennium/navier-stokes-equation/) will award you one million dollars! 
 
 The term $u_t$ is the vertical velocity of a wave particle since it has just one time derivative. The derivative with respect to $x$, $u_x$ gives the slope, and multiplying it by the height of the function $u$ induces the shock:
 
-![File-Burgers2](/assets/img/big-squish-theory/File-Burgers2.gif)
+![File-Burgers2](/assets/img/2023-08-22-big-squish-theory/File-Burgers2.gif)
+
+<p align = "center"><b>Burgers Equation</b></p>
 
 This is a 2D simulation of Burgers' Equation in two dimensions where you can see the shock "pile up" as the wave moves.
 
-![inviscid-burgers-equation-in-two-dimensions](/assets/img/big-squish-theory/inviscid-burgers-equation-in-two-dimensions.gif)
+![inviscid-burgers-equation-in-two-dimensions](/assets/img/2023-08-22-big-squish-theory/inviscid-burgers-equation-in-two-dimensions.gif)
+
+<p align = "center"><b>Burgers 3D</b></p>
 
 This form is the simplest version of Burgers' where the sum of the terms is zero, which is the case for an [inviscid fluid](https://www.cambridge.org/core/books/abs/basic-aerodynamics/fundamentals-of-steady-incompressible-inviscid-flows/4F5672B432936FA6E9176571060C3822) which happens when two adjacent layers of the fluid can slip past each other without friction. 
 
 In most cases, PDEs can only be solved numerically. To do this, a grid is constructed in the $x-y$ plane, and $u(x,t)$ is solved for each time step over every square of the grid. The simulation improves with finer grids and shorter time steps, but the computational cost can be very high. Machine learning has helped reduce the grid density by discovering properties of the problem that reduce the complexity. Here's an [example](https://ai.googleblog.com/2019/07/learning-better-simulation-methods-for.html) of Burgers' using only 16 points:
 
-![Burgers](/assets/img/big-squish-theory/Burgers.gif)
+![Burgers](/assets/img/2023-08-22-big-squish-theory/Burgers.gif)
+
+<p align = "center"><b>Neural Network Approximation to Burgers</b></p>
 
 For the Mathematica version of Burgers' equation, I used a hyperbolic tangent function for the initial condition,
 $$
@@ -263,7 +279,9 @@ NDSolve::eerr: Warning: scaled local spatial error estimate of 6047.74 at t = 1.
 
 but created a plot anyway.
 
-![burgers-mathematica](/assets/img/big-squish-theory/burgers-mathematica.gif)
+![burgers-mathematica](/assets/img/2023-08-22-big-squish-theory/burgers-mathematica.gif)
+
+<p align = "center"><b>Mathematica Solution</b></p>
 
 Numerically, the solution becomes unstable fairly quickly when the shock forms. Better solutions are in the post [Solving Burger's equation with NDSolve at large time](https://mathematica.stackexchange.com/questions/267890/solving-burgers-equation-with-ndsolve-at-large-time) on the [Mathematica and Wolfram Language](https://mathematica.stackexchange.com/) Stack Exchange forum.
 
@@ -313,7 +331,9 @@ The total energy of a small volume of fluid is derived from several sources:
 
 For air at sea level and water at a depth of 3800 meters, the values of the variables are
 
-![water-air-properties-table](/assets/img/big-squish-theory/water-air-properties-table.png)
+![water-air-properties-table](/assets/img/2023-08-22-big-squish-theory/water-air-properties-table.png)
+
+<p align = "center"><b>Table of Properties</b></p>
 
 1. [NOAA](https://oceanexplorer.noaa.gov/facts/temp-vary.html) How does the temperature of ocean water vary?
 2. [Mac Instruments](https://macinstruments.com/blog/what-is-the-density-of-air-at-stp/#:~:text=According%20to%20the%20International%20Standard,%3A%200.0765%20lb%2Fft%5E3) What Is the Density of Air at STP?
@@ -346,11 +366,15 @@ NDSolve::ndsz: At t == 6.9232 10  , step size is effectively zero; singularity o
 
 The code generated a plot, but it ended at time step $t \approx 0.0005$. 
 
-![euler-shock](/assets/img/big-squish-theory/euler-shock.png)
+![euler-shock](/assets/img/2023-08-22-big-squish-theory/euler-shock.png)
+
+<p align = "center"><b>Mathematica Solution to Eulers Equation</b></p>
 
 A stiff system is one where conditions change very rapidly, which is what we might expect with very high-pressure water rushing into a bubble of standard atmospheric pressure air. Even with somewhat better conditions, you have to be careful about handling stiff problems. A question on the Mathematica Stack Exchange asked about accurately [solving the 1-D Euler equations](https://mathematica.stackexchange.com/questions/11748/1d-euler-equations-fluid-dynamics-with-ndsolve) using NDSolve, which was answered by adding a viscosity term to the equations. The plots of density, energy, and velocity looked like this:
 
-![Euler](/assets/img/big-squish-theory/Euler.gif)
+![Euler](/assets/img/2023-08-22-big-squish-theory/Euler.gif)
+
+<p align = "center"><b>Euler Equations with NDSolve</b></p>
 
 This didn't work for our Big Squish problem, but Mathematica wasn't meant to be used for this kind of problem. Instead, we need specialized code that can handle stiff problems which will be the subject of the next post.
 
@@ -386,7 +410,27 @@ Even though Mathematica wasn't able to solve The Big Squish Theory problem, hope
 
 After playing lead guitar in Queen, [Brian May](https://en.wikipedia.org/wiki/Brian_May) earned a Ph.D. in astrophysics. Here, he contemplates another spherical problem.
 
-![brian-may](/assets/img/big-squish-theory/brian-may.jpeg)
+![brian-may](/assets/img/2023-08-22-big-squish-theory/brian-may.jpeg)
+
+------
+
+#### Image credits
+
+Hero: [Cutaway of Jules Verne's Nautilus](https://www.deviantart.com/hisutton/art/Cutaway-of-Jules-Verne-s-Nautilus-555662500). H I Sutton, Deviant Art, Aug. 23, 2015.
+
+Spherical Cow: [Wikipedia](https://en.wikipedia.org/wiki/Spherical_cow), [Ingrid Kallick](https://ikallick.com/).
+
+Wave Equation: [Wave Motion in Time and Space](https://www.acs.psu.edu/drussell/Demos/wave-x-t/wave-x-t.html). [Dan Russell](http://www.acs.psu.edu/drussell/demos.html), [Acoustics and Vibration Animations](https://www.acs.psu.edu/drussell/demos.html), May 28, 2008.
+
+Burgers Equation: [Wikiwaves](https://wikiwaves.org/Burgers_Equation). 
+
+Burgers 3D: [Inviscid Burgers Equation in Two Dimensions](https://en.m.wikipedia.org/wiki/File:Inviscid_Burgers_Equation_in_Two_Dimensions.gif). Nick Rogers, Wikipedia, Feb 9, 2012.
+
+Neural Network Approximation to Burgers: [Learning Better Simulation Methods for Partial Differential Equations](https://blog.research.google/2019/07/learning-better-simulation-methods-for.html). Stephan Hoyer, Google Research, Jul. 23, 2019.
+
+Euler Equations with NDSolve: [1D Euler equations (fluid dynamics) with NDSolve](https://mathematica.stackexchange.com/questions/11748/1d-euler-equations-fluid-dynamics-with-ndsolve). [xzczd](https://mathematica.stackexchange.com/users/1871/xzczd), [Mathematica Stack Exchange](https://mathematica.stackexchange.com/), Dec. 9, 2016.
+
+Brian May: [Pinterest](https://www.pinterest.com/pin/419538521546981745/visual-search/?x=16&y=16&w=532&h=561).
 
 ------
 
@@ -397,12 +441,12 @@ After playing lead guitar in Queen, [Brian May](https://en.wikipedia.org/wiki/Br
 - [Burgers Equation](https://www.uni-muenster.de/imperia/md/content/physik_tp/lectures/ws2016-2017/num_methods_i/burgers.pdf)
 - [Burgers' equation](http://www.clawpack.org/riemann_book/html/Burgers.html) (clawpack)
 - [Note on One Dimensional Burgers Equation](https://www.researchgate.net/publication/333867601_Note_on_One_Dimensional_Burgers_Equation)
-- [Numerical solutions of the Burgers’ equation by the least-squares quadratic B-spline finite element method](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://core.ac.uk/download/pdf/82349445.pdf)
-- [Notes on Burgers' Equation](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.math.umd.edu/~mariakc/burgers.pdf)
+- [Numerical solutions of the Burgers’ equation by the least-squares quadratic B-spline finite element method](https://core.ac.uk/download/pdf/82349445.pdf)
+- [Notes on Burgers' Equation](https://www.math.umd.edu/~mariakc/burgers.pdf)
 - [Solution of Burgers equation with some initial data](https://mathematica.stackexchange.com/questions/197288/solution-of-burgers-equation-with-some-initial-data)
-- [Discontinuous Galerkin Methods for Computational Fluid Dynamics](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www-users.cse.umn.edu/~bcockbur/lecture_notes/DG-4.pdf)
+- [Discontinuous Galerkin Methods for Computational Fluid Dynamics](https://www-users.cse.umn.edu/~bcockbur/lecture_notes/DG-4.pdf)
 - [One Dimensional Euler's Equations of Gas Dynamics](http://www.csun.edu/~jb715473/examples/euler1d.htm)
-- [The Euler Equation of Gas-Dynamics](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/http://personalpages.to.infn.it/~mignone/Plasma_Physics/euler_eqns.pdf)
+- [The Euler Equation of Gas-Dynamics](http://personalpages.to.infn.it/~mignone/Plasma_Physics/euler_eqns.pdf)
 - [Compressible Euler Equations](https://www.theoretical-physics.com/dev/fluid-dynamics/euler.html) (Theoretical Physics Reference)
 - [Euler equations (fluid dynamics)](https://en.wikipedia.org/wiki/Euler_equations_(fluid_dynamics))
 - [An Overview of Euler's Equations in Fluid Dynamics](https://resources.system-analysis.cadence.com/blog/msa2021-an-overview-of-eulers-equations-in-fluid-dynamics)

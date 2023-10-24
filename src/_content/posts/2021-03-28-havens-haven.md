@@ -4,11 +4,11 @@ subtitle: Chakravala in a Taxicab
 author: John Peach
 lede:
 hero:
-  url: /assets/img/havens-haven/havens-hardy-ramanujan.jpg
+  url: /assets/img/2021-03-28-havens-haven/havens-hardy-ramanujan.jpg
   alt: Drawing by Chris Havens of Hardy and Ramanujan.
 tags: [math]
 keywords: [Number Theory, Pell's Equation, Prison Math Project]
-socialImg: /assets/img/havens-haven/havens-hardy-ramanujan.jpg
+socialImg: /assets/img/2021-03-28-havens-haven/havens-hardy-ramanujan.jpg
 ghDiscussion: 131
 ---
 
@@ -22,17 +22,21 @@ If you were facing a 25 year stretch for murder and had landed in solitary for a
 
 While in solitary, Havens started working puzzles and then realized that the guards were handing out math problems to other prisoners. He did as much math as they could provide, quickly learning calculus and number theory, but eventually exceeded the guards' ability to keep up with his level.
 
-![Chris Havens](/assets/img/havens-haven/chris-havens.jpg){.panel}
+![Chris Havens](/assets/img/2021-03-28-havens-haven/chris-havens.jpg){.panel}
+
+<p align = "center"><b>Chris Havens</b></p>
 
 That's when he sent this letter that eventually arrived on the desk of Matthew Cargo, editor for [Mathematical Sciences Publishers](https://msp.org/), whose partner [Marta Cerruti](https://theconversation.com/an-inmates-love-for-math-leads-to-new-discoveries-130123 "An inmate's love for math leads to new discoveries") is Associate Professor of Materials Engineering at McGill University.
 
-![Havens' letter to Matthew Cargo.](/assets/img/havens-haven/havens-letter.jpg)
+![Havens' letter to Matthew Cargo.](/assets/img/2021-03-28-havens-haven/havens-letter.jpg)
+
+<p align = "center"><b>Havens Letter</b></p>
 
 Her parents are mathematicians and her father, Umberto Cerruti, is a number theorist at the University of Torino in Italy. Umberto Cerruti sent Havens a problem to work on, and Christopher wrote back with a long, complicated solution that turned out to be correct.
 
 Christopher has since published a paper jointly with Cerruti and two other mathematicians, in the journal _Research in Number Theory_, ["Linear fractional transformations and nonlinear leaping convergents of some continued fractions"](https://link.springer.com/article/10.1007/s40993-020-0187-5 'Linear fractional transformations and nonlinear leaping convergents of some continued fractions | SpringerLink'). He hopes to [inspire other prisoners through mathematics](https://www.inspiremore.com/christopher-havens-prison-mathematics-project/ 'Prisoner Discovers New Life In Math And Starts Nonprofit To Help Others Find Hope. – InspireMore') and has started the [Prison Mathematics Project (PMP)](https://www.prisonmathproject.org/ 'Prison Math Project – The Prison Mathematics Projects') to connect inmates with mathematicians. They hold bi-weekly meetings to discuss math problems and work on larger projects. Beginning in 2016 the PMP has been holding Pi Day celebrations.
 
-"You should never set aside your dreams and goals and dismiss them as impossible just because you are institutionally challenged," [Havens said](https://www.doc.wa.gov/news/2017/03172017.htm 'Easy As Pi: Inmates Find Motivation Through Mathematics | Washington State Department of Corrections'). "Today is not just a day to celebrate pi, but mathematics as a whole and celebrate an opportunity we have to move our lives in a positive direction."
+"You should never set aside your dreams and goals and dismiss them as impossible just because you are institutionally challenged," [Havens said](https://medium.com/@WACorrections/easy-as-pi-inmates-find-motivation-through-mathematics-ce284067618d). "Today is not just a day to celebrate pi, but mathematics as a whole and celebrate an opportunity we have to move our lives in a positive direction."
 
 Besides having a research paper published, Chris also submitted a problem to [_Math Horizons_](https://www.maa.org/press/periodicals/math-horizons 'Math Horizons | Mathematical Association of America'), a magazine published by the [Mathematical Association of America (MAA)](https://www.maa.org/ 'Homepage | Mathematical Association of America') meant to be accessible to undergraduate mathematics majors. The [problem](https://www.popularmechanics.com/science/math/a35520893/havens-math-horizons-problem/ 'A Self-Taught Math Genius Wrote This Riddle While Serving Time in Prison. Can You Solve It? (popularmechanics.com)') is this, _What is the smallest positive integer $y$ such that $1729y^2 + 1$ is a perfect square_? This is a form of Pell's Equation, and there's a connection to the mathematicians Srinivasa Ramanujan and G. H. Hardy.
 
@@ -66,7 +70,9 @@ In the 7th century, Indian mathematician and astronomer [Brahmagupta](https://ww
 
 The equations are hyperbolic functions and have solutions at points where both $x$ and $y$ are integers. This is an example of the equation $x^2 - 2y^2 = 1$ plotted in [Desmos](https://www.desmos.com/calculator 'Desmos | Graphing Calculator'). Use `x^2-2y^2=1` to plot the function, and plot solutions in the form $(x,y)$ as shown on the second line.
 
-![pells-equation-x^2-2y^2=1](/assets/img/havens-haven/pells-equation-x^2-2y^2=1.png)
+![pells-equation-x^2-2y^2=1](/assets/img/2021-03-28-havens-haven/pells-equation-x^2-2y^2=1.png)
+
+<p align = "center"><b>Pell's Equation in Desmos</b></p>
 
 In the 12th century, [Bhāskara II](https://www.thefamouspeople.com/profiles/bhskara-ii-6835.php) (1114–1185) continued the work of Brahmagupta (598–670) and developed an algorithm for finding solutions that he called the _Chakravala Method_.
 
@@ -189,7 +195,9 @@ $$
 
 then $n$ goes into $a$ $q$ times with a remainder of $r$. An example is the angle when going around a circle:
 
-![modulo-pi](/assets/img/havens-haven/modulo-pi.png)
+![modulo-pi](/assets/img/2021-03-28-havens-haven/modulo-pi.png)
+
+<p align = "center"><b>&theta; mod &pi; in Desmos</b></p>
 
 If the circle has a radius of $1$, then the angle $\theta$ ranges from $0$ to $2 \pi$, but once it gets back to the $x$-axis the remainder resets to $0$. That is, you can't tell from looking at where the pointer is whether it's gone around zero times, once, twice, or more. The sloped lines in this plot represent the remainder of the angle after dividing by $2 \pi$. Usually, the numbers $a,q,n$, and $r$ are integers and the equation is often written as
 
@@ -484,7 +492,7 @@ $$
 
 Using the [PARI/GP](http://pari.math.u-bordeaux.fr/ 'PARI/GP Development Headquarters (u-bordeaux.fr)') language, the code [chakravala.gp](https://gist.github.com/XerxesZorgon/e746ca856e8e0e51bbab1c6874dc6ded) finds the smallest values of $a$ and $b$ for a given $n$. This is a screenshot of the solution to Chris Havens' problem with the Ramanujan-Hardy Taxicab number 1729:
 
-![havens-hardy-ramanujan-solution](/assets/img/havens-haven/havens-hardy-ramanujan-solution.png)
+![havens-hardy-ramanujan-solution](/assets/img/2021-03-28-havens-haven/havens-hardy-ramanujan-solution.png)
 
 ## The Prison Mathematics Project
 
@@ -494,4 +502,16 @@ The Prison Mathematics Projects likes to hear from people willing to volunteer t
 
 If you have some ability in mathematics and would like to volunteer, you can [submit your name](https://www.prisonmathproject.org/volunteer/ 'Volunteer – Prison Math Project') and email address, and the PMP will connect you with an inmate to become their "pen pal". [Donations](https://www.prisonmathproject.org/donate/ 'Donate – Prison Math Project') are also greatly appreciated.
 
-![pmp](/assets/img/havens-haven/pmp.jpg){.blend-multiply}
+![pmp](/assets/img/2021-03-28-havens-haven/pmp.jpg){.blend-multiply}
+
+------
+
+#### Image credits
+
+Hero: Mathematical Association of America, [Pi Day Behind Bars Doing Mathematics In Prison](https://digitaleditions.sheridan.com/publication/?i=524260&article_id=3183679&view=articleBrowser), Luisella Caire, Umberto Cerruti, Gary Gordon
+
+Chris Havens: MAA, Pi Day Behind Bars Doing Mathematics In Prison
+
+Havens Letter: The Conversation, [An inmate’s love for math leads to new discoveries](https://theconversation.com/an-inmates-love-for-math-leads-to-new-discoveries-130123), Marta Cerruti May 14, 2020
+
+Pell's Equation in Desmos: [Desmos Studio](https://www.desmos.com/) [Calculator](https://www.desmos.com/calculator)

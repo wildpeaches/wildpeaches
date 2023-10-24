@@ -4,14 +4,14 @@ subtitle: Mathematicians Fooled by Probability, an R Experiment To Show Why They
 author: John Peach
 lede: Controversial Ask Marylin column about the Monty Hall problem solved.
 hero:
-  url: /assets/img/marylin-and-the-goats/men-who-stare-at-goats.jpg
+  url: /assets/img/2021-01-07-marylin-and-the-goats/men-who-stare-at-goats.jpg
   alt: Still from The Men Who Stare at Goats (movie).
 tags: [math]
 keywords: [probability, simulation, R language]
-socialImg: /assets/img/marylin-and-the-goats/game-show.jpg
+socialImg: /assets/img/2021-01-07-marylin-and-the-goats/game-show.jpg
 pullQuote:
   author: Marylin vos Savant
-  imgUrl: /assets/img/marylin-and-the-goats/marilyn-vos-savant.jpg
+  imgUrl: /assets/img/2021-01-07-marylin-and-the-goats/marilyn-vos-savant.jpg
   imgAlt: Headshot of Marylin vos Savant.
   quote: To acquire knowledge, one must study; but to acquire wisdom, one must observe.
 ---
@@ -40,7 +40,9 @@ In 1990 a reader of the _Ask Marylin_ column wrote, "Suppose you're on a game sh
 
 In 1975 Steve Selvin, a statistician at UC Berkeley, presented the same problem to the _American Statistician_, calling it _The Monty Hall Problem_ from the game show _Let's Make a Deal_.
 
-![game-show](/assets/img/marylin-and-the-goats/game-show.jpg)
+![game-show](/assets/img/2021-01-07-marylin-and-the-goats/game-show.jpg)
+
+<p align = "center"><b>Let's Make A Deal Game Show</b></p>
 
 Monty Hall is required by the game rules to
 
@@ -88,13 +90,15 @@ _You are the goat!_
 
 First, you pick a door, any door. Suppose you pick a door with a goat. Then Monty will show you the other goat, and you should switch to the third door. If you pick the door with the car, Monty shows you one of the goats and you shouldn't switch. Since you don't know what's behind the door you initially selected, let's follow Marylin's logic of always switching.
 
-![Diagram stepping through each scenario, revealing car as outcome 2/3 of the time.](/assets/img/marylin-and-the-goats/goat-analysis-emoji.png)
+![Diagram stepping through each scenario, revealing car as outcome 2/3 of the time.](/assets/img/2021-01-07-marylin-and-the-goats/goat-analysis-emoji.png)
+
+<p align = "center"><b>Goat Logic</b></p>
 
 If you happen to pick a door with a goat, then by switching you end up with the car. Two-thirds of the time you'll be randomly choosing a door with a goat, so by switching you have a $2/3$ chance of getting the car. On the other hand, if you don't switch, you'll get your first choice (the first column) and wind up with the goat two out of three times. What Scott Smith, Ph.D., University of Florida gets wrong is that the chances are fixed after your initial selection. The host always shows you a goat and that doesn't change the odds, it just changes which door you should choose next.
 
 Maybe some people were confused by the last branch where you pick the door with the car and then there's a split depending on which goat Monty chooses. Another way to look at it is that you'll choose the top branch here with probability $2/3$ and the bottom branch with probability $1/3$:
 
-![goat-analysis2](/assets/img/marylin-and-the-goats/goat-analysis-emoji-2.png)
+![goat-analysis2](/assets/img/2021-01-07-marylin-and-the-goats/goat-analysis-emoji-2.png)
 
 Could you improve your odds of winning the car by randomly choosing to switch or not? Suppose you decide to switch with probability $p$. Then the odds of winning that shiny red car become
 
@@ -144,7 +148,9 @@ For a much bigger simulation, you either need a lot of patience or to write some
 
 First, download and install [**R**](https://www.r-project.org/), and I recommend the IDE [RStudio](https://rstudio.com/products/rstudio/). RStudio provides [tutorials](https://education.rstudio.com/learn/beginner/) for beginners to help get started with the environment, with the R language, and with associated packages. When you start RStudio, it should look something like this:
 
-![RStudio](/assets/img/marylin-and-the-goats/RStudio.png)
+![RStudio](/assets/img/2021-01-07-marylin-and-the-goats/RStudio.png)
+
+<p align = "center"><b>RStudio IDE</b></p>
 
 The upper left pane (click on the green circle with the white + below <u>F</u>ile if it's not open), is where you can write new R scripts. The pane below is the console for interacting directly with the language. On the right side are panes for Environment, History, Connections, and Tutorials and below for Files, Plots, Packages, Help, and Viewer. You might find the [RStudio Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/master/rstudio-ide.pdf) handy, too.
 
@@ -203,3 +209,14 @@ Today's pop quiz is the Mega Test. You have 15 minutes.
 ---
 
 _Update January 17, 2021:_ [Monty Hall simulation in JavaScript](https://gist.github.com/JanDW/30342afdcd8d51b7fe5eccdf8f541754)
+
+------
+
+#### Image credits
+
+Hero: [The Men Who Stare at Goats](https://www.imdb.com/title/tt1234548/)
+
+Let's Make A Deal Game Show: Jan De Wilde
+
+RStudio IDE: [Posit, PBC](https://posit.co/)
+

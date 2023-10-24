@@ -4,7 +4,7 @@ subtitle: Catamaran Parameters in SMath Studio
 author: John Peach
 lede: How are boats, velociraptors, and walking on the Moon related? We'll find out by designing a catamaran and making a mistake.
 hero:
-  url: '/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/hero-image.jpg'
+  url: '/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/hero-image.jpg'
   alt: 'Illustration of a velociraptor walking on the moon with a sailing ship in the background.'
 tags: [math]
 keywords: [hull design, units]
@@ -27,7 +27,9 @@ eleventyComputed:
 
 [Isambard Kingdom Brunel](https://en.wikipedia.org/wiki/Isambard_Kingdom_Brunel) an English civil engineer described as ["one of the most ingenious and prolific figures in engineering history"](https://rdcu.be/b9l6p) designed the SS Great Eastern which was launched in 1858. The Great Eastern was by far the largest ship built to date at 211 m in length and a displacement of 32,160 tons. Four steam engines with a combined power of 6 MW powered the Great Eastern.
 
-![Great Eastern 1866](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/great-eastern-1866.svg)
+![Great Eastern 1866](/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/great-eastern-1866.svg)
+
+<p align = "center"><b>The Great Eastern</b></p>
 
 Brunel wanted a ship that could circumnavigate the globe without refueling and figured that it could carry a larger cargo with a smaller crew. But in the end, the Great Eastern couldn't maintain a speed much more than about 14 knots (1 knot = 1 nautical mile/hour = 1.15 mph) and wasn't the financial success Brunel hoped.
 
@@ -43,21 +45,21 @@ A consistent set of units helps the designer keep track of the parameters. If th
 
 The length overall $L_H$ (often abbreviated as LOA) is the maximum length dimension. The waterline length $L_{WL}$ is the maximum length touching the water if the water is still. In this example, they are nearly the same, $L_H = 12.2 \; m$ and $L_{WL} = 12.0 \; m$. The canoe body draft (often just called draft), $T_C$, which is the maximum depth below the waterline, will be derived later.
 
-![Side view](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/side-view.png)
+![Side view](/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/side-view.png)
 
 In SMath Studio you can enter values for total length and waterline length like this:
 
-![SMath Studio length parameters](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/smath-studio-length-parameters.svg)
+![SMath Studio length parameters](/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/smath-studio-length-parameters.svg)
 
 SMath Studio lets you start equations anywhere on the page, although an equation calling on a previous equation needs to be below the first equation. To enter $L_H$ type "L" followed by a period "." which starts a subscript, then "H". Type ":" to assign a value to your variable, and SMath Studio will fill in the equal sign after the colon. Now enter the variable value of $12.2$ followed by "m" for meters. A units menu box will open showing available units beginning with the letter "m":
 
-![Smath Studio length unit entry](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/smath-studio-length-unit-entry.svg)
+![Smath Studio length unit entry](/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/smath-studio-length-unit-entry.svg)
 
 Press the TAB key to accept the choice of meters. Units are shown in blue on the worksheet. If you see a black "m" where you think a meter unit should be, go back and re-enter the unit.
 
 Typing text somewhere on the page generates a comment. Click on the palette icon on the toolbar and you can change the background color of the comment.
 
-![SMath Studio text color](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/smath-studio-text-color.svg)
+![SMath Studio text color](/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/smath-studio-text-color.svg)
 
 That's almost everything you need to know about SMath Studio for this project.
 
@@ -69,7 +71,7 @@ $$
 
 Select $L_{BR}$ somewhere between 9 and 12 for a cruising catamaran. Lower values will make the hulls narrower, and decrease draft if all other parameters remain the same. For this example, set $L_{BR} = 11.0$. In this figure, the inner curve is the waterline which is where the hull touches the surface of the water. The outer curve is the outline of the hull.
 
-![Single hull top view](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/single-hull-top-view.svg)
+![Single hull top view](/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/single-hull-top-view.svg)
 
 Reducing the width of the hull would result in a deeper draft, but doesn't here is because of the next ratio, the beam to draft ratio, $B_{TR}$, which is used to determine the canoe body draft
 
@@ -87,17 +89,19 @@ $$
 C_m = \frac{A_m}{B_{WL}T_C}.
 $$
 
-![Section view](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/section-view.svg)
+![Section view](/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/section-view.svg)
 
 Since the area of a triangle is $\frac{1}{2} wh$, a vee-shaped hull will have a minimum at $C_m = 0.5$, while elliptical cross-section results in $C_m = 0.785$, and a more rectangular cross-section might have $C_m = 0.9$. Large cargo ships have rectangular sections, but for sailboats, elliptical cross-sections are more typical.
 
 James Wharram designs catamarans meant to be cut from sheets of marine plywood with no rounded cross-sections, such as the Ariki shown here. Construction is simpler, but the midship coefficient is quite low.
 
-![Ariki](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/ariki.jpg)
+![Ariki](/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/ariki.jpg)
+
+<p align = "center"><b>Wharram Ariki</b></p>
 
 The area of any ellipse divided by the area of the enclosed bounding box may be calculated as follows. The parametric equation for an ellipse is $(a \cos t, b \sin t)$ with $t \in [0,2\pi]$,
 
-![ellipse](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/ellipse.svg){.blend-multiply}
+![ellipse](/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/ellipse.svg){.blend-multiply}
 
 so the area of a quarter ellipse is
 
@@ -134,7 +138,7 @@ $$
 
 Lucky guess! This is exactly the value Terho Halme chose for the example. Values for $C_w$ are typically between 0.69 and 0.72 for catamarans.
 
-![Waterplane coefficient](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/waterplane-coefficient.svg)
+![Waterplane coefficient](/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/waterplane-coefficient.svg)
 
 The final design parameter is the length to beam ratio, $LBRC$, which is the ratio of the overall length to the distance between hull centers or centerline beam,
 
@@ -142,13 +146,13 @@ $$
 LBRC = \frac{L_H}{B_{CB}}.
 $$
 
-![Two hulls top view](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/two-hulls-top-view.svg)
+![Two hulls top view](/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/two-hulls-top-view.svg)
 
 A high value of $LBRC$ means $B_{CB}$ is small relative to the length and will reduce transverse stability, possibly leading to capsize. Low values mean that the boat will be wider and heavier, but able to carry more sail area. For this example, set $LBRC = 2.2$.
 
 Your SMath Studio worksheet should look something like this:
 
-![SMath Studio design parameters](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/smath-studio-design-parameters.svg)
+![SMath Studio design parameters](/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/smath-studio-design-parameters.svg)
 
 I also included two constants, the number of hulls $n_{Hull} = 2$ and the density of seawater, $\rho_{SW} = 1025 \frac{kg}{m^3}$.
 
@@ -158,7 +162,9 @@ The remaining calculations are derived from these parameters and can be added to
 
 When you add these equations to the worksheet include an equals sign "=" at the end to make SMath Studio immediately evaluate them.
 
-![SMath Studio derived parameters](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/smath-studio-derived-parameters.svg)
+![SMath Studio derived parameters](/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/smath-studio-derived-parameters.svg)
+
+<p align = "center"><b>Derived Parameters SMath Studio</b></p>
 
 The loaded displacement $m_{LDC}$ is calculated from the volume enclosed by the waterline length and beam times the draft, then scaled by prismatic and midship coefficients and multiplied by the density of seawater. This is the mass of water displaced by the boat sitting in the water which must equal the mass of the boat. Empty and light displacements are also calculated as 70% and 80% of the loaded displacement, respectively.
 
@@ -220,10 +226,11 @@ $$
 
 which is the usual representation. Froude also measured the drag, or viscous resistance, of a flat plate through the water. The dimensionless Reynolds number is the ratio of the inertial force to the viscous force and is used to estimate the viscous resistance. This plot shows the components forming the total resistance as a function of ship speed (from ["Resistance and powering of ships"](https://www.usna.edu/NAOE/_files/documents/Courses/EN400/02.07%20Chapter%207.pdf)):
 
-![Resistance and powering of ships](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/resistance-and-powering-of-ships.png){ .blend-multiply}
+![Resistance and powering of ships](/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/resistance-and-powering-of-ships.png){ .blend-multiply}
+
+<p align = "center"><b>Components of Hull Resistance </b></p>
 
 Now we can write the velocity in terms of the Froude number,
-
 $$
 V = Fr \sqrt{gL} = 3.1 Fr \sqrt{L} \; \frac{m}{s}
 $$
@@ -232,11 +239,15 @@ since $g = 9.8 \frac{m}{s^2}$. This means Halme's hull speed of $8.5 \; \frac{m}
 
 From <cite>[Thin or bulky: optimal aspect ratios for ship hulls, by Boucher et al](https://arxiv.org/abs/1803.10695)</cite>, the Froude number for multihull sailboats seems to cluster around $1.25$, a bit higher than Halme's estimate ($U$ is the velocity):
 
-![Optimal aspect ratios for ship hulls](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/optimal-aspect-ratios-for-ship-hulls.png){.panel .pr-4}
+![Optimal aspect ratios for ship hulls](/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/optimal-aspect-ratios-for-ship-hulls.png){.panel .pr-4}
+
+<p align = "center"><b>Froude Numbers</b></p>
 
 What's so special about the hull speed? It's the speed where the boat length $L$ matches the length of the wave $Lw$ generated by the bow. When this happens, the stern just catches up to the previous bow wave and can ride on it. Above this speed, the boat is always working uphill against the bow wave as can be seen [here](https://www.usna.edu/NAOE/_files/documents/Courses/EN400/02.07%20Chapter%207.pdf). This is why the characteristic length was chosen to be the length of the boat.
 
-![Wavelength vs speed](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/wavelength-vs-speed.png){.blend-multiply}
+![Wavelength vs speed](/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/wavelength-vs-speed.png){.blend-multiply}
+
+<p align = "center"><b>Wavelength vs Speed</b></p>
 
 ## Velociraptors
 
@@ -260,7 +271,9 @@ Alexander measured the stride length from dinosaur footprints and got the charac
 
 But, what about velociraptors? They will stalk you, hunt you down, and chew you to little bits. Is there any hope to outrun them?
 
-![Velociraptors](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/velociraptors.jpg)
+![Velociraptors](/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/velociraptors.jpg)
+
+<p align = "center"><b>Velociraptors</b></p>
 
 Velociraptor stride lengths are usually about $\lambda = \frac{1}{4} \; m$, and the hip height $L = 0.72 \; m$ giving a velocity estimate of
 
@@ -270,7 +283,9 @@ $$
 
 The stride lengths were taken from footprints where the velociraptor may have been walking, so running speeds could be a bit higher. In the movie, velociraptors were scaled up quite a lot as the actual animal was probably about the size of a turkey and may have been more like this, um, [vicious-looking dinosaur](https://www.nhm.ac.uk/discover/velociraptor-facts.html):
 
-![Vicious velociraptor](/assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/vicious-velociraptor.jpg){ .blend-multiply}
+![Vicious velociraptor](/assets/img/2020-11-23-of-sailing-ships-velociraptors-and-walking-on-the-moon/vicious-velociraptor.jpg){ .blend-multiply}
+
+<p align = "center"><b>Vicious Velociraptor</b></p>
 
 ## Walking on the Moon
 
@@ -283,3 +298,25 @@ $$
 The Apollo astronauts found that attempting to walk at normal terrestrial speeds on the Moon was quite difficult and wound up skipping instead. Even though gravity is reduced on the Moon, their walking speed and stride length didn't match what they were used to on Earth. A more complete description of the connection between the Froude number and walking and running speeds can be found in the paper by Vaughn and O'Malley, ["Froude and the contribution of naval architecture to our understanding of bipedal locomotion."](https://me.queensu.ca/People/Deluzio/JAM/files/04.01.2011_Kevin.pdf)
 
 William Froude's experiments show that a boat's hull speed, the length of a velociraptor's stride, and the effects of the gravitational field on the Moon are all related.
+
+------
+
+#### Image credits
+
+Hero: Jan De Wilde, Velociraptor Walking on the Moon
+
+The Great Eastern: Robert Edward Holloway, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Great_Eastern_1866-crop.jpg)
+
+Catamaran lines drawings: CatamaranSite, [Catamaran Design Formulas](https://www.catamaransite.com/reference/catamaran_hull_design_formulas/)
+
+Wharram Ariki: James Wharram Designs, [Ariki](https://www.wharram.com/gallery/classic-designs/ariki)
+
+Components of Hull Resistance: US Naval Academy Engineering 400 Class, Chapter 7. RESISTANCE AND POWERING OF SHIPS (P. 7-8) [RESISTANCE AND POWERING OF SHIPS](https://www.usna.edu/NAOE/_files/documents/Courses/EN400/02.07%20Chapter%207.pdf).
+
+Froude Numbers: Boucher et al. [Thin or bulky: optimal aspect ratios for ship hulls](https://arxiv.org/abs/1803.10695)
+
+Wavelength vs Speed: US Naval Academy Engineering 400 Class, Chapter 7. RESISTANCE AND POWERING OF SHIPS (P. 7-17)
+
+Velociraptors: Jurassic-pedia [Velociraptor “antirrhopus”](https://www.jurassic-pedia.com/velociraptor-antirrhopus-sf/)
+
+Vicious Velociraptor: Matt Martyniuk, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Velociraptor_dinoguy2.jpg)

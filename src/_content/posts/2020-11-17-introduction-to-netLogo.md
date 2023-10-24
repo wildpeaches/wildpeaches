@@ -4,7 +4,7 @@ subtitle: Using Agent-Based Modeling to Study Emergent Systems
 author: John Peach
 lede: I'm going to introduce NetLogo and show you how to write a simple program that has a surprising outcome. I won't show the result, so you'll need to download the software and try it yourself.
 hero:
-  url: /assets/img/netlogo-introduction/netlogo-screen-shot.png
+  url: /assets/img/2020-11-17-netlogo-introduction/netlogo-screen-shot.png
   alt:
 tags: [math]
 keywords: [Agent Based Model, Emergent Systems]
@@ -28,7 +28,7 @@ $$
 
 where $\frac{ds}{dt}$ represents the growth rate of the sheep population $s$, $\frac{dw}{dt}$ is the rate of increase of the wolf population $w$, and the constants $\alpha, \beta, \delta$, and $\gamma$ control the interaction between the species. NetLogo lets you simulate the predator-prey model without needing to understand the math behind the interactions.
 
-![Wolves and sheep](/assets/img/netlogo-introduction/wolf-sheep.svg)
+![Wolves and sheep](/assets/img/2020-11-17-netlogo-introduction/wolf-sheep.svg)
 
 The rules for the sheep-agents are pretty simple. First, they move in search of a new patch of grass and this move costs one unit of energy. If they find grass they eat it, but if their energy is too low they die. With sufficient energy, they can reproduce. Wolf rules are the same except they eat sheep instead of grass. At each time step, or "tick" every agent follows it's own set of rules and the system evolves.
 
@@ -47,7 +47,7 @@ The rules for the sheep-agents are pretty simple. First, they move in search of 
 
 When you run this simulation you'll see the sheep running around searching for grass, the wolves searching for sheep, and the grass being eaten. A plot of the sheep and wolf populations looks like this.
 
-![Population Plot](/assets/img/netlogo-introduction/population-plot.svg)
+![Population Plot](/assets/img/2020-11-17-netlogo-introduction/population-plot.svg)
 
 If you'd like to run this example, go to Files $\rightarrow$ Model Library $\rightarrow$ Biology $\rightarrow$ Wolf Sheep Predation.
 
@@ -59,7 +59,7 @@ NetLogo comes with a model library containing hundreds of pre-built models in ar
 
 When you first start NetLogo you'll see a screen like this:
 
-![NetLogo start screen](/assets/img/netlogo-introduction/netlogo-start-screen.svg){ .blend-multiply}
+![NetLogo start screen](/assets/img/2020-11-17-netlogo-introduction/netlogo-start-screen.svg){ .blend-multiply}
 
 The black square is the environment or world where agents move and follow the instructions you've written. The white area to the left is reserved for buttons, sliders, plots, and other interactive devices. At the bottom are the Command Center and a blank space where you can enter one line commands as the observer.
 
@@ -116,7 +116,7 @@ turtles-own [speed]
 
 In the Interface area, we need to add two buttons to run the code just written. Make sure the drop-down next to "Add" is set to "Button" and then click on "Button" followed by a click in the white space which will create a button. A pop-up box will open where you need to enter the command `to-setup` and change the Display name to `Setup`,
 
-![Make setup button](/assets/img/netlogo-introduction/make-setup-button.svg){ .blend-multiply}
+![Make setup button](/assets/img/2020-11-17-netlogo-introduction/make-setup-button.svg){ .blend-multiply}
 
 Make another button with the command `to-go`, Display name `Go` and check the box next to "Forever". When you run the simulation, first click on "Setup" then "Go". Because you checked "Forever" for the "Go" button, the simulation will continue running until you click "Go" again.
 
@@ -130,13 +130,13 @@ end
 
 reducing the speed from the current speed to speed - .15. Add these two buttons below the "Setup" and "Go" buttons:
 
-![Change speed and track turtle buttons](/assets/img/netlogo-introduction/change-speed-track-turtle.svg)
+![Change speed and track turtle buttons](/assets/img/2020-11-17-netlogo-introduction/change-speed-track-turtle.svg)
 
 The command for the "Change speed" button is a call to the `change-speed` function and the "Track turtle" button needs this command: `ask one-of turtles [pen-down]` which randomly selects one of the turtles and tells it to put its pen down. When the pen is down you'll be able to see a track of where the turtle has been. Right-click on the buttons and select "Edit" to add the commands.
 
 You now have a complete NetLogo program. Click the "Setup" button to generate a circle of colored dots. Click on the "Go" button and the dots will spin clockwise around the circle. Don't click the "Change speed" button just yet, though.
 
-![Turtle setup](/assets/img/netlogo-introduction/turtle-setup.svg)
+![Turtle setup](/assets/img/2020-11-17-netlogo-introduction/turtle-setup.svg)
 
 Before you change the turtle speed, think about what you expect to happen when the speed changes. What we know will happen is that each turtle will be taking a slightly shorter step size during every tick. But what does the collective behavior look like? What is the resulting emergent system? Now, go ahead and click "Change speed" and watch the system for a while. Change the speed a second time. You can restart at any time by clicking the "Go" button and then resetting the simulation with the "Setup" button.
 
@@ -148,19 +148,19 @@ Many computer languages have Integrated Development Environments (IDEs) where yo
 
 Since NetLogo is agent-based, each class of turtle is doing the same thing all at the same time. Instead of using breakpoints, you can click the "Go" button to stop the simulation. Right-click on an agent to see a pop-up menu. At the bottom of the menu, you can choose to inspect the turtle (here it's turtle #18) or inspect the patch under the turtle. Patches are small squares with integer coordinates, so in this case, the patch is at $x = 20$, $y = -3$.
 
-![Debug turtles](/assets/img/netlogo-introduction/debug-turtle.svg)
+![Debug turtles](/assets/img/2020-11-17-netlogo-introduction/debug-turtle.svg)
 
 Clicking on "inspect turtle 18" brings up this dialog:
 
-![Inspect turtles](/assets/img/netlogo-introduction/inspect-turtle.svg)
+![Inspect turtles](/assets/img/2020-11-17-netlogo-introduction/inspect-turtle.svg)
 
 Here, you can see the properties of this turtle, including the special turtles-own speed. Change the speed to 0.2 and set the pen-mode to "down", then press "Go" again. At the bottom of the Interface screen are the Command Center and an input area labeled "observer >",
 
-![Observer command](/assets/img/netlogo-introduction/observer-command.svg)
+![Observer command](/assets/img/2020-11-17-netlogo-introduction/observer-command.svg)
 
 where you can enter single lines of code such as `show [speed] of turtle 18` one to show the speed of turtle #18. In the Command Center, you'll see the results. These commands may be entered even if the program is running.
 
-![Command center](/assets/img/netlogo-introduction/command-center.svg)
+![Command center](/assets/img/2020-11-17-netlogo-introduction/command-center.svg)
 
 Every programming language has its own syntax. Besides working through example problems and tutorials, the Models Library contains sample programs in the "Code Examples" section that may be useful for your own programs. Usually, agents passing through the left wall reappear at the right wall, and going through the top makes them come back from the bottom of the screen. If you'd rather have them bounce off the walls, take a look at the "Bounce Example".
 
@@ -171,3 +171,9 @@ The biggest difference between NetLogo and most other languages is that it uses 
 The trickiest part of agent-based models is probably trying to figure out what caused an emergent system. What simple agent commands might you need to cause a result? Suppose you had loaded [Turtles Circling Sun and Moon.nlogo](https://gist.github.com/XerxesZorgon/8ea0b72770b7df8d11cbd960e8c45374) but hadn't looked at any of the code. Try running it a few times and watch what happens when you click on "Sun" and "Moon". (The names "Sun" and "Moon" don't have any relevance to the code.) If you had no idea what caused the turtles to do what they're doing, would you be able to recreate the commands?
 
 Solving this mystery is how to do science. You observe the behavior of the system and then try to figure out what causes it. It might be possible to get the same overall effect using a different method, so you need to carefully check to be sure your code exactly matches the observations under all conditions. In nature, you might observe a colony of insects behaving unexpectedly. You would hypothesize a reason for the behavior, and then test your hypothesis in much the same way as you did with this NetLogo function.
+
+------
+
+#### Image credits
+
+Hero: Netlogo screenshot, [An Introduction to Agent-Based Modeling](https://www.intro-to-abm.com/)

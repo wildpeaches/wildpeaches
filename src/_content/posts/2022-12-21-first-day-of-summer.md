@@ -1,14 +1,16 @@
 ---
+
+
 title: The First Day of Summer Every Day
 subtitle: Lazy Days with Astronomy
 author: John Peach
 lede:
 hero:
-  url: /assets/img/first-day-of-summer/children-on-the-beach-by-winslow-homer.png
+  url: /assets/img/2022-12-21-first-day-of-summer/children-on-the-beach-by-winslow-homer.png
   alt:
 tags: [math]
 keywords: [math, astronomy, analemma]
-socialImg: /assets/img/first-day-of-summer/children-on-the-beach-by-winslow-homer.png
+socialImg: /assets/img/2022-12-21-first-day-of-summer/children-on-the-beach-by-winslow-homer.png
 ---
 
 > School's out for summer
@@ -18,21 +20,21 @@ socialImg: /assets/img/first-day-of-summer/children-on-the-beach-by-winslow-home
 
 Wouldn't it be great if every day was the first day of summer? With a little math and some astronomy, it's easy to do.
 
-![](/assets/img/first-day-of-summer/calvin-the-days-are-just-packed.webp)
+![](/assets/img/2022-12-21-first-day-of-summer/calvin-the-days-are-just-packed.webp)
 
 ## The Summer Solstice
 
 The summer solstice is the one day of the year with the longest period of daylight. The Earth orbits the Sun in a plane, but the Earth's axis of rotation is tilted by about $23.5\degree$ relative to the orbital plane. 
 
-![seasons-earth-orbit](/assets/img/first-day-of-summer/seasons-earth-orbit.gif)
+![seasons-earth-orbit](/assets/img/2022-12-21-first-day-of-summer/seasons-earth-orbit.gif)
 
 In the Northern Hemisphere, this tilt causes the longest day of the year to be around June 20th,
 
-![summer-solstice](/assets/img/first-day-of-summer/summer-solstice.jpg)
+![summer-solstice](/assets/img/2022-12-21-first-day-of-summer/summer-solstice.jpg)
 
 while in the Southern Hemisphere the longest day is near December 20th. 
 
-![winter-solstice](/assets/img/first-day-of-summer/winter-solstice.jpg)
+![winter-solstice](/assets/img/2022-12-21-first-day-of-summer/winter-solstice.jpg)
 
 The difference between the axis of rotation about the Sun and the Earth's axis between the North and South poles is called the axial tilt or obliquity. The obliquity slowly changes, currently $23.43631\degree$, and is one of three components of the [Milankovitch Cycles](https://climate.nasa.gov/news/2948/milankovitch-orbital-cycles-and-their-role-in-earths-climate/) which are responsible for long-term changes in climate determining when Ice Ages occur. 
 
@@ -58,7 +60,9 @@ You could walk that far.
 
 The path of the subsolar point is sinusoidal, and looks something like this:
 
-![Subsolar_point_date_graph](/assets/img/first-day-of-summer/Subsolar_point_date_graph.svg)
+![Subsolar_point_date_graph](/assets/img/2022-12-21-first-day-of-summer/Subsolar_point_date_graph.svg)
+
+<p align = "center"><b>Subsolar Point</b></p>
 
 If you choose a latitude like Honolulu ($21.31 \degree$ N), then follow a horizontal line (blue) until it intersects the red curve, you get the day of the year that the Sun will be directly overhead. 
 
@@ -66,11 +70,15 @@ If you choose a latitude like Honolulu ($21.31 \degree$ N), then follow a horizo
 
 Imagine that you have a vector pointing North, another one pointing East, and a third pointing directly upwards toward the local zenith.
 
-![earth-vectors](/assets/img/first-day-of-summer/earth-vectors.png)
+![earth-vectors](/assets/img/2022-12-21-first-day-of-summer/earth-vectors.png)
+
+<p align = "center"><b>Earth Vectors</b></p>
 
 All three vectors are perpendicular to each other, and if the Up vector points towards the Sun, then you're at the subsolar point. If you aren't at the subsolar point, then there will be an angle between the direction towards the Sun and your local up called the zenith angle. The angle between North and the Sun direction is called the azimuth angle.
 
-![solarl-azimuth-zenith-angles1](/assets/img/first-day-of-summer/solarl-azimuth-zenith-angles.png)
+![solarl-azimuth-zenith-angles1](/assets/img/2022-12-21-first-day-of-summer/solarl-azimuth-zenith-angles.png)
+
+<p align = "center"><b>Azimuth and Zenith Angles</b></p>
 
 Given our latitude, longitude, date, and time, we can calculate these two angles. First, we need to know the number of days since January 1<sup>st</sup>, 2000 at noon (called J2000),
 $$
@@ -122,7 +130,9 @@ The ecliptic plane is the plane in which the Earth orbits the Sun. It is tilted 
 
 The solar ecliptic longitude, $\lambda$, is measured in degrees, starting from the vernal equinox and increasing in a counterclockwise direction. It is usually measured in the range of 0 to 360 degrees. The solar ecliptic longitude is used to predict the location and phase of the Moon, as well as the positions of the planets. It is also used to track the motion of comets and asteroids.
 
-![Ecliptic_with_earth_and_sun_animation](/assets/img/first-day-of-summer/Ecliptic_with_earth_and_sun_animation.gif)
+![Ecliptic_with_earth_and_sun_animation](/assets/img/2022-12-21-first-day-of-summer/Ecliptic_with_earth_and_sun_animation.gif)
+
+<p align = "center"><b>Ecliptic Plane</b></p>
 
 The obliquity of the ecliptic, $\epsilon$, is the angle between the Earth's axis of rotation and the vector perpendicular to the ecliptic plane, in other words, the amount of tilt of the Earth.
 
@@ -134,7 +144,9 @@ Right ascension is the angular distance of an object eastward along the celestia
 
 Declination is the angular distance of an object north or south of the celestial equator, measured in degrees.
 
-![Ra_and_dec_on_celestial_sphere](/assets/img/first-day-of-summer/Ra_and_dec_on_celestial_sphere.png)
+![Ra_and_dec_on_celestial_sphere](/assets/img/2022-12-21-first-day-of-summer/Ra_and_dec_on_celestial_sphere.png)
+
+<p align = "center"><b>Right Ascension and Declination</b></p>
 
 The Sun's right ascension and declination change throughout the year due to the Earth's orbit around the Sun. The Sun's right ascension and declination are at their maximum at the summer solstice, which occurs around June 21st in the Northern Hemisphere. At this time, the Sun's right ascension is around 12 hours and its declination is at its maximum positive value of around 23.5 degrees. 
 
@@ -204,13 +216,13 @@ A [Pluto](https://plutojl.org/) notebook (in [Julia](https://julialang.org/)) to
 
 Today, (21 Dec 2022),  the first day of summer in the Southern Hemisphere the code says that the Sun should be at the Tropic of Capricorn:
 
-![subsolarpoint-lat-lon](/assets/img/first-day-of-summer/subsolarpoint-lat-lon.png)
+![subsolarpoint-lat-lon](/assets/img/2022-12-21-first-day-of-summer/subsolarpoint-lat-lon.png)
 
 ## The Anna Lemma
 
 An [analemma](https://en.wikipedia.org/wiki/Analemma) is the pattern that the Sun makes over a year when viewed from the same location on the Earth. Jack Fishburn took this sequence of photographs at the Bell Laboratories in Murray Hill, NJ to create an analemma,
 
-![lossy-page1-1713px-Analemma_fishburn.tif](/assets/img/first-day-of-summer/lossy-page1-1713px-Analemma_fishburn.tif.jpg)
+![lossy-page1-1713px-Analemma_fishburn.tif](/assets/img/2022-12-21-first-day-of-summer/lossy-page1-1713px-Analemma_fishburn.tif.jpg)
 
 <p align = "center"><b>An Analemma</b></p>
 
@@ -218,7 +230,7 @@ Using the equations for azimuth and elevation, you could calculate the Sun's pos
 
 To make an analemma, you need to take a photo at exactly the same time (accounting for daylight savings time) throughout the year. If you take the photos at times separated by one-hour intervals, you'll get a wreath of analemmas,
 
-![wreath-of-analemmas](/assets/img/first-day-of-summer/wreath-of-analemmas.png)
+![wreath-of-analemmas](/assets/img/2022-12-21-first-day-of-summer/wreath-of-analemmas.png)
 
 <p align = "center"><b>Wreath of Analemmas</b></p>
 
@@ -232,7 +244,7 @@ In [Google Earth](https://earth.google.com/web/), you can turn on grid lines by 
 
 Another option would be to go by boat. With the [Wharram Mana 24](https://www.wharram.com/self-build-boats/mana24), you could sail along the coast and at night pull up on the beach for an overnight camp. The [Pax](https://www.youtube.com/watch?v=KeJHlsgz7cw) is more comfortable (and check out the interior!) or you could get a [BeTriton](https://betriton.com/) combination bike/boat/camper. 
 
-![mana-pax-z-triton](/assets/img/first-day-of-summer/mana-pax-z-triton.png)
+![mana-pax-z-triton](/assets/img/2022-12-21-first-day-of-summer/mana-pax-z-triton.png)
 
 Now the options are to start upriver in Bangladesh, then along the coast of Myanmar... Ok, how about the East Coast of Africa? Start in Oman, then along the coast of Yemen, cross the oil tanker shipping lanes in the Gulf of Aden then along the coast of Somalia ... nope, nope, nope. The West coast of Africa wouldn't be too bad, but there's a long stretch from Liberia to Cameroon that runs mostly West to East, and we need to be moving South every day.
 
@@ -240,7 +252,7 @@ On the East coast of the Americas, you could start in the Bahamas and make your 
 
 How about the West coast? Start just North of Mazatlan, Mexico and it's a pretty nice ride South along the coast. You'd have to skip most of Panama because it curls Northward, but after that, it's smooth sailing all the way down the coast of Chile. You'll pass by Mejillones which looks pretty nice,
 
-![Mejillones](/assets/img/first-day-of-summer/Mejillones.jpg)
+![Mejillones](/assets/img/2022-12-21-first-day-of-summer/Mejillones.jpg)
 
 <p align = "center"><b>Mejillones, Chile</b></p>
 
@@ -250,9 +262,35 @@ and your last stop at the Tropic of Capricorn will be at Isla Santa Maria where 
 
 Did you know that the Eastern third of the United States is an island? You can go completely around it in a boat. It's called the [Great Loop](https://www.greatloop.org/) and you can join a club that will help you navigate your way around. National Geographic says, ["The Great Loop is the epic U.S. adventure you've never heard of"](https://www.nationalgeographic.com/travel/article/great-loop-is-the-epic-us-adventure-you-have-never-heard-of). Maybe this would be a better way to spend the summer.
 
-![GreatLoop](/assets/img/first-day-of-summer/GreatLoop.png)
+![GreatLoop](/assets/img/2022-12-21-first-day-of-summer/GreatLoop.png)
 
 <p align = "center"><b>The Great Loop</b></p>
+
+------
+
+#### Image credits
+
+Hero: [Children on the Beach](https://commons.wikimedia.org/wiki/File:Winslow_Homer_-_Children_on_the_beach_(1873).jpg), Winslow Homer. Wikimedia Commons.
+
+The Days Are Just Packed: [Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/The_Days_are_Just_Packed), Bill Waterson, Apr. 11, 1991.
+
+Solstice/Equinox: [Summer Solstice 2023: The First Day of Summer](https://www.almanac.com/content/first-day-summer-summer-solstice). [Catherine Boeckmann](https://www.almanac.com/author/catherine-boeckmann), Almanac, Oct. 21, 2023.
+
+Summer/Winter Solstice, Subsolar Point: [Solstice](https://en.wikipedia.org/wiki/Solstice), Wikipedia. See also [What Is a Solstice?](https://scijinks.gov/solstice/), NOAA SciJinks.
+
+Azimuth and Zenith Angles: [Estimating Solar Irradiance on Tilted Surface with Arbitrary Orientations and Tilt Angles](https://www.mdpi.com/1996-1073/12/8/1427). Hsu-Yung Chen et al., MDPI, Apr. 13, 2019.
+
+Ecliptic Plane: [The ecliptic is the sun’s path in our sky](https://earthsky.org/astronomy-essentials/definition-ecliptic-what-is-the-ecliptic/). Scott Levine, EarthSky, Jun 18, 2023.
+
+Right Ascension and Declination: [Right Ascension and Declination: Celestial Coordinates for Beginners](https://skyandtelescope.org/astronomy-resources/right-ascension-declination-celestial-coordinates/). Bob King, Sky & Telescope, Feb. 26, 2019.
+
+An Analemma: [Analemma](https://en.wikipedia.org/wiki/Analemma) photo taken from 1998 to 1999 from Bell Laboratories, [Murray Hill](https://en.wikipedia.org/wiki/Murray_Hill,_New_Jersey). J. Fishburn.
+
+Wreath of Analemmas: [Analemma](https://en.wikipedia.org/wiki/Analemma), Wikipedia.
+
+Mejillones, Chile: [Get to know the tourist attractions of Mejillones](https://radiochilena.cl/conoce-los-atractivos-turistico-de-mejillones/). Tourism in Chile, Dec. 26, 2014.	
+
+The Great Loop: [Great Loop](https://en.wikipedia.org/wiki/Great_Loop). Wikipedia.			
 
 ------
 

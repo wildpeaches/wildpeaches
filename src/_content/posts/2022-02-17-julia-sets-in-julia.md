@@ -4,7 +4,7 @@ subtitle: Completely invariant iterations of the holomorphic function
 author: John Peach
 lede: null
 hero:
-  url: /assets/img/julia-sets-in-julia/julia_ranged_a.gif
+  url: /assets/img/2022-02-17-julia-sets-in-julia/julia_ranged_a.gif
   alt: null
 tags:
   - math
@@ -13,7 +13,7 @@ keywords:
   - Julia language
   - complex numbers
   - iterated functions
-socialImg: /assets/img/julia-sets-in-julia/julia_ranged_a.gif
+socialImg: /assets/img/2022-02-17-julia-sets-in-julia/julia_ranged_a.gif
 lastmod: '2022-03-04T02:36:04.435Z'
 ---
 
@@ -29,7 +29,9 @@ Deployed to the Western Front, the following is a report of the action, and Juli
 
 For the remainder of his life, Julia wore a leather strap to cover the missing nose.
 
-![gaston-julia](/assets/img/julia-sets-in-julia/gaston-julia.png)
+![gaston-julia](/assets/img/2022-02-17-julia-sets-in-julia/gaston-julia.png)
+
+<p align = "center"><b>Gaston Julia</b></p>
 
 Julia married Marianne Chausson in 1918. She was the nurse who attended to him after his injury, and the daughter of composer Ernest Chausson. He had completed his Ph.D. in mathematics the year before, under [Émile Picard](https://mathshistory.st-andrews.ac.uk/Biographies/Picard_Emile/), [Henri Lebesgue](https://mathshistory.st-andrews.ac.uk/Biographies/Lebesgue/), and [Pierre Humbert](https://mathshistory.st-andrews.ac.uk/Biographies/Humbert_Pierre/).
 
@@ -69,17 +71,19 @@ $$
 (x+2)(x-3) = x^2-x-6.
 $$
 
-![curses-foiled-again](/assets/img/julia-sets-in-julia/curses-foiled-again.jpg)
+![curses-foiled-again](/assets/img/2022-02-17-julia-sets-in-julia/curses-foiled-again.jpg)
 
 Snidely Whiplash often said, "Curses, foiled again!" on the [Rocky and Bullwinkle show](https://www.imdb.com/title/tt0052507/), but he may not have been referring to algebra. Here's a picture of Rocky, Bullwinkle, and Captain Peachfuzz. Because reasons.
 
-![rocky-bullwinkle-peachfuzz](/assets/img/julia-sets-in-julia/rocky-bullwinkle-peachfuzz.jpg)
+![rocky-bullwinkle-peachfuzz](/assets/img/2022-02-17-julia-sets-in-julia/rocky-bullwinkle-peachfuzz.jpg)
 
 What's the square root of negative one $(\sqrt{-1})$? For a long time, mathematicians thought there was no solution to this problem because when you multiply two positive numbers together you get a positive number, and when you multiply two negative numbers together you also get a positive number, so there can't be an $x$ such that $x \times x = x^2 = -1$. But, in the 17th century, [René Descartes](https://en.wikipedia.org/wiki/René_Descartes) named the solution to $\sqrt{-1}$ as $i$, an imaginary, fictitious, and useless number.
 
 Since then, we've found plenty of uses for these otherwise useless numbers. Combine them with real numbers, the kind we're used to, and you get complex numbers like $4 + 3i$ which is $4$ parts real and $3$ parts imaginary. You can plot complex numbers as points, using the $x-$axis for the real part, and the $y-$axis for the imaginary part. Here's a plot of $z_1 = 4 + 3i$:
 
-![complex-number](/assets/img/julia-sets-in-julia/complex-number.png)
+![complex-number](/assets/img/2022-02-17-julia-sets-in-julia/complex-number.png)
+
+<p align = "center"><b>The Complex Plane</b></p>
 
 Suppose you wanted to multiply $z_1$ by another complex number $z_2 = 2 + 5i$. Just use the FOIL method but with the complex numbers,
 
@@ -133,7 +137,9 @@ We can calculate the value of this constant at any $\theta$, and the easiest one
 
 The angle $\theta$ is measured from the $x-$axis, so $\theta = 0$ is along the positive real number line, $\theta = \frac{\pi}{2}$ is the positive imaginary axis, $\theta = \pi$ represents negative real numbers and $\theta = \frac{3\pi}{2}$ points along the negative imaginary axis.
 
-![e-i-pi](/assets/img/julia-sets-in-julia/e-i-pi.png)
+![e-i-pi](/assets/img/2022-02-17-julia-sets-in-julia/e-i-pi.png)
+
+<p align = "center"><b>Angles in the Complex Plane</b></p>
 
 Looking at $z_2$, we see that when $\theta = \pi$, $e^{i \theta} = e^{i \pi} = -1$, which gives the most beautiful equation,
 
@@ -163,11 +169,11 @@ Since the first iterate squares the initial value of $z_0$ and adds $c$, then $z
 
 In this plot, $z_0 = (0.1+e^{i\theta})/2$ for $\theta = 30,120,210,300$ degrees, and $c = -0.1+0.1i$.
 
-![several-iterates](/assets/img/julia-sets-in-julia/several-iterates.png)
+![several-iterates](/assets/img/2022-02-17-julia-sets-in-julia/several-iterates.png)
 
 Adding $0.1$ shifts the starting points a little bit to prevent overlapping trajectories, and dividing by $2$ is equivalent to setting $r=\frac{1}{2}$ in the $u$ and $v$ vectors except for the slight shift of the starting point. If you set $z_0 = 0.1+e^{i\theta}$, eventually all of the trajectories escape towards infinity.
 
-![several-iterates-escape](/assets/img/julia-sets-in-julia/several-iterates-escape.png)
+![several-iterates-escape](/assets/img/2022-02-17-julia-sets-in-julia/several-iterates-escape.png)
 
 What is it that keeps some points from getting away, while others escape? The _norm_ of a vector is the length of the vector and as we saw above, the length is easily calculated using the Pythagorean theorem. A shorthand notation for the _norm_ is a pair of vertical lines around the vector or complex number,
 
@@ -203,13 +209,13 @@ How long is the new vector $z^2$? The $e^{2i \theta}$ part measures the angle so
 
 If we choose $c$ such that $|c| < 1$, then $|z^2+c|$ will be greater than $1$ if $|z^2| > 2$. If $r > 1$ then $r^2$ will grow at each step. If you think of $z^2$ and $c$ as vectors, then the smallest value for $r$ is when $z^2$ and $c$ point in opposite directions.
 
-![r](/assets/img/julia-sets-in-julia/r.png)
+![r](/assets/img/2022-02-17-julia-sets-in-julia/r.png)
 
 In most cases, $z^2$ and $c$ won't point in opposite directions, so $r$ will be even larger and the trajectory will escape faster, but we can check to see if $z^2 > 2$ and stop iterating when we get to that value.
 
 Vectors are added together by connecting the point of $u$ to the tail of $v$ to get $z = u+v$. Subtracting $v$ from $u$ turns the direction of $v$ around.
 
-![vector-addition](/assets/img/julia-sets-in-julia/vector-addition.png)
+![vector-addition](/assets/img/2022-02-17-julia-sets-in-julia/vector-addition.png)
 
 Using the FOIL method, we can calculate $z^2$ for combinations of positive and negative vectors $u$ and $v$.
 
@@ -228,13 +234,17 @@ In the picture above, you can see that the red $z$ vectors have the same $z^2$, 
 
 Gaston Julia wanted to find the boundary between the points that escaped and those that didn't. The boundary is now called the Julia Set. The $z$ points are taken from all points in the complex plane, and the set changes depending on the initial choice of the parameter $c$.
 
-![julia-set-c=-0.1+0.1im](/assets/img/julia-sets-in-julia/julia-set-c=-0.1+0.1im.png)
+![julia-set-c=-0.1+0.1im](/assets/img/2022-02-17-julia-sets-in-julia/julia-set-c=-0.1+0.1im.png)
+
+<p align = "center"><b>Julia Set (c = 0.7269 + 0.1889i)</b></p>
 
 In this image, $c = -0.7269 + 0.1889i$, and the complex numbers range over $[-1.6,1.6] \times [-1.6,1.6]i$. The image is composed of 1281 points in each dimension, and for each point $z$, the number of iterations needed to exceed $|z| > 2$ is stored in a matrix. The black regions are where $|z|$ starts greater than $2$, and the colored points are counts. On the right side, the color bar indicates the number of iterations, up to 1000, before the norm of $z$ becomes large.
 
 Another example shows that for $c = -0.20509091 + 0.71591i$, the points either are clearly in the set or outside. At the top of this post is a plot of the Julia set for values of $c$ from $c = −0.29609091+0.62491i$ to $c = -0.20509091 + 0.71591i$, taken from Benjamin Badger's [Julia Sets page](https://blbadger.github.io/julia-sets.html).
 
-![julia-set-c=-0.20509091 + 0.71591i](/assets/img/julia-sets-in-julia/julia-set-c=-0.2+0.7im.png)
+![julia-set-c=-0.20509091 + 0.71591i](/assets/img/2022-02-17-julia-sets-in-julia/julia-set-c=-0.2+0.7im.png)
+
+<p align = "center"><b>Julia Set (c = -0.2 + 0.7i)</b></p>
 
 The [code](https://gist.github.com/XerxesZorgon/5205facbb7c7ef02999e27ead70a5d59) (on Github) to generate these images is very straightforward. An `iterCounts` array is initialized to zero, and for each $z$, the value of $|z_n| = |z_{n-1}^2+c|$ is computed. The iteration is repeated until either $|z_n| > 2$ or the number of iterations reaches 1000. The array `iterCounts` is displayed as a [heatmap](https://en.wikipedia.org/wiki/Heat_map) to make the image.
 
@@ -276,6 +286,20 @@ Gaston Julia never saw the images that we can now quickly produce in the Julia l
 
 ---
 
+#### Image credits
+
+Hero: [Julia sets](https://blbadger.github.io/julia-sets.html). Benjamin Badger, [Form and Formula](https://blbadger.github.io/), 2023.
+
+Gaston Julia: [Gaston Maurice Julia](https://mathshistory.st-andrews.ac.uk/Biographies/Julia/pictdisplay/). [Edmund Robertson](https://jjoc45.github.io/efr) and [John O'Connor](https://jjoc45.github.io/joc), [MacTutor](https://mathshistory.st-andrews.ac.uk/), [School of Mathematics and Statistics](https://www.st-andrews.ac.uk/mathematics-statistics/) at the [University of St Andrews](https://www.st-andrews.ac.uk/). 
+
+Curses Foiled Again: [The Darkest Minds](https://amusedinthedark.com/2018/08/06/darke-reviews-the-darkest-minds-2018/#comments). Jessica Darke, [Amused in the Dark](https://amusedinthedark.com/), 2018.
+
+Rocky and Bullwinkle: [Rocky & Bullwinkle’s triumphant return](https://renegadecinema.com/18404/rocky-bullwinkles-triumphant-return/). [Eric Norcross](https://renegadecinema.com/author/ericnorcross/), Renegade Cinema, Nov 6, 2013.
+
+
+
+------
+
 ## References
 
 - ["Mémoire sur l’itération des fonctions rationnelles"](http://sites.mathdoc.fr/JMPA/PDF/JMPA_1918_8_1_A2_0.pdf), Gaston Julia
@@ -287,7 +311,7 @@ Gaston Julia never saw the images that we can now quickly produce in the Julia l
 - ["Complex Dynamics, the Julia Set."](http://www.uwosh.edu/faculty_staff/kuennene/Chaos/ChaosNotes8.pdf), [Eric Kuennen](http://www.uwosh.edu/faculty_staff/kuennene/)
 - ["Understanding Julia and Mandelbrot Sets"](https://www.karlsims.com/julia.html), Karl Sims
 - [Julia Sets](https://blbadger.github.io/julia-sets.html)
-- [Julia Language Plots.jl](https://docs.juliaplots.org/latest/generated/gr/) and [plot attributes](https://docs.juliaplots.org/latest/attributes/#attributes)
+- [Julia Language Plots.jl](https://docs.juliaplots.org/stable/) and [plot attributes](https://docs.juliaplots.org/latest/attributes/#attributes)
 - [Wikipedia](https://en.wikipedia.org/wiki/Julia_set) page on Julia sets
 - [The Julia Programming Language](https://julialang.org/)
 - [Timing in Julia](https://www.juliabloggers.com/timing-in-julia/)

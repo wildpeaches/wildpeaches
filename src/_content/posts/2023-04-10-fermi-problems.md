@@ -4,11 +4,11 @@ subtitle: Part III - Learn how to solve a Fermi Problem and get help from Bing A
 author: John Peach
 lede:
 hero:
-  url: /assets/img/fermi-problems/mushroom-cloud.jpg
+  url: /assets/img/2023-04-10-fermi-problems/mushroom-cloud.jpg
   alt:
 tags: []
 keywords: []
-socialImg: /assets/img/fermi-problems/mushroom-cloud.jpg
+socialImg: /assets/img/2023-04-10-fermi-problems/mushroom-cloud.jpg
 ---
 
 > Henk: "Hi, how are you?"
@@ -21,7 +21,7 @@ socialImg: /assets/img/fermi-problems/mushroom-cloud.jpg
 
 Enrico Fermi was a physicist who won the Nobel Prize in 1938 for induced radioactivity and the discovery of transuranium elements. Induced radioactivity changes a material from stable to radioactive, and a transuranium element is one with atomic number greater than uranium (92). All transuranium elements are unstable and decay into other products.
 
-![enrico-fermi-chalkboard](/assets/img/fermi-problems/enrico-fermi-chalkboard.jpg)
+![enrico-fermi-chalkboard](/assets/img/2023-04-10-fermi-problems/enrico-fermi-chalkboard.jpg)
 
 <p align = "center"><b>Enrico Fermi</b></p>
 
@@ -49,7 +49,7 @@ Using this method, we can estimate that if one teaspoon of water could be conver
 I hope this helps! Let me know if you have any other questions.
 
 Source: Conversation with Bing, 3/27/2023(1) Fermi problem - Wikipedia. https://en.wikipedia.org/wiki/Fermi_problem Accessed 3/27/2023.
-(2) Fermi problems. https://www.stem.org.uk/resources/collection/419670/fermi-problems Accessed 3/27/2023.
+(2) Fermi problems. https://www.stem.org.uk/resources/collection/419670/2023-04-10-fermi-problems Accessed 3/27/2023.
 (3) What does Einstein's equation E=mc² really mean? | HowStuffWorks. https://science.howstuffworks.com/science-vs-myth/everyday-myths/einstein-formula.htm Accessed 3/27/2023.
 (4) Energy from water - Energy Education. https://energyeducation.ca/encyclopedia/Energy_from_water Accessed 3/27/2023.
 (5) How Much Does a Teaspoon of Water Weigh? Free Essay Example. https://studybounty.com/how-much-does-a-teaspoon-of-water-weigh-coursework Accessed 3/27/2023.
@@ -153,7 +153,7 @@ We can check the Fermi solution by using more precise values, and doing the calc
 
 Here's the [solution](https://gist.github.com/XerxesZorgon/ccda153e3c7f134782594e6a8708b7d9) using more precise inputs:
 
-![fermi-worksheet](/assets/img/fermi-problems/fermi-worksheet.png)
+![fermi-worksheet](/assets/img/2023-04-10-fermi-problems/fermi-worksheet.png)
 
 Round up the answer for the volume and you get exactly the same result found using the Fermi method! In liters, the volume is $1.7212 \times 10^8$, which is very different from the solutions produced by Bing AI or ChatGPT, and you could have easily come up with the Fermi solution in your head without resorting to a blackboard, right?
 
@@ -229,3 +229,11 @@ The responses (with a little additional prompting):
 This gives us some good starting points. We would need to assess the health of each bank independently and then calculate a probability of failure, but using the Fermi method we should be able provide an estimate of the expected number of failures. Since the problem only asks for the number of failures, we might predict the failure of one bank only to see that it doesn't fail while missing the collapse of another, still giving the correct total.
 
 Combining the Fermi method with insights given by large language models and more directed research about a problem will significantly improve your prediction capabilities.
+
+------
+
+#### Image credits
+
+Hero: AI generated image of a digital mushroom cloud.
+
+Enrico Fermi: [Atomic Heritage Foundation](https://ahf.nuclearmuseum.org/ahf/profile/enrico-fermi/). 

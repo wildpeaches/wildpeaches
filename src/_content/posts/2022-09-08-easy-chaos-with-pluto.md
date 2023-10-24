@@ -4,11 +4,11 @@ subtitle: Simply Making a Mess of Everything
 author: John Peach
 lede: 
 hero:
-  url: /assets/img/easy-chaos-with-pluto/lorenz3.png
+  url: /assets/img/2022-09-08-easy-chaos-with-pluto/lorenz3.png
   alt:
 tags: [math,chaos theory]
 keywords: [Pluto notebook, logistic function, autocorrelation, phase portrait]
-socialImg: /assets/img/easy-chaos-with-pluto/lorenz3.png
+socialImg: /assets/img/2022-09-08-easy-chaos-with-pluto/lorenz3.png
 ---
 
 ## Getting Started with Pluto
@@ -24,11 +24,11 @@ add StatsBase
 
 It may take a few minutes as Julia checks and downloads all necessary dependencies. When everything has finished, type "Ctrl-C" to exit the package manager. In the Julia command window, type "Using Pluto" followed by "Pluto.run()":
 
-![julia-start-pluto](/assets/img/easy-chaos-with-pluto/julia-start-pluto.png)
+![julia-start-pluto](/assets/img/2022-09-08-easy-chaos-with-pluto/julia-start-pluto.png)
 
 A new tab will open in your browser:
 
-![welcome-to-pluto](/assets/img/easy-chaos-with-pluto/welcome-to-pluto.png)
+![welcome-to-pluto](/assets/img/2022-09-08-easy-chaos-with-pluto/welcome-to-pluto.png)
 
 Download [EasyChaos.jl](https://gist.github.com/XerxesZorgon/3300e57441ecf83640361a6d7f287ba7) from Github and then enter the path in Pluto below "Open from file:". The notebook should look very much like the remainder of this post.
 
@@ -52,15 +52,15 @@ f(x) = mx + b.
 $$
 Let's start by plotting some lines.
 
-![using-PlutoUI-Plots](/assets/img/easy-chaos-with-pluto/using-PlutoUI-Plots.png)
+![using-PlutoUI-Plots](/assets/img/2022-09-08-easy-chaos-with-pluto/using-PlutoUI-Plots.png)
 
 We need a way to change the values of $m$ and $b$. First, we'll make a slider for the slope $m$ and set the initial value to $m=1$.
 
-![m-slider](/assets/img/easy-chaos-with-pluto/m-slider.png)
+![m-slider](/assets/img/2022-09-08-easy-chaos-with-pluto/m-slider.png)
 
 Next, we'll make a slider for $b$ and set it to $b=0$. Both can be varied between $-5$ and $5$.
 
-![line-plot](/assets/img/easy-chaos-with-pluto/line-plot.png)
+![line-plot](/assets/img/2022-09-08-easy-chaos-with-pluto/line-plot.png)
 
 Notice that the origin of the plot is in the center. Move the sliders for $m$ and $b$ to get a new plot. Interesting, but not chaos.
 
@@ -76,31 +76,31 @@ x = \{1,0,-1,-2,-3, \ldots \}.
 $$
 Instead of calculating $x_1 = mx_0 + b$ and then $x_2 = mx_1 + b$ and so on, we can do this in a function *iter_f* with inputs $m,b,x_0,n$ where $x_0$ is the starting point, and $n$ is the number of iterations.
 
-![iter_f](/assets/img/easy-chaos-with-pluto/iter_f.png)
+![iter_f](/assets/img/2022-09-08-easy-chaos-with-pluto/iter_f.png)
 
 We can try this function with the equation $y = x - 1$ starting at $x_0 = 0.4961$ and $x_1 = 0.4962$ for $n = 10$ iterations.
 
-![linear-results](/assets/img/easy-chaos-with-pluto/linear-results.png)
+![linear-results](/assets/img/2022-09-08-easy-chaos-with-pluto/linear-results.png)
 
 Taking the difference between the outputs gives an uninteresting answer:
 
-![linear-differences](/assets/img/easy-chaos-with-pluto/linear-differences.png)
+![linear-differences](/assets/img/2022-09-08-easy-chaos-with-pluto/linear-differences.png)
 
 Now, let's change the equation slightly to $f(x) = 2x - 1$, and use the same starting points as before.
 
-![linear-2x](/assets/img/easy-chaos-with-pluto/linear-2x.png)
+![linear-2x](/assets/img/2022-09-08-easy-chaos-with-pluto/linear-2x.png)
 
 The difference between these sequences is:
 
-![differences-2x](/assets/img/easy-chaos-with-pluto/differences-2x.png)
+![differences-2x](/assets/img/2022-09-08-easy-chaos-with-pluto/differences-2x.png)
 
 Multiply the differences by $10000$ to make the changes more obvious:
 
-![differences-2x-10000](/assets/img/easy-chaos-with-pluto/differences-2x-10000.png)
+![differences-2x-10000](/assets/img/2022-09-08-easy-chaos-with-pluto/differences-2x-10000.png)
 
 This is a little bit surprising, but notice that each number is twice the previous number. It looks like the sequence $\{ 2^0, 2^1, 2^2, \dots 2^9 \}$ and could be written as $2^{[0:9]}$:
 
-![differences-pow2](/assets/img/easy-chaos-with-pluto/differences-pow2.png)
+![differences-pow2](/assets/img/2022-09-08-easy-chaos-with-pluto/differences-pow2.png)
 
 Let's write out several iterations of $y = mx + b$ in terms of the starting point $x_0$.
 
@@ -148,7 +148,7 @@ We want to iterate $F(x)$ by using the $y-$coordinate of *B* as the next input. 
 
 Draw a horizontal line until you get to the line $y=x$ at point *C*. Because *C* is on the $45 \degree$ line, then $x_C = y_C$ so the coordinates are $C = (0.64,0.64)$. The $x-$coordinate of *C* is the $y-$coordinate of *B*, so *C* becomes the next iterate. From *C*, draw a vertical line until you intersect the parabola at *D* which has coordinates $(0.64,0.9216)$. 
 
-<img src="/assets/img/easy-chaos-with-pluto/logistic-orbits.png" alt="logistic-orbits" style="zoom:50%;" />
+<img src="/assets/img/2022-09-08-easy-chaos-with-pluto/logistic-orbits.png" alt="logistic-orbits" style="zoom:50%;" />
 
 This process can be repeated as often as you like and will show the trajectory of the function $F(x)$.
 
@@ -158,21 +158,21 @@ Like the *iter_f* function above, we can write a Julia function to iterate the l
 
 This new function, *iter_logistic* will return the orbit, $y$.
 
-![iter_logistic](/assets/img/easy-chaos-with-pluto/iter_logistic.png)
+![iter_logistic](/assets/img/2022-09-08-easy-chaos-with-pluto/iter_logistic.png)
 
 Let's try an example with $x_0 = 0.2$
 
-![slider-x0](/assets/img/easy-chaos-with-pluto/slider-x0.png)
+![slider-x0](/assets/img/2022-09-08-easy-chaos-with-pluto/slider-x0.png)
 
 and $c = 4$.
 
-![slider-c](/assets/img/easy-chaos-with-pluto/slider-c.png)
+![slider-c](/assets/img/2022-09-08-easy-chaos-with-pluto/slider-c.png)
 
-![y-logistic](/assets/img/easy-chaos-with-pluto/y-logistic.png)
+![y-logistic](/assets/img/2022-09-08-easy-chaos-with-pluto/y-logistic.png)
 
 Now we can plot the trajectory:
 
-![plot-y-logistic](/assets/img/easy-chaos-with-pluto/plot-y-logistic.png)
+![plot-y-logistic](/assets/img/2022-09-08-easy-chaos-with-pluto/plot-y-logistic.png)
 
 Try adjusting the value for $c$. When $c=4$ the plot seems pretty chaotic. What happens if you change $x_0$ from $0.2$ to $0.19$? This should show that the trajectory is sensitive to the initial value of $x_0$.
 
@@ -194,11 +194,11 @@ Let's start by plotting the autocorrelation of the iterated logistic function fo
 
 Rather than scrolling back up to set $x_0$ and $c$, let's just create two new variables and call them $xP$ and $cP$.
 
-![plot-autocorrelation](/assets/img/easy-chaos-with-pluto/plot-autocorrelation.png)
+![plot-autocorrelation](/assets/img/2022-09-08-easy-chaos-with-pluto/plot-autocorrelation.png)
 
 Choose the autocorrelation step $\tau$:
 
-![plot-phase-portrait](/assets/img/easy-chaos-with-pluto/plot-logistic-orbit.png)
+![plot-phase-portrait](/assets/img/2022-09-08-easy-chaos-with-pluto/plot-logistic-orbit.png)
 
 The autocorrelation plot seems about as chaotic as the logistic function, but when $\tau_0 = 1$, the phase portrait is very smooth. In fact, the outline of the blue dots (y1) looks just like the logistic function! 
 
@@ -211,6 +211,8 @@ Try setting $\tau_0 = 0$ and you'll see that the orbit becomes the line $y=x$, b
 With Pluto, you can change the input values to a function to immediately see the effects.  
 
 ------
+
+Hero image from [Introduction to Online Nonstochastic Control](https://www.researchgate.net/publication/365486091_Introduction_to_Online_Nonstochastic_Control), Elad Hazan, Karan Singh, Research Gate, Figure 2.7: Lorenz attractor Nov 2022.
 
 ### Further Reading
 
