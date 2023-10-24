@@ -4,11 +4,11 @@ subtitle: The Options · Part I
 author: John Peach
 lede:
 hero:
-  url: /assets/img/gambling-science-1/cornelis-de-vos-players-and-courtesans-under-a-tent.jpg
+  url: /assets/img/2021-04-23-gambling-science-1/cornelis-de-vos-players-and-courtesans-under-a-tent.jpg
   alt: Cornelis de Vos Players and Courtesans under a Tent
 tags: [math]
 keywords: [Gambling, Brier Score, Bayes, Skiena]
-socialImg: /assets/img/gambling-science-1/cornelis-de-vos-players-and-courtesans-under-a-tent.jpg
+socialImg: /assets/img/2021-04-23-gambling-science-1/cornelis-de-vos-players-and-courtesans-under-a-tent.jpg
 ---
 
 > Victory is a fleeting thing in the gambling business. Today's winners are tomorrow's blinking toads, dumb beasts with no hope.
@@ -19,7 +19,9 @@ socialImg: /assets/img/gambling-science-1/cornelis-de-vos-players-and-courtesans
 
 It's all about outsmarting the house. Is it possible? Don't know! But we've already explored one possibility with the [scratch lottery](https://wildpeaches.xyz/blog/winning-the-scratch-lottery/) that looks promising. In this first of a series of posts, we'll look at other options and discuss which ones are most likely to return an increasingly larger sum of money. One requirement for success is knowing the probability of winning and having a good estimate of the payoff as we previously discussed in [The Kelly Criterion](https://wildpeaches.xyz/blog/the-kelly-criterion/). With proper money management, your wealth should grow exponentially. If you start with \$1 and each bet increases your wealth by 2%, then after 100 bets your total will be ​\$7.10. You'll win sometimes and lose others, but in general, the growth should follow a curve something like this.
 
-![exp](/assets/img/gambling-science-1/exp.png){.blend-multiply}
+![exp](/assets/img/2021-04-23-gambling-science-1/exp.png){.blend-multiply}
+
+<p align = "center"><b>Exponential Function</b></p>
 
 Not understanding the exponential function will end civilization ([soon!](https://wildpeaches.xyz/blog/economics-and-the-stefan-boltzmann-law/)) but meanwhile, we should use it to get rich quick to buy toys!, a yacht!, a vacation home!, a new car! (fully electric, of course).
 
@@ -63,7 +65,9 @@ If you are already very good at poker this could be an option. Very few people m
 
 Similarly to poker, unless you follow sports fervently, gambling on sports will be difficult. The turnover rate will be low, since you may be limited to one or fewer betting opportunities per day. Fewer than half the [states have legalized sports betting](https://en.wikipedia.org/wiki/Sports_betting), and in some states, sports gambling is restricted to tribal casinos.
 
-![sports-betting-legality-in-the-us](/assets/img/gambling-science-1/sports-betting-legality-in-the-us.svg)
+![sports-betting-legality-in-the-us](/assets/img/2021-04-23-gambling-science-1/sports-betting-legality-in-the-us.svg)
+
+<p align = "center"><b>Legalized Betting by State</b></p>
 
 ## Casino Gambling
 
@@ -79,7 +83,9 @@ Electronics are banned in casinos, so getting caught with one was a serious conc
 
 Casinos carefully calibrate the wheels to eliminate bias, but manufacturing and installation errors introduce potentially playable discrepancies. Ed Thorp recognized that either the wheel is perfect, in which case predictable, or it has some bias. A biased wheel will favor some pockets over others that may be [exploitable](https://www.roulettephysics.com/roulette-wheel-secrets/).
 
-![roulette-wheel](/assets/img/gambling-science-1/roulette-wheel.gif)
+![roulette-wheel](/assets/img/2021-04-23-gambling-science-1/roulette-wheel.gif)
+
+<p align = "center"><b>Roulette Wheel</b></p>
 
 ### The Scratch Lottery
 
@@ -95,7 +101,9 @@ Horse racing occurs almost daily around the world and even in the U.S. at 20 to 
 
 Future posts will discuss how to collect data from Equibase, and how to work around paywall barriers. While horse racing is not as popular a sport as football or baseball in the U.S., there is sufficient interest that it presents a good betting opportunity. Off-track betting (OTB) is [legal in many states](https://www.legalsportsreport.com/horse-betting/otb/) providing an easy way to play [online](https://www.offtrackbetting.com/) at tracks around the world. Laws regarding online betting seem to be rapidly changing, with [many states](https://gamboool.com/states-where-it-is-legal-to-bet-on-horse-racing-online) approving betting through apps.
 
-![Del_Mar_Horse_Racing](/assets/img/gambling-science-1/Del_Mar_Horse_Racing.jpeg)
+![Del_Mar_Horse_Racing](/assets/img/2021-04-23-gambling-science-1/Del_Mar_Horse_Racing.jpeg)
+
+<p align = "center"><b>Horse Racing</b></p>
 
 ### Greyhound Racing
 
@@ -109,7 +117,9 @@ Jai Alai is a sport in which eight contestants participate in each match, two on
 
 The prediction worked by inputting the player's point win/loss record and using that to assess the probability of winning against another player. If Player A had a W/L of $p_A$ and Player B had a W/L of $p_B$ then the algorithm gave Player A probability $p = f(p_A,p_B)$ of winning the point, and Player B won with probability $1-p$. The algorithm tracked every possible outcome, which meant that there were over a million possible results for every match. Cumulative probabilities that each player came in first, second, third, or out of the money determined the match predicted results.
 
-![dania-jai-alai](/assets/img/gambling-science-1/dania-jai-alai.png)
+![dania-jai-alai](/assets/img/2021-04-23-gambling-science-1/dania-jai-alai.png)
+
+<p align = "center"><b>Jai Alai at Dania Fronton</b></p>
 
 The success with Jai Alai predictions gives some hope for predicting other similar events such as horse racing. Jai Alai is not sufficiently popular to be considered a betting opportunity, but [the reports of its death have been greatly exaggerated](https://www.treehugger.com/jai-alai-the-sport-that-almost-caught-on-in-the-us-4864008).
 
@@ -117,7 +127,7 @@ The success with Jai Alai predictions gives some hope for predicting other simil
 
 Guessing about how easy it might be to successfully gamble is very subjective, but this is how I see it:
 
-![gambling-opportunities](/assets/img/gambling-science-1/gambling-opportunities.png)
+![gambling-opportunities](/assets/img/2021-04-23-gambling-science-1/gambling-opportunities.png)
 
 The Scratch Lottery is simple and provides an easy entry, but will be limited in returns. The next best bet seems to be horse racing with the biggest hurdle being data collection. Eventually, horse race betting will hit limits on returns at which point investing in the stock market might be the best remaining option.
 
@@ -133,7 +143,7 @@ for some exponent $\alpha$ determined from the data. After analyzing many matche
 
 A more [Bayesian](https://en.wikipedia.org/wiki/Bayesian_probability) approach might be to look at how each player does against all others, like this:
 
-![](/assets/img/gambling-science-1/pab.png)
+![](/assets/img/2021-04-23-gambling-science-1/pab.png)
 
 The area on the right side of the vertical line represents the probability that Player $A$ wins against all others (including Player $B$), and the area above the horizontal line is the probability of winning for Player $B$. In head-to-head play, one player wins and one loses the point so the total number of points won by all players is exactly the total number lost by all players (meaning this is a zero-sum game). Except for the slight imbalance of wins/losses by players $A$ and $B$, their play against all others is almost as if they played against a generic player who wins exactly half the time.
 
@@ -185,7 +195,9 @@ We're only interested in the teams and the final score, so we can select the tea
 
 The first step is to compile a Won/Lost record for each team at the end of the season to use in the prediction formulas. Usually, you wouldn't be able to use the final standings to predict the winner of a game during the season, but since we'd like to be able to compare the two predictors, giving the best available information reduces the chance of introducing a confounding error. I used the [2020 Baseball Standings](https://www.mlb.com/standings/2020) and imported them into a spreadsheet, adding a column with the [team nickname](https://www.retrosheet.org/CurrentNames.csv) from Retrosheet.
 
-![al-east-standings](/assets/img/gambling-science-1/al-east-standings.png)
+![al-east-standings](/assets/img/2021-04-23-gambling-science-1/al-east-standings.png)
+
+<p align = "center"><b>2020 AL East Standings</b></p>
 
 You can simplify the spreadsheet by removing everything except columns A and E, and any rows with the division names, saving it as MLB.xlsx.
 
@@ -220,3 +232,20 @@ When it finishes running, check the values of the Skiena and Bayes predictors,
 A lower score indicates a better predictor, so this says that the Bayes method is better than Skiena's, but to be fair, Skiena chose the exponent $\alpha = 0.4$ for predicting Jai Alai, not baseball. This shows that we need to be careful about choosing the best prediction method, though.
 
 In the next post of this series, we'll explore what data might be needed and how to collect it.
+
+------
+
+#### Image credits
+
+Hero: Wikipedia. Cornelis de Vos, [Dice Players and Courtesans in a Tent](https://en.wikipedia.org/wiki/File:Cornelis_de_Vos_-_Players_and_courtesans_under_a_tent.jpg)
+
+Legalized Betting by State: Wikipedia. [Sports betting legality in the US](https://en.m.wikipedia.org/wiki/File:Sports_betting_legality_in_the_US.svg)
+
+Roulette Wheel: Dan Ryckert, X. [Retro Roulette returns](https://twitter.com/i/status/1710462746611876110)
+
+Horse Racing: Wikipedia. [Jon Sullivan](https://commons.wikimedia.org/wiki/File:Del_Mar_Horse_Racing.jpeg), PD Photo.org, See also: *[Biomechanics of Human Movement](https://pressbooks.bccampus.ca/humanbiomechanics/chapter/2-4-acceleration/)*, BC Campus 
+
+Jai Alai at Dania Fronton: Florida Trend. [Running the numbers at Dania Jai Alai](https://www.floridatrend.com/article/16064/running-the-numbers-at-dania-jai-alai), Mike Vogel 9/18/2013
+
+
+

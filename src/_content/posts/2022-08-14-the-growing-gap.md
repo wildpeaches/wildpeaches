@@ -4,18 +4,18 @@ subtitle: The End of an Era
 author: John Peach
 lede: The oil age may be coming to a close much sooner than most people realize, and there is a growing gap between expectations and the thermodynamic reality of renewable energy.
 hero:
-  url: /assets/img/the-growing-gap/pulling-on-the-gas-guage.jpg
+  url: /assets/img/2022-08-14-the-growing-gap/pulling-on-the-gas-guage.jpg
   alt:
 tags: [math, ]
 keywords: [logistic function]
-socialImg: /assets/img/the-growing-gap/pulling-on-the-gas-guage.jpg
+socialImg: /assets/img/2022-08-14-the-growing-gap/pulling-on-the-gas-guage.jpg
 ---
 
 A recent paper by Jean Laherrère, Charles Hall, and Roger Bentley asks the question, ["How much oil remains for the world to produce? Comparing assessment methods, and separating fact from fiction"](https://www.sciencedirect.com/science/article/pii/S2666049022000524#s0110). 
 
 The answer depends on how much oil has been discovered, how much more we might expect to be discovered, and how much we've already used. 
 
-![laherrere-hall-bentley](/assets/img/the-growing-gap/laherrere-hall-bentley.png)
+![laherrere-hall-bentley](/assets/img/2022-08-14-the-growing-gap/laherrere-hall-bentley.png)
 
 Laherrère is a petroleum geologist, Hall a systems ecologist, and Bentley is in the cybernetics department at the University of Reading.
 
@@ -37,7 +37,7 @@ His pacifist wife, [Clara Immerwahr](https://en.wikipedia.org/wiki/Clara_Immerwa
 
 What a guy.
 
-![products-from-barrel-crude-oil](/assets/img/the-growing-gap/products-from-barrel-crude-oil.png)
+![products-from-barrel-crude-oil](/assets/img/2022-08-14-the-growing-gap/products-from-barrel-crude-oil.png)
 
 Oil [formed](https://education.nationalgeographic.org/resource/petroleum) from the lipids of diatoms over a period of millions of years. It is the ultimate biofuel. Without oil we wouldn't have [global warming](https://climate.nasa.gov/global-warming-vs-climate-change/) or be able to wipe out the [plankton in the oceans](https://www.goesfoundation.com/).
 
@@ -83,7 +83,6 @@ There are several sources for data:
 - [BP Statistical Review of World Energy](https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy/energy-charting-tool-desktop.html), (click **Download full report**)
 - [Our World in Data](https://ourworldindata.org/energy-production-consumption)
 - [JODI](https://www.jodidata.org/oil/) 
-- [Rystand Energy](https://www.rystadenergy.com/products/free-solutions/) - limited free data
 - [International Energy Agency](https://www.iea.org/data-and-statistics/data-products/?filter=oil) (IEA) - subscription only
 - [Statista](https://www.statista.com/study/57187/oil-and-gas---global/) - subscription only
 - [Wood Mackenzie](https://www.woodmac.com/store/industry-sector/upstream-oil-and-gas/) - subscription only
@@ -98,7 +97,7 @@ How much oil has been discovered? It's kind of a [squishy](http://large.stanford
 
 There's an incentive to overestimate, and many believe that OPEC (Organization of Petroleum Exporting Countries) did just that in the 1980s. OPEC decided that each member nation could produce at a rate proportional to their known reserves. 
 
-![OPEC_reserve](/assets/img/the-growing-gap/OPEC_reserve.png)
+![OPEC_reserve](/assets/img/2022-08-14-the-growing-gap/OPEC_reserve.png)
 
 In 1988, many OPEC nations suddenly "found" a lot more oil. Saudi Arabia made their discoveries two years later. In their paper, Laherrère, Hall, and Bentley estimate that OPEC and FSU (the former Soviet Union) countries have overstated reserves by 400 Gb (1 Gb = 1 billion barrels). 
 
@@ -124,7 +123,7 @@ While production data isn't perfect, it's much better than discovery data.
 
 Using the data from the paper, we can get some insight, assuming the caveats outlined above, including the adjustments made by Laherrère, Hall, and Bentley to correct the reserve overestimates by OPEC and FSU. Discovery data came from [IHS International](https://ihsmarkit.com/index.html), considered one of the better sources for petroleum [data](https://my.ihs.com/energy). Production data came from EIA.
 
-![Discoveries-Production](/assets/img/the-growing-gap/Discoveries-Production.png)
+![Discoveries-Production](/assets/img/2022-08-14-the-growing-gap/Discoveries-Production.png)
 
 Plotting 2P backdated discovery data and production data together shows that after the North Sea discovery, only three years have had discoveries greater than production. If you think of discoveries as "putting money in the bank", then since 1983 we've been outspending our income.
 
@@ -132,7 +131,7 @@ Except for the giant oil field of Ghawar found in 1948, the peak of discoveries 
 
 Cumulative discoveries and production show the trends more clearly.
 
-![Cumulative-Discoveries-Production](/assets/img/the-growing-gap/Cumulative-Discoveries-Production.png)
+![Cumulative-Discoveries-Production](/assets/img/2022-08-14-the-growing-gap/Cumulative-Discoveries-Production.png)
 
 ------
 
@@ -165,7 +164,7 @@ $$
 $$
  which is a linear function in $Q$, with slope $-\frac{\omega}{Q_\infty}$ and $y-$intercept $\omega$. The plot of $\frac{P}{Q}$ against $Q$ looks like this:
 
-![hubbert-linearization](/assets/img/the-growing-gap/hubbert-linearization.png)
+![hubbert-linearization](/assets/img/2022-08-14-the-growing-gap/hubbert-linearization.png)
 
 The plot on the left fits all the data, but up to about 500 Gb of cumulative production the ratio is noisy. It jumps up and down and is hard to fit. The plot on the right starts at 500 Gb and gives a much better fit.
 
@@ -191,7 +190,7 @@ where
 
 The red curve is the fit to the data:
 
-![cumulative-discoveries-fit](/assets/img/the-growing-gap/cumulative-discoveries-fit.png)
+![cumulative-discoveries-fit](/assets/img/2022-08-14-the-growing-gap/cumulative-discoveries-fit.png)
 
 There's a big jump in 1948 with the discovery of Ghawar, and the $21^{st}$-century data doesn't quite match, but otherwise, it's not too bad. 
 
@@ -199,7 +198,7 @@ Beginning around 2005, conventional oil production reached a plateau and almost 
 
 Let's fit the two periods separately. The $20^{th}$-century could be considered the time of "conventional" oil, while the "fracking era" might have started in 2000.
 
- ![discoveries-logistic-fit](/assets/img/the-growing-gap/discoveries-logistic-fit.png)
+ ![discoveries-logistic-fit](/assets/img/2022-08-14-the-growing-gap/discoveries-logistic-fit.png)
 
 Splitting the data into two eras gives a very good fit and provides a direct method for $Q_\infty$ for each era. $Q_\infty(conv) = 1990$ Gb and $Q_\infty(frac) = 250$ Gb for a total of $2240$ Gb, or about $200$ Gb less than the Hubbert Linearization method.
 
@@ -209,7 +208,7 @@ Notice in both plots that the current cumulative discovery is very close to the 
 
 Between 1900 and 1970 oil production grew exponentially, but in the 1970s the [Arab Oil Embargoes](https://www.britannica.com/event/Arab-oil-embargo) forced importing countries to become less profligate with energy and more efficient. Since about 1982, oil production has grown linearly by $0.26$ Gb per year.
 
-![production-linear-fit](/assets/img/the-growing-gap/production-linear-fit.png)
+![production-linear-fit](/assets/img/2022-08-14-the-growing-gap/production-linear-fit.png)
 
 Using 1980 as the base year, the linear fit to production data is
 $$
@@ -239,7 +238,7 @@ The roots of this quadratic equation are $-217.17520$ and $73.66375$. Discarding
 
 ## EROI
 
-[Charles Hall](https://www.esf.edu/EFB/hall/) (the second author of the paper) was a professor at the SUNY College of Environmental Science and Forestry. Ecologists know animals must expend some energy to stay alive. Some need to find the right plants to eat, others are predators and need to chase their prey. In either case, they expend energy searching for food.
+[Charles Hall](https://www.esf.edu/biology/directory/emeritus.php) (the second author of the paper) was a professor at the SUNY College of Environmental Science and Forestry. Ecologists know animals must expend some energy to stay alive. Some need to find the right plants to eat, others are predators and need to chase their prey. In either case, they expend energy searching for food.
 
 Hall realized that the same is true for every form of energy that humans use as well. We use energy to drill the well, transport the crude petroleum to the refinery, and send the refined oil and other products to the point of sale.
 
@@ -253,15 +252,15 @@ In their paper, *[Long-term estimates of the energy-return-on-investment (EROI) 
 
 The physical component is a limit based on the increasing difficulty of finding oil fields, and the decreasing size of fields. The bigger, easier to extract resources tend to be found and produced first.
 
-![eroi-function](/assets/img/the-growing-gap/eroi-function.png)
+![eroi-function](/assets/img/2022-08-14-the-growing-gap/eroi-function.png)
 
 The $x-$axis of the plots is the fraction of the available resource discovered to date, while the $y-$axis represents the fraction of the maximum possible EROI. Using their functions, we can plot the EROI as a function of time.
 
-​	![EROI](/assets/img/the-growing-gap/EROI.png)
+​	![EROI](/assets/img/2022-08-14-the-growing-gap/EROI.png)
 
 The right end shows we are now only able to get about 20% of the maximum possible EROI, which was achieved in the early 1920s. Another way to look at this is to compare the yearly production to the net available. For example, if the EROI is 50 to 1, then we have 50 barrels available after using one to extract the total.
 
-![Net-EROI](/assets/img/the-growing-gap/Net-EROI.png)
+![Net-EROI](/assets/img/2022-08-14-the-growing-gap/Net-EROI.png)
 
 Court and Fizaine assume that the maximum possible EROI was about 45. The green curve at the bottom represents the energy required to extract and process oil. The blue curve is the net available including the EROI loss. Annual consumption is the red curve, but over time less is becoming available for use in other processes. EROI losses are a second growing gap in our energy supply.
 
@@ -271,11 +270,11 @@ What about the fracking revolution in the U.S. over the past 15 years? Didn't th
 
 Let's look at the data rather than the dogma. This is U.S. oil production and consumption according to the [BP 2022 Statistical Review of World Energy](https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy/energy-charting-tool-desktop.html):
 
-![US-OIL-Production-Consumption](/assets/img/the-growing-gap/US-OIL-Production-Consumption.png)
+![US-OIL-Production-Consumption](/assets/img/2022-08-14-the-growing-gap/US-OIL-Production-Consumption.png)
 
 The rapid increase in production comes from fracking, or tight oil, which has mainly occurred in three areas, the Bakken in North Dakota, the Permian in West Texas and Eastern New Mexico, and the Eagle Ford region in South Texas. Without oil from these sources, there would be a significant oil shortfall.
 
-![longer-term-crude-condensate-1](/assets/img/the-growing-gap/longer-term-crude-condensate-1.jpg)
+![longer-term-crude-condensate-1](/assets/img/2022-08-14-the-growing-gap/longer-term-crude-condensate-1.jpg)
 
 There's been a lot of hype about the "fracking revolution" and how new technology enabled it to happen. This is generally untrue. Hydraulic fracturing began in the 1960s in Texas and Louisiana, and the other key component, horizontal drilling, started being used in the early 1990s. While there have been improvements in the chemical mixes used to break open oil-bearing shales, most of what enabled the "fracking revolution" was easy money.
 
@@ -299,7 +298,9 @@ The projections for oil production from fracking and tar sands seems to be a rea
 
 ## Efficiency and Substitution
 
-![william-stanley-jevons](/assets/img/the-growing-gap/william-stanley-jevons.jpg)
+![william-stanley-jevons](/assets/img/2022-08-14-the-growing-gap/william-stanley-jevons.jpg)
+
+<p align = "center"><b>William Stanley Jevons</b></p>
 
 In 1865 William Stanley Jevons, an English mathematician, and economist wrote
 
@@ -313,7 +314,7 @@ On the other hand, if you replace your gas-powered car with an electric car, it'
 >
 > In a narrow technical sense, the Jevons Effect *only* happens if a technology makes an *existing* process more efficient – and even then, only if demand is highly sensitive to  prices. But new technology oft obviates the old way of doing things entirely. Automobiles, for example, did not create a Jevons Effect for horse manure, despite triggering a 10,000-fold increase in freight and  passenger miles traveled.
 
-This may be true at a reductionist level, but on a larger scale, Jevons still appears to be valid as described by the [Khazzoom–Brookes postulate](https://en.wikipedia.org/wiki/Khazzoom%E2%80%93Brookes_postulate), which says (see *[The Jevons Paradox: The Evolution of Complex Adaptive Systems and the Challenge for Scientific Analysis](https://www.taylorfrancis.com/chapters/edit/10.4324/9781849773102-8/jevons-paradox-evolution-complex-adaptive-systems-challenge-scientific-analysis-mario-giampietro-kozo-mayumi)*)
+This may be true at a reductionist level, but on a larger scale, Jevons still appears to be valid as described by the [Khazzoom–Brookes postulate](https://en.wikipedia.org/wiki/Khazzoom%E2%80%93Brookes_postulate), which says (see *[The Jevons Paradox: The Evolution of Complex Adaptive Systems and the Challenge for Scientific Analysis (pg. 79)](https://books.google.com/books?hl=en&lr=&id=nfHDSSqi4NQC&oi=fnd&pg=PA79&ots=PZeTdkUOr7&sig=YkFJUbtXb5NIy0O_8--z5-336bA#v=onepage&q&f=false)*)
 
 > that an increase in energy efficiency, as characterized at the microeconomic level, can ‘backfire’, leading to an increase in energy use, at the macroeconomic level, rather than to a reduction.  
 
@@ -327,7 +328,7 @@ In economics, an annual growth rate of 3% gives a doubling time of 24 years, so 
 
 A plot of energy consumption over the period 1800-2018 shows that energy consumption of all types is generally increasing. We aren't substituting one form of energy for another, we're just adding more energy from all sources to the mix.
 
-![world-energy-consumption](/assets/img/the-growing-gap/world-energy-consumption.jpg)
+![world-energy-consumption](/assets/img/2022-08-14-the-growing-gap/world-energy-consumption.jpg)
 
 ## Renewable energy
 
@@ -345,7 +346,7 @@ Many people who consider a renewable energy future probably think that of course
 
 
 
-![EnergyFractions](/assets/img/the-growing-gap/EnergyFractions.png)
+![EnergyFractions](/assets/img/2022-08-14-the-growing-gap/EnergyFractions.png)
 
 The questions may not have immediate answers, but there are larger issues that need to be addressed for each one.
 
@@ -398,13 +399,25 @@ Two boundaries, novel entities (chemical pollution, radioactive materials, AI) a
 
 Most of these boundaries would continue to be exceeded even with a carbon-free energy source under business as usual conditions.
 
- ![planetary-boundaries-cover-1620](/assets/img/the-growing-gap/planetary-boundaries.png)
+ ![planetary-boundaries-cover-1620](/assets/img/2022-08-14-the-growing-gap/planetary-boundaries.png)
+
+<p align = "center"><b>Planetary Boundaries</b></p>
 
 To anyone who claims that a carbon-free energy society at anything approaching the current scale is not only possible but easily achievable, a complete feasibility demonstration is urgently needed. 
 
 As Carl Sagan said, "*extraordinary claims require extraordinary evidence*".
 
+------
 
+#### Image credits
+
+Hero: AliExpress, [Creativity refuel Car Sticker](https://www.aliexpress.us/item/3256801369628304.html?gatewayAdapt=glo2usa4itemAdapt)
+
+William Stanley Jevons: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:PSM_V11_D660_William_Stanley_Jevons.jpg)
+
+Planetary Boundaries: [Stockholm Resilience Centre](https://www.stockholmresilience.org/research/planetary-boundaries/the-nine-planetary-boundaries.html)
+
+------
 
 ## Processing the data
 
@@ -437,7 +450,7 @@ For convenience, all of the functions are in [GrowingGap_functions.zip](https://
 - [Peak Oil](https://en.wikipedia.org/wiki/Peak_oil). Wikipedia
 - [Oil Reserves](https://en.wikipedia.org/wiki/Oil_reserves). Wikipedia
 - [Backdating is the key](http://aspofrance.viabloga.com/files/JL_ASPO2011.pdf). Laherrère
-- [Comments on *Squeezing more oil from the ground by L. Maugeri*](https://www.yumpu.com/en/document/read/33784415/1-jean-laherrere-corrected-by-colin-campbell-25-aspo-france). Campbell, Laherrère
+- [Comments on *Squeezing more oil from the ground by L. Maugeri*](https://www.peakoil.net/headline-news/comments-by-jean-laherr-re-on-squeezing-more-oil-from-the-ground-scientific-american). Campbell, Laherrère  (Follow the links, "[You can read Jean’s comments here](https://www.peakoil.net/publications/comments-on-squeezing-more-oil-from-the-ground)", and [Maugerifinalversion.pdf](https://www.peakoil.net/files/Maugerifinalversion.pdf).)
 - [Review and Analysis of the Peak Oil Debate](https://apps.dtic.mil/sti/pdfs/ADA488967.pdf). Fisher
 - [Forecasting the limits to the availability and diversity of global conventional oil supply: Validation](https://www.sciencedirect.com/science/article/pii/S0360544213009420?via%3Dihub). Hallock, Wu, Hall, Jefferson
 - [Shaping the global oil peak: A review of the evidence on field sizes, reserve growth, decline rates and depletion rates](https://www.sciencedirect.com/science/article/abs/pii/S0360544211006694). Sorrell, Speirs, Bentley, Miller, Thompson

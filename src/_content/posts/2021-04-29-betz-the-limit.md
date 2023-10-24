@@ -4,11 +4,11 @@ subtitle: The Ultra Hyper Totally Amazing Push Me Pull You Supercavitating Surfa
 author: John Peach
 lede:
 hero:
-  url: /assets/img/betz-the-limit/wind-turbines-in-the-field.jpg
+  url: /assets/img/2021-04-29-betz-the-limit/wind-turbines-in-the-field.jpg
   alt:
 tags: [math, physics]
 keywords: [Betz Limit, Wind Energy]
-socialImg: /assets/img/betz-the-limit/wind-turbines-in-the-field.jpg
+socialImg: /assets/img/2021-04-29-betz-the-limit/wind-turbines-in-the-field.jpg
 ---
 
 > Idiot wind
@@ -120,7 +120,9 @@ Albert Betz was a German physicist interested in wind turbine technology. In 192
 
 Betz' Law is surprisingly easy to prove. Here's a picture of wind flowing through the rotor disk of a wind turbine drawn by [David Watson](http://www.ftexploring.com/energy/wind-enrgy.html).
 
-![wind-turbine](/assets/img/betz-the-limit/wind-turbine.png)
+![wind-turbine](/assets/img/2021-04-29-betz-the-limit/wind-turbine.png)
+
+<p align = "center"><b>Kinetic Energy of Wind Machines</b></p>
 
 If the diameter of the rotor is $D$, then the swept area is
 
@@ -215,7 +217,9 @@ So there we have it. With a carefully designed wind turbine, we can get almost $
 
 In 2001, Russian physicists Aleksandr Gorban, Aleksandr Gorlov, and Valentin Silantyev published a [paper](http://www.math.le.ac.uk/people/ag153/homepage/Gorlov2001.pdf), _"Limits of the Turbine Efficiency for Free Fluid Flow"_. This is a picture of Gorban, and just look at the smirk on his face
 
-![alexandr-gorban](/assets/img/betz-the-limit/alexandr-gorban.jpg)
+![alexandr-gorban](/assets/img/2021-04-29-betz-the-limit/alexandr-gorban.jpg)
+
+<p align = "center"><b>Aleksandr Gorban</b></p>
 
 because they had applied Computational Fluid Dynamics (CFD) to Betz' Law. CFD uses numerical analysis to study fluid flows and can provide more accurate solutions than the Betz method above. Because Betz didn't have access to the powerful computers available today, he made some assumptions,
 
@@ -227,3 +231,13 @@ because they had applied Computational Fluid Dynamics (CFD) to Betz' Law. CFD us
 With CFD methods, Gorban, Gorlov, and Silantyev were able to show that the air mass spins up as it passes through the disk, thus wasting energy. Their maximum turned out to be $30.1 \%$ of the total available energy. In "[_Wind Turbine Power: The Betz Limit and Beyond_](https://cdn.intechopen.com/pdfs/41078/InTech-Wind_turbine_power_the_betz_limit_and_beyond.pdf)", Mahmoud Huleihil and Gedalya Mazor found that the maximum thermodynamic efficiency is $\frac{8}{27} \approx 29.6 \%$. Nevertheless, wind turbines do work, they extract useful energy and we can use them to power _The Ultra Hyper Totally Amazing Push Me Pull You_.
 
 [^1]: Photons bounce around like crazy inside the sun, in a path called a [random walk](https://en.wikipedia.org/wiki/Random_walk), or [Brownian Motion](https://en.wikipedia.org/wiki/Brownian_motion). The average distance traveled during a random walk is the mean step size times the square root of the number of steps. The distance traveled during each step is very short, so many steps are required to get to the sun's surface.
+
+------
+
+#### Image credits
+
+Hero: EPRI Journal, [EPRI Uses Data Analytics to Increase Wind Power Production](https://eprijournal.com/a-deep-dive-into-wind-turbine-performance/). Chris Warren, Nov. 26, 2018
+
+Kinetic Energy of Wind Machines: [Flying Turtle Exploring Science and Technology](http://www.ftexploring.com). [Wind Turbines and the Energy in Wind](https://www.ftexploring.com/energy/wind-enrgy.html). David Watson, Copyright 2000-2000 The Flying Turtle Company. All rights reserved.
+
+Aleksandr Gorban: Wikimedia Commons. [Gorban3.jpg](https://commons.wikimedia.org/wiki/File:Gorban3.jpg), Wikipedia: [Alexander Gorban](https://en.wikipedia.org/wiki/Alexander_Gorban) 

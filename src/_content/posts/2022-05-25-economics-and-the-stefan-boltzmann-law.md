@@ -4,16 +4,16 @@ subtitle: Why do economists want us to live in a searing, burning, flaming apoca
 author: John Peach
 lede:
 hero:
-  url: /assets/img/economics-and-the-stefan-boltzmann-law/heronimus-bosch-the-harrowing-of-hell.jpg
+  url: /assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/heronimus-bosch-the-harrowing-of-hell.jpg
   alt:
 tags: [math]
 keywords: []
-socialImg: /assets/img/economics-and-the-stefan-boltzmann-law/heronimus-bosch-the-harrowing-of-hell.jpg
+socialImg: /assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/heronimus-bosch-the-harrowing-of-hell.jpg
 ---
 
  Profits. 
 
-![underpantsgnomes1](/assets/img/economics-and-the-stefan-boltzmann-law/underpantsgnomes1.png)
+![underpantsgnomes1](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/underpantsgnomes1.png)
 
 In 1972, an MIT study called [*The Limits to Growth*](https://www.clubofrome.org/publication/the-limits-to-growth/) was published, warning
 
@@ -25,11 +25,11 @@ Here, I'll show how continued economic growth could turn the Earth into an infer
 
 The [World GDP](https://ourworldindata.org/grapher/gross-domestic-product?tab=chart&country=OWID_WRL~World) (Gross Domestic Product) has been growing quite nicely for decades
 
-![World GDP](/assets/img/economics-and-the-stefan-boltzmann-law/world-gdp.png)
+![World GDP](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/world-gdp.png)
 
 other than a couple of hiccups in 2008 and 2019-2020. Another way to look at the data is to plot the [logarithm](https://www.britannica.com/science/logarithm) of GDP. If you raise a number to a power, $10^2 = 100$ then the logarithm of the answer is the exponent, $\log_{10}(100) = 2$.
 
-![log-world-GDP-fit](/assets/img/economics-and-the-stefan-boltzmann-law/log-world-GDP-fit.png)
+![log-world-GDP-fit](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/log-world-GDP-fit.png)
 
 If you put your money in a savings account earning 2% per year, then the equation for how much you have after $t$ years is
 $$
@@ -59,7 +59,7 @@ then the World economy grew by an average of 2.9% per year. Great!
 
 The log plot of total World energy consumption over the same period looks similar.
 
-![Log World energy fit](/assets/img/economics-and-the-stefan-boltzmann-law/log-world-energy-fit.png)
+![Log World energy fit](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/log-world-energy-fit.png)
 
 The linear fit isn't quite as good, but the trend is still there. The log of energy consumption in 2019 was 5.21 TWh, and in 1973 it was 4.82 TWh, so the average per year was 0.008423774, and
 $$
@@ -71,11 +71,11 @@ or just a bit under 2% growth per year.
 
 If we plot log GDP against log energy, the fit is nearly linear.
 
-![world-gdp-energy-log-log](/assets/img/economics-and-the-stefan-boltzmann-law/world-gdp-energy-log-log.png)
+![world-gdp-energy-log-log](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/world-gdp-energy-log-log.png)
 
 But, as anyone who doesn't understand statistics quite well enough will be happy to tell you, "Correlation doesn't imply causation."
 
-![xkcd-correlation](/assets/img/economics-and-the-stefan-boltzmann-law/xkcd-correlation.png)
+![xkcd-correlation](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/xkcd-correlation.png)
 
 For every aphorism, there's a counter-aphorism. In this case, it's "Where there's smoke, there's fire," meaning if you've got a really good fit (correlation), you'd better start considering causation. 
 
@@ -91,17 +91,21 @@ Why does the economy need energy? Imagine if we suddenly had no access to extern
 
 Nice economy youse got there. Shame if sumtin' was to happen to it.
 
-![mafia-economy](/assets/img/economics-and-the-stefan-boltzmann-law/mafia-economy.png)
+![mafia-economy](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/mafia-economy.png)
 
 ## The Stefan-Boltzmann Law
 
 In 1856, Eunice Newton Foote presented a paper to the [American Association for the Advancement of Science (AAAS)](https://www.aaas.org/), [*Circumstances affecting the Heat of the Sun's Rays*](https://publicdomainreview.org/collection/first-paper-to-link-co2-and-global-warming-by-eunice-foote-1856), the first paper to relate carbon dioxide concentration in the atmosphere to temperature. 
 
-![Eunice_Newton_Foote](/assets/img/economics-and-the-stefan-boltzmann-law/Eunice_Newton_Foote.png)
+![Eunice_Newton_Foote](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/eunice-newton-foote2.png)
+
+<p align = "center"><b>Eunice Newton Foote</b></p>
 
 Three years later, Irish physicist [John Tyndall](https://www.tyndall.ie/john-tyndall/) independently rediscovered Foote's work, using a [ratio spectrophotometer](https://en.wikipedia.org/wiki/Spectrophotometry), and began the era of [climate science.](https://www.ucl.ac.uk/news/2020/jul/opinion-john-tyndall-forgotten-co-discoverer-climate-science)
 
-![tyndall-and-apparatus](/assets/img/economics-and-the-stefan-boltzmann-law/tyndall-and-apparatus.png)
+![tyndall-and-apparatus](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/tyndall-and-apparatus.png)
+
+<p align = "center"><b>John Tyndall</b></p>
 
 In 1877, [Josef Stefan](https://en.wikipedia.org/wiki/Josef_Stefan) derived the physical law describing the relationship between radiation and temperature,
 $$
@@ -113,27 +117,37 @@ $$
 $$
 where $k$ is the [Boltzmann constant](https://en.wikipedia.org/wiki/Boltzmann_constant), $c$ is the [speed of light in a vacuum](https://en.wikipedia.org/wiki/Speed_of_light), and $h$ is [Planck's constant](https://en.wikipedia.org/wiki/Planck_constant). The units are watts per (square meter - degree Kelvin to the fourth power), and $0 \degree K = 273.15 \degree C$. 
 
-![Stefan and Boltzmann](/assets/img/economics-and-the-stefan-boltzmann-law/stefan-and-boltzmann.png)
+![Stefan and Boltzmann](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/stefan-and-boltzmann.png)
+
+<p align = "center"><b>Stefan and Boltzmann</b></p>
 
 ## Global Warming
 
 Using the works of Tyndall, Stefan, and Boltzmann, Swedish chemist [Svante Arrhenius](https://www.sciencehistory.org/distillations/magazine/future-calculations) developed a relationship between global warming and $CO_2$ concentration, publishing his results in the *London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science* in 1896. He showed that doubling the concentration of carbon dioxide in the atmosphere would increase global temperatures between $5.5\degree F$  and $9\degree F$.
 
-![Svante Arrhenius](/assets/img/economics-and-the-stefan-boltzmann-law/svante-arrhenius.jpg)
+![Svante Arrhenius](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/svante-arrhenius.jpg)
+
+<p align = "center"><b>Svante Arrhenius</b></p>
 
 What does the Stefan-Boltzmann law mean? An object at temperature $T$ in [degrees Kelvin](https://www.livescience.com/temperature.html) radiates energy $j^*$ in Watts per square meter. Watts are a unit of power, but multiply power by time to get energy. Also, the Stefan-Boltzmann law applies to [blackbody radiators](https://astronomy.swin.edu.au/cosmos/b/blackbody+radiation) or perfect radiators, but most objects are not quite ideal, so emit less energy than a blackbody.
 
 Conversely, for an object to radiate more energy, it needs to be hotter, and this is how the law applies to climate science. Sunlight is mostly in the [visible spectrum (380 nm - 700 nm)](https://science.nasa.gov/ems/09_visiblelight) which is transparent to atmospheric molecules. After the light reaches the surface it warms the earth. To maintain an [energy balance](https://theconversation.com/earths-energy-budget-is-out-of-balance-heres-how-thats-warming-the-climate-165244) an equivalent amount needs to be reradiated into space.
 
-![earth-energy-budget](/assets/img/economics-and-the-stefan-boltzmann-law/earth-energy-budget.png)
+![earth-energy-budget](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/earth-energy-budget.png)
+
+<p align = "center"><b>Earth Energy Budget</b></p>
 
 The top of the atmosphere receives around $1370 \frac{W}{m^2}$ from the sun. About 30% is reflected by clouds and other atmospheric molecules, leaving approximately $1000 \; \frac{W}{m^2}$ at the Earth's surface. Due to the [curvature of the Earth](https://earthobservatory.nasa.gov/features/EnergyBalance), and since only one side is illuminated, this reduces to an average of $340.4 \frac{W}{m^2}$. 
 
-![sunlight_angle](/assets/img/economics-and-the-stefan-boltzmann-law/sunlight_angle.png)
+![sunlight_angle](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/sunlight_angle.png)
+
+<p align = "center"><b>Sunlight Angle</b></p>
 
 Reradiation from the warmed surface is in the [infrared spectrum](https://www.infinitioptics.com/technology/multi-sensor)
 
-![Infrared_Spectrum_fixed](/assets/img/economics-and-the-stefan-boltzmann-law/Infrared_Spectrum_fixed.svg)
+![Infrared_Spectrum_fixed](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/Infrared_Spectrum_fixed.svg)
+
+<p align = "center"><b>Visible and Infrared Spectra</b></p>
 
 which is where the trouble begins. Divalent molecules or molecules with a single central atom bonded to two other atoms are often excellent [absorbers of infrared radiation](https://www.epa.gov/ghgemissions/overview-greenhouse-gases). 
 
@@ -153,7 +167,9 @@ Fenway Park in Boston, MA is home to the Boston Red Sox. The stadium was built i
 
 The left-field wall, called the "Green Monster", is 37 feet tall and houses the scoreboard. The scores are updated manually, and if a batter hits a ball through a hole where a number is being updated, it's an automatic ground-rule double.
 
-![Fenway Park Home Plate & Green Monster](/assets/img/economics-and-the-stefan-boltzmann-law/green-monster.png)
+![Fenway Park Home Plate & Green Monster](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/green-monster.png)
+
+<p align = "center"><b>Fenway Green Monster</b></p>
 
 Snidely Whiplash forced you at epee point to the upper bleachers just below the Citgo sign. There, he chained you to the seats, locked with an old-fashioned padlock. What is he up to? What have you ever done to Snidely? Nothing. He's just evil. As you watch, he wanders all around the bleachers applying Whiplash's Wicked Waterproofing to the entire interior of Fenway.
 
@@ -191,7 +207,9 @@ Albert Bartlett taught nuclear physics at the University of Colorado at Boulder.
 
 ## Meltdown!
 
-![earthmelting](/assets/img/economics-and-the-stefan-boltzmann-law/earthmelting.jpg)
+![earthmelting](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/earthmelting.jpg)
+
+<p align = "center"><b>Meltdown!</b></p>
 
 Since economic growth depends on increasing energy inputs, and all of the energy eventually is converted to waste heat, we can calculate the temperature of the Earth as a function of exponential growth.
 
@@ -209,7 +227,9 @@ If the economy also grew by a factor of 10 in a century, then the temperature of
 $$
 T_{\text{Earth}} = \left( \frac{(340.3 + 0.4) \frac{W}{m^2}}{5.67 \times 10^{-8} \frac{W}{m^2-\degree K}} \right)^{1/4} = 278.4384 \degree K.
 $$
-![Mad-Magazine-Alfred-Neuman-what-me-worry](/assets/img/economics-and-the-stefan-boltzmann-law/Mad-Magazine-Alfred-Neuman-what-me-worry.gif)
+![Mad-Magazine-Alfred-Neuman-what-me-worry](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/Mad-Magazine-Alfred-Neuman-what-me-worry.gif)
+
+<p align = "center"><b>Alfred E. Neuman</b></p>
 
 After another hundred years, the economy adds $4$ Watts per square meter. A century later it's up to $40 \; \frac{W}{m^2}$, and pretty soon you've got a Snidely Whiplash kind of problem. 
 
@@ -219,7 +239,7 @@ T_{\text{Earth}} = \left( \frac{(340.3 + (1+\frac{r}{100})^t) \frac{W}{m^2}}{5.6
 $$
 where $r$ is the annual growth rate of the economy in percent, and $t$ is the number of years. This shows the effect on the Earth's surface temperature with a constant economic growth rate of $2.3 \%$:
 
-![Earth Temperature](/assets/img/economics-and-the-stefan-boltzmann-law/earth-temperature.png)
+![Earth Temperature](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/earth-temperature.png)
 
 Water boils after 292 years, paper burns at year 357, gold melts in year 533, and after 789 years of constant growth, the surface of the Earth is the same temperature as the Sun. 
 
@@ -244,7 +264,7 @@ Branko Milanović, an economist at CUNY's Stone Center on Socio-Economic Inequal
 
 A similar proposed new economy is the [Circular Economy](https://www.europarl.europa.eu/news/en/headlines/economy/20151201STO05603/circular-economy-definition-importance-and-benefits), which involves sharing, leasing, reusing, repairing, refurbishing, and  recycling existing materials and products for as long as possible. In this  way, the life cycle of products could be extended.
 
-![The_Circular_Economy_concept](/assets/img/economics-and-the-stefan-boltzmann-law/The_Circular_Economy_concept.png)
+![The_Circular_Economy_concept](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/The_Circular_Economy_concept.png)
 
 Simon Michaux, Senior Scientist with the Geological Survey of Finland says of the [circular economy](https://tupa.gtk.fi/raportti/arkisto/3_2021.pdf)
 
@@ -256,7 +276,41 @@ So, as John Michael Greer writes, ["Collapse now, and avoid the rush"](https://w
 
 ------
 
+#### Image credits
 
+Hero: [The Harrowing of Hell](https://commons.wikimedia.org/wiki/File:Follower_of_Jheronimus_Bosch_-_The_Harrowing_of_Hell.jpg), Hieronymus Bosch. Wikimedia Commons
+
+Underpants Gnomes: [South Park](https://southpark.cc.com/), Season 2 E 17 • 12/16/1998
+
+Correlation: [Randall Munroe](https://xkcd.com/552/), XKCD.
+
+Mafia Goon: [Mafia Patty FAKE](https://ahatintime.fandom.com/wiki/Mafia_Goon?file=Mafia_Patty_FAKE.jpg), [A Hat in Time Wiki](https://ahatintime.fandom.com/)
+
+Eunice Foote: [Eunice Newton Foote, the Forgotten Pioneer of the Greenhouse Effect](https://www.bbvaopenmind.com/en/science/environment/eunice-newton-foote-pioneer-greenhouse-effect/). Javier Yanes, OpenMind, Mar 8, 2022 and [Nucleation Capital](https://nucleationcapital.com/eunice-newton-foote/).
+
+John Tyndall: [Tyndall National Institute](https://www.tyndall.ie/john-tyndall/).
+
+Apparatus: [Tyndall's setup for measuring radiant heat absorption by gases](https://en.m.wikipedia.org/wiki/File:Tyndalls_setup_for_measuring_radiant_heat_absorption_by_gases_annotated.svg), Wikipedia.
+
+Jozef Stefan: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Jozef_Stefan.jpg).	
+
+Ludwig Boltzmann: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Boltzmann2.jpg).
+
+Svante Arrhenius: [Future Calculations](https://www.sciencehistory.org/stories/magazine/future-calculations/). [Rudy M. Baum Sr.](https://www.sciencehistory.org/profile/rudy-m-baum-sr/) [Science History Institute Museum & Library](https://www.sciencehistory.org/), Jul. 18 2016. 
+
+Earth Energy Budget: [Earth’s energy budget is out of balance – here’s how that’s warming the climate](https://theconversation.com/earths-energy-budget-is-out-of-balance-heres-how-thats-warming-the-climate-165244). Scott Denning, The Conversation, Aug. 9 2021. 
+
+Sunlight Angle: [Incoming Sunlight](https://earthobservatory.nasa.gov/features/EnergyBalance/page2.php). NASA Earth Observatory, Jan 14, 2009.
+
+Visible and Infrared Spectrum: [See Beyond Human Vision](https://www.infinitioptics.com/technology/multi-spectral-surveillance-imaging). [Infiniti Electro-Optics](https://www.infinitioptics.com/).
+
+Fenway Green Monster: Wally Gobetz, [Fenway Park Home Plate Green Monster](https://wallpapersafari.com/w/phb0Rg), Jan 3, 2018. Boston Landmarks Commission, [Citgo Sign in Kenmore Square Study Report](https://www.bostonpreservation.org/sites/default/files/2018-11/citgo_sign_subcommittee_final_draft-.pdf) (pg. 18).
+
+Meltdown!: [Want to save the world? Vote.](https://www.syfy.com/syfy-wire/want-to-save-the-world-vote) SYFY, Phil Plait, May 4, 2018.
+
+Alfred E. Neuman: [Lost in Thought - Who Said What? ("What, me worry?")](https://www.stonesoferasmus.com/2018/03/lost-in-thought-who-said-what-what-me.html) Greig Roselli, Stones of Erasmus, 
+
+------
 
 ### References and Further Reading
 
@@ -266,7 +320,7 @@ So, as John Michael Greer writes, ["Collapse now, and avoid the rush"](https://w
 
 [Do The Math blog](https://dothemath.ucsd.edu/), Tom Murphy
 
-[Energy: Key Charts](https://ourworldindata.org/energy-key-charts), Hannah Ritchie - Our World in Data
+[Energy: Key Charts](https://ourworldindata.org/energy), Hannah Ritchie, Max Roser and Pablo Rosado - Our World in Data
 
 [World GDP](https://ourworldindata.org/grapher/gross-domestic-product?tab=chart&country=OWID_WRL~World), Our World in Data
 

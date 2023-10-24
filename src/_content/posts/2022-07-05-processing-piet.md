@@ -4,7 +4,7 @@ subtitle: Language into Art, Art into Language
 author: John Peach
 lede: null
 hero:
-  url: /assets/img/processing-piet/torus-earth.jpg
+  url: /assets/img/2022-07-05-processing-piet/torus-earth.jpg
   alt: null
 tags:
   - programming
@@ -13,11 +13,11 @@ keywords:
   - Processing
   - Piet
   - Java
-socialImg: /assets/img/processing-piet/torus-earth.jpg
+socialImg: /assets/img/2022-07-05-processing-piet/torus-earth.jpg
 lastmod: 2022-07-08T15:09:37.851Z
 pullQuote:
   author: Bertrand Russell
-  imgUrl: /assets/img/processing-piet/Bertrand_Russell_1957.jpg
+  imgUrl: /assets/img/2022-07-05-processing-piet/Bertrand_Russell_1957.jpg
   imgAlt: Headshot of Bertrand Russel.
   quote: Thus mathematics may be defined as the subject in which we never know
     what we are talking about, nor whether what we are saying is true.
@@ -36,7 +36,9 @@ Jan is the artist of this blog. He drew the velociraptor walking on the moon for
 
 Jan suggested we use "The chicken contemplates Werner Herzog" which produced this watercolor using only the text as input.
 
-![The chicken contemplates Werner Herzog](/assets/img/processing-piet/the-chicken-contemplates-werner-herzog.png)
+![The chicken contemplates Werner Herzog](/assets/img/2022-07-05-processing-piet/the-chicken-contemplates-werner-herzog.png)
+
+<p align = "center"><b>The chicken contemplates Werner Herzog</b></p>
 
 Looking around for other art-related software tools, I found two interesting programs. [Processing](https://processing.org/) uses the Java language to generate art, and [Piet](https://www.dangermouse.net/esoteric/piet.html), named for the Dutch artist Piet Mondrian, uses art to create language.
 
@@ -44,13 +46,15 @@ Processing can create art in the style of Piet Mondrian, so I thought it might b
 
 ## Piet Mondrian
 
-Piet Mondrian is considered one of the greatest artists of the 20th century. He said of art,
+[Piet Mondrian](https://en.wikipedia.org/wiki/Piet_Mondrian) is considered one of the greatest artists of the 20th century. He said of art,
 
 > Art is higher than reality and has no direct relation to reality. To approach the spiritual in art, one will make as little use as possible of reality, because reality is opposed to the spiritual. We find ourselves in the presence of an abstract art. Art should be above reality, otherwise it would have no value for man.
 
 His paintings evolved from impressionistic landscapes like _Willow Grove: Impression of Light and Shadow_ (1905) to the abstract _Composition A_ (1923).
 
-![mondrian](/assets/img/processing-piet/mondrian.png)
+![mondrian](/assets/img/2022-07-05-processing-piet/mondrian.png)
+
+<p align = "center"><b>Piet Mondrian</b></p>
 
 Along with other late 19th and early 20th century artists, Mondrian rejected representational art, favoring [Cubism](https://en.wikipedia.org/wiki/Cubism) during the period 1912 - 1917, eventually settling on pure abstraction using only the primary colors red, yellow, and blue, and white, gray, and black, separated by vertical and horizontal lines.
 
@@ -60,9 +64,11 @@ The [Processing](https://processing.org/) language was started in 2001 by [Casey
 
 Mondrian's _Composition A_ makes an easy introduction to Processing because he used only six colors, and the lines are horizontal or vertical. Since I'm lazy, I thought that instead of trying to draw each line, I could paint the entire canvas black, and then paint colored rectangles on top. First, I needed to know the coordinates of each line forming the boundaries of the rectangles.
 
-I added the [_coordinates_](https://chrome.google.com/webstore/detail/coordinates/bpflbjmbfccblbhlcmlgkajdpoiepmkd?hl=en-US) extension for Chrome which shows the $x,y$ pixel coordinates of the mouse pointer. The [Piet Mondrian](https://www.piet-mondrian.org/) fan club web page lists all his paintings and has an image of [Composition A](https://www.piet-mondrian.org/composition-a-1923.jsp) where I could pick out the coordinates. I chose the right edge of each black line, using the origin $(0,0)$ as the top left corner because both _Processing_ and the _coordinates_ extension use that point as the start.
+I added the [Mouse_Coordinates](https://chrome.google.com/webstore/detail/mouse-coordinates/khdgjhdgmblhlngkhmnmbkacgjcecnah) extension for Chrome which shows the $x,y$ pixel coordinates of the mouse pointer. The [Piet Mondrian](https://www.piet-mondrian.org/) fan club web page lists all his paintings and has an image of [Composition A](https://www.piet-mondrian.org/composition-a-1923.jsp) where I could pick out the coordinates. I chose the right edge of each black line, using the origin $(0,0)$ as the top left corner because both _Processing_ and the _coordinates_ extension use that point as the start.
 
-![composition-a-line-coords](/assets/img/processing-piet/composition-a-line-coords.png)
+![composition-a-line-coords](/assets/img/2022-07-05-processing-piet/composition-a-line-coords.png)
+
+<p align = "center"><b>Composition A Coordinates</b></p>
 
 The width of the lines separating the rectangles is about 4 pixels. I numbered each rectangle to make it easier to identify in the code, so rectangle 6 lies in the region bounded by $x_2 - x_3$ and $y_1 - y_3$.
 
@@ -93,7 +99,9 @@ and so on.
 
 We need to get the right colors for each rectangle using a color picker tool. Most paint programs like Windows Paint3D can extract color from an image, usually using an eyedropper icon. Click the eyedropper, then the color you'd like to select. The blue rectangles have a mix of colors, red 100, green 87, and blue 197.
 
-![color-picker](/assets/img/processing-piet/color-picker.png)
+![color-picker](/assets/img/2022-07-05-processing-piet/color-picker.png)
+
+<p align = "center"><b>Color Picking</b></p>
 
 Pure red is red $= 255$ green $= 0$, and blue $= 0$. Halfway between red and green is yellow, and halfway between green and blue is cyan.
 
@@ -114,7 +122,9 @@ Mondrian's colors aren't as uniform as a single color represents, and the lines 
 
 When you start _Processing_ you'll see the IDE with the name of the file called "sketch\_\<ddmmyy\>a" where "ddmmyy" is today's date. Start writing your code on the first line.
 
-![processing-ide](/assets/img/processing-piet/processing-ide.png)
+![processing-ide](/assets/img/2022-07-05-processing-piet/processing-ide.png)
+
+<p align = "center"><b>The Processing IDE</b></p>
 
 Notice that two forward slashes `//` start a comment. Also, the location of the last $x$ line, `x7` is the pixel location (1271) minus the `left_side` plus the line width `LW`. Later, we'll define the width and height of each rectangle as the line locations minus the widths, but to get the full extent of the image the line width needs to be added back.
 
@@ -130,7 +140,9 @@ rect(x1,y0,x3-LW,y1-LW);
 
 Continue building the remaining rectangles. Save the file ([sketch_220624.pde](https://gist.github.com/XerxesZorgon/e3ca1e889b4a5ad1fd3599d63fec77f0)), and then press the Run button at the top of the edit area of the IDE (the blue triangle in a white circle). If all goes well you should have a perfect reproduction of _Composition A_.
 
-![mondrian-sketch](/assets/img/processing-piet/mondrian-sketch.png)
+![mondrian-sketch](/assets/img/2022-07-05-processing-piet/mondrian-sketch.png)
+
+<p align = "center"><b>Composition A in Processing</b></p>
 
 If not, close the sketch window, fix the code, and try again.
 
@@ -138,7 +150,9 @@ If not, close the sketch window, fix the code, and try again.
 
 David Morgan-Mar is an Australian physicist, photographer, [blogger](https://www.dangermouse.net/), and creator of esolangs, or esoteric computer languages. His esolang [Piet](https://www.dangermouse.net/esoteric/piet.html) uses images like the _Composition A_ painting we generated with _Processing_ as the instructions to the computer. Piet "sees" six different colors and three different intensities of each color, as well as black and white.
 
-![piet-colors](/assets/img/processing-piet/piet-colors.png)
+![piet-colors](/assets/img/2022-07-05-processing-piet/piet-colors.png)
+
+<p align = "center"><b>Piet Colors</b></p>
 
 The basic unit of code in Piet is a codel, the smallest square of color used. It's like a pixel, but to make a codel visible, they're usually many pixels across. The gray rectangle in the top left (block #1) is contained between $x1 = 44$ and $x3 = 278$ and $y0 = 1$ and $y1 = 26$. The length is 234 pixels and the height is 26 making the width 9 times the height. If we define a codel to be $26 \times 26$ pixels, then the gray block is $9 \times 1$ codels.
 
@@ -154,11 +168,15 @@ After this, the rules get more complicated than [**_The Campaign for North Afric
 
 The magentas on the right end are connected to the reds on the left end, and the light colors are connected to the dark. Depending on color and intensity changes between adjacent codels, the Piet interpreter will perform different actions.
 
-![piet-lightness-and-hues](/assets/img/processing-piet/piet-lightness-and-hues.png)
+![piet-lightness-and-hues](/assets/img/2022-07-05-processing-piet/piet-lightness-and-hues.png)
+
+<p align = "center"><b>Piet Lightness and Hues</b></p>
 
 Suppose you're on a medium yellow and move onto a dark blue. That's 3 steps in hue and one in intensity. If your next move is to the light green, then you've gone 4 steps in hue and 1 in intensity. Depending on how many steps you make, a different rule applies.
 
-![piet-rules](/assets/img/processing-piet/piet-rules.png)
+![piet-rules](/assets/img/2022-07-05-processing-piet/piet-rules.png)
+
+<p align = "center"><b>Piet Rules</b></p>
 
 Dark blue to normal green is 4 steps in hue and 1 in intensity which is roll. Even though the move is from dark blue to light green, it's 1 Darker because you're wrapping around the torus in the clockwise direction if you're looking down the tube from the red end.
 
@@ -182,13 +200,17 @@ More detailed instructions for programming in Piet are available from these sour
 
 I think the easiest way to get acquainted with _Piet_ would be to read David Morgan-Mar's page, and then skip right to the end of the list above and go through Gabrielle Singh Cadieux's presentation. [MasterPiets](https://gabriellesc.github.io/piet/) is her implementation of the _Piet_ interpreter and it runs in a browser window, so you don't need to download anything.
 
-![masterpiets](/assets/img/processing-piet/masterpiets.png)
+![masterpiets](/assets/img/2022-07-05-processing-piet/masterpiets.png)
+
+<p align = "center"><b>The MasterPiets IDE</b></p>
 
 Everything you need is built-in. Decide how big you want the image to be, and set the height and width. Click on the eye to display the number of codels in each block. Select a color and the pen icon to begin filling in individual blocks. When you've finished, click the green run button, or if you want to debug your code, pause with the orange button, step with light blue, or set breakpoints and run to the break using the dark blue arrow.
 
 Let's jump right in and try to code something. Many beginning programs start by printing "Hello World", which Gabrielle has included in her slides. A slight modification could be "Welcome" for your front door welcome mat. The ASCII code for "W" is 87, so we could create a block with area 87, push it onto the stack, and then use the "out(char)" command to get "W" in the output window.
 
-![w](/assets/img/processing-piet/w.png)
+![w](/assets/img/2022-07-05-processing-piet/w.png)
+
+<p align = "center"><b>"W" in MasterPiets</b></p>
 
 I filled in an area of 87 squares in red, then made a few blocks to the right in dark red ("push") and finally made one square magenta for "out(char)". Clicking the green run button pushes 87 onto the stack and then writes the character "W" in the output window.
 
@@ -200,7 +222,7 @@ I wanted to create a painting in the spirit of Mondrian by making the blocks rec
 
 If you look at the [rectangles](https://gist.github.com/XerxesZorgon/ca415b3c8fcb19437aa222e8091f67f4) from several of Mondrian's [Compositions](https://www.piet-mondrian.org/piet-mondrian-paintings.jsp) (2, C, II, III, with red and blue, with blue, with gray and light brown), and compare width to height (taking the larger value as the numerator) a histogram of the ratios is:
 
-![rectangle-ratios-hist](/assets/img/processing-piet/rectangle-ratios-hist.png)
+![rectangle-ratios-hist](/assets/img/2022-07-05-processing-piet/rectangle-ratios-hist.png)
 
 To make _Piet_ seem more Mondrian, we should make rectangles that represent the distribution of ratios found in his original paintings. There are many probability distributions, so we need to find one that fits the data. A distribution is a mathematical function that describes the probability of an event occurring under certain conditions.
 
@@ -214,7 +236,7 @@ library(fitdistrplus)
 plotdist(rectDims$Ratio, histo = TRUE, demp = TRUE, breaks = 40)
 ```
 
-![empirical-cumulative-dist](/assets/img/processing-piet/empirical-cumulative-dist.png)
+![empirical-cumulative-dist](/assets/img/2022-07-05-processing-piet/empirical-cumulative-dist.png)
 
 The dotted curve in the _Empirical density_ plot is the function we'd like to approximate. Applying the function `descdist`,
 
@@ -240,19 +262,21 @@ In the summary statistics, the standard deviation, $\sigma$ is labeled "estimate
 
 If you flatten or pull up a normal distribution, you've got _kurtosis_ and should seek medical advice immediately.
 
-![standard-symmetric-pdfs](/assets/img/processing-piet/standard-symmetric-pdfs.svg)
+![standard-symmetric-pdfs](/assets/img/2022-07-05-processing-piet/standard-symmetric-pdfs.svg)
+
+<p align = "center"><b>Kurtosis</b></p>
 
 The red curve has large kurtosis, while the magenta curve is low. The formula for kurtosis is the same as skewness, except that the exponents are $4$ instead of $3$.
 
 The Mondrian rectangles are strongly skewed to the right side and have a sharp peak at $1$, so the kurtosis is very high as well. The `descdist` function produces a [Cullen and Frey graph](http://www.di.fc.ul.pt/~jpn/r/distributions/fitting.html)
 
-![cullen-and-frey](/assets/img/processing-piet/cullen-and-frey.png)
+![cullen-and-frey](/assets/img/2022-07-05-processing-piet/cullen-and-frey.png)
 
-showing how well the data matches several other distributions. The blue dot at (25,34) is the observed data from the Mondrian rectangles. The yellow diamonds are [bootstrap](https://machinelearningmastery.com/a-gentle-introduction-to-the-bootstrap-method/) samples generated using a Monte Carlo resampling of the original data. _[An Introduction to the Bootstrap](http://www.ru.ac.bd/stat/wp-content/uploads/sites/25/2019/03/501_02_Efron_Introduction-to-the-Bootstrap.pdf)_ by Efron and Tibshirani is a good resource.
+showing how well the data matches several other distributions. The blue dot at (25,34) is the observed data from the Mondrian rectangles. The yellow diamonds are [bootstrap](https://machinelearningmastery.com/a-gentle-introduction-to-the-bootstrap-method/) samples generated using a Monte Carlo resampling of the original data. _[An Introduction to the Bootstrap](https://www.semanticscholar.org/paper/An-Introduction-to-the-Bootstrap-Efron-Tibshirani/85a8a97f614b2b6823e035bcc9abcb0f3d27be4d)_ by Efron and Tibshirani is a good resource.
 
 Both the observational data and the bootstrap values fall into the region covered by the [beta distribution](https://en.wikipedia.org/wiki/Beta_distribution), so that seems like a good initial guess. But, if we fit [log-normal](https://en.wikipedia.org/wiki/Log-normal_distribution), [Weibull](https://en.wikipedia.org/wiki/Weibull_distribution), and [Gamma](https://en.wikipedia.org/wiki/Gamma_distribution) distributions, it looks like the log-normal gives the best fit
 
-![lognormal-weibull-gamma](/assets/img/processing-piet/lognormal-weibull-gamma.png)
+![lognormal-weibull-gamma](/assets/img/2022-07-05-processing-piet/lognormal-weibull-gamma.png)
 
 using the commands
 
@@ -369,11 +393,15 @@ The rectangle dimensions I chose were
 
 where $rx$ and $ry$ are the dimensions of the remaining rectangle. The sum of the ASCII values is 716, and we'll need more for the commands, but give yourself room for artistic creativity.
 
-![welcome-mondrian-40](/assets/img/processing-piet/welcome-mondrian-40.png)
+![welcome-mondrian-40](/assets/img/2022-07-05-processing-piet/welcome-mondrian-40.png)
+
+<p align = "center"><b>"Welcome"</b></p>
 
 To make the letter "W", I made a block of $13 \times 6 = 78$ in red, followed by dark red "push", a $3 \times 3 = 9$ yellow block, and another "push" in dark yellow. Next, I put in a green block for "add" and finished with a yellow "out(char)". Here are the details:
 
-![mondrian-create-W](/assets/img/processing-piet/mondrian-create-W.png)
+![mondrian-create-W](/assets/img/2022-07-05-processing-piet/mondrian-create-W.png)
+
+<p align = "center"><b>Creating "W"</b></p>
 
 The sizes of the "push", "add", and "out(char)" blocks can be anything, so sometimes I used a single codel at the end of a black line. White codels pass the pointer on to the next color block without changing anything. I found that putting in some white in the code helped keep track of which blocks belonged together to create a single letter.
 
@@ -381,7 +409,9 @@ The code starts in the upper left corner (the red block), travels across the top
 
 The output from this code is shown in the MasterPiets Output window:
 
-![mondrian-output](/assets/img/processing-piet/mondrian-output.png)
+![mondrian-output](/assets/img/2022-07-05-processing-piet/mondrian-output.png)
+
+<p align = "center"><b>Piets Output</b></p>
 
 I input Mondrian's _Composition A_ into MasterPiets and it spits out some nonsense, "daed si luaP". I have no idea what that's about.
 
@@ -389,7 +419,9 @@ I input Mondrian's _Composition A_ into MasterPiets and it spits out some nonsen
 
 By changing the size of the painting, the colors used, and the size of the codel blocks, the same output can be generated in many vastly different formats. The colors used in Piet aren't entirely Mondrian, but you can get close to the original Mondrian style if you're careful. Thomas Schoch wrote this Piet program that spells "Piet" when run.
 
-![Piet](/assets/img/processing-piet/Piet.png)
+![Piet](/assets/img/2022-07-05-processing-piet/Piet.png)
+
+<p align = "center"><b>"Piet" in Piet</b></p>
 
 Piet is a [Turing complete](https://en.wikipedia.org/wiki/Turing_completeness) language which means it can simulate any other Turing complete language. In principle, you could write a Piet program that would output a Processing sketch that would look like the original Piet program.
 
@@ -400,3 +432,18 @@ Artists of Mondrian's time were the Avant-Garde or Modernists. By the middle of 
 ---
 
 \* Post Malone's real name is Austin Richard Post, but he used an [online rap name generator](https://www.insider.com/how-did-post-malone-get-his-name-jimmy-fallon-video-2018-10) for his first mix tape. Jan's rap name is Wilde Da Baby and mine is lil' peachfuzz.
+
+------
+
+#### Image credits
+
+Hero: [Apparently, Some People Believe the Earth Is Shaped Like a Donut](https://www.vice.com/en/article/mbyak8/apparently-some-people-believe-the-earth-is-shaped-like-a-donut-1). Beckett Mufson,Vice, Nov. 13, 2018.
+
+The chicken contemplates Werner Herzog: Jan De Wilde and John Peach. [Hotpot.ai](https://hotpot.ai/)
+
+Piet Mondrian: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Piet_Mondriaan.jpg)	
+
+Willow Grove: Impression of Light and Shadow: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:20_sep_13_klee_around_the_core.jpg).
+
+Composition A: [Happy Birthday Mondrian!](https://illustratorsjournal.wordpress.com/2012/03/07/happy-birthday-mondrian/). Lon Levin, The Illustrators Journal, Mar 7, 2012.
+

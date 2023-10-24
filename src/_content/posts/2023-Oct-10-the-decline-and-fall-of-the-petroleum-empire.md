@@ -4,11 +4,11 @@ subtitle: An EROI analysis of renewable energy
 author: John Peach
 lede:
 hero:
-  url: /assets/img/2023-Oct-10-decline-and-fall-of-petroleum/post-apocalyptic-burning-oil-refinery.png
+  url: /assets/img/2023-10-10-decline-and-fall-of-petroleum/post-apocalyptic-burning-oil-refinery.png
   alt:
 tags: [math, physics]
 keywords: [Peak oil, Oil production decline, Energy return on investment (EROI), Resource constraints, Biophysical economics]
-socialImg: /assets/img/2023-Oct-10-decline-and-fall-of-petroleum/post-apocalyptic-burning-oil-refinery.png
+socialImg: /assets/img/2023-10-10-decline-and-fall-of-petroleum/post-apocalyptic-burning-oil-refinery.png
 ---
 
 Listen to an Energy Return on Input (EROI) discussion with Brent Ragsdale and John Peach on [EcoRadio KC](https://kkfi.org/program-episodes/is-the-decline-of-oil-in-sight/).
@@ -81,7 +81,7 @@ This process of allocating some of the total available energy towards constructi
 
 Setting aside 3% is better, but the total still declines to 82.9 units. Investing 5% would be more than sufficient and we'd have 144.9 units after 30 years. Where is the break-even point? If you take the proportion of the distance between 3% and 5%, and the ratio of the ending total energy for each scenario, a good initial estimate is 3.615% which gives 99.87 units of combined energy after 30 years, almost exactly back to the original 100 units at the start.
 
-![renewable-decline](/assets/img/2023-Oct-10-decline-and-fall-of-petroleum/renewable-decline.png)
+![renewable-decline](/assets/img/2023-10-10-decline-and-fall-of-petroleum/renewable-decline.png)
 
 ## Fixed Points
 
@@ -189,13 +189,15 @@ If the lifetime of the RE system is longer than the EROI, then $q < 1$, so for e
 
 Looking at the case where 5% of the available energy is diverted to building renewable energy, the quantity of fossil fuel that needs to be made up with renewables is shown in red as "Fossil fuel loss", and the decay from the start due to natural decline is the blue curve labeled "Fossil fuel". The green curve shows the increasing amount of renewable energy, and the purple curve shows the combined total.
 
-![renewable-replacement-5pct](/assets/img/2023-Oct-10-decline-and-fall-of-petroleum/renewable-replacement-5pct.png)
+![renewable-replacement-5pct](/assets/img/2023-10-10-decline-and-fall-of-petroleum/renewable-replacement-5pct.png)
 
 During the early years of the conversion process, the total available energy would be less than if only fossil fuel were consumed. But by diverting 5% every year, the total quickly exceeds the initial energy availability.
 
 ## A Dose of Reality
 
-![Answers-simple-vs-complex-750x600](/assets/img/2023-Oct-10-decline-and-fall-of-petroleum/Answers-simple-vs-complex-750x600.png)
+![Answers-simple-vs-complex-750x600](/assets/img/2023-10-10-decline-and-fall-of-petroleum/Answers-simple-vs-complex-750x600.png)
+
+<p align = "center"><b>Answers</b></p>
 
 The graphs above show that if we simply divert 5% of the available energy towards constructing renewables, pretty soon we'll have more than we started with, it will be clean and forever increasing. What could possibly be wrong?
 
@@ -218,13 +220,13 @@ In [Can Modernity Last?](https://dothemath.ucsd.edu/2023/09/can-modernity-last/)
 
 A graph from Murphy's post shows the dramatic decrease in the ratio of wild land mammal mass to human mass which has dropped almost five orders of magnitude (10,000 times) over the period 10,000 B.C. to now.
 
-![mam-hum-ratio](/assets/img/2023-Oct-10-decline-and-fall-of-petroleum/mam-hum-ratio.png)
+![mam-hum-ratio](/assets/img/2023-10-10-decline-and-fall-of-petroleum/mam-hum-ratio.png)
 
 <p align = "center"><b>Land mammal to human mass ratios</b></p>
 
 and the [Living Planet Index](https://ourworldindata.org/grapher/global-living-planet-index) provides this graph of the decline in wild species over the last 50 years, showing a nearly 70% decline.
 
-![global-living-planet-index](/assets/img/2023-Oct-10-decline-and-fall-of-petroleum/global-living-planet-index.svg)
+![global-living-planet-index](/assets/img/2023-10-10-decline-and-fall-of-petroleum/global-living-planet-index.svg)
 
 <p align = "center"><b>Land mammal population declines</b></p>
 
@@ -234,19 +236,17 @@ and the [Living Planet Index](https://ourworldindata.org/grapher/global-living-p
 
 The [Stockholm Resilience Centre](https://www.stockholmresilience.org/) says that consumption of Earth resources is out of bounds and estimates that humans have exceeded planetary limits in several critical areas. Including Hagens' estimate, our energy bound far surpasses the other planetary limits we have crossed to date.
 
-![earth-overshoot](/assets/img/2023-Oct-10-decline-and-fall-of-petroleum/earth-overshoot.png)
-
-
+![earth-overshoot](/assets/img/2023-10-10-decline-and-fall-of-petroleum/earth-overshoot.png)
 
 <p align = "center"><b>Earth resources safe operating space</b></p>
 
 Converting energy sources to non-carbon based would address the $CO_2$ and radiative forcing issues, and would reduce the rate of ocean acidification, but wouldn't return any of the other limits to their safe operating zones. [World energy consumption](https://ourworldindata.org/grapher/energy-consumption-by-source-and-country) by source shows that fossil fuels dominate
 
-![world-energy-by-source-key](/assets/img/2023-Oct-10-decline-and-fall-of-petroleum/world-energy-by-source-key.png)
+![world-energy-by-source-key](/assets/img/2023-10-10-decline-and-fall-of-petroleum/world-energy-by-source-key.png)
 
 but even with increasing energy derived from solar and wind, fossil fuel consumption continues to climb. This is not surprising since the economy depends on energy (See [Economics and the Stefan-Boltzmann Law](https://wildpeaches.xyz/blog/economics-and-the-stefan-boltzmann-law/)). Humans have never voluntarily substituted one form of energy for another, we've always just included new sources to the overall supply.
 
-![NRE-and-RE-Comparison](/assets/img/2023-Oct-10-decline-and-fall-of-petroleum/NRE-and-RE-Comparison.png)
+![NRE-and-RE-Comparison](/assets/img/2023-10-10-decline-and-fall-of-petroleum/NRE-and-RE-Comparison.png)
 
 An unintended consequence of renewable energy adoption is that it could extend the life of fossil fuels because the consumption of solar or wind-derived electricity might reduce the cost of fossil fuels. This phenomenon was first observed by Stanley Jevons and is now known as [Jevons Paradox](https://en.wikipedia.org/wiki/Jevons_paradox) which says that the falling cost of a resource increases demand. 
 
@@ -256,13 +256,15 @@ This agrees with thermoeconomic, or biophysical economic theory which says that 
 
 [Simon Michaux](https://www.simonmichaux.com/) is a professor of mining and mineralogy at the [Geological Survey of Finland](https://www.gtk.fi/en/) (GTK). Even for the first generation of renewables, he estimates there will be severe shortfalls of critical metals and minerals.
 
-![Metals-Ratios](/assets/img/2023-Oct-10-decline-and-fall-of-petroleum/Metals-Ratios.png)
+![Metals-Ratios](/assets/img/2023-10-10-decline-and-fall-of-petroleum/Metals-Ratios.png)
 
-Copper (Cu) resources are less than 20% of the required quantities, and graphite (C-Gr), vanadium (V), and cobalt (Co) resources are about 3.5% of the needed amounts. This doesn't mean that these resources don't exist in the necessary quantities, but that the energy or EROI required to mine, refine and produce ores is too high. Nickel (Ni) and Lithium (Li) have only about 10% of the required quantities for an energy transition to renewables. The [quantity of useable ore per unit volume of mined material](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://tupa.gtk.fi/raportti/arkisto/16_2021.pdf) is decreasing because we have already exploited the best resources $( \text{\sect}8)$.
+Copper (Cu) resources are less than 20% of the required quantities, and graphite (C-Gr), vanadium (V), and cobalt (Co) resources are about 3.5% of the needed amounts. This doesn't mean that these resources don't exist in the necessary quantities, but that the energy or EROI required to mine, refine and produce ores is too high. Nickel (Ni) and Lithium (Li) have only about 10% of the required quantities for an energy transition to renewables. The [quantity of useable ore per unit volume of mined material](https://tupa.gtk.fi/raportti/arkisto/16_2021.pdf) is decreasing because we have already exploited the best resources $( \text{\sect}8)$.
 
 Not only are the recoverable quantities of required ores significantly less than what is needed for a renewable energy transition, but the rates of mining and processing would need to be increased by orders of magnitude. [Michaux estimates](https://ieo.imf.org/-/media/IEO/Files/Seminars/michaux-ppt.ashx) that copper mining would take 189 years at current rates to reach the required levels, nickel 400 years and lithium 9920 years.
 
-![michaux-mining-rates](/assets/img/2023-Oct-10-decline-and-fall-of-petroleum/michaux-mining-rates.png)
+![michaux-mining-rates](/assets/img/2023-10-10-decline-and-fall-of-petroleum/michaux-mining-rates.png)
+
+<p align = "center"><b>Mining Rates</b></p>
 
 ### Electric power grid limits
 
@@ -283,7 +285,7 @@ A more succinct, but less technical summary of our predicament is [Should We Tel
 
 ## The Sagan Standard, ECREE, TRL and TLAs
 
-![sagan](/assets/img/2023-Oct-10-decline-and-fall-of-petroleum/sagan.jpg)
+![sagan](/assets/img/2023-10-10-decline-and-fall-of-petroleum/sagan.jpg)
 
 <p align = "center"><b>Carl Sagan with a Viking lander</b></p>
 
@@ -339,7 +341,7 @@ In an interview with Nate Hagens, climate and policy scientist [Roger Pielke, Jr
 
 The IPCC initiated [Integrated Assessment Models](https://www.carbonbrief.org/qa-how-integrated-assessment-models-are-used-to-study-climate-change/) (IAMs) to provide a consistent framework for models from various disciplines to be compared. The IAMs were developed from inputs provided by demographers and economists who estimated world population and energy requirements out to 2100 under different assumptions of energy consumption. The one with the most rapid increase in emissions is [RCP 8.5](https://worldoceanreview.com/en/wor-5/climate-change-threats-and-natural-hazards/climate-change-and-the-coasts/the-ipcc-scenarios/) and is currently the pathway closest to measured data.
 
-![ipcc-rcp](/assets/img/2023-Oct-10-decline-and-fall-of-petroleum/ipcc-rcp.png)
+![ipcc-rcp](/assets/img/2023-10-10-decline-and-fall-of-petroleum/ipcc-rcp.png)
 
 <p align = "center"><b>IPCC climate change pathways</b></p>
 
@@ -376,6 +378,30 @@ where $P$ is the production after $n$ years post-peak, $P_0$ is the peak flow ra
 
 The data was extracted to [oil-prod-data.xlsx](https://docs.google.com/spreadsheets/d/1ipN9b_O5VErITjUiMFNwGLEOm7xbspl7/edit?usp=sharing&ouid=114371855488428161826&rtpof=true&sd=true) (Sheet 2) if you want to review the decline rates. 
 
+------
+
+#### Image credits
+
+Hero: [DreamStudio.ai](https://dreamstudio.ai/generate). Prompt: "A post-apocalyptic burning oil refinery." with photo of the [Roman Colosseum](https://www.livescience.com/roman-colosseum). Robin-Angelo Photography via Getty Images.
+
+Answers: [Science vs. Everything Else](https://www.gocomics.com/nonsequitur/2016/01/20). Wiley Miller, Non Sequitur, Jan 20, 2016.
+
+Land mammal to human mass ratios: [Ecological Cliff Edge](https://dothemath.ucsd.edu/2023/08/ecological-cliff-edge/). Tom Murphy, [Do The Math](https://dothemath.ucsd.edu/), Aug. 18, 2023.
+
+Land mammal population declines: [Living Planet Index, World](https://ourworldindata.org/grapher/global-living-planet-index). Our World in Data, World Wildlife Fund (WWF) and Zoological Society of London, Oct. 13, 2022.
+
+Earth resources safe operating space: [Earth Out of Bounds](https://www.stockholmresilience.org/). Stockholm Resilience Centre, [Planetary Boundaries](https://www.stockholmresilience.org/research/planetary-boundaries.html), Azote for Stockholm Resilience Centre, based on analysis in Richardson et al 2023. 
+
+Renewables Reserves Shortfall: [Is There Enough Metal to Replace Oil?](https://www.counterpunch.org/2022/08/23/is-there-enough-metal-to-replace-oil/). [Robert Hunziker](https://www.counterpunch.org/author/robert-hunziker/), [CounterPunch](https://www.counterpunch.org/), Aug. 23, 2022.
+
+Mining Rates: [Assessment of the Extra Capacity Required of Alternative Energy Electrical Power Systems to Completely Replace Fossil Fuels](https://ieo.imf.org/-/media/IEO/Files/Seminars/michaux-ppt.ashx). Simon Michaux, GTK, Aug. 18, 2022.
+
+Carl Sagan with a Viking lander: [Carl Sagan with Viking](https://airandspace.si.edu/multimedia-gallery/saganvikingjpg). Smithsonian National Air and Space Museum.
+
+IPCC climate change pathways: [The IPCC Scenarios](https://worldoceanreview.com/en/wor-5/climate-change-threats-and-natural-hazards/climate-change-and-the-coasts/the-ipcc-scenarios/). 
+
+------
+
 ## References and further reading
 
 - [Peak Oil Has Finally Arrived. No, Really](https://www.washingtonpost.com/business/energy/peak-oil-has-finally-arrivedno-really/2022/09/28/f67f2f0a-3f68-11ed-8c6e-9386bd7cd826_story.html)
@@ -383,6 +409,8 @@ The data was extracted to [oil-prod-data.xlsx](https://docs.google.com/spreadshe
 - [Giant oil field decline rates and peak oil](https://energyskeptic.com/2020/giant-oil-field-decline-rates-and-their-influence-on-world-oil-production/)
 - [Substituting Renewable Energy for Fossil Fuels is a Doomsday Stratagem](https://energy.utexas.edu/events/substituting-renewable-energy-fossil-fuels-doomsday-stratagem#:~:text=Energy%20substitution%20is%20a%20doomsday,its%20consequence%20of%20no%20growth.)
 - [Can Modernity Last?](https://dothemath.ucsd.edu/2023/09/can-modernity-last/)
+- [Ecological Cliff Edge](https://dothemath.ucsd.edu/2023/08/ecological-cliff-edge/)
+- [The global biomass of wild mammals](https://www.pnas.org/doi/10.1073/pnas.2204892120)
 - [Living Planet Index](https://ourworldindata.org/grapher/global-living-planet-index)
 - [The Great Simplification](https://www.thegreatsimplification.com/)
 - [Stockholm Resilience Centre](https://www.stockholmresilience.org/) 

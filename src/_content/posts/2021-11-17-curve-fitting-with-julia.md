@@ -4,7 +4,7 @@ subtitle: Why Oil Production May Not Follow a Gaussian Function
 author: John Peach
 lede: null
 hero:
-  url: /assets/img/curve-fitting-with-julia/huntington-beach.jpeg
+  url: /assets/img/2021-11-17-curve-fitting-with-julia/huntington-beach.jpeg
   alt: null
   class: hero--contain
 tags:
@@ -15,7 +15,7 @@ keywords:
   - Weierstrass approximation
   - Hubbert peak theory
   - Seneca cliff
-socialImg: /assets/img/curve-fitting-with-julia/huntington-beach.jpeg
+socialImg: /assets/img/2021-11-17-curve-fitting-with-julia/huntington-beach.jpeg
 lastmod: '2022-03-04T21:18:20.078Z'
 ---
 
@@ -28,7 +28,9 @@ lastmod: '2022-03-04T21:18:20.078Z'
 
 In 1885, Karl Weierstrass
 
-![karl-weierstrass](/assets/img/curve-fitting-with-julia/karl-weierstrass.jpg)
+![karl-weierstrass](/assets/img/2021-11-17-curve-fitting-with-julia/karl-weierstrass.jpg)
+
+<p align = "center"><b>Karl Weierstrass</b></p>
 
 proved that any continuous function can be approximated as closely as you like with a polynomial. Written in mathematical terms, the theorem he proved is
 
@@ -60,7 +62,9 @@ and you get the same $y$ values as $f$, but over the interval $[0,1]$.
 
 A theorem isn't a theorem until it's been proved. Weierstrass proved his theorem, but in 1912, Sergei Bernstein
 
-![Sergei-Bernstein](/assets/img/curve-fitting-with-julia/sergei-bernstein.jpg)
+![Sergei-Bernstein](/assets/img/2021-11-17-curve-fitting-with-julia/sergei-bernstein.jpg)
+
+<p align = "center"><b>Sergei Bernstein</b></p>
 
 used Bernstein basis polynomials to construct approximation functions. In ["Yacht Design with Mathematics"](https://wildpeaches.xyz/blog/yacht-design-with-mathematics/) we used Bernstein polynomials as the basis for Bezier functions. For any $n \geq 0$, the $n+1$ Bernstein basis polynomials are defined as
 
@@ -90,7 +94,9 @@ Michael Bertrand gives the complete version of Bernstein's proof in his article,
 
 In 1938, Marshall Stone
 
-![marshall-h-stone](/assets/img/curve-fitting-with-julia/marshall-h-stone.png)
+![marshall-h-stone](/assets/img/2021-11-17-curve-fitting-with-julia/marshall-h-stone.png)
+
+<p align = "center"><b>Marshall Stone</b></p>
 
 extended Weierstrass' Theorem which is now known as the Stone-Weierstrass Theorem.
 
@@ -113,7 +119,9 @@ Polynomials aren't the only way to approximate functions. [Fourier approximation
 
 Something you should never do is fit a function $f$ with a high degree polynomial $p$ and then extrapolate $p$ beyond the limits of $f$. You only get a good fit over the interval $[a,b]$ where you defined $f$.
 
-![function-approximation-with-polynomial](/assets/img/curve-fitting-with-julia/function-approximation-with-polynomial.png)
+![function-approximation-with-polynomial](/assets/img/2021-11-17-curve-fitting-with-julia/function-approximation-with-polynomial.png)
+
+<p align = "center"><b>Polynomial Approximation in Desmos</b></p>
 
 Here, the function
 
@@ -133,7 +141,9 @@ Between $-\frac{\pi}{2}$ and $\frac{\pi}{2}$ the fit is pretty good, but outside
 
 Suppose you knew nothing about approximation theory and decided to try fitting one function (or data) with the sum of a simpler function? 
 
-![marion-king-hubbert](/assets/img/curve-fitting-with-julia/marion-king-hubbert.jpg)
+![marion-king-hubbert](/assets/img/2021-11-17-curve-fitting-with-julia/marion-king-hubbert.jpg)
+
+<p align = "center"><b>Marion King Hubbert</b></p>
 
 Marion King Hubbert was a geologist, mathematician, and physicist who worked for Shell Oil, the USGS, and taught at Columbia, Stanford, and UC Berkeley. In 1956, he looked at oil production data and proposed a model for the amount of oil extracted from a field,
 
@@ -143,11 +153,11 @@ $$
 
 where $Q_{\text{max}}$ is the total quantity of oil to eventually be produced from the field, $Q(t)$ is the cumulative production up to time $t$, and constants $a$ and $b$ are parameters defined by local geology. This is the [logistic function](https://en.wikipedia.org/wiki/Logistic_function) first described by [Pierre Francois Verhulst](https://en.wikipedia.org/wiki/Pierre_Fran%C3%A7ois_Verhulst) to model population growth. The derivative of the logistic function produces a bell-shaped curve (or Gaussian function), which for Hubbert was the instantaneous rate of oil flow from the field.
 
-![logistic-and-bell-curve](/assets/img/curve-fitting-with-julia/logistic-and-bell-curve.png)
+![logistic-and-bell-curve](/assets/img/2021-11-17-curve-fitting-with-julia/logistic-and-bell-curve.png)
 
 Hubbert used the logistic function because initially with only a few wells production would be low, but as more came on line production should increase. Eventually, though, depletion would slow the rate of production. Hubbert thought his model could be extended to all U.S. oil production and predicted the peak of production would occur in 1970 for the lower 48 states.
 
-![hubbert-prediction-lower-48-us](/assets/img/curve-fitting-with-julia/hubbert-prediction-lower-48-us.png)
+![hubbert-prediction-lower-48-us](/assets/img/2021-11-17-curve-fitting-with-julia/hubbert-prediction-lower-48-us.png)
 
 In 1976 Hubbert [predicted](https://www.youtube.com/watch?v=ImV1voi41YY) the world peak in production might happen as soon as 1995. A 2007 [study](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwim2Ya6upv0AhXgpXIEHajODgYQFnoECAIQAQ&url=https%3A%2F%2Fwww.researchgate.net%2Fpublication%2F258260565_The_Rebound_Effect_An_Assessment_of_the_Evidence_for_Economy-Wide_Energy_Savings_from_Improved_Energy_Efficiency&usg=AOvVaw2k-j2HOFKDdzLd1UA-j422) by the UK Energy Resource Center found no geological reason to expect cumulative oil production should follow a logistic curve. They reported on field data suggesting peaks tended to happen at about 25% of the total production $Q_\text{max}$.
 
@@ -155,7 +165,9 @@ On the other hand, Ugo Bardi says [decline is faster than growth](https://thesen
 
 > _"It would be some consolation for the feebleness of our selves and our works if all things should perish as slowly as they come into being; but as it is, increases are of sluggish growth, but the way to ruin is rapid." Lucius Anneaus Seneca, Letters to Lucilius, n. 91_
 
-![bardi-seneca-cliff](/assets/img/curve-fitting-with-julia/bardi-seneca-cliff.png)
+![bardi-seneca-cliff](/assets/img/2021-11-17-curve-fitting-with-julia/bardi-seneca-cliff.png)
+
+<p align = "center"><b>The Seneca Cliff</b></p>
 
 We can model individual fields using Gaussian functions,
 
@@ -173,7 +185,7 @@ f(x) = 0 < x <= 1 ? x : 0
 
 which asks the question, Is $x$ between $0$ and $1$? If it is, $f(x) = x$, otherwise it's zero.
 
-![cliff-function](/assets/img/curve-fitting-with-julia/cliff-function.png)
+![cliff-function](/assets/img/2021-11-17-curve-fitting-with-julia/cliff-function.png)
 
 If oil production mimicked this $f(x)$, the rate would increase linearly until suddenly every oil well in the world stopped producing on the same day. This is about as likely as Zaphod Beeblebrox's [Infinite Improbability Drive](https://creative-analytics.corsairs.network/hitchhikers-guide-to-analytics-improbability-drive-b80001453e44), but we're just trying to build a simple mind-sized problem. "See, all my procedures are mind-sized bites", explains seventh-grader Robert in Seymour Papert's [Mindstorms](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxha2hsYWdoZWF8Z3g6NzgyOWYxNWNjMjE5ZjVh).
 
@@ -227,7 +239,7 @@ where `gaussSum` contains the definition for $g$, extracts the parameters from $
 
 The result is a pretty good approximation
 
-![gaussian-fit](/assets/img/curve-fitting-with-julia/gaussian-fit.png)
+![gaussian-fit](/assets/img/2021-11-17-curve-fitting-with-julia/gaussian-fit.png)
 
 You can see the peaks of each Gaussian with centers $\mu = [0.52, 0.80, 0.93, 0.99]$ and widths $\sigma = [0.218, 0.099, 0.041, 0.014]$. The optimal amplitudes are $\alpha = [0.51, 0.57, 0.63, 0.69]$. The function $f$ has a discontinuity at $x=1$, so we wouldn't be able to find a polynomial approximation. Smoothing over the discontinuity would help with the sum of Gaussians technique. This doesn't mean this model necessarily represents what's actually happening, but it shows that a sum of Gaussian-like production curves can still lead to a Seneca Cliff. The Julia code is on [GitHub](https://gist.github.com/XerxesZorgon/4bc86e874f27fd8fb6aced87735510a0).
 
@@ -237,7 +249,9 @@ This is a good experimental start to finding a method for fitting Gaussians to f
 
 Here's the proof of Weierstrass' theorem. It's actually pretty easy to follow if you take it in mind-size bites. It comes from [Chris Tisdell](https://research.unsw.edu.au/people/professor-chris-tisdell), a mathematician at [UNSW Sydney](https://www.unsw.edu.au/about-us). The proof below was taken from his [YouTube video](https://www.youtube.com/watch?v=MKVttK1uAXU) and is based on the proof by [Dunham Jackson](https://en.wikipedia.org/wiki/Dunham_Jackson).
 
-![dunham-jackson](/assets/img/curve-fitting-with-julia/dunham-jackson.gif)
+![dunham-jackson](/assets/img/2021-11-17-curve-fitting-with-julia/dunham-jackson.gif)
+
+<p align = "center"><b>Dunham Jackson</b></p>
 
 **Theorem**: Suppose $f: [a,b] \Rightarrow \mathbb{R}$ is a continuous function. Then we can construct a sequence of polynomials $P_n$ such that for any $\epsilon > 0$ there exists $N = N(\epsilon)$ such that for all $x \in [a,b]$ we have
 
@@ -261,7 +275,7 @@ $$
 
 This just adds pieces to $f(x)$ so that it covers the entire real line by connecting $(0,0)$ to $(a,f(a))$ and $(b,f(b))$ to $(1,0)$, and then defining $f(x) = 0$ for any point outside the interval $[0,1]$, (and it's still continuous)
 
-![f](/assets/img/curve-fitting-with-julia/f.png)
+![f](/assets/img/2021-11-17-curve-fitting-with-julia/f.png)
 
 Now, create a sequence of constants (called a Landau integral),
 
@@ -271,7 +285,7 @@ $$
 
 Here are some examples of the Landau integral, and the numeric values over the interval $[-1,1]$. [Integration](https://en.wikipedia.org/wiki/Integral) gives the area below the curve and above the $x-$axis.
 
-![landau](/assets/img/curve-fitting-with-julia/landau.png)
+![landau](/assets/img/2021-11-17-curve-fitting-with-julia/landau.png)
 
 $$
 \begin{aligned}
@@ -440,3 +454,24 @@ so long as $n$ is sufficiently large such that
 $$
 \frac{2M}{2n \delta^2} < \frac{\epsilon}{2}. \; \blacksquare
 $$
+
+------
+
+#### Image credits
+
+Hero: [Oil EIR Raises Sticky Issues For Hermosa Beach](https://healthebay.org/oil-eir-raises-sticky-issues-for-hermosa-beach/). Dana Murray, Heal the Bay, Apr. 14, 2014.
+
+Karl Weierstrass: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Karl_Weierstrass.jpg).  
+
+Sergei Bernstein: [Wikipedia](https://en.wikipedia.org/wiki/File:Snbernstein.jpg).
+
+Marshall Stone: [Marshall Harvey Stone seated in a classroom, ca. 1974](https://credo.library.umass.edu/view/full/murg120_2-i0001730). University of Massachusetts Amherst. Special Collections and University Archives, University of Massachusetts Amherst Libraries.
+
+Marion King Hubbert: [Wikipedia](https://en.wikipedia.org/wiki/File:Marion_King_Hubbert00.jpg). 
+
+Hubbert Prediction Lower 48: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hubbert_Upper-Bound_Peak_1956.png).
+
+The Seneca Cliff: [The Seneca Effect](https://www.senecaeffect.com/2015/11/the-seneca-effect-why-decline-is-faster.html). Ugo Bardi, The Seneca Effect: why decline is faster than growth. Aug 28, 2011.
+
+Dunham Jackson: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Dunham_Jackson.jpg). 
+

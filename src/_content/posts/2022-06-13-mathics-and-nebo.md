@@ -4,11 +4,11 @@ subtitle: Symbolic Mathematics and AI Handwriting Recognition
 author: John Peach
 lede: "I think this is the beginning of a beautiful friendship."
 hero:
-  url: /assets/img/mathics-and-nebo/Casablanca.jpeg
+  url: /assets/img/2022-06-13-mathics-and-nebo/Casablanca.jpeg
   alt:
 tags: [math]
 keywords: []
-socialImg: /assets/img/mathics-and-nebo/Casablanca.jpeg
+socialImg: /assets/img/2022-06-13-mathics-and-nebo/Casablanca.jpeg
 ---
 
 I've been playing around with a couple of fun math toys recently, [Mathics](https://mathics.org/) and [Nebo](https://www.nebo.app/). Mathics is a free, open-source symbolic calculator. Nebo is a note-taking app for laptops, tablets, and smartphones with stylus inputs, and it can accept and understand mathematics. Nebo is free for the iPad, ($10 on Windows), and you can try Nebo [here](https://webdemo.myscript.com/views/math/index.html#).
@@ -39,7 +39,7 @@ x = \frac{i \pm \sqrt{i^2 - 4(-1)}}{2} = \frac{i \pm \sqrt{-1+4}}{2} = \frac{i \
 $$
 In Mathics, the symbol for the imaginary unit $i = \sqrt{-1}$ is $I$, so to solve for $x$ type
 
-![x2-Ix-1](/assets/img/mathics-and-nebo/x2-Ix-1.png)
+![x2-Ix-1](/assets/img/2022-06-13-mathics-and-nebo/x2-Ix-1.png)
 
 followed by `Ctrl-Enter` to get the solution. Hmmm. These solutions are correct, but not informative. The solution for $x$ has an $x$ in it.
 
@@ -49,31 +49,31 @@ x^2-ix-1 = (x-r)(x-s).
 $$
 Putting this into Mathics and collecting terms,
 
-![expand-rs](/assets/img/mathics-and-nebo/expand-rs.png)
+![expand-rs](/assets/img/2022-06-13-mathics-and-nebo/expand-rs.png)
 
 Then $rs = -1$ and $-r-s = -i \Rightarrow r + s = i$. Solving these two equations simultaneously in Mathics,
 
-![rs-simul](/assets/img/mathics-and-nebo/rs-simul.png)
+![rs-simul](/assets/img/2022-06-13-mathics-and-nebo/rs-simul.png)
 
 which is correct.
 
 To open a help window in Mathics, click on the `?` in the upper right corner. Complete documentation is available online [here](https://mathics.org/docs/mathics-latest.pdf).
 
-![Mathics-help](/assets/img/mathics-and-nebo/Mathics-help.png)
+![Mathics-help](/assets/img/2022-06-13-mathics-and-nebo/Mathics-help.png)
 
 ## Nebo
 
 MyScript Nebo uses AI to interpret handwriting. If you have a tablet or laptop that accepts input from a stylus, Nebo will convert your handwritten notes to text. With Nebo, you can draw diagrams, and it will clean them up:
 
-![nebo-diagram](/assets/img/mathics-and-nebo/nebo-diagram.png)
+![nebo-diagram](/assets/img/2022-06-13-mathics-and-nebo/nebo-diagram.png)
 
 You can insert images into a document, and draw freehand sketches. I tend to write ideas down on a pad of paper, and the next great idea goes on the next empty page in the pad. My house is cluttered with pads. What was this one all about?
 
-![notes](/assets/img/mathics-and-nebo/notes.jpg)
+![notes](/assets/img/2022-06-13-mathics-and-nebo/notes.jpg)
 
 So I thought Nebo might be useful in organizing and cleaning up all my scribblings. Here's an example:
 
-![nebo-script-to-tex](/assets/img/mathics-and-nebo/nebo-script-to-tex.png)
+![nebo-script-to-tex](/assets/img/2022-06-13-mathics-and-nebo/nebo-script-to-tex.png)
 
 On the left are the original hand-written equations. After tapping twice on the screen, Nebo converted everything to MathJax format. I had to fix three errors - two of the lower case $v$'s had been changed to upper case, and one of the $r$'s was interpreted as an $n$. Other than that, Nebo got it exactly right on the first try.
 
@@ -113,7 +113,7 @@ x = \frac{-b \pm \sqrt{b^2 - 4c}}{2}.
 $$
 If you have the form $f(x) = ax^2 + bx + c$, divide by $a$ and calling $\frac{b}{a}$ the new $b$, and $\frac{c}{a}$ the new $c$, which has the same roots. 
 
-![fx-GeoGebra](/assets/img/mathics-and-nebo/fx-GeoGebra.png)
+![fx-GeoGebra](/assets/img/2022-06-13-mathics-and-nebo/fx-GeoGebra.png)
 
 If we call the roots $r$ and $s$, then the plot of $f(x)$ will cross the $x-$axis at $r$ and $s$, and $f$ can be written as
 $$
@@ -154,11 +154,11 @@ $$
 
 One more Nebo trick - write the equation with an equal sign at the end like this:
 
-![root-handwritten-Nebo](/assets/img/mathics-and-nebo/root-handwritten-Nebo.png)
+![root-handwritten-Nebo](/assets/img/2022-06-13-mathics-and-nebo/root-handwritten-Nebo.png)
 
 Double-tap, and you'll get a neatly written equation with the solution!
 
-![root-solution-Nebo](/assets/img/mathics-and-nebo/root-solution-Nebo.png)
+![root-solution-Nebo](/assets/img/2022-06-13-mathics-and-nebo/root-solution-Nebo.png)
 
 Erase the $+$, replace it with a minus sign, and double-tap to get the other root $r \approx 0.382$. Nebo doesn't do complex math, so we wouldn't be able to solve the problem done earlier in Mathics, but for quick calculations, it's pretty neat!
 
@@ -168,11 +168,11 @@ A nice introduction to Nebo is available from [Paperless](https://www.youtube.co
 
 [Obsidian](https://obsidian.md/) is the electronic version of my pads of paper. Obsidian is a [markdown](https://www.markdownguide.org/) editor and a knowledge database of your ideas [linked](https://help.obsidian.md/How+to/Internal+link) together. [Upmath](https://upmath.me/) shows how to get started using [LaTeX](https://www.latex-project.org/) in Markdown files to write equations. Help is available by clicking on the `?` in the lower left-corner, which opens a new pop-up window. An outline appears in the left panel, and document links are shown in the right panel.
 
-![obsidian-help](/assets/img/mathics-and-nebo/obsidian-help.png)
+![obsidian-help](/assets/img/2022-06-13-mathics-and-nebo/obsidian-help.png)
 
 The graphical view of help looks like this:
 
-![obsidian-help-graph-view](/assets/img/mathics-and-nebo/obsidian-help-graph-view.png)
+![obsidian-help-graph-view](/assets/img/2022-06-13-mathics-and-nebo/obsidian-help-graph-view.png)
 
 Click on `Open another vault` to switch to your files. To extend the capabilities of Obsidian there are both [core plugins](https://help.obsidian.md/Plugins/Core+plugins) and [community plugins](https://obsidian.md/plugins). [The Sweet Setup](https://thesweetsetup.com/our-favorite-obsidian-plugins/) blog lists some of their favorite plugins, and [LibHunt](https://www.libhunt.com/topic/obsidian-plugin) lists the top community projects. 
 
@@ -180,11 +180,11 @@ Click on `Open another vault` to switch to your files. To extend the capabilitie
 
 I switch between the desktop computer and laptop frequently, depending on whichever is the most convenient at the moment. But, how should I keep files synchronized between the two? Copying back and forth whenever I modify a file on one seemed tedious.
 
-![floppy](/assets/img/mathics-and-nebo/floppy.png)
+![floppy](/assets/img/2022-06-13-mathics-and-nebo/floppy.png)
 
 This is where [SyncThing](https://syncthing.net/) comes to the rescue. It continuously synchronizes files between any number of your computers, all in the background, using your home network. Take a look at the ["Getting Started"](https://docs.syncthing.net/v1.20.2/intro/getting-started.html) page, and online [documentation](https://docs.syncthing.net/v1.20.2/index.html). After installation, all you need to do is identify your computers and the folders you'd like to synchronize. After that, the software keeps everything up-to-date.
 
-![SyncThing](/assets/img/mathics-and-nebo/SyncThing.png)
+![SyncThing](/assets/img/2022-06-13-mathics-and-nebo/SyncThing.png)
 
 For Windows users, [SyncTrayzor](https://github.com/canton7/SyncTrayzor) is a tray utility for SyncThing. 
 
@@ -212,3 +212,11 @@ Installing Nebo, Obsidian, and SyncThing is just a matter of following their ins
 12. Click on the desktop icon to start Mathics, and type localhost:8000 in the address bar. Drag to the bookmarks bar. 
 
 Running Mathics from now on requires two steps - clicking on the icon to start the server followed by clicking the link to localhost:8000.
+
+------
+
+#### Image credits
+
+Hero: [Humphrey Bogart](https://www.imdb.com/name/nm0000007/?ref_=tt_mv_desc) and [Claude Rains](https://www.imdb.com/name/nm0001647/?ref_=tt_mv_desc) in [Casablanca (1942)](https://www.imdb.com/title/tt0034583/?ref_=tt_mv_desc). [IMDB](https://www.imdb.com/media/rm3692832256/tt0034583) (photo 101)
+
+Floppy Disk: [How did people get apps on their computer before the Internet?](https://retrocomputing.stackexchange.com/questions/25315/how-did-people-get-apps-on-their-computer-before-the-internet) [user3840170](https://retrocomputing.stackexchange.com/users/15334/user3840170), Stack Exchange, Oct 4, 2022

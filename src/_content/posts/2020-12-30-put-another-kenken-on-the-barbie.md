@@ -4,11 +4,11 @@ subtitle: Partitions with Pari/GP
 author: John Peach
 lede: If you like Sudoku, you'll love KenKen!
 hero:
-  url: /assets/img/put-another-kenken-on-the-barbie/shrimp-on-the-barbie.png
+  url: /assets/img/2020-12-30-put-another-kenken-on-the-barbie/shrimp-on-the-barbie.png
   alt:
 tags: [math]
 keywords: [KenKen, Pari/GP, Integer Partitions, Number theory]
-socialImg: /assets/img/put-another-kenken-on-the-barbie/tetsuya-miyamoto.jpg
+socialImg: /assets/img/2020-12-30-put-another-kenken-on-the-barbie/tetsuya-miyamoto.jpg
 ---
 
 ## Tetsuya Miyamoto
@@ -17,7 +17,9 @@ Tetsuya Miyamoto (宮本 哲也), a Japanese mathematics teacher invented KenKen
 
 Miyamoto told [Device Plus](https://www.deviceplus.com/others/interviews/kenken-puzzle-inventors-tips-for-engineers/), "Some would say the most important thing in mathematics is calculation. You memorize the formulas and calculate to solve a problem. In my opinion, there is much more than just calculation. I think the process of challenging yourself with different questions and struggling to figure out solutions on your own is what makes solving any kind of problems more fun and meaningful. This is the reason why I never step in to help my students solve puzzles, because I do not want to risk taking away their invaluable learning experiences."
 
-![Tetsuya Miyamoto](/assets/img/put-another-kenken-on-the-barbie/tetsuya-miyamoto.jpg)
+![Tetsuya Miyamoto](/assets/img/2020-12-30-put-another-kenken-on-the-barbie/tetsuya-miyamoto.jpg)
+
+<p align = "center"><b>Tetsuya Miyamoto</b></p>
 
 His approach to challenges is, "I make a list of things I do not like to do and I pick one from the list that I absolutely do not want to do. Then, I set a date and get it done."
 
@@ -31,7 +33,9 @@ Your list might be different.
 
 If you've played [Sudoku](https://www.websudoku.com/), you know that the game is a $9 \times 9$ grid of cells where the cells must be filled with the integers $1 - 9$ such that each digit appears exactly once in each row, column, and $3 \times 3$ block. [KenKen](http://www.kenkenpuzzle.com/) is similar, but Miyamoto added an intriguing twist.
 
-![KenKen puzzle](/assets/img/put-another-kenken-on-the-barbie/KenKen-puzzle.svg)
+![KenKen puzzle](/assets/img/2020-12-30-put-another-kenken-on-the-barbie/KenKen-puzzle.svg)
+
+<p align = "center"><b>KenKen Puzzle</b></p>
 
 Instead of square blocks, the board is divided into irregularly shaped cages, outlined in black. Each cage has a number in the upper left square and an arithmetic operator $(+ - \times \div)$. For example, in this puzzle, the cage in the upper left corner is $1 \times 2$ with $1-$ indicating that the difference between the two numbers must be $1$. You could enter $9,8$ or $8,9$ or any other pair that differs by one. The order doesn't matter except that you need to satisfy the rules of Sudoku by having one of each digit in every row and column.
 
@@ -71,7 +75,7 @@ $$
 
 You have to be careful with this one because a $1$, $3$, $5$, or $9$ could appear in each row if it's in two different columns. One possible solution might be
 
-![Solution 4050](/assets/img/put-another-kenken-on-the-barbie/solution-4050.svg)
+![Solution 4050](/assets/img/2020-12-30-put-another-kenken-on-the-barbie/solution-4050.svg)
 
 How can we find all of the partitions? Let's take a look at the PARI/GP computer algebra language.
 
@@ -85,17 +89,17 @@ Download the latest version of PARI/GP [here](https://pari.math.u-bordeaux.fr/do
 
 Besides the languages that come with Notepad++, there is a collection of [User Defined Languages (UDL)](https://github.com/notepad-plus-plus/userDefinedLanguages) ([list here](https://github.com/notepad-plus-plus/userDefinedLanguages/blob/master/udl-list.md)), and the PARI/GP definition is available [here](https://github.com/notepad-plus-plus/userDefinedLanguages/blob/master/UDLs/PARI-GP_by-third_maths.xml). Click on "Raw", copy the text into a new tab in Notepad++, and save it as "PariGP.xml" in the UDL folder. Now click on <u>L</u>anguage $\rightarrow$ User Defined Language $\rightarrow$ Define your language... which opens a dialog box. Click on Import... and navigate to the UDL folder. Select PariGP.xml and open it. If you click on <u>L</u>anguage again, you should see a dot next to User-defined at the bottom indicating that the PARI/GP lexer has been loaded. The Notepad++ user manual contains the [complete instructions](https://npp-user-manual.org/docs/user-defined-language-system/) for working with UDLs.
 
-![PARI_GP UDL](/assets/img/put-another-kenken-on-the-barbie/PARIGP-UDL.svg)
+![PARI_GP UDL](/assets/img/2020-12-30-put-another-kenken-on-the-barbie/PARIGP-UDL.svg)
 
 ## The PARI/GP Command Window
 
 Start PARI/GP by clicking on the desktop icon (because you're one of the cool kids). It should look something like this:
 
-![PariGP Command Window](/assets/img/put-another-kenken-on-the-barbie/PariGP-command-window.svg)
+![PariGP Command Window](/assets/img/2020-12-30-put-another-kenken-on-the-barbie/PariGP-command-window.svg)
 
 The command prompt `gp >` is where you interact directly with the PARI engine. PARI understands all of the basic mathematical expressions as well as many specific to number theory. If you type `numbpart(20)` at the prompt PARI will return 627, the number of arithmetic partitions of 20. Enter `partitions(5)` to get a list of the partitions of $5$.
 
-![Partitions](/assets/img/put-another-kenken-on-the-barbie/Partitions.svg)
+![Partitions](/assets/img/2020-12-30-put-another-kenken-on-the-barbie/Partitions.svg)
 
 You might find it handy to have the [PARI/GP Reference Card](http://math.mit.edu/~brubaker/PARI/PARIrefcard.pdf) open in a browser window to quickly look up the commands, or the [available functions by category](https://pari.math.u-bordeaux.fr/dochtml/html-stable/), which is more current. The `partitions` function is in the Combinatorics section.
 
@@ -227,7 +231,7 @@ Multiplicative partitions (also called unordered factorizations, "factorisatio n
 
 The [Online Encyclopedia of Integer Sequences (OEIS)](https://oeis.org/) describes a [multiplicative partition function](https://oeis.org/A001055) as the number of ways of factoring $n$ with all factors greater than $1$. This is a pin plot of the [number of partitions](https://oeis.org/A001055/graph) for each integer up to 200:
 
-![Pin plot A001055](/assets/img/put-another-kenken-on-the-barbie/pin-plot-A001055.svg){.panel .py-4}
+![Pin plot A001055](/assets/img/2020-12-30-put-another-kenken-on-the-barbie/pin-plot-A001055.svg){.panel .py-4}
 
 Suppose a cage with four cells has the operation $72 \times$. There are $16$ multiplicative partitions of $72 = 2^3 \times 3^2$,
 
@@ -291,4 +295,12 @@ And now it's time to present the revised list of things you absolutely don't wan
 1. Writing an editor/debugger for PARI/GP.
    {reversed}
 
-We have a winner. Let me know when it's ready.
+------
+
+#### Image credits
+
+Hero: Barbie Life, Shrimp on the Barbie: Annette MacKay, [Pinterest](https://www.pinterest.com/pin/shrimp-on-the-barbie--227783693625723828/)
+
+Tetsuya Miyamoto: Device Plus, [KenKen Puzzle Inventor’s Tips for Engineers to Think “Outside the Box”](https://www.deviceplus.com/others/interviews/kenken-puzzle-inventors-tips-for-engineers/), October 31, 2016
+
+OEIS Pin Plot of [A001055](https://oeis.org/A001055) as a [graph](https://oeis.org/A001055/graph)

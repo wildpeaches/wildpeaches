@@ -4,22 +4,22 @@ subtitle: Why am I going so slow?
 author: John Peach
 lede: “I asked God for a bike, but I know God doesn’t work that way. So I stole a bike and asked for forgiveness.” – Emo Philips
 hero:
-  url: /assets/img/bicycle-science/timeline-of-bicycle-design.png
+  url: /assets/img/2022-04-30-bicycle-science/timeline-of-bicycle-design.png
   alt:
 tags: [math]
 keywords: []
-socialImg: /assets/img/bicycle-science/timeline-of-bicycle-design.png
+socialImg: /assets/img/2022-04-30-bicycle-science/timeline-of-bicycle-design.png
 ---
 
 ## A Tale of Two Bicycles
 
 I have two bicycles, a ten-year-old [Dynamic Tempo 8](https://www.gadgetreview.com/dynamic-bicycles-tempo-cross-8-review) (my Motorless Child)
 
-![dynamic-tempo-8](/assets/img/bicycle-science/dynamic-tempo-8.JPG)
+![dynamic-tempo-8](/assets/img/2022-04-30-bicycle-science/dynamic-tempo-8.JPG)
 
 and a four-year-old [Juiced CrossCurrentX](https://electric-biking.com/juiced-bikes-crosscurrent-review/).
 
-![CCX3](/assets/img/bicycle-science/CCX3.jpg)
+![CCX3](/assets/img/2022-04-30-bicycle-science/CCX3.jpg)
 
 You might notice there's no chain on the Tempo 8. Instead, it has a drive shaft between the cranks and the rear hub, so all of the transmission is enclosed and free of dirt and grease. A [Shimano Alfine 8](https://www.sheldonbrown.com/nexus8.shtml) internal gear hub is built into the rear wheel, similar to the hubs on old [three-speed Raleigh bicycles](https://www.sheldonbrown.com/retroraleighs/sports.html), but with eight gears. 
 
@@ -57,7 +57,7 @@ The kinetic energy might be the answer, but let's do a science.
 
 I did two identical 20-mile rides, one on the Dynamic bike (left) and the second on the Juiced bike (right), and recorded the trips using my [Strava app](https://www.strava.com/dashboard).
 
-![the-two-rides](/assets/img/bicycle-science/the-two-rides.png)
+![the-two-rides](/assets/img/2022-04-30-bicycle-science/the-two-rides.png)
 
 Strava recorded my average speed of 10.6 mph (4.7 m/s) unmotorized and 15.7 mph (7.0 m/s) on the electric bike, giving kinetic energies of 1050 J and 2695 J. The kinetic energy is about 2.6 times higher on the electric bike than the motorless bike. 
 
@@ -67,11 +67,11 @@ Riding the electric bike feels faster, but not a lot faster. The [Bolin Creek Tr
 
 Using the Strava data we can calculate average speeds for each bike along the trail. But I needed to get up a big hill to get to the trail.
 
-![predators](/assets/img/bicycle-science/predators.png)
+![predators](/assets/img/2022-04-30-bicycle-science/predators.png)
 
 ## Stravanalysis
 
-![happiness-is](/assets/img/bicycle-science/happiness-is.png)
+![happiness-is](/assets/img/2022-04-30-bicycle-science/happiness-is.png)
 
 Getting out of our neighborhood means climbing a hill with an 11% grade. If I'm on the Motorless Child there are times when I think, "Ugh, do I have to?" and wind up walking. I can walk the hill at about 3 mph or about 4.5 ft/sec, which means it takes 107 seconds to go up. 
 
@@ -85,7 +85,7 @@ It seems the big speed difference is in the hills. I put the brakes on coming ba
 
 Let's do a more careful analysis of the entire trip. If you log into your Strava account (even if you're cheap like me and haven't paid for it), you can download the details of your route. Click on the route, and on the left side you should see something like this:
 
-![strava-ellipsis](/assets/img/bicycle-science/strava-ellipsis.png)
+![strava-ellipsis](/assets/img/2022-04-30-bicycle-science/strava-ellipsis.png)
 
 Click on "Export GPX" and save the data. In this format, we only get timestamps, latitude, longitude, and elevation data. The timestamp is in the form `2022-04-12T18:33:38Z`, but if you're using Excel there's a nice trick to extract hours, minutes, and seconds from the data. 
 
@@ -146,7 +146,7 @@ This was quite a puzzle until I remembered I'd done the ride the day after my bi
 
 Looking through the data, I found a half-hour gap in the timestamps, and the latitude and longitude show up in exactly the right place. Here's a picture of the ride using the online [GPX2KML](https://gpx2kml.com/?results) converter. Drag and drop the KML file onto Google Earth to plot the route.
 
-![the-prosecco-and-pie-interruption](/assets/img/bicycle-science/the-prosecco-and-pie-interruption.png)
+![the-prosecco-and-pie-interruption](/assets/img/2022-04-30-bicycle-science/the-prosecco-and-pie-interruption.png)
 
 Strava gives the total moving time, so the remaining missing time is probably due to stops at traffic lights.
 
@@ -177,7 +177,7 @@ which seems like a perfectly reasonable top speed for a bike with no motor. Or, 
 
 which gives the latitude and longitude: $35.91322 \; N, -79.0821 \; E$,
 
- ![west-poplar-position](/assets/img/bicycle-science/west-poplar-position.png)
+ ![west-poplar-position](/assets/img/2022-04-30-bicycle-science/west-poplar-position.png)
 
 a position on W. Poplar just prior to the Prosecco and Pie Interruption.
 
@@ -205,7 +205,7 @@ vecSmooth <- function(v,k){
 
 The plots of speed against time show how the trips were going.
 
-![smoothed-speeds](/assets/img/bicycle-science/smoothed-speeds.png)
+![smoothed-speeds](/assets/img/2022-04-30-bicycle-science/smoothed-speeds.png)
 
 ### Savitzky-Golay Smoothing
 
@@ -215,13 +215,13 @@ Even this method has been called into question in the paper, ["*Why and How Savi
 
 Using $2m+1 = 101$, the smoothed speed data looks like this:
 
-![smoothed-speeds-sg](/assets/img/bicycle-science/smoothed-speeds-sg.png)
+![smoothed-speeds-sg](/assets/img/2022-04-30-bicycle-science/smoothed-speeds-sg.png)
 
 ### Speeeeed
 
 We can generate histograms of the speeds for each bike using the rolling averages.
 
-![smooth-speed-hist](/assets/img/bicycle-science/smooth-speed-hist.png)
+![smooth-speed-hist](/assets/img/2022-04-30-bicycle-science/smooth-speed-hist.png)
 
 The maximum speed for the electric bike is $16.12635 \frac{m}{s} = 36.07 \text{ mph}$, and for the motorless bike it's $21.81978 \frac{m}{s} = 48.8 \text{ mph}$, so still a bit inaccurate, but better. In the histogram, the bar at $22 \frac{m}{s}$ has a frequency of $1$, making it too small to see in the plot. 
 
@@ -235,7 +235,7 @@ When I replaced the pads on the electric bike I noticed a lot of grit buildup on
 
 On my bike, grit had gotten into the cylinder preventing one side from fully extending leading to uneven wear of the pad on that side. I should probably clean the bike and especially the brakes more often.
 
-![tektro-caliper](/assets/img/bicycle-science/tektro-caliper.png)
+![tektro-caliper](/assets/img/2022-04-30-bicycle-science/tektro-caliper.png)
 
 ## You've Got Potential
 
@@ -247,7 +247,7 @@ PE = mgh
 $$
 where $m$ is the combined mass of the bike and rider, $g = 9.81 \frac{m}{s^2}$ is the acceleration due to gravity, and $h$ is the height or elevation. Here's an elevation plot of my ride on the electric bike.
 
-![elevation-plot](/assets/img/bicycle-science/elevation-plot.png)
+![elevation-plot](/assets/img/2022-04-30-bicycle-science/elevation-plot.png)
 
 Since the rides start and end at the same place the total potential energy for the trip is zero, but that doesn't help going up a steep hill. Right at the beginning, the elevation is about $135 \; m$ and quickly climbs to about $160 \; m$ so I had to overcome a potential of
 $$
@@ -263,13 +263,13 @@ to get up the hill. In the middle of the plot is a long decline as I rode beside
 
 Using the minimum elevation as the zero point for potential energy, we can plot kinetic, potential, and total energy on the same graph for each bike.
 
-![mbike-energy](/assets/img/bicycle-science/mbike-energy.png)![ebike-energy](/assets/img/bicycle-science/ebike-energy.png)
+![mbike-energy](/assets/img/2022-04-30-bicycle-science/mbike-energy.png)![ebike-energy](/assets/img/2022-04-30-bicycle-science/ebike-energy.png)
 
 The potential energy is much greater than the kinetic energy, so you've got to put in a lot of effort to climb those hills. Right at the start, the hill getting out of the neighborhood requires at least $20 \; KJ$ to overcome the gravity potential, and the long climb up Raleigh Road (starting at ~5000 seconds on the motorless bike and 3500 seconds electric) takes about $50 \; KJ$. 
 
 Let's take a look at the times coming down the Bolin Creek path. In Google Earth, I put pins at the beginning and end of the path,
 
-![bolin-creek-start-end](/assets/img/bicycle-science/bolin-creek-start-end.png)
+![bolin-creek-start-end](/assets/img/2022-04-30-bicycle-science/bolin-creek-start-end.png)
 
 and put the longitude and latitude for each point into a variable:
 
@@ -309,3 +309,12 @@ Two other tough hills are the ones on Houston and Raleigh roads. The Dynamic bik
 It's not surprising that the e-bike climbs hills faster than the motorless bike, but the data shows that there isn't a big difference in the downhills. The fact the electric bike is 50% faster overall comes almost entirely in the uphill times. 
 
 Download the [R code](https://gist.github.com/XerxesZorgon/e6b064e478a5a016c9e38f25d5bf0372) from Github to use the Strava data collected on your rides.
+
+------
+
+#### Image credits
+
+Hero: Timeline of Bicycle Design, Randall Munroe, [XKCD](https://xkcd.com/1673/).
+
+Happiness Is: Lisa Swerling & Ralph Lazar, [Last Lemon](https://lastlemon.com/happiness/), 2015
+

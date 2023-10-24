@@ -4,11 +4,11 @@ subtitle: A Letcher in Homotopies
 author: John Peach
 lede: I'll show you how to design a yacht hull with five Bezier curves and a homotopy. I'll demonstrate how to make a scale model of your boat. Becoming a pirate and sailing the seven seas is left as an exercise to the reader.
 hero:
-  url: /assets/img/yacht-design-with-mathematics/jurgen-venakowa-8Qs9bEhZRvw-unsplash.jpg
+  url: /assets/img/2020-10-20-yacht-design-with-mathematics/jurgen-venakowa-8Qs9bEhZRvw-unsplash.jpg
   alt:
 date: 2020-10-19
 tags: [math, yacht design, homotopies, octave, geogebra, delftship]
-socialImg: /assets/img/yacht-design-with-mathematics/jurgen-venakowa-8Qs9bEhZRvw-unsplash.jpg
+socialImg: /assets/img/2020-10-20-yacht-design-with-mathematics/jurgen-venakowa-8Qs9bEhZRvw-unsplash.jpg
 ---
 
 > A ship in harbor is safe, but that is not what ships are built for.
@@ -19,12 +19,15 @@ socialImg: /assets/img/yacht-design-with-mathematics/jurgen-venakowa-8Qs9bEhZRvw
 
 Historically, yacht designers drew the outlines of boats on their drafting boards with [French curves](https://www.draftingsteals.com/catalog-drafting---drawing-aides-curves-french-curve-sets.html), [irregular curves](https://www.engineersupply.com/Alvin-1010-24-14-Transparent-Irregular-Curve.aspx), and [weighted battens (or spline weights)](https://edsonmarine.com/products/boating-accessories/spline-weights/). This method produced beautiful boats, such as the British cutter Valkyrie II, the 1893 America's Cup challenger.
 
-![Valkyrie II yacht](/assets/img/yacht-design-with-mathematics/cutter-valkyrie.jpg)
+![Valkyrie II yacht](/assets/img/2020-10-20-yacht-design-with-mathematics/cutter-valkyrie.jpg)
+
+<p align = "center"><b>Valkyrie II</b></p>
 
 As computers became more widely available, designers turned to them to handle the difficult problems of yacht design. Now, high-performance yachts such as these by [Team Oracle USA](https://en.wikipedia.org/wiki/Oracle_Team_USA), are drawn with supercomputers calculating [Computational Fluid Dynamics](https://en.wikipedia.org/wiki/Computational_fluid_dynamics).
 
-![Team Oracle high-performance yachts](/assets/img/yacht-design-with-mathematics/ac-72-team-oracle-boats-photo-d-ramey-logan.svg){.mb-1}[Photograph](https://commons.wikimedia.org/w/index.php?curid=27731307) by [D Ramey Logan](http://don.logan.com/), [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en){.mb-1}
-{.mb-12 .text-sm .text-blue-600}
+![Team Oracle high-performance yachts](/assets/img/2020-10-20-yacht-design-with-mathematics/ac-72-team-oracle-boats-photo-d-ramey-logan.svg)
+
+<p align = "center"><b>America's Cup Team Oracle Boats</b></p>
 
 In 1972, John S. Letcher published a paper, [A New Approach to Numerical Fairing and Lofting](https://www.semanticscholar.org/paper/A-NEW-APPROACH-TO-NUMERICAL-FAIRING-AND-LOFTING-Letcher/56549810b9af3839dd1feec77cce063d3689feb8), where he showed how to calculate the surface of the hull using just six curves. We can combine Letcher's method with some computer power to create the 3D shape of a hull easily. It isn't up to the level of CFD on a supercomputer, but it makes the designing process much easier than spending hours carefully drawing the outline by hand.
 
@@ -32,15 +35,15 @@ In 1972, John S. Letcher published a paper, [A New Approach to Numerical Fairing
 
 The coordinate system used by most designers starts at the bow and runs towards the stern. The origin is at the waterline directly below the bow, and positive $x$ values increase towards the stern. The lines drawings are from Letcher's paper.
 
-![The Coordinate System](/assets/img/yacht-design-with-mathematics/the-coordinate-system.svg){ .blend-multiply}
+![The Coordinate System](/assets/img/2020-10-20-yacht-design-with-mathematics/the-coordinate-system.svg){ .blend-multiply}
 
 The first step is to draw the outline, which consists of three curves, the sheer $s(x)$, which is the view looking down from above, the top curve of the hull called the freeboard, $f(x)$, and the bottom without the keel called the profile, $p(x)$.
 
-![Sheer Freeboard Profile curves example](/assets/img/yacht-design-with-mathematics/sheer-freeboard-profile.svg){ .blend-multiply}
+![Sheer Freeboard Profile curves example](/assets/img/2020-10-20-yacht-design-with-mathematics/sheer-freeboard-profile.svg){ .blend-multiply}
 
 Next, the yacht is "sliced" at several points along the $x$-axis, and these section curves are typically drawn on the same plot, such as this:
 
-![Hull section curves](/assets/img/yacht-design-with-mathematics/section-curves.svg){ .blend-multiply}
+![Hull section curves](/assets/img/2020-10-20-yacht-design-with-mathematics/section-curves.svg){ .blend-multiply}
 
 On the right side are section numbers $00, 0, 1, 2, ..., 5$ looking from the bow aftwards to the maximum width. On the left side are the sections seen from the aft end looking forward. To minimize drag, the water needs to flow smoothly around this shape, so designers needed to carefully adjust the shape of each section curve (using their French curves) so there won't be any hollow areas. Designers call this "fairing".
 
@@ -48,11 +51,13 @@ What Letcher realized was that each of these section curves needed to be similar
 
 But, how do you get a smooth transition from the aft section to the forward section? This is where homotopies come in. A homotopy is a continuous deformation of one curve into another.
 
-![Animation of a continuous deformation of one curve into another](/assets/img/yacht-design-with-mathematics/HomotopySmall.gif){ .blend-multiply}
+![Animation of a continuous deformation of one curve into another](/assets/img/2020-10-20-yacht-design-with-mathematics/HomotopySmall.gif){ .blend-multiply}
+
+<p align = "center"><b>Homotopy</b></p>
 
 Letcher used the idea of homotopies to transition the section curves from the forward sections to the aft sections. Now, he had the complete design in six curves, the sheer, freeboard, profile, forward section $\eta_1$, aft section $\eta_2$, and the homotopy transition function $A(x)$.
 
-![The six defining curves of a boat hull](/assets/img/yacht-design-with-mathematics/six-defining-curves.svg){ .blend-multiply}
+![The six defining curves of a boat hull](/assets/img/2020-10-20-yacht-design-with-mathematics/six-defining-curves.svg){ .blend-multiply}
 
 The transition function $A(x)$ varies from 1 at the bow to 0 at the stern and generates the sections from the equation
 
@@ -90,7 +95,9 @@ $$
 
 since $0^0 = 1$ but $0^k = 0$ for all $k > 0$. Similarly, when $t = 1$, $B(t) = P_n$, so the endpoints of the curve coincide with the first and last control points. Each control point $P_i = (y_i,z_i)$, are the coordinates of a point in $\R^2$ (two-dimensional coordinates), so $B(t)$ defines a curve in $\R^2$. Here's an example of a Bezier curve with five control points.
 
-![Animation of a quartic Bézier curve](/assets/img/yacht-design-with-mathematics/bezier.gif){ .blend-multiply}
+![Animation of a quartic Bézier curve](/assets/img/2020-10-20-yacht-design-with-mathematics/bezier.gif){ .blend-multiply}
+
+<p align = "center"><b>Bezier Curve</b></p>
 
 The Bezier curve (red) starts at $P_0$ when $t=0$ and ends at $P_4$ when $t=1$.
 
@@ -98,15 +105,15 @@ The Bezier curve (red) starts at $P_0$ when $t=0$ and ends at $P_4$ when $t=1$.
 
 We'll be using [Geogebra Classic 6](https://www.geogebra.org/download) to draw the curves. After you install it and start it the first time you should see a screen like this:
 
-![Geogebra splash screen](/assets/img/yacht-design-with-mathematics/geogebra-classic-6-start-screen.svg)
+![Geogebra splash screen](/assets/img/2020-10-20-yacht-design-with-mathematics/geogebra-classic-6-start-screen.svg)
 
 First, decide how many control points you think you might need. A few extra don't matter, but you'd like to get the curve defined with the fewest number of control points possible. For this set of curves, 5 points should be sufficient. These will be labeled A, B, C, D, and E by Geogebra. Choose the point tool from the upper left corner - an icon with a small blue dot and an "A", and select "Point" from the menu. Beginning at the origin and moving towards the right place the five points.
 
-![Drawing control points in Geogebra](/assets/img/yacht-design-with-mathematics/geogebra-five-points.svg)
+![Drawing control points in Geogebra](/assets/img/2020-10-20-yacht-design-with-mathematics/geogebra-five-points.svg)
 
-Load an [image](https://wiki.geogebra.org/en/Image_Tool) by clicking on the icon ![a=2](/assets/img/yacht-design-with-mathematics/geogebra-a=2.png){.inline .m-0 .align-baseline}, and then choose "Image" from the dropdown menu. You may want to flip the image (in an external image editor) so the bow is on the $y$-axis. Right-click on the image to open a menu on the right side of Geogebra. Under "Basic" select "Background Image". You'll also see two points labeled "F" and "G" at the bottom left and right corners of the image. Drag these around until the image is in the correct position and scaled appropriately. The waterline should be on the $x$-axis, and the length should be 50.
+Load an [image](https://wiki.geogebra.org/en/Image_Tool) by clicking on the icon ![a=2](/assets/img/2020-10-20-yacht-design-with-mathematics/geogebra-a=2.png){.inline .m-0 .align-baseline}, and then choose "Image" from the dropdown menu. You may want to flip the image (in an external image editor) so the bow is on the $y$-axis. Right-click on the image to open a menu on the right side of Geogebra. Under "Basic" select "Background Image". You'll also see two points labeled "F" and "G" at the bottom left and right corners of the image. Drag these around until the image is in the correct position and scaled appropriately. The waterline should be on the $x$-axis, and the length should be 50.
 
-![Placing background image in Geogebra](/assets/img/yacht-design-with-mathematics/geogebra-import-image.svg)
+![Placing background image in Geogebra](/assets/img/2020-10-20-yacht-design-with-mathematics/geogebra-import-image.svg)
 
 Let's start by defining the sheer curve (the one labeled $s(x)$ backward). The points "A" and "E" should be on the first and last points of the sheer curve.
 
@@ -120,15 +127,15 @@ $$
 
 You probably don't want to figure out what the equation for a 5-point Bezier curve is, so instead, run the [Octave](https://www.gnu.org/software/octave/) function [`curveString(5)`](https://gist.github.com/XerxesZorgon/24713be3816c53cba0535371fbba2606) which will generate the Bezier function for 5 points. Copy and paste it into Geogebra. Right-click on the dot in the function box, choose "Settings" which will open a dialog box on the right side. Select "Color" and change the color to something which stands out from the other curves (maybe red).
 
-![Geogebra settings dialog](/assets/img/yacht-design-with-mathematics/geogebra-settings-and-dialog.svg)
+![Geogebra settings dialog](/assets/img/2020-10-20-yacht-design-with-mathematics/geogebra-settings-and-dialog.svg)
 
 Now comes the fun part. First, drag the point "A" to the leftmost point of the sheer curve, and drag the point "E" to the rightmost point. Next, select one of the inner points B-D and start moving it around. Repeat with the other two until the red curve lines up with the sheer curve in the picture. Points "A" and "E" need to be exactly on the endpoints of the curve, but the others can be anywhere that gives the best fit.
 
-![Fit bézier curve to sheer](/assets/img/yacht-design-with-mathematics/bezier-curve-fit-to-sheer.svg)
+![Fit bézier curve to sheer](/assets/img/2020-10-20-yacht-design-with-mathematics/bezier-curve-fit-to-sheer.svg)
 
 When you're done, you can export the control points to the Geogebra spreadsheet. Click on the three vertical dots in the upper right corner, and select "Spreadsheet".
 
-![Export control points from Geogebra](/assets/img/yacht-design-with-mathematics/geogebra-show-spreadsheet.svg)
+![Export control points from Geogebra](/assets/img/2020-10-20-yacht-design-with-mathematics/geogebra-show-spreadsheet.svg)
 
 You will need the following commands to copy the points into the spreadsheet. The `Lst` only needs to be entered once, but you need to have all of the points used, A-E, to form the curve in the list. If you used a different number of points adjust Lst, for example, if you used four points then Lst should be {A, B, C, D}.
 
@@ -140,17 +147,17 @@ FillColumn(2, y(Lst))
 
 Copy and paste each one of these commands into a separate Input cell in Geogebra,
 
-![Geogebra spreadsheet commands](/assets/img/yacht-design-with-mathematics/geogebra-spreadsheet-commands.svg)
+![Geogebra spreadsheet commands](/assets/img/2020-10-20-yacht-design-with-mathematics/geogebra-spreadsheet-commands.svg)
 
 which will populate the [spreadsheet](https://wiki.geogebra.org/en/Spreadsheet_View):
 
-![Geogebra spreadsheet copied to excel](/assets/img/yacht-design-with-mathematics/geogebra-spreadsheet-copied-to-excel.svg)
+![Geogebra spreadsheet copied to excel](/assets/img/2020-10-20-yacht-design-with-mathematics/geogebra-spreadsheet-copied-to-excel.svg)
 
 Copy the Geogebra Spreadsheet values (shown on the left above) into Excel (on the right), name the curve in the first column, and repeat for the other curves: freeboard, profile, and A. For subsequent curves, just copy and paste the two FillColumn commands to update the Geogebra spreadsheet, but you won't need the Lst command again.
 
 The two section curves $\eta_1$ and $\eta_2$ are scaled differently, so you should restart Geogebra and load the curves image again, but not flipped this time. (The image can be deleted without restarting Geogebra. [See this suggestion.](https://help.geogebra.org/topic/background-image)) This is a fit for the second section:
 
-![fit-to-eta2](/assets/img/yacht-design-with-mathematics/fit-to-eta2.svg)
+![fit-to-eta2](/assets/img/2020-10-20-yacht-design-with-mathematics/fit-to-eta2.svg)
 
 When you have all six curves defined, save the Excel spreadsheet.
 
@@ -194,31 +201,31 @@ To visualize the completed hull you will need one more software tool, [DELFTship
 
 After starting DELFTship, click on the white rectangle in the upper left corner for "New Project" (`CTRL-N`) which will open a new window. In that window, select a blank project and click on "Accept".
 
-![DELFTship start screen](/assets/img/yacht-design-with-mathematics/delftship-start-screen.svg){ .blend-multiply}
+![DELFTship start screen](/assets/img/2020-10-20-yacht-design-with-mathematics/delftship-start-screen.svg){ .blend-multiply}
 
 Next to the "New Project" icon is the "Open Project" icon. Click on the down arrow and select "Import" and "Surface" (the second choice). Import the text file `Letcher_curves.txt`. (Notice that blanks in the file name have been changed to underscores.)
 
-![DELFTship open textfile](/assets/img/yacht-design-with-mathematics/delftship-open-txt-file.svg){ .blend-multiply}
+![DELFTship open textfile](/assets/img/2020-10-20-yacht-design-with-mathematics/delftship-open-txt-file.svg){ .blend-multiply}
 
 Click OK for the default number of columns, rows, and "Yes" for the dialog box, "The main particulars have not been specified",
 
-![DELFTship enter main now](/assets/img/yacht-design-with-mathematics/delftship-enter-main-now.svg){ .blend-multiply}
+![DELFTship enter main now](/assets/img/2020-10-20-yacht-design-with-mathematics/delftship-enter-main-now.svg){ .blend-multiply}
 
 which will open a Projects Settings input. Copy the values from Octave for the length, beam, and draft (including the minus sign) and uncheck the default for midship location. Copy the values derived above, then click "OK".
 
-![DELFTship enter main particulars](/assets/img/yacht-design-with-mathematics/delftship-enter-main-particulars.svg){ .blend-multiply}
+![DELFTship enter main particulars](/assets/img/2020-10-20-yacht-design-with-mathematics/delftship-enter-main-particulars.svg){ .blend-multiply}
 
 You should see the starboard half of your yacht:
 
-![DELFTship showing starboard half](/assets/img/yacht-design-with-mathematics/DELFTship.svg){ .blend-multiply}
+![DELFTship showing starboard half](/assets/img/2020-10-20-yacht-design-with-mathematics/DELFTship.svg){ .blend-multiply}
 
 Clicking on the "Aft" and "Wireframe" icons displays the section curves similar to the ones above.
 
-![DELFTship sections curves](/assets/img/yacht-design-with-mathematics/delft-sections.svg){ .blend-multiply}
+![DELFTship sections curves](/assets/img/2020-10-20-yacht-design-with-mathematics/delft-sections.svg){ .blend-multiply}
 
 If you click on "Gauss" and "Both sides" you'll see the complete hull. Gauss indicates curvature in the hull which may be negative, zero, or positive and colored blue, green, and orange respectively. Negative curvature means locally the surface is like a saddle - it curves upwards one way and downwards in a direction perpendicular to the first. Zero curvature means that in at least one direction the surface is flat and positive means curvature is the same in both directions. For boats, the curvature should be mostly positive with possibly some flat sections. An area that shows up as blue surrounded by orange indicates the hull is not fair and will induce drag if the area is below the waterline.
 
-![DELFTShip complete hull](/assets/img/yacht-design-with-mathematics/delft-both-sides.svg){ .blend-multiply}
+![DELFTShip complete hull](/assets/img/2020-10-20-yacht-design-with-mathematics/delft-both-sides.svg){ .blend-multiply}
 
 This figure shows a view of Letcher's six curve yacht from the stern with "Both sides" turned on and the "Environment map" set to "Sky". There are many more features to DELFTship you may want to explore.
 
@@ -226,7 +233,9 @@ This figure shows a view of Letcher's six curve yacht from the stern with "Both 
 
 You can build a model of your yacht design from styrofoam using a hot wire cutter. Jan found instructions for building a [hot wire cutter](https://www.flitetest.com/articles/hot-wire-cutting-foam) from [FliteTest](https://www.flitetest.com/), a group that helps amateur model aircraft builders and flyers. To use the cutter you need a rigid template attached to opposite sides of a foam block. The template guides the hot wire as it cuts through the foam, as shown here.
 
-![Template pinned to foam for hot wire cutting](/assets/img/yacht-design-with-mathematics/hot-wire-template.svg)
+![Template pinned to foam for hot wire cutting](/assets/img/2020-10-20-yacht-design-with-mathematics/hot-wire-template.svg)
+
+<p align = "center"><b>Hot wire foam cutting</b></p>
 
 Using the sections generated from the code you can create templates for your hot wire cutter. Of course, you don't want to use templates for each cross-section, but a few along the length of the boat should be sufficient for a model. Most of the templates will be used twice during the cutting, once for each cut of adjacent blocks. After cutting all of the blocks, glue them together with a hot glue gun, and sand down the edges to smooth the surface.
 
@@ -302,3 +311,21 @@ The section curves in the yacht example start at $(0,0)$ and end at $(1,1)$ but 
 Bezier curves are linear in the control point values, so it's possible to fit a set of $(x,y)$ points to an $n^{th}$ degree Bezier. Effectively, this automates the Geogebra step but requires converting a drawn curve to a set of numerical coordinates.
 
 If you'd like to explore fluid dynamics a bit more, check out Nicole Sharp's [FYFD](https://fyfluiddynamics.com/) blog. Optimizing the shape of the hull for a smooth flow could be done by adjusting the shapes of the six curves. Since they're defined using Bezier control points, a better hull shape could be generated by shifting the positions of a handful of points and running the resulting hull through DELFTship's CFD calculator or [OpenFOAM](https://openfoam.org/).
+
+------
+
+#### Image credits
+
+Hero:  [Jürgen Venakowa](https://unsplash.com/s/photos/jurgen-venakowa), Unsplash.com
+
+Valkyrie II: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Cutter_Valkyrie_II-01.jpg)
+
+America's Cup Team Oracle Boats: CC BY-SA 3.0: [D Ramey Logan](https://commons.wikimedia.org/w/index.php?curid=27731307), Wikimedia Commons
+
+Yacht line drawings: John Letcher, [A New Approach to Numerical Fairing and Lofting](https://www.semanticscholar.org/paper/A-NEW-APPROACH-TO-NUMERICAL-FAIRING-AND-LOFTING-Letcher/56549810b9af3839dd1feec77cce063d3689feb8)
+
+Homotopy gif: Jim Belk, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:HomotopySmall.gif)
+
+Bezier curve: Phil Tregoning, [Wikipedia](https://en.wikipedia.org/wiki/File:B%C3%A9zier_4_big.gif)
+
+Hot wire foam cutting: [Flite Test](https://www.flitetest.com/articles/hot-wire-cutting-foam)

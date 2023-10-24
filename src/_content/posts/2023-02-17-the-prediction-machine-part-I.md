@@ -4,11 +4,11 @@ subtitle: Part I - Protocols and OpenBB
 author: John Peach
 lede:
 hero:
-  url: /assets/img/stock-picker/part-1/Protocols-all.png
+  url: /assets/img/2023-02-17-the-prediction-machine/Protocols-all.png
   alt:
 tags: [math, ai, openbb]
 keywords: [day trading, prediction, forecasting]
-socialImg: /assets/img/stock-picker/part-1/Protocols-all.png
+socialImg: /assets/img/2023-02-17-the-prediction-machine/Protocols-all.png
 ---
 
 > "Anyone who believes that exponential growth can go on forever in a finite world is either a madman or an economist."
@@ -82,7 +82,7 @@ Finance professor Roy Batchelor says of the technical analysis method called Fib
 
 Stock data is immediately available through [Yahoo Finance](https://finance.yahoo.com/), so to load recent data for [AMC Entertainment Holdings, Inc. (AMC)](https://finance.yahoo.com/quote/AMC?p=AMC) switch to the `Stocks` menu:
 
-![openbb-stocks-menu](/assets/img/stock-picker/part-1/openbb-stocks-menu.png)
+![openbb-stocks-menu](/assets/img/2023-02-17-the-prediction-machine/openbb-stocks-menu.png)
 
 and now type `load amc` which will display 
 
@@ -92,15 +92,15 @@ You can change the range of dates to acquire with the start and end commands: `l
 
 The `candle` command shows the opening and closing prices, and `candle --ma 20` overlays a 20-day moving average. The volume, or number of shares bought and sold, is shown in the bottom section of the plot.
 
-![amc-candle](/assets/img/stock-picker/part-1/amc-candle.png)
+![amc-candle](/assets/img/2023-02-17-the-prediction-machine/amc-candle.png)
 
-Using the [Behavioral Analysis](https://docs.openbb.co/terminal/guides/intros/common/ba) submenu (`ba`), you can plot mentions of the stock using data from FinnBrain:
+Using the [Behavioral Analysis](https://docs.openbb.co/terminal/reference/stocks/ba) submenu (`ba`), you can plot mentions of the stock using data from FinnBrain:
 
-![finnbrain-sentiment](/assets/img/stock-picker/part-1/finnbrain-sentiment.png)
+![finnbrain-sentiment](/assets/img/2023-02-17-the-prediction-machine/finnbrain-sentiment.png)
 
 ## APIs
 
-Much more financial data is available through third-party sources. You'll need to install keys for each [API](https://aws.amazon.com/what-is/api/) (Application Programming Interface), and OpenBB makes it easy to get the ones you want. Under the `Advanced` menu, you'll see `Set API keys`. On the [help page](https://docs.openbb.co/terminal/guides/advanced/api-keys), scroll down to see how to obtain the keys. I got keys for stock-related sites that didn't charge for the information:
+Much more financial data is available through third-party sources. You'll need to install keys for each [API](https://aws.amazon.com/what-is/api/) (Application Programming Interface), and OpenBB makes it easy to get the ones you want. Under the `Advanced` menu, you'll see `Set API keys`. On the [help page](https://docs.openbb.co/terminal/usage/guides/api-keys), scroll down to see how to obtain the keys. I got keys for stock-related sites that didn't charge for the information:
 
 - [Alpha Vantage](https://www.alphavantage.co/support/#api-key)
 - [FinnHub](https://finnhub.io/)
@@ -115,13 +115,13 @@ Reddit was a little tricky, but some help is [here](https://www.reddit.com/r/ope
 
 The `Forecast` menu contains machine learning tools to help predict the future direction of stock prices. If you're in the `Stocks` submenu, use the command `home` to return to the top level, then `forecast` where you can apply commands to explore the data you previously loaded, apply feature engineering to create new data sets, and predict future prices with Time Series Forecasting.
 
-![forecast](/assets/img/stock-picker/part-1/forecast.png)
+![forecast](/assets/img/2023-02-17-the-prediction-machine/forecast.png)
 
 Note the disclaimer at the top, and don't forget Protocol 2. 
 
-Instead of using a built-in method, we'll use a very simple rule-based model. First, we need to [export](https://docs.openbb.co/terminal/guides/advanced/data) the data in either xlsx or csv format. From the top level, use `/stocks/load AMC --export xlsx` which will save the data in `<user>\OpenBBUserData\exports\20230215_211502_OpenBB_openbb_terminal_load_AMC.xlsx`
+Instead of using a built-in method, we'll use a very simple rule-based model. First, we need to [export](https://docs.openbb.co/terminal/reference/forecast/export) the data in either xlsx or csv format. From the top level, use `/stocks/load AMC --export xlsx` which will save the data in `<user>\OpenBBUserData\exports\20230215_211502_OpenBB_openbb_terminal_load_AMC.xlsx`
 
-![amc-exported-xlsx](/assets/img/stock-picker/part-1/amc-exported-xlsx.png)
+![amc-exported-xlsx](/assets/img/2023-02-17-the-prediction-machine/amc-exported-xlsx.png)
 
 Using the closing price data we can build a simple prediction machine. Add a new column `Close Diff` and take the difference of the first two entries in column $E$, `=e3-e2`. Copy this formula to the bottom of the last row of data. These will be the values we want to predict.
 
@@ -129,11 +129,11 @@ The formula to predict the closing price differences is very simple. If the both
 
 Next create one more column to hold the predicted values, using the formula `=IF(I4<0,H4+H3,AVERAGE(H4,H3))`. This says that if the entry in column $I$ is negative (the changes were in opposite directions) add the two values together, otherwise take the average. Your spreadsheet should now look like this:
 
-![predicted-spreadsheet](/assets/img/stock-picker/part-1/predicted-spreadsheet.png)
+![predicted-spreadsheet](/assets/img/2023-02-17-the-prediction-machine/predicted-spreadsheet.png)
 
 Next, make a scatter plot of the predicted changes against the actual closing differences (col. $J$ vs col. $H$). I added a red line at $45\degree$ to show where perfect predictions would lie on the plot.
 
-![predicted-price-change](/assets/img/stock-picker/part-1/predicted-price-change.png)
+![predicted-price-change](/assets/img/2023-02-17-the-prediction-machine/predicted-price-change.png)
 
 For a plain-vanilla prediction machine, it works fairly well. 
 
@@ -143,7 +143,7 @@ In the example, when the Indicator (column $I$) is less than zero the output is 
 
 The equations contained in the spreadsheet can be outlined as a flow chart,
 
-![simple-neural-net](/assets/img/stock-picker/part-1/simple-neural-net.png)
+![simple-neural-net](/assets/img/2023-02-17-the-prediction-machine/simple-neural-net.png)
 
 where the two previous changes in closing prices are the inputs. The first operation sums them together and the lower one multiplies them to create the indicator function ($-1/+1$) which returns a multiplier $m$. The prediction is $P_t = m (\Delta_{t-2}+ \Delta_{t-1})$. This is a very simple neural network with the exception that the values for $m$ were pre-selected. In a true neural network, some of the input data $\Delta$ would be used to "train" the network. 
 

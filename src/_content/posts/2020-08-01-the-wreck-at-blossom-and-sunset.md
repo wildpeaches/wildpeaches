@@ -106,3 +106,13 @@ If you'd like to run this experiment for an intersection nearby, install the [An
 ![navigator](/assets/img/2020-08-01-blossom-and-sunset/navigator.png)
 
 Launch [JupyterLab](https://jupyter.org/) and select the Python kernel. Save a copy of the [Blossom_and_Sunset.ipynb](https://gist.github.com/XerxesZorgon/16bd83e8c5ff0053b12ec40e8c6e8471) notebook locally, and then open it in JupyterLab. You can change the parameters in the notebook to fit your conditions, and then calculate the probability of a crash coming to a neighborhood near you!
+
+------
+
+#### Image credits
+
+Hero: Google Street View
+
+Google Earth: Overhead view of Blossom and Sunset
+
+Anaconda: [Anaconda Navigator](https://www.anaconda.com/)
