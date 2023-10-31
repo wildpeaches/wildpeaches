@@ -65,6 +65,10 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addCollection(key, value);
   });
 
+  eleventyConfig.addCollection('software', (collection) => {
+    return collection.getFilteredByGlob('src/_content/software/*.md');
+  });
+
   // Browsersync Configuration
   eleventyConfig.setBrowserSyncConfig({
     // Disable ghostMode so it does not interfere
