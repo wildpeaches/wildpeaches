@@ -1,6 +1,6 @@
 ---
 displayName: "Meshlab"
-URL: "https://www.meshlab.net/"
+url: "https://www.meshlab.net/"
 ---
 
 Meshlab, the open source system for processing and editing 3D triangular meshes.

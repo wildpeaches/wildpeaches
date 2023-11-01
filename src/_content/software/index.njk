@@ -1,0 +1,23 @@
+---
+layout: blog-post
+title: Software
+permalink: /software/
+---
+<main class>
+<ul class="divide-y list-none mx-auto w-max">
+  {{collections.software[0] | dump | safe}}
+  {%- for software in collections.software | sort(attribute="data.displayName") -%}
+  <li>
+    <article class="my-4">
+      <h2 class="text-xl font-medium mb-2" id="{{ software.template.fileSlugStr }}">
+        <a href="{{ software.data.url }}">
+          {{ software.data.displayName }}
+        </a>
+      </h2>
+      <div>{{ software.templateContent | safe }}</div>
+    </article>
+  </li>
+  {%- endfor -%}
+</ul>
+
+<main>

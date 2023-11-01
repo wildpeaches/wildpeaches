@@ -1,6 +1,6 @@
 ---
 displayName: "RStudio"
-URL: "https://rstudio.com/products/rstudio/"
+url: "https://rstudio.com/products/rstudio/"
 ---
 
 RStudio is an integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management.

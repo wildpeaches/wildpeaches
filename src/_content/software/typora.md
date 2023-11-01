@@ -1,6 +1,6 @@
 ---
 displayName: "Typora"
-URL: "https://typora.io/"
+url: "https://typora.io/"
 ---
 
 Simple markdown editor. Used to generate this document.
