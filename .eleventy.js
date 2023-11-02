@@ -8,7 +8,9 @@ const markdownItFootnote = require('markdown-it-footnote');
 const markdownItImageLazyLoading = require('markdown-it-image-lazy-loading');
 const markdownItKatex = require('@iktakahiro/markdown-it-katex');
 
-const collections = require('./src/utils/collections');
+// to be collections
+const { posts } = require('./src/utils/collections/posts');
+const { softwares } = require('./src/utils/collections/softwares');
 
 const betterSlugFilter = require('./src/filters/better-slug');
 const dateFilter = require('./src/filters/date-filter');
@@ -61,13 +63,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy({ 'node_modules/katex/dist/fonts': 'assets/fonts' });
 
   // Collections
-  Object.entries(collections).map(([key, value]) => {
-    eleventyConfig.addCollection(key, value);
-  });
+  eleventyConfig.addCollection('posts', posts);
+  eleventyConfig.addCollection('softwares', softwares);
 
-  eleventyConfig.addCollection('software', (collection) => {
-    return collection.getFilteredByGlob('src/_content/software/*.md');
-  });
 
   // Browsersync Configuration
   eleventyConfig.setBrowserSyncConfig({

@@ -24,8 +24,69 @@ includeSubscription: true
     <div class="{{ ledeTopMargin }}"></div>
     {{ content | safe }}
     {% endif %} 
+    <hr>
 
-    
+    {%- if software.length > 0 -%}
+    <section aria-labelledby="software" class="s-post">
+      <h2 id="software" tabindex="-1" class="mb-6">
+        <a class="text-gray-300 border-b-4 border-transparent  hover:border-gray-200 hover:text-gray-500" href="#software" aria-hidden="true">#</a>
+        Software
+      </h2>
+      {% for softwareInPost in software %}
+        {% set foundSoftware = false %}
+        {% for software in collections.softwares %}
+
+          {% if software.template.fileSlugStr == softwareInPost %}
+            <div class="text-small">
+
+            {% set foundSoftware = true %}
+
+            <h3 id="{{ software.template.fileSlugStr }}" tabindex="-1" class="font-bold -mb-5">
+              <a class="text-gray-300 border-b-4 border-transparent  hover:border-gray-200 hover:text-gray-500" href="#{{ software.template.fileSlugStr }}" aria-hidden="true">#</a>
+              {{ software.data.displayName }}
+            </h3>
+
+            {{ software.templateContent | safe }}
+
+            {%- set index = 0 -%}
+            {%- for post in software.data.posts -%}
+              {%- if post.title != title -%}
+                {%- set index = index + 1 -%}
+                {%- set margins = "mb-0" -%}
+                {%- if index == 1 -%}
+                {%- set margins = "mt-2 mb-0" -%}
+                <details class="text-sm mb-5 -mt-3">
+                  <summary class="font-medium mt-2">Posts using {{ software.data.displayName }}</summary>
+                  <ul>
+                {%- endif %}
+                    <li class="{{ margins }}">
+                      <a href="{{ post.url }}">{{ post.title }}</a>
+                    </li>
+                {%- if loop.last %}
+                  </ul>
+                </details>
+                {%- endif %}
+              {%- endif %}
+            {%- endfor -%}
+
+            </div>
+          {% endif %}
+
+        {% endfor %}
+
+        {% if not foundSoftware %}
+        <div>
+        <h3 id="{{ softwareInPost }}" tabindex="-1" class="font-bold -mb-5">
+          <a class="text-gray-300 border-b-4 border-transparent  hover:border-gray-200 hover:text-gray-500" href="#{{ softwareInPost }}" aria-hidden="true">#</a>
+          {{ softwareInPost }}
+        </h3>
+          <p>We don't seem to have documented {{ softwareInPost }} on wildpeaches.xyz yet. Maybe try <a href="https://google.com/search?q={{ softwareInPost }}" rel="external" target="_blank">a Google search</a>?</p>
+          </div>
+        {% endif %}
+
+      {%- endfor -%}
+    </section>
+    {%- endif -%}
 
     {#
       <!-- @TODO show tags-->
