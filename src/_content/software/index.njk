@@ -1,0 +1,37 @@
+---
+layout: blog-post
+title: Software
+permalink: /software/
+---
+<main class>
+<ul class="divide-y list-none mx-auto w-max">
+  {%- for software in collections.softwares | sort(attribute="data.displayName") -%}
+  <li>
+    <article class="my-4">
+      <h2 class="text-xl font-medium mb-2" id="{{ software.template.fileSlugStr }}" tabindex="-1">
+        <a class="text-gray-300 border-b-4 border-transparent  hover:border-gray-200 hover:text-gray-500" href="#{{ software.template.fileSlugStr }}" aria-hidden="true" rel="canonical">#</a>
+        <a href="{{ software.data.url}}" rel="external">{{ software.data.displayName }}</a>
+      </h2>
+        {{ software.templateContent | safe }}
+      {%- for post in software.data.posts -%}
+        {%- set margins = "mb-0" -%}
+        {%- if loop.first -%}
+        {%- set margins = "mt-2 mb-0" -%}
+        <details class="text-sm">
+          <summary class="font-medium mt-2">Posts using {{ software.data.displayName }}</summary>
+          <ul>
+        {%- endif %}
+            <li class="{{ margins }}">
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+        {%- if loop.last %}
+          </ul>
+        </details>
+        {%- endif %}
+      {%- endfor -%}
+    </article>
+  </li>
+  {%- endfor -%}
+</ul>
+
+<main>
