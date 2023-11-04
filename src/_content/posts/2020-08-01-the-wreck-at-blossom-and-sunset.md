@@ -9,6 +9,7 @@ hero:
 tags: [math,Poisson,Exponential]
 keywords: [science, technology, engineering, mathematics, computing]
 socialImg: /assets/img/2020-08-01-blossom-and-sunset/Blossom-and-Sunset.png
+software: ['anaconda', 'jupyterlab', 'python']
 ---
 
 The town of Arlington repaved Sunset Road and installed new sidewalks all around. The block of Blossom between Sunset and Lennon had been unpaved for years because it was privately owned, but in 2020 the town paved it anyway. The neighborhood seemed much nicer after all the construction was done, but there was just one problem. There were no stop signs at the four-way intersection of Blossom and Sunset.
@@ -116,3 +117,7 @@ Hero: Google Street View
 Google Earth: Overhead view of Blossom and Sunset
 
 Anaconda: [Anaconda Navigator](https://www.anaconda.com/)
+
+### Gists
+
+[The probability of a crash at the intersection of Blossom and Sunset](https://gist.github.com/XerxesZorgon/16bd83e8c5ff0053b12ec40e8c6e8471) JupyterLab notebook.
