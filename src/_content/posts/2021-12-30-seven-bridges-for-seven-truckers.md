@@ -15,6 +15,7 @@ keywords:
   - Königsberg bridge problem
 socialImg: /assets/img/2021-12-30-seven-bridges-for-seven-truckers/seven-brides.png
 lastmod: '2022-03-04T21:11:23.175Z'
+software: ['julia', 'octave', 'python', 'r', 'graphviz', 'gephi', 'microsoft-automatic-graph-layout', 'tulip', 'neo4j']
 ---
 
 ## Seven Trucks

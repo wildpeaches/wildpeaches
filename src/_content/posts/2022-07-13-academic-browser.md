@@ -9,6 +9,7 @@ hero:
 tags: [math]
 keywords: []
 socialImg: /assets/img/2022-07-13-academic-browser/library-francesca-grima-ln_slYqaMiI-unsplash.jpg
+software: ['zotero', 'mendeley', 'qiqqa', 'docear', 'r', 'rstudio', 'obsidian', 'zettlr', 'lyx', 'ghostwriter', 'typora']
 ---
 
 In an earlier post, [*A Research Rubric*](https://wildpeaches.xyz/blog/a-research-rubric/), we showed how to do online journal article searches, based on Aaron Tay's [blog](https://musingsaboutlibrarianship.blogspot.com/). This post extends the basic idea and provides a structured method for performing a search.
@@ -114,7 +115,7 @@ You can often download a paper directly from the search engine found in the *Jou
 
 ### Note taking
 
-If you want to take notes on the papers you're reading, [Obsidian](https://obsidian.md/) or [Zettlr](https://zettlr.com/storage/app/media/img/frontpage_zettlr.png) are excellent alternatives to simple text editors. They allow both internal and external links, use [LaTeX](https://www.latex-project.org/) in [Markdown](https://www.markdownguide.org/) for writing formulas, and can include images.
+If you want to take notes on the papers you're reading, [Obsidian](https://obsidian.md/) or [Zettlr](https://zettlr.com/) are excellent alternatives to simple text editors. They allow both internal and external links, use [LaTeX](https://www.latex-project.org/) in [Markdown](https://www.markdownguide.org/) for writing formulas, and can include images.
 
 ### Publishing
 

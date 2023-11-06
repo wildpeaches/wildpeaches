@@ -15,6 +15,7 @@ keywords:
   - iterated functions
 socialImg: /assets/img/2022-02-17-julia-sets-in-julia/julia_ranged_a.gif
 lastmod: '2022-03-04T02:36:04.435Z'
+software: ['julia', 'vscode', 'pluto-jl']
 ---
 
 ## Gaston Julia
@@ -316,3 +317,7 @@ Rocky and Bullwinkle: [Rocky & Bullwinkle’s triumphant return](https://renegad
 - [The Julia Programming Language](https://julialang.org/)
 - [Timing in Julia](https://www.juliabloggers.com/timing-in-julia/)
 - [Collatz Conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture)
+
+## Code for this article
+
+[JuliaSetPlots.jl](https://gist.github.com/XerxesZorgon/5205facbb7c7ef02999e27ead70a5d59#file-juliasetplots-jl) - Plots trajectories and filled Julia sets: `plotIterates`, `plotJulia`   

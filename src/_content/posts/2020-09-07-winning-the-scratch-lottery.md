@@ -9,6 +9,7 @@ hero:
 tags: [math]
 keywords: [Gambling, Statistics, Expectation, Optical Character Recognition]
 socialImg: /assets/img/2020-09-07-winning-the-scratch-lottery/bingo-card.jpg
+software: ['sikulix', 'python', 'tesseract']
 ---
 
 ## Mohan Srivastava's Discovery
@@ -136,4 +137,3 @@ _Update December 16, 2020:_ [An elderly mathematician hacked the lottery for 26 
 [Delaware Lottery Games](https://www.delottery.com/Instant-Games)
 
 [South Park](https://southpark.cc.com/) Underpants Gnomes, Season 2 E 17 • 12/16/1998
-

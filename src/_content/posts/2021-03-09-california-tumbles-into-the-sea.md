@@ -10,6 +10,7 @@ tags: [math]
 keywords: [structure from motion, volume estimation, drone video]
 socialImg: /assets/img/2021-03-09-california-tumbles-into-the-sea/coastal-convection-landscape.jpg
 ghDiscussion: 133
+software: ['meshroom', 'regard3d', 'visualsfm', 'visualsize', 'google-earth', 'cloudcompare', 'meshlab', 'octave', 'grass-gis', 'webodm', 'qgis']
 ---
 
 ## Fire and Rain
@@ -315,5 +316,6 @@ Google Earth Image Overlay: [Google Earth](https://earth.google.com/web/search/R
 
 CloudCompare Screenshots: [CloudCompare](https://www.danielgm.net/cc/) 3D point cloud and mesh processing software Open Source Project
 
+## Code for this article
 
-
+[meshFunctions.m](https://gist.github.com/XerxesZorgon/711c64f4fc230a8fa7b5af7bb847fcaf) - Octave code to estimate volume from point meshes: `openMesh`, `plyread`, `rotationParams`, `triInMesh`, `knnsearch`, `meshCrossSect`, `volUnderRect`, `volUnderSlope`, `unit`, `vnorm`, `pubFig`.	

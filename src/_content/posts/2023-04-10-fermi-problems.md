@@ -9,6 +9,7 @@ hero:
 tags: []
 keywords: []
 socialImg: /assets/img/2023-04-10-fermi-problems/mushroom-cloud.jpg
+software: ['smath-studio']
 ---
 
 > Henk: "Hi, how are you?"
@@ -237,3 +238,7 @@ Combining the Fermi method with insights given by large language models and more
 Hero: AI generated image of a digital mushroom cloud.
 
 Enrico Fermi: [Atomic Heritage Foundation](https://ahf.nuclearmuseum.org/ahf/profile/enrico-fermi/). 
+
+## Code for this article
+
+[Fermi_Worksheet.sm](https://gist.github.com/XerxesZorgon/ccda153e3c7f134782594e6a8708b7d9#file-fermi_worksheet-sm) - SMath Studio worksheet for a Fermi problem.

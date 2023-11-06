@@ -10,6 +10,7 @@ socialImg: /assets/img/2021-01-17-fun-with-physics/sheldon.jpg
 tags: [math, physics]
 keywords: [physics, simulation, Algodoo, HeuristicLab, Octave]
 ghDiscussion: 134
+software: ['algodoo', 'octave', 'gptips', 'turningbot', ai-feynman', 'heuristiclab', 'reactphysics3d', 'simphy', 'projectchrono', 'bullet-physics']
 ---
 
 ## The Most Famous Equation
@@ -135,7 +136,7 @@ The two new equations are evaluated at each $t_i$ and compared to the data $y_i$
 
 Just as in nature, it's useful to have random mutations. Every once in a while, a constant gets changed, or an operator is swapped out for some other randomly selected operator. Usually, this results in a poorer fit, and the offspring is discarded, but sometimes you get an improvement that's worth keeping.
 
-Writing a program to convert equations into tree expressions, and then handling all of the mechanics of the genetic algorithm is a lot of work. Fortunately, there are several open-source versions available. Dominic Searson wrote [GPTips](https://sites.google.com/site/gptips4matlab/), which runs under Octave and Matlab. GPTips requires some coding to set up the model, but it works very well and you can select the model that gives good performance with minimal complexity.
+Writing a program to convert equations into tree expressions, and then handling all of the mechanics of the genetic algorithm is a lot of work. Fortunately, there are several open-source versions available. Dominic Searson wrote [GPTips](https://sites.google.com/site/gptips4matlab/), which runs under [Matlab](https://www.mathworks.com/products/matlab.html). GPTips requires some coding to set up the model, but it works very well and you can select the model that gives good performance with minimal complexity.
 
 [TuringBot](https://turingbotsoftware.com/) isn't open-source, but there is a free version, and [AI Feynman 2.0](https://github.com/SJ001/AI-Feynman) had been released recently which runs under Python. I've used GPTips, but not TuringBot or AI Feynman 2.0, although both look promising. But for now we'll use ...
 

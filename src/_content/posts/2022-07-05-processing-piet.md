@@ -15,6 +15,7 @@ keywords:
   - Java
 socialImg: /assets/img/2022-07-05-processing-piet/torus-earth.jpg
 lastmod: 2022-07-08T15:09:37.851Z
+software: ['processing', 'piet', 'masterpiets', 'r', 'rstudio']
 pullQuote:
   author: Bertrand Russell
   imgUrl: /assets/img/2022-07-05-processing-piet/Bertrand_Russell_1957.jpg
@@ -447,3 +448,8 @@ Willow Grove: Impression of Light and Shadow: [Wikimedia Commons](https://common
 
 Composition A: [Happy Birthday Mondrian!](https://illustratorsjournal.wordpress.com/2012/03/07/happy-birthday-mondrian/). Lon Levin, The Illustrators Journal, Mar 7, 2012.
 
+## Code for this article
+
+[mondrianRects.r](https://gist.github.com/XerxesZorgon/b0e4fe201f51851572551c4458397574#file-mondrianrects-r) - Generate Mondrian dimensional rectangles from ASCII characters of input string.
+
+[rectangle-dimensions.csv](https://gist.github.com/XerxesZorgon/ca415b3c8fcb19437aa222e8091f67f4#file-rectangle-dimensions-csv) - Dimensions of rectangles from several Mondrian paintings.

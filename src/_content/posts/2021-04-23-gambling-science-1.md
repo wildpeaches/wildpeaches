@@ -9,6 +9,7 @@ hero:
 tags: [math]
 keywords: [Gambling, Brier Score, Bayes, Skiena]
 socialImg: /assets/img/2021-04-23-gambling-science-1/cornelis-de-vos-players-and-courtesans-under-a-tent.jpg
+software: ['r', 'rstudio']
 ---
 
 > Victory is a fleeting thing in the gambling business. Today's winners are tomorrow's blinking toads, dumb beasts with no hope.
@@ -247,5 +248,7 @@ Horse Racing: Wikipedia. [Jon Sullivan](https://commons.wikimedia.org/wiki/File:
 
 Jai Alai at Dania Fronton: Florida Trend. [Running the numbers at Dania Jai Alai](https://www.floridatrend.com/article/16064/running-the-numbers-at-dania-jai-alai), Mike Vogel 9/18/2013
 
+## Code for this article
 
+[MLB_brier.r](https://gist.github.com/XerxesZorgon/6613be32ded7bd64dfc960a64ecec359) - Calculates the Brier Score for the 2020 MLB season using Skiena and Bayes predictors: `skiena_func`, `bayes_func`, `make_lookup_tables`, `brier_score`.
 

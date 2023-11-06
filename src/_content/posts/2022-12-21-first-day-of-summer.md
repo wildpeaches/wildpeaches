@@ -11,6 +11,7 @@ hero:
 tags: [math]
 keywords: [math, astronomy, analemma]
 socialImg: /assets/img/2022-12-21-first-day-of-summer/children-on-the-beach-by-winslow-homer.png
+software: ['julia', 'pluto-jl', 'openstreetmap', 'google-earth']
 ---
 
 > School's out for summer
@@ -342,3 +343,6 @@ The Great Loop: [Great Loop](https://en.wikipedia.org/wiki/Great_Loop). Wikipedi
 
 [Convert Right Ascension to HMS](https://www.vercalendario.info/en/how/convert-ra-degrees-hours.html)
 
+## Code for this article
+
+[SubSolarPoint.jl](https://gist.github.com/XerxesZorgon/c0f35c26fda679172e58acfae396b2f5#file-subsolarpoint-jl) - A Pluto.jl notebook to calculate the position of the subsolar point.

@@ -9,6 +9,7 @@ hero:
 tags: [math, physics]
 keywords: [Peak oil, Oil production decline, Energy return on investment (EROI), Resource constraints, Biophysical economics]
 socialImg: /assets/img/2023-10-10-decline-and-fall-of-petroleum/post-apocalyptic-burning-oil-refinery.png
+software: ['veusz', 'libreoffice']
 ---
 
 Listen to an Energy Return on Input (EROI) discussion with Brent Ragsdale and John Peach on [EcoRadio KC](https://kkfi.org/program-episodes/is-the-decline-of-oil-in-sight/).
@@ -232,7 +233,7 @@ and the [Living Planet Index](https://ourworldindata.org/grapher/global-living-p
 
 ### Earth boundaries
 
-[Nate Hagens](https://www.thegreatsimplification.com/), Director of The Institute for the Study of Energy & Our Future (ISEOF), estimates that fossil fuels provide the equivalent of 500 billion human laborers every year. Since the current population is about 8 billion, this means we have access to 62.5 laborers each on average. 
+[Nate Hagens](https://www.thegreatsimplification.com/), Director of [The Institute for the Study of Energy & Our Future](https://www.energyandourfuture.org/) (ISEOF), estimates that fossil fuels provide the equivalent of 500 billion human laborers every year. Since the current population is about 8 billion, this means we have access to 62.5 laborers each on average. 
 
 The [Stockholm Resilience Centre](https://www.stockholmresilience.org/) says that consumption of Earth resources is out of bounds and estimates that humans have exceeded planetary limits in several critical areas. Including Hagens' estimate, our energy bound far surpasses the other planetary limits we have crossed to date.
 
@@ -430,3 +431,11 @@ IPCC climate change pathways: [The IPCC Scenarios](https://worldoceanreview.com/
 - [Emissions – the ‘business as usual’ story is misleading](https://www.nature.com/articles/d41586-020-00177-3)
 - [The story about the ‘business as usual’ story is misleading](https://michaelmann.net/content/story-about-%E2%80%98business-usual%E2%80%99-story-misleading)
 - [Should We Tell People It’s Too Late To Save Civilization?](https://collapsesurvivalsite.substack.com/p/should-we-tell-people-its-too-late?utm_source=post-email-title&publication_id=878624&post_id=137822899&utm_campaign=email-post-title&isFreemail=true&r=rg5l&utm_medium=email) 
+
+## Code for this article
+
+[decline.xlsx](https://docs.google.com/spreadsheets/d/1PCyTBKeQPU-eGGf5akvUFVAFEwI9ogUk/edit?usp=sharing&ouid=114371855488428161826&rtpof=true&sd=true) - Simple EROI model assuming declining oil production.
+
+[Renewable Decline.vsz](https://gist.github.com/XerxesZorgon/0740e982586a7502d9f470c68f40d2a5) - Plots renewable energy conversion in decline.csv spreadsheet using Veusz.
+
+[oil-prod-data.xlsx](https://docs.google.com/spreadsheets/d/1ipN9b_O5VErITjUiMFNwGLEOm7xbspl7/edit?usp=sharing&ouid=114371855488428161826&rtpof=true&sd=true) - Oil production data from the Energy Institute / BP for producing countries, by year.

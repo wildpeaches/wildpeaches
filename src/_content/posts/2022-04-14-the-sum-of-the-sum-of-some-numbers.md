@@ -9,6 +9,7 @@ hero:
 tags: [math]
 keywords: [Gauss, von Neumann, Tartaglia, Abel, polynomials, proof]
 socialImg: /assets/img/2022-04-14-the-sum-of-the-sum-of-some-numbers/10_DM_Serie4_Vorderseite.jpg
+software: ['julia', 'octave', 'python', 'r']
 ---
 
 ## Carl Gauss' Very Bad Day
@@ -314,3 +315,6 @@ Nicolo Tartaglia: [Niccolò Tartaglia Quesiti et inventioni diverse](https://com
 
 Niels Henrik Abel: [Niels Henrik Abel](https://en-academic.com/dic.nsf/enwiki/13118), Academic Dictionaries and Encyclopedias.
 
+## Code for this article
+
+[depressedCubic.m](https://gist.github.com/XerxesZorgon/8fbc11ef543529a608e4435c4e7ef784#file-depressedcubic-m) - Solves the depressed cubic equation x^3 + Ax + B = 0 in Octave.

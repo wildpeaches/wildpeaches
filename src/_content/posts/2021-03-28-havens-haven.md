@@ -10,6 +10,7 @@ tags: [math]
 keywords: [Number Theory, Pell's Equation, Prison Math Project]
 socialImg: /assets/img/2021-03-28-havens-haven/havens-hardy-ramanujan.jpg
 ghDiscussion: 131
+software: ['desmos', 'pari-gp']
 ---
 
 > I have never done anything "useful". No discovery of mine has made, or is likely to make, directly or indirectly, for good or ill, the least difference to the amenity of the world.
@@ -515,3 +516,7 @@ Chris Havens: MAA, Pi Day Behind Bars Doing Mathematics In Prison
 Havens Letter: The Conversation, [An inmate’s love for math leads to new discoveries](https://theconversation.com/an-inmates-love-for-math-leads-to-new-discoveries-130123), Marta Cerruti May 14, 2020
 
 Pell's Equation in Desmos: [Desmos Studio](https://www.desmos.com/) [Calculator](https://www.desmos.com/calculator)
+
+## Code for this article
+
+[chakravala.gp](https://gist.github.com/XerxesZorgon/e746ca856e8e0e51bbab1c6874dc6ded) - Solves the Brahmagupta (Pell) equation using the chakravala method.  

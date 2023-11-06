@@ -9,6 +9,7 @@ hero:
 tags: [math]
 keywords: [KenKen, Pari/GP, Integer Partitions, Number theory]
 socialImg: /assets/img/2020-12-30-put-another-kenken-on-the-barbie/tetsuya-miyamoto.jpg
+software: ['pari-gp', 'notepad++', 'ampl', 'gnu-mathprog', 'sagemath', 'vscode', 'eclipse']
 ---
 
 ## Tetsuya Miyamoto
@@ -282,7 +283,7 @@ which will give you access to the functions `sumPart`, `multPart`, `mnumbpart`, 
 
 ## What's Next?
 
-Tetsuya Miyamoto would likely say that this takes away from your opportunity to explore the logic of KenKen, so it would probably be a good idea to try a few puzzles before using this PARI/GP code. These functions won't solve the puzzle, but they significantly reduce the number of possible partitions for a cage. If you'd like to try to build a KenKen solver, Vardges Melkonian wrote, ["An Integer Programming Model for the KenKen Problem"](https://file.scirp.org/Html/1-1040464_66317.htm). He provides code written in [AMPL](https://ampl.com/) (A Mathematical Programming Language). AMPL is proprietary, but it may be possible to run some code [online](https://ampl.com/try-ampl/start/) or to use the open-source subset of AMPL, [GNU MathProg](http://web.mit.edu/lpsolve_v5525/doc/MathProg.htm).
+Tetsuya Miyamoto would likely say that this takes away from your opportunity to explore the logic of KenKen, so it would probably be a good idea to try a few puzzles before using this PARI/GP code. These functions won't solve the puzzle, but they significantly reduce the number of possible partitions for a cage. If you'd like to try to build a KenKen solver, Vardges Melkonian wrote, ["An Integer Programming Model for the KenKen Problem"](https://file.scirp.org/Html/1-1040464_66317.htm). He provides code written in [AMPL](https://ampl.com/) (A Mathematical Programming Language). AMPL is proprietary, but it may be possible to run some code [online](https://ampl.com/try-ampl/start/), or to download the [AMPL Community Edition](https://ampl.com/ce/), or to use the open-source subset of AMPL, [GNU MathProg](http://web.mit.edu/lpsolve_v5525/doc/MathProg.htm).
 
 For experiments in [number theory](https://en.wikipedia.org/wiki/Number_theory) and [combinatorics](https://en.wikipedia.org/wiki/Combinatorics), PARI/GP excels. Hundreds of specialized functions have been written for the language, and it is very fast. It lacks an IDE and debugging can only be done at the command line. Scripts are written in an external text editor, or may be run in a [SageMath](https://www.sagemath.org/) notebook.
 
@@ -304,3 +305,14 @@ Hero: Barbie Life, Shrimp on the Barbie: Annette MacKay, [Pinterest](https://www
 Tetsuya Miyamoto: Device Plus, [KenKen Puzzle Inventor’s Tips for Engineers to Think “Outside the Box”](https://www.deviceplus.com/others/interviews/kenken-puzzle-inventors-tips-for-engineers/), October 31, 2016
 
 OEIS Pin Plot of [A001055](https://oeis.org/A001055) as a [graph](https://oeis.org/A001055/graph)
+
+## Code for this article
+
+[sumpart.gp](https://gist.github.com/XerxesZorgon/472509428d4e8b4b48bbd89fda8549b5) - Additive partitions of integers
+
+[multpart.gp](https://gist.github.com/XerxesZorgon/42efdcda67fecf266d03534e50d9098c) - Multiplicative partitions of integers
+
+[unique.gp, isunique.gp](https://gist.github.com/XerxesZorgon/409a0cc6364333381d38496591db8627) - Returns a vector of the unique elements of v
+
+[mnumbpart.gp](https://gist.github.com/XerxesZorgon/27bec0167801a19d8ed24542c30672ad) - Returns the number of multiplicative partitions of integer n
+

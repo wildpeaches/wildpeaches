@@ -9,6 +9,7 @@ hero:
 tags: [math]
 keywords: [Mathematica, Wave, Burgers' and Euler equations]
 socialImg: /assets/img/2023-08-22-big-squish-theory/nautilus.jpg
+software: ['wolfram-language', 'anaconda', 'jupyterlab']
 ---
 
 > Pressure pushing down on me
@@ -458,3 +459,11 @@ Brian May: [Pinterest](https://www.pinterest.com/pin/419538521546981745/visual-s
 - ["StiffnessSwitching" Method for NDSolve](https://reference.wolfram.com/language/tutorial/NDSolveStiffnessSwitching.html)
 - [Using Wolfram Language in Jupyter: A free alternative to Mathematica](https://nicoguaro.github.io/posts/wolfram_jupyter/)
 - [Codeium in Jupyter Notebooks](https://codeium.com/jupyter_tutorial)
+
+## Code for this article
+
+[Wave_mathematica.ipynb](https://gist.github.com/XerxesZorgon/aa7d13ac19cc0e2ca947f1e01bb050ea#file-wave_mathematica-ipynb) - Numerical solution to the wave equation.  
+
+[Burgers.ipynb](https://gist.github.com/XerxesZorgon/6e8ca30b211bae7833d639a11bad577d#file-burgers-ipynb) - Numerical solution to Burgers' equation.
+
+[EulerShock.ipynb](https://gist.github.com/XerxesZorgon/63504d5fa0450e2cd30a77e047f74c52) - Attempted numerical solution to Euler's equation in Wolfram Language notebook.

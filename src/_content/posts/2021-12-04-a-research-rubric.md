@@ -18,6 +18,7 @@ keywords:
   - summarizers
 socialImg: /assets/img/2021-12-04-a-research-rubric/VOSviewer2.png
 lastmod: '2022-03-04T21:13:44.581Z'
+software: ['zotero', 'qiqqa', 'docear', 'mendeley']
 ---
 
 ## The Perfect Bet
