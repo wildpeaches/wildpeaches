@@ -9,6 +9,7 @@ hero:
 tags: [math, ai, openbb]
 keywords: [day trading, prediction, forecasting]
 socialImg: /assets/img/2023-02-17-the-prediction-machine/Protocols-all.png
+software: ['openbb-terminal', 'anaconda', 'python']
 ---
 
 > "Anyone who believes that exponential growth can go on forever in a finite world is either a madman or an economist."

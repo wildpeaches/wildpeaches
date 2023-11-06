@@ -8,6 +8,7 @@ hero:
 tags: [math]
 keywords: [chaos, orbits, Julia, Pluto]
 socialImg: /assets/img/2022-09-28-tools-of-chaos-orbits/orbits.png
+software: ['julia', 'pluto-jl', 'drwatson']
 pullQuote:
   author: Buckaroo Banzai
   imgUrl: /assets/img/2022-09-28-tools-of-chaos-orbits/buckaroo-banzai.jpeg
@@ -201,3 +202,7 @@ Buckaroo Bonzai: [Buckaroo Bonzai](https://www.writeups.org/buckaroo-banzai-pete
 - [Standard Map](https://en.wikipedia.org/wiki/Standard_map), Wikipedia
 - [Lotka-Volterra Equations](https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations), Wikipedia
 - [Van der Pol oscillator](https://en.wikipedia.org/wiki/Van_der_Pol_oscillator), Wikipedia
+
+## Code for this article
+
+[Orbits.jl](https://gist.github.com/XerxesZorgon/aefccd2321bb1e717b648a66a8fe1187) - A Pluto notebook to study chaos

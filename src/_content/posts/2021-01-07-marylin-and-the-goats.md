@@ -14,6 +14,7 @@ pullQuote:
   imgUrl: /assets/img/2021-01-07-marylin-and-the-goats/marilyn-vos-savant.jpg
   imgAlt: Headshot of Marylin vos Savant.
   quote: To acquire knowledge, one must study; but to acquire wisdom, one must observe.
+software: ['r', 'rstudio', 'javascript']
 ---
 
 > Throw out your gold teeth and see how they roll;
@@ -220,3 +221,8 @@ Let's Make A Deal Game Show: Jan De Wilde
 
 RStudio IDE: [Posit, PBC](https://posit.co/)
 
+## Code for this article
+
+[montyhall.r](https://gist.github.com/XerxesZorgon/d8d9f93c9bd55170fb4f95d5887e89ba) - Monty Hall problem simulation
+
+[monty-hall.js](https://gist.github.com/JanDW/30342afdcd8d51b7fe5eccdf8f541754) - Monty Hall simulation in JavaScript

@@ -9,6 +9,7 @@ hero:
 tags: [math]
 keywords: [Monte Carlo simulation, conspiracies, Gompertz Survival Function]
 socialImg: /assets/img/2020-08-26-the-boonie-conundrum/conspiracy.png
+software: ['octave']
 ---
 
 ## The Boonie Story
@@ -142,3 +143,7 @@ Abbie Richards created the [Conspiracy Chart](https://www.bostonglobe.com/2021/1
 Hero: Atze Lourens, "What do religion, populism and conspiracies have in common?" [Medium](https://medium.com/@atzelourens/what-do-religion-populism-and-conspiracies-have-in-common-69a25b7639a0?source=post_internal_links---------3----------------------------)
 
 The Conspiracy Chart: [Abbie Richards 2021](https://conspiracychart.com/)
+
+## Code for this article
+
+[boonieSim.m](https://gist.github.com/JanDW/62b4b4d4ca9822080a7ed6209e33ab50) - Simulates the Boonie Conundrum 

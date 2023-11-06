@@ -8,6 +8,7 @@ hero:
   alt:
 tags: [math]
 keywords: [Gambling, Statistics, Expectation, Optical Character Recognition]
+software: ['python', 'tesseract']
 ---
 
 ## Shannon and Kelly at Bell Labs
@@ -222,3 +223,7 @@ UCI Libraries: First Wearable Computer, [A Spin of the Wheel](https://www.lib.uc
 - [The Mathematics of Gambling](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/http://www.edwardothorp.com/wp-content/uploads/2016/11/TheKellyMoneyManagementSystem.pdf)
 - [The Kelly Criterion and the Stock Market](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/http://www.edwardothorp.com/wp-content/uploads/2016/11/TheKellyCriterionAndTheStockMarket.pdf)
 - [The Invention of the First Wearable Computer](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.cs.virginia.edu/~evans/thorp.pdf)
+
+## Code for this article
+
+[Kelly.py](https://gist.github.com/XerxesZorgon/33d4fb8d521a1508d52d0792a5c7204c) - Kelly Criterion functions, plotReturnRatio.py and KellyMC.py

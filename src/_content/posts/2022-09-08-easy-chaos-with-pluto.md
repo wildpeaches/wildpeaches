@@ -9,6 +9,7 @@ hero:
 tags: [math,chaos theory]
 keywords: [Pluto notebook, logistic function, autocorrelation, phase portrait]
 socialImg: /assets/img/2022-09-08-easy-chaos-with-pluto/lorenz3.png
+software: ['julia', 'pluto-jl']
 ---
 
 ## Getting Started with Pluto
@@ -221,3 +222,6 @@ Hero image from [Introduction to Online Nonstochastic Control](https://www.resea
 - [General principles of chaotic dynamics](https://watermark.silverchair.com/31-3-332.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAuAwggLcBgkqhkiG9w0BBwagggLNMIICyQIBADCCAsIGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFer7lp4q3xQjfSY6AgEQgIICk0IOaNVk1vMyhKnEZZZpKfVV62JkFEXuxG-9gkisulLaWOmgUOFy-nYCJLfv1tL4nS78ez0KOPl2PEb-OD80Sq-kYtLGT63K4S9Q6f7PSOPxTKARDqgRigTIjGJVFokhWLny339aS1nAp79qTU6L0dgMy8r8W61PNDxWrduddnR9FNKU2cxyR9X--5v6Zk1bipU2aKdYEPIHjsGI0VpW8ZAiBlp0-0RKCAOIqMMMQvbyfznfnFhV46mwdazEgOXjg8dCEfovMM1lw8tfyKxA-ZpE2-YWKbUgtWsbCcWX3Gh5DZWmZRwgnCtlCEOJirh6-I57oF2dFiyBLnjqDOM00h9QAvE3GaeUx-yrCJw6ZfZ1ne4dBkeMrWUUZbanOw4OESvhM-cPrdbqE7nYLfpDSrBrVBLZ80T__G0g3ar1Al57bZ5ygReME4m1itWlU7v-lQNhQPH4cTNEPqN6IBiw7uYEt9UbQ4kwQCyYIQLfP_dIPGiqM1gSa6eXlIWTPlMHOl6R_VFhdhidx_lsBYBTxMtoHUmxxgg35Nr4_rrfio11vlQsHOB1ehgJTNG3V-CwT79gi-gcFBO-taBKw91dY2AcExpsQJ3ViJxV0GMWn3i58UUaYqoSorQs2iKeGqARIsf8hkBtX66k3AuE3-Tn_DZF3bI-t-DK98LsBpM-4FwmIbstHD_FOpztAzBtnM0iHnPYlh4DB3Ux3f5fyasMy5MewuKsRJTiEnXfl3bNnGyIG_nUBVTQmVuvYK9FOtDdDAJixAcvb1kzumiTL11tgEOlPVIjSOf_xEn2oVBnZsTBFP-k52VIBTlAGAp-_CFDAIjTLA_L3WAlcJ_iSrPnoxHvw6HzsMIAFgwtR98wNTD9wt3m)
 - [Chaos Theory Simply Explained](https://www.researchgate.net/publication/289996762_Chaos_Theory_Simply_Explained)
 
+## Code for this article
+
+[EasyChaos.jl](https://gist.github.com/XerxesZorgon/3300e57441ecf83640361a6d7f287ba7) - A Pluto notebook to do some simple experiments with chaos theory.

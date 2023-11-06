@@ -9,6 +9,7 @@ hero:
 date: 2020-10-19
 tags: [math, yacht design, homotopies, octave, geogebra, delftship]
 socialImg: /assets/img/2020-10-20-yacht-design-with-mathematics/jurgen-venakowa-8Qs9bEhZRvw-unsplash.jpg
+software: ['geogebra', 'octave', 'libreoffice', 'delftship', 'openfoam']
 ---
 
 > A ship in harbor is safe, but that is not what ships are built for.
@@ -153,7 +154,7 @@ which will populate the [spreadsheet](https://wiki.geogebra.org/en/Spreadsheet_V
 
 ![Geogebra spreadsheet copied to excel](/assets/img/2020-10-20-yacht-design-with-mathematics/geogebra-spreadsheet-copied-to-excel.svg)
 
-Copy the Geogebra Spreadsheet values (shown on the left above) into Excel (on the right), name the curve in the first column, and repeat for the other curves: freeboard, profile, and A. For subsequent curves, just copy and paste the two FillColumn commands to update the Geogebra spreadsheet, but you won't need the Lst command again.
+Copy the Geogebra Spreadsheet values (shown on the left above) into Excel (on the right) or [Libre Office](https://www.libreoffice.org/), name the curve in the first column, and repeat for the other curves: freeboard, profile, and A. For subsequent curves, just copy and paste the two FillColumn commands to update the Geogebra spreadsheet, but you won't need the Lst command again.
 
 The two section curves $\eta_1$ and $\eta_2$ are scaled differently, so you should restart Geogebra and load the curves image again, but not flipped this time. (The image can be deleted without restarting Geogebra. [See this suggestion.](https://help.geogebra.org/topic/background-image)) This is a fit for the second section:
 
@@ -167,7 +168,7 @@ The homotopy function $A(x)$ is the least intuitive and won't show up in other d
 
 ## Generating Functions
 
-After you have copied the control point data from each curve into the spreadsheet, save the spreadsheet to your local folder naming it something like "Letcher curves.xlsx". In [Octave](https://www.gnu.org/software/octave/index), open the function `BezierHull`^[[Source code for BezierHull() on GitHub Gist](https://gist.github.com/XerxesZorgon/c92272ec4dead2e19e4c7ab3eb2593b6)] and run it from the command line,
+After you have copied the control point data from each curve into the spreadsheet, save the spreadsheet to your local folder naming it something like "Letcher curves.xlsx". In [Octave](https://www.gnu.org/software/octave/index), open the function [BezierHull](https://gist.github.com/XerxesZorgon/c92272ec4dead2e19e4c7ab3eb2593b6) and run it from the command line,
 
 ```matlab
 >> BezStruct = BezierHull('Letcher curves.xlsx');
@@ -329,3 +330,9 @@ Homotopy gif: Jim Belk, [Wikimedia Commons](https://commons.wikimedia.org/wiki/F
 Bezier curve: Phil Tregoning, [Wikipedia](https://en.wikipedia.org/wiki/File:B%C3%A9zier_4_big.gif)
 
 Hot wire foam cutting: [Flite Test](https://www.flitetest.com/articles/hot-wire-cutting-foam)
+
+## Code for this article
+
+[curveString ](https://gist.github.com/XerxesZorgon/24713be3816c53cba0535371fbba2606#file-curvestring-m) - Generates Bezier polynomials in x and y for use in Geogebra 
+
+[BezierHull.m](https://gist.github.com/XerxesZorgon/c92272ec4dead2e19e4c7ab3eb2593b6#file-bezierhull-m) - Generate yacht hull lines using Letcher's method with all curves defined analytically using Bezier curves

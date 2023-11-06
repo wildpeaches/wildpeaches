@@ -118,6 +118,6 @@ Google Earth: Overhead view of Blossom and Sunset
 
 Anaconda: [Anaconda Navigator](https://www.anaconda.com/)
 
-### Gists
+## Code for this article
 
 [The probability of a crash at the intersection of Blossom and Sunset](https://gist.github.com/XerxesZorgon/16bd83e8c5ff0053b12ec40e8c6e8471) JupyterLab notebook.

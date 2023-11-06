@@ -10,6 +10,7 @@ tags: [math]
 keywords: [hull design, units]
 eleventyComputed:
   socialImg: '{{ hero.url }}'
+software: ['smath-studio', ]
 ---
 
 > In 18 hundred and 59, the engineer Brunel,

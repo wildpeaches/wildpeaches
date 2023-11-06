@@ -10,6 +10,7 @@ date: 2020-08-07
 tags: [math, covid-19]
 keywords: [Pool Testing, Covid, Opt]
 socialImg: /assets/img/2020-08-07-how-deep-is-the-pool/covid-virus.png
+software: ['anaconda', 'python']
 ---
 
 To control the COVID-19 pandemic requires rapid testing of many people. One way to do this is to perform a single test on the combined samples taken from a group of people, called pool testing. [The American Society for Microbiology thinks it's time to jump in the pool](https://asm.org/Articles/2020/July/COVID-19-Pool-Testing-Is-It-Time-to-Jump-In) and [STAT agrees](https://www.statnews.com/2020/06/26/pool-testing-covid-19/).
@@ -121,3 +122,7 @@ Usama Kadri from Cardiff University has developed a [linear algebra method](http
 Hero: [peterschreiber.media](https://www.peterschreiber.media/) / Shutterstock
 
 Daily state-by-state testing trends chart: [Johns Hopkins](https://coronavirus.jhu.edu/testing/individual-states)
+
+## Code for this article
+
+[optPoolSize.py](https://gist.github.com/JanDW/2d555feb2967fd7fb3bb7525e03c2506) - Estimates the optimal pandemic testing pool size. 

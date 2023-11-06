@@ -9,6 +9,7 @@ hero:
 tags: [math]
 keywords: []
 socialImg: /assets/img/2022-04-30-bicycle-science/timeline-of-bicycle-design.png
+software: ['notepad++', 'libreoffice', 'pyspread', 'r', 'rstudio']
 ---
 
 ## A Tale of Two Bicycles
@@ -318,3 +319,6 @@ Hero: Timeline of Bicycle Design, Randall Munroe, [XKCD](https://xkcd.com/1673/)
 
 Happiness Is: Lisa Swerling & Ralph Lazar, [Last Lemon](https://lastlemon.com/happiness/), 2015
 
+## Code for this article
+
+[bicycleScience.r](https://gist.github.com/XerxesZorgon/e6b064e478a5a016c9e38f25d5bf0372#file-bicyclescience-r) - Kinetic and potential energy derived from Strava data for bicycle rides: `dataPrep`, `vecSmooth`, `histSpeeds`, `plotSpeeds`, `plotEnergy`, `plotElevation`, `timeBtwnPoints`.   

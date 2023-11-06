@@ -8,6 +8,7 @@ hero:
   alt:
 tags: [math]
 keywords: [Agent Based Model, Emergent Systems]
+software: ['netlogo']
 ---
 
 ## NetLogo
@@ -177,3 +178,7 @@ Solving this mystery is how to do science. You observe the behavior of the syste
 #### Image credits
 
 Hero: Netlogo screenshot, [An Introduction to Agent-Based Modeling](https://www.intro-to-abm.com/)
+
+## Code for this article
+
+[Turtles Circling Sun and Moon.nlogo](https://gist.github.com/XerxesZorgon/8ea0b72770b7df8d11cbd960e8c45374#file-turtles-circling-sun-and-moon-nlogo) - NetLogo demonstration of circling turtles  

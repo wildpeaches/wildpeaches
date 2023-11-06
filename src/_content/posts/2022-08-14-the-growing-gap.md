@@ -9,6 +9,7 @@ hero:
 tags: [math, ]
 keywords: [logistic function]
 socialImg: /assets/img/2022-08-14-the-growing-gap/pulling-on-the-gas-guage.jpg
+software: ['octave', 'veusz', 'libreoffice', 'r', 'rstudio']
 ---
 
 A recent paper by Jean Laherrère, Charles Hall, and Roger Bentley asks the question, ["How much oil remains for the world to produce? Comparing assessment methods, and separating fact from fiction"](https://www.sciencedirect.com/science/article/pii/S2666049022000524#s0110). 
@@ -554,3 +555,10 @@ For convenience, all of the functions are in [GrowingGap_functions.zip](https://
 
 ------
 
+## Code for this article
+
+[GrowingGap_functions.zip](https://github.com/XerxesZorgon/GrowingGap/blob/main/GrowingGap_functions.zip) - Octave and R functions used to process data
+
+[GrowingGap_data.zip](https://github.com/XerxesZorgon/GrowingGap/blob/main/GrowingGap_data.zip) - Data for energy analysis
+
+[Peak Oil Presentation](https://github.com/XerxesZorgon/GrowingGap/blob/main/Peak%20Oil%20Presentation.pptx) - Slides 
