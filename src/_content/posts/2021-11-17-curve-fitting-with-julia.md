@@ -17,6 +17,7 @@ keywords:
   - Seneca cliff
 socialImg: /assets/img/2021-11-17-curve-fitting-with-julia/huntington-beach.jpeg
 lastmod: '2022-03-04T21:18:20.078Z'
+software: ['desmos', 'julia', 'vscode']
 ---
 
 > “How did you go bankrupt?” Bill asked.
@@ -475,3 +476,6 @@ The Seneca Cliff: [The Seneca Effect](https://www.senecaeffect.com/2015/11/the-s
 
 Dunham Jackson: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Dunham_Jackson.jpg). 
 
+## Code for this article
+
+[fitGaussParams.jl](https://gist.github.com/XerxesZorgon/4bc86e874f27fd8fb6aced87735510a0) - Estimates parameters required to fit sum of Gaussians to a function: `fitParams`, `gaussSum`, `plotFit`

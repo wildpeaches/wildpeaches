@@ -9,6 +9,7 @@ hero:
 tags: [math, Monte Carlo]
 keywords: []
 socialImg: /assets/img/2022-05-10-remembrance-of-things/proust.png
+software: ['julia', 'vscode', 'veusz']
 ---
 
 
@@ -267,4 +268,8 @@ Hero: [Remembrance of Things Past](https://www.midtownscholar.us/product/1119673
 Shinkei-Suijaku, You Win!, Matching Images: Jan De Wilde
 
 The Rolling Stones – 19th Nervous Breakdown, [Discogs](https://www.discogs.com/release/2640743-The-Rolling-Stones-19th-Nervous-Breakdown)
+
+## Code for this article
+
+[matchGame.jl ](https://gist.github.com/XerxesZorgon/c4744fb75f98f40874be8cc026c1b10e#file-matchgame-jl) - Monte Carlo simulation of the Memory Game: `matchMC`, `playGame`
 
