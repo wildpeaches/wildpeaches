@@ -17,7 +17,14 @@ h6,
 li,
 figcaption {
   max-width: var(--measure);
+  text-wrap: balance;
 }
+
+p {
+  text-wrap: pretty;
+}
+
+
 
 
 table {
