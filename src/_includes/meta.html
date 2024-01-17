@@ -27,19 +27,20 @@
   <title>{{ pageTitle }}</title>
   <link rel="canonical" href="{{ currentUrl }}" />
 
-  <meta property="og:site_name" content="{{ siteTitle }}" />
-  <meta property="og:title" content="{{ pageTitle }}" />
+  <meta property="og:site_name" content="{{ siteTitle | safe }}" />
+  <meta property="og:title" content="{{ pageTitle | safe }}" />
+  <meta property="twitter:title" content="{{ pageTitle | safe }}" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ currentUrl }}" />
+  <meta property="og:url" content="{{ currentUrl | safe }}" />
   {%- if socialImg %}
   <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="{{ site.url + socialImg }}" />
   <meta name="twitter:image" content="{{ site.url + socialImg }}" />
-  <meta property="og:image:alt" content="Page image for {{ site.name }}" />
-  <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
+  <meta property="og:image:alt" content="Page image for {{ site.name | safe }}" />
+  <meta name="twitter:image:alt" content="Page image for {{ site.name | safe }}" />
   {%- endif %}
   {%- if metaDesc %}
-  <meta name="description" content="{{ metaDesc }}" />
-  <meta name="twitter:description" content="{{ metaDesc }}" />
-  <meta property="og:description" content="{{ metaDesc }}" />
+  <meta name="description" content="{{ metaDesc | safe }}" />
+  <meta name="twitter:description" content="{{ metaDesc | safe }}" />
+  <meta property="og:description" content="{{ metaDesc | safe }}" />
   {%- endif %}
