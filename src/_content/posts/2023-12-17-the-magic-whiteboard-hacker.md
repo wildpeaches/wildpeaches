@@ -38,15 +38,9 @@ The Mamba [Troubleshooting](https://mamba.readthedocs.io/en/latest/user_guide/tr
 
 Finally, whatever you might read elsewhere, [don't install anything](https://focalplane.biologists.com/2022/12/08/managing-scientific-python-environments-using-conda-mamba-and-friends/) in the *base* environment besides Mamba. You should install Jupyter in an environment other than the *base* environment when using conda or Mamba. Here are a few reasons why:
 
-
-
 - Installing Jupyter in its own environment prevents possible conflicts with other packages that you may install.
-
 - It makes it easier to update or remove Jupyter without impacting other packages.
-
 - You can create multiple Jupyter environments with different versions of Jupyter or kernels if needed for different projects.
-
-
 
 Even when installed in its own environment, Jupyter will still be available to other environments. The Jupyter server process runs outside of any particular environment, so it can access kernels and packages from any environment you have configured. 
 
@@ -55,16 +49,14 @@ The key is that you need to make sure the ipykernel package is installed in each
 To be able to use several different languages in JupyterLab such as Julia, Octave, Python, and R you can either install the kernels in the same environment as Jupyter or give each language kernel a separate environment:
 
 1. Install the kernels in the same environment as Jupyter:
-
-    - Create one environment for Jupyter and the kernels
-    - Install Jupyter and needed kernel packages 
-    - Kernels will be registered to work with the Jupyter server
+  - Create one environment for Jupyter and the kernels
+  - Install Jupyter and needed kernel packages 
+  - Kernels will be registered to work with the Jupyter server
 
 2. Install kernels in their own language environments:
-
-    - Create separate environments for each language 
-    - Install Jupyter in one dedicated environment 
-    - Install kernel packages in each language environment to register with Jupyter
+  - Create separate environments for each language 
+  - Install Jupyter in one dedicated environment 
+  - Install kernel packages in each language environment to register with Jupyter
 
 The second approach of installing kernels in separate environments keeps things more isolated. But the kernels will still work with the Jupyter server as long as you install the kernel integration packages.
 
@@ -76,7 +68,9 @@ The advantage of separate environments is isolation, while a shared Jupyter envi
 
 To install [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) make a new environment named "Jupyter" or something similar using 
 
-`mamba create --name "Jupyter" python=<ver no> `
+```bash
+mamba create --name "Jupyter" python=<ver no>
+```
 
 where you specify the latest version of Python to be included in the Jupyter environment. Check that the new environment was created with `mamba env list`, and then activate it with `activate Jupyter` which should change the prompt to `(Jupyter) C:\Users\<your name>` or similar if you're not on a Windows machine. Next, activate the Jupyter environment with `activate Jupyter`  and then start a JupyterLab notebook using the command `jupyter lab`.
 
@@ -200,11 +194,8 @@ SciTech Daily: [The Intersection of Math and AI: A New Era in Problem-Solving](h
 - [Jupyter kernels](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) - Official list of available Jupyter kernels. 
 - [Jupyter kernel list](https://gist.github.com/chronitis/682c4e0d9f663e85e3d87e97cd7d1624) - Community-maintained list of kernels.
 - [Xeus kernels](https://xeus.readthedocs.io/en/latest/) - A framework meant to facilitate the implementation of kernels for Project Jupyter.
-
 - [Add kernels for multiple languages in Jupyter Notebook](https://note.nkmk.me/en/jupyter-notebook-kernels-bash/).
-
 - [Jupyter Extension for Visual Studio Code](https://github.com/microsoft/vscode-jupyter).
-
 - [JupyterLab Spreadsheet](https://github.com/quigleyj97/jupyterlab-spreadsheet?tab=readme-ov-file#jupyterlab-spreadsheet) - Adds a simple spreadsheet viewer to JupyterLab.
 - [JupyterCAD - A JupyterLab extension for 3D geometry modeling](https://github.com/jupytercad/jupytercad).
 - [Jason Weill](https://medium.com/@jweill-aws?source=post_page-----3f7174824862--------------------------------) - [Generative AI in Jupyter](https://blog.jupyter.org/generative-ai-in-jupyter-3f7174824862).
@@ -248,7 +239,4 @@ SciTech Daily: [The Intersection of Math and AI: A New Era in Problem-Solving](h
 - [Jarvis](https://github.com/microsoft/JARVIS) - Explore artificial general intelligence (AGI) and deliver cutting-edge research to the whole community.
 - [Pinecone](https://www.pinecone.io/blog/canopy-rag-framework/) - Introducing Canopy: An easy, free, and flexible RAG framework powered by Pinecone.
 - [Liquid.ai](https://www.liquid.ai/) - A new generation of foundation models from first principles.
-- [Obsidian vault for scientific research](https://github.com/LalieA/obsidian-scientific-research-vault). 
-
-
-
+- [Obsidian vault for scientific research](https://github.com/LalieA/obsidian-scientific-research-vault).

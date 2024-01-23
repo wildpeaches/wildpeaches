@@ -8,7 +8,7 @@ hero:
   alt:
 tags: [math, science, technology, AI]
 keywords: []
-socialImg: /assets/img/
+socialImg: /assets/img/2023-12-01-the-magic-whiteboard-ai-librarian/robot-librarian-2.webp
 software: ['obsidian', 'zotero', 'pandoc' , 'lyx' ]
 ---
 

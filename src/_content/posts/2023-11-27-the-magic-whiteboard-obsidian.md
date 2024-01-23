@@ -8,7 +8,7 @@ hero:
   alt:
 tags: [math]
 keywords: []
-socialImg: /assets/img/2023-11-27-the-magic-whiteboard-obsidian/
+socialImg: /assets/img/2023-11-27-the-magic-whiteboard-obsidian/wizard1.webp
 software: ['obsidian','octave','python','r']
 ---
 
