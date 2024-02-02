@@ -9,7 +9,7 @@ hero:
 tags: [math, science]
 keywords: [AI code assistant, JupyterLab]
 socialImg: /assets/img/2023-12-17-the-magic-whiteboard-hacker/the-hacker-sequence-dall-e.webp
-software: ['obsidian', 'anaconda', 'mamba', 'jupyterlab', 'julia', 'lean', 'maxima', 'octave', 'pari-gp', 'python', 'r', wolfram-language', 'knime', 'orange', 'weka', 'colab', 'fastai']
+software: ['obsidian', 'anaconda', 'mamba', 'jupyterlab', 'julia', 'lean-theorem-prover', 'wxmaxima', 'octave', 'pari-gp', 'python', 'r', 'wolfram-language', 'knime', 'orange', 'weka', 'colab', 'fastai']
 ---
 
 ## The Hacker
