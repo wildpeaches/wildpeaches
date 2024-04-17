@@ -154,5 +154,5 @@ The area of the colored region: Geogebra
 
 Geogebra solution: Geogebra CAS
 
-Calvin and Hobbes - Bill Water
+Calvin and Hobbes - Bill Waterson
 
