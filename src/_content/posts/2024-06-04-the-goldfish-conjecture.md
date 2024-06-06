@@ -9,9 +9,13 @@ hero:
 tags: [math, statistics]
 keywords: [Hypothesis testing, t-test, standard error, test statistic, degrees of freedom, p-value]
 socialImg: /assets/img/2024-06-04-the-goldfish-conjecture/goldfishfriends.webp
+
 software: ['jupyterlab', 'python']
 ---
 
+
+
+>
 > ABCD goldfish?
 > LMNO goldfish
 > OSAR goldfish
@@ -38,9 +42,9 @@ The smiley-faced goldfish was introduced in 1997 and appears on approximately 40
 
 According to the [Wikipedia article](https://en.wikipedia.org/wiki/Goldfish_(cracker)),
 
-*Pepperidge Farm has created several spin-off products, including Goldfish Sandwich Crackers, Flavor-Blasted Goldfish, Goldfish bread, multi-colored Goldfish (known as Goldfish-American), and Baby Goldfish (which are smaller than normal). There are also seasonably available color-changing Goldfish and colored Goldfish (come in a variety pack). There was once a line of Goldfish cookies in vanilla and chocolate; chocolate has reappeared in the "100 calorie" packs.*
+*Pepperidge Farm has created several spin-off products, including Goldfish Sandwich Crackers, Flavor-Blasted Goldfish, Goldfish bread, multi-colored Goldfish (known as Goldfish-American), and Baby Goldfish (which are smaller than normal). There are also seasonably available color-changing Goldfish and colored Goldfish (come in a variety pack). There was once a line of Goldfish cookies in vanilla and chocolate; chocolate has reappeared in the "100 calorie" packs.*
 
-*[Julia Child](https://en.wikipedia.org/wiki/Julia_Child "Julia Child") liked Goldfish crackers so much that on [Thanksgiving](https://en.wikipedia.org/wiki/Thanksgiving "Thanksgiving"), she often put out a bowl alongside her famous reverse martini.*
+*[Julia Child](https://en.wikipedia.org/wiki/Julia_Child "Julia Child") liked Goldfish crackers so much that on [Thanksgiving](https://en.wikipedia.org/wiki/Thanksgiving "Thanksgiving"), she often put out a bowl alongside her famous reverse martini.*
 
 Samantha explains it all on [*Not All Goldfish Have Faces?! | WHAT THEY GOT RIGHT*](https://youtu.be/23WEnemwgbs)
 
@@ -74,7 +78,7 @@ The [Student's t-distribution](https://en.wikipedia.org/wiki/Student%27s_t-distr
 $$
 f(t) = \frac{ \Gamma \left( \frac{\nu + 1}{2} \right) }{\sqrt{\pi \nu} \frac{\nu}{2}} \left( 1 + \frac{t^2}{\nu} \right)^{-(\nu + 1)/2}
 $$
-where $\nu$ is the number of degrees of freedom and $\Gamma$​ is the [gamma function](https://en.wikipedia.org/wiki/Gamma_function). The degrees of freedom in statistics refer to the number of values that are free to vary. 
+where $\nu$ is the number of degrees of freedom and $\Gamma$ is the [gamma function](https://en.wikipedia.org/wiki/Gamma_function). The degrees of freedom in statistics refer to the number of values that are free to vary.
 
 ![Student_t_pdf](/assets/img/2024-06-04-the-goldfish-conjecture/Student_t_pdf.webp)
 
@@ -87,7 +91,7 @@ For a coin flip, the sample space is *{Heads, Tails}* but if you were to sample 
 <p align = "center"><b>Combined Cumulative Distribution Graphs</b></p>
 
 
-On the left is the probability density function (*pdf*) while the right function is the cumulative distribution function (*cdf*) or integral of $f(x)$. The area in red in the *pdf* is to the left of $4$ is the value of $F(4)$​ in the *cdf*.
+On the left is the probability density function (*pdf*) while the right function is the cumulative distribution function (*cdf*) or integral of $f(x)$. The area in red in the *pdf* is to the left of $4$ is the value of $F(4)$ in the *cdf*.
 
 ## Goldfish and the t-test
 Is it true that 40% of goldfish crackers have smiley faces? The only data available are Alan's count of one package of 349 goldfish. It hardly seems sufficient considering that [142 billion](https://www.mashed.com/83742/untold-truth-pepperidge-farm/#:~:text=Along%20with%20206%20million%20loaves%20of%20bread%20and,they%20produce%20142%20billion%20Goldfish%20crackers%20every%20year.) of them are made every year (and it keeps going up!) But, the t-test can give some insight even if we don't have an exact count. 
@@ -114,7 +118,7 @@ $𝑆𝐸 = \sqrt{ \frac{p(1-p)}{n}}$
 
 where $p$ is the hypothesized population proportion (0.40), and n is the sample size (349).
 
-$SE = \sqrt{ \frac{0.4 \times (1 - 0.4)} {349} } = 0.02622$​
+$SE = \sqrt{ \frac{0.4 \times (1 - 0.4)} {349} } = 0.02622$
 
 The [Standard Error](https://www.scribbr.com/statistics/standard-error/) is a statistic that estimates the amount of uncertainty or error associated with using the sample mean ($\hat{p}$) as an estimate of the true population mean ($p = 0.4$). The standard error shows how much sample means would vary across repeated samples of the same size from the population. 
 
@@ -131,7 +135,7 @@ The key differences are:
 
 The test statistic ($t$) is calculated as the difference between the sample proportion and the hypothesized proportion divided by the Standard Error, _SE_:
 
-$t = \frac{ \hat{p} - p}{SE} = \frac{0.4069 - 0.4}{0.02622} = 0.2622$​
+$t = \frac{ \hat{p} - p}{SE} = \frac{0.4069 - 0.4}{0.02622} = 0.2622$
 
 This $t$ value can be compared to the quantiles of a $t$-distribution with $n-1$ degrees of freedom to determine if the observed difference is statistically significant or not.
 
@@ -161,7 +165,7 @@ Having $n-1$ degrees of freedom allows us to use the appropriate $t$-distributio
 
 The p-value is the probability of obtaining a test statistic at least as extreme as the one observed, under the null hypothesis. This can be found using the t-distribution with the calculated t-statistic and degrees of freedom. 
 
-Using the [Omni calculator](https://www.omnicalculator.com/statistics/t-test#when-to-use-a-t-test) (one-sample, $\mu \neq \mu_0$, significance level 0.05) the p-value is $p = 0.7933$​​, which is much larger than the significance level of 0.05. Therefore the null hypothesis cannot be rejected, and the proportion of smiley-faced goldfish in the sample is not statistically different from the 40% estimated by The History Channel. 
+Using the [Omni calculator](https://www.omnicalculator.com/statistics/t-test#when-to-use-a-t-test) (one-sample, $\mu \neq \mu_0$, significance level 0.05) the p-value is $p = 0.7933$, which is much larger than the significance level of 0.05. Therefore the null hypothesis cannot be rejected, and the proportion of smiley-faced goldfish in the sample is not statistically different from the 40% estimated by The History Channel. 
 
 The p-value represents the probability of obtaining a sample proportion as extreme as the one observed ( $\hat{p}$), if the null hypothesis about the true population proportion ($p$) is correct.
 
