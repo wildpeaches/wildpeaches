@@ -9,27 +9,26 @@ hero:
 tags: [math]
 keywords: [Bezier polynomials, curve fitting, Large Language Models]
 software: ['python']
+socialImg: /assets/img/2024-03-11-minimization-problem-for-bezier-polynomials/math-to-code.webp
 ---
-
-
 
 ## Introduction
 
-In the article, [*Yacht Design with Mathematics*](https://wildpeaches.xyz/blog/yacht-design-with-mathematics/) we showed how to use Bezier polynomials to approximate curves in $\mathbb{R}^2$, but getting a good fit to the curve meant manipulating the positions of the control points by hand until you were satisfied with the approximation. Optimization problems have been solved by computers for decades, and this is one that seems should have a solution.
+In the article, [_Yacht Design with Mathematics_](https://wildpeaches.xyz/blog/yacht-design-with-mathematics/) we showed how to use Bezier polynomials to approximate curves in $\mathbb{R}^2$, but getting a good fit to the curve meant manipulating the positions of the control points by hand until you were satisfied with the approximation. Optimization problems have been solved by computers for decades, and this is one that seems should have a solution.
 
 The first problem, though, is that we don't know where the control points $P$ should be, except that the first and last control points are the same as the first and last points of the curve $Q$. The second problem is that when you generate the curve you need to vary the parameter $t$ from $0$ to $1$. See the gif labeled "Bezier Curve" which shows the evolution of the Bezier polynomial as a function of $t$. When you select points along the curve there's no guarantee that those points are evenly spread out values of $t$.
 
-So, we need to optimize both $P$ and $t$ simultaneously, and while it's conceptually easy to understand, turning it into useful code is an entirely different issue. In fact, solving the problem of converting mathematics into working code is the goal of [*The Coder*](https://euraika-sciences.github.io/the-coder/) in our project [*eurAIka*.](https://euraika-sciences.github.io/) There have been attempts to solve the problem of optimally fitting Bezier polynomials to curves such as Tim Pastva's thesis, [*Bezier Curve Fitting*](https://apps.dtic.mil/sti/tr/pdf/ADA350611.pdf), but I wondered if another approach might work. 
+So, we need to optimize both $P$ and $t$ simultaneously, and while it's conceptually easy to understand, turning it into useful code is an entirely different issue. In fact, solving the problem of converting mathematics into working code is the goal of [_The Coder_](https://euraika-sciences.github.io/the-coder/) in our project [_eurAIka_.](https://euraika-sciences.github.io/) There have been attempts to solve the problem of optimally fitting Bezier polynomials to curves such as Tim Pastva's thesis, [_Bezier Curve Fitting_](https://apps.dtic.mil/sti/tr/pdf/ADA350611.pdf), but I wondered if another approach might work.
 
-I put the problem to several online Large Language Models: [Anthropic's Claude](https://www.anthropic.com/claude), [Poe](https://poe.com/login), [You.com](https://you.com/), [ChatGPT](https://chat.openai.com/auth/login), and in honor of [Pi Day](https://www.jpl.nasa.gov/edu/events/2024/3/7/celebrate-pi-day-with-nasa/), [Pi](https://pi.ai/onboarding). After giving each of the first four the problem statement, I realized that I'd typed in the definition of the matrix $A$ as  $A = [t^{m-1} t^{m-2} \cdots t^0]$ using the variable $m$ where I should have written it with $p$, or at least defined the matrix $P$ as $m \times 2$​. 
+I put the problem to several online Large Language Models: [Anthropic's Claude](https://www.anthropic.com/claude), [Poe](https://poe.com/login), [You.com](https://you.com/), [ChatGPT](https://chat.openai.com/auth/login), and in honor of [Pi Day](https://www.jpl.nasa.gov/edu/events/2024/3/7/celebrate-pi-day-with-nasa/), [Pi](https://pi.ai/onboarding). After giving each of the first four the problem statement, I realized that I'd typed in the definition of the matrix $A$ as $A = [t^{m-1} t^{m-2} \cdots t^0]$ using the variable $m$ where I should have written it with $p$, or at least defined the matrix $P$ as $m \times 2$​.
 
 ![pi-day](/assets/img/2024-03-11-minimization-problem-for-bezier-polynomials/pi-day.webp)
 
 <p align = "center"><b>Fake "Pi Day" Holiday</b></p>
 
-I told each AI assistant that I'd made the error, and each apologized for not understanding the problem correctly (not their fault!) and made corrections. However, I noticed that Poe gave exactly the same answer both times, and after reading through carefully, I realized that it had figured out that the parameter $p$​ was a required input the first time. You.com also caught the error and fixed it in the first response. 
+I told each AI assistant that I'd made the error, and each apologized for not understanding the problem correctly (not their fault!) and made corrections. However, I noticed that Poe gave exactly the same answer both times, and after reading through carefully, I realized that it had figured out that the parameter $p$​ was a required input the first time. You.com also caught the error and fixed it in the first response.
 
-So, why do these Large Language Models seem to work so well? A big part of the answer in this case is that I asked for Python code and there are a lot of examples to use as a starting point. It's easy to think that they are somehow actually "intelligent" and to anthropomorphize them. In reality, they are much closer to the autocomplete function used in emails and texts on your phone. I'm not convinced that they are getting close to true Artificial General Intelligence (AGI) yet. 
+So, why do these Large Language Models seem to work so well? A big part of the answer in this case is that I asked for Python code and there are a lot of examples to use as a starting point. It's easy to think that they are somehow actually "intelligent" and to anthropomorphize them. In reality, they are much closer to the autocomplete function used in emails and texts on your phone. I'm not convinced that they are getting close to true Artificial General Intelligence (AGI) yet.
 
 I haven't tried any of these solutions yet, and it may be better to alternate the optimization of $P$ and $t$ until convergence, so there's still work to do, but it appears to be a promising way to go from the mathematical statement of a problem to working code.
 
@@ -37,7 +36,7 @@ I haven't tried any of these solutions yet, and it may be better to alternate th
 
 This is the initial statement with the error in the definition of matrix $A$:
 
-> Let $Q$ be an ordered sequence of $n$ points in $\mathbb{R}^2$ and $t \in [0,1]$ be a monotonically increasing vector of length $n$ such that $t_0 = 0$ and $t_{n-1} = 1.$ Define array $A$ to be the Vandermonde matrix formed from powers of $t$, $A = [t^{m-1} t^{m-2} \cdots t^0]$. Find the $p \times 2$ array $P$ that minimizes $\lVert AP - Q \lVert^2$ with the property that the first and last rows of $P$ are identical to the first and last rows of $Q$. A good initial estimate for $P$ is to construct $t$ uniformly in $[0,1]$ and solve for $P$ with the pseudoinverse of $A$, $P \approx (A^TA)^{-1}(A^Q)$, but this will be inexact because the true values of $t$ are unknown. Write a Python function to solve this problem, minimizing over both $P$ and $t$. 
+> Let $Q$ be an ordered sequence of $n$ points in $\mathbb{R}^2$ and $t \in [0,1]$ be a monotonically increasing vector of length $n$ such that $t_0 = 0$ and $t_{n-1} = 1.$ Define array $A$ to be the Vandermonde matrix formed from powers of $t$, $A = [t^{m-1} t^{m-2} \cdots t^0]$. Find the $p \times 2$ array $P$ that minimizes $\lVert AP - Q \lVert^2$ with the property that the first and last rows of $P$ are identical to the first and last rows of $Q$. A good initial estimate for $P$ is to construct $t$ uniformly in $[0,1]$ and solve for $P$ with the pseudoinverse of $A$, $P \approx (A^TA)^{-1}(A^Q)$, but this will be inexact because the true values of $t$ are unknown. Write a Python function to solve this problem, minimizing over both $P$ and $t$.
 
 After seeing the responses, I told each (except Pi) that I'd made a mistake:
 
@@ -49,7 +48,7 @@ and added this line to the original problem:
 
 and here are the results from each LLM:
 
-------
+---
 
 ## Claude
 
@@ -121,7 +120,7 @@ print(t_opt)
 
 Note that this implementation assumes that a solution exists for the given `Q`. If no solution can be found, the `least_squares` function may not converge or may return a suboptimal solution.
 
-------
+---
 
 ## Poe
 
@@ -170,13 +169,11 @@ In this example, `Q` is the input sequence of points, and `p` is the desired num
 
 Note that this implementation assumes that `Q` has at least two points, and `p` is greater than or equal to 1. Also, make sure to have the NumPy and SciPy libraries installed to run this code.
 
-------
+---
 
 ## You.com
 
 To solve this problem, we can use optimization techniques to minimize the objective function $\lVert AP - Q \lVert^2$ over both $P$ and $t$. One possible approach is to use the gradient descent algorithm to iteratively update the values of $P$ and $t$ until convergence. Here's a Python function that implements this approach:
-
-
 
 ```python
 import numpy as np
@@ -214,8 +211,6 @@ P = minimize_AP_Q(Q, p)
 print(P)
 ```
 
-
-
 In this code, the `minimize_AP_Q` function takes the input array `Q` and the parameter `p`, which represents the number of polynomial terms in $P$. It also has optional parameters for the maximum number of iterations (`max_iterations`), the learning rate (`learning_rate`), and the convergence tolerance (`tolerance`).
 
 The function initializes $P$ with the pseudoinverse of $A$, and then performs gradient descent iterations to update $P$ and $t$ until convergence. The gradient of the objective function with respect to $P$ and $t$ is computed, and then used to update $P$ and $t$ according to the gradient descent update rule.
@@ -224,7 +219,7 @@ Finally, the function returns the optimized array $P$. In the example usage, we 
 
 Note that the initial estimate using the pseudoinverse of $A$ is used to provide a good starting point for the optimization, but the true values of $t$ are still unknown and need to be estimated. The optimization process helps to refine the estimate of $P$ and $t$ to minimize the objective function $\lVert AP - Q \lVert^2$​.
 
-------
+---
 
 Let's redefine matrix $A$ to have dimensions $n \times p$ as you mentioned. The correct definition of matrix $A$ is $A = [t^{p-1} \ t^{p-2} \ \cdots \ t^0]$, where $t$ is the monotonically increasing vector of length $n$.
 
@@ -289,7 +284,7 @@ def objective_function(params, Q, p):
     P = params[n:].reshape((p, 2))
 
     A = np.column_stack([t**(i) for i in range(p)])
-    
+
     diff = np.dot(A, P) - Q
     return np.linalg.norm(diff) ** 2
 
@@ -299,14 +294,14 @@ def solve_minimization(Q, p):
     initial_P = np.linalg.pinv(np.column_stack([initial_t**(i) for i in range(p)])) @ Q
 
     initial_guess = np.concatenate((initial_t, initial_P.flatten()))
-    
+
     bounds = [(0, 1) for _ in range(n)] + [(None, None)] * (p * 2)
-    
+
     result = minimize(objective_function, initial_guess, args=(Q, p), bounds=bounds)
-    
+
     t_optimal = result.x[:n]
     P_optimal = result.x[n:].reshape((p, 2))
-    
+
     return P_optimal, t_optimal
 
 # Example usage:
@@ -347,7 +342,7 @@ def solve_minimization_problem(Q, p):
     initial_guess_t = np.linspace(0, 1, p)
     initial_guess_P = Q[0]
     params = np.concatenate((initial_guess_t, initial_guess_P.flatten()))
-    
+
     res = minimize(fun, params, args=(Q, p))
     P_min = res.x[p:].reshape((p, 2))
     t_min = res.x[:p]
