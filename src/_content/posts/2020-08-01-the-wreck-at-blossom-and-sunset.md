@@ -16,6 +16,12 @@ The town of Arlington repaved Sunset Road and installed new sidewalks all around
 
 Jan and his family lived in the house right on the corner, and we lived in the blue house next door. We were watching the cars go by and realized that since there weren't any stop signs, everyone assumed they had the right-of-way no matter which direction they approached the intersection. Sooner or later there would be a huge wreck at the intersection of Blossom and Sunset. It seemed to us that we had two options. The first would be to inform someone in the town planning department about the serious omission. The second was to calculate the probability of a wreck. We chose option two.
 
+To calculate the probability of a wreck, we need to consider the random nature of cars arriving at the intersection. This scenario is well-suited for a statistical tool called the Poisson distribution, which is often used to model the number of events occurring within a fixed interval of time or space, especially when these events happen independently of each other.
+
+The Poisson distribution is particularly useful in situations where we're dealing with rare events - like car crashes - that occur randomly but at a known average rate. In our case, we'll use it to model the arrival of cars at the intersection and, ultimately, to calculate the probability of two cars arriving simultaneously from different directions.
+
+Before we dive into the Poisson distribution, let's first gather some data about the traffic at our intersection.
+
 ## Time in the Intersection
 
 Using [Google Earth](https://earth.google.com/web/search/45+Sunset+Road,+Arlington,+MA/@42.42767033,-71.1775864,57.47981609a,43.70107677d,35y,0h,0t,0r/data=CigiJgokCf-6pwPJgTRAEfy6pwPJgTTAGRgBWyhPVUFAIavHgqKy31DA) we can estimate the width of the intersection to be 24 feet. Assuming that cars in a residential neighborhood go about 25 mph, or 36.67 feet/second then the total time a car is in the intersection is 0.654 seconds. A handy conversion factor is that 60 mph is exactly 88 feet per second. A further simplification is that the car would only need to be in the same half of an intersection as another one, or they'd have a near miss but escape unscathed. This means that the exposed time in the intersection is just 1/3 of a second.
@@ -24,9 +30,15 @@ Using [Google Earth](https://earth.google.com/web/search/45+Sunset+Road,+Arlingt
 
 <p align = "center"><b>Google Earth view of Blossom and Sunset</b></p>
 
-I watched the intersection for 95 minutes collecting traffic data and found that 24 cars entered from Blossom and 14 from Sunset. 
+I watched the intersection for 95 minutes collecting traffic data and found that 24 cars entered from Blossom and 14 from Sunset. Now that we have our traffic data, we can apply the Poisson distribution to our problem. Here's how it works:
 
 ## Poisson Distributions
+
+To calculate the probability of a wreck, we need to consider the random nature of cars arriving at the intersection. This scenario is well-suited for a statistical tool called the Poisson distribution, which is often used to model the number of events occurring within a fixed interval of time or space, especially when these events happen independently of each other.
+
+The Poisson distribution is particularly useful in situations where we're dealing with rare events - like car crashes - that occur randomly but at a known average rate. In our case, we'll use it to model the arrival of cars at the intersection and, ultimately, to calculate the probability of two cars arriving simultaneously from different directions.
+
+Before we dive into the Poisson distribution, let's first gather some data about the traffic at our intersection.
 
 Letting $\lambda$ be the average rate events occur, then the [Poisson Distribution](https://en.wikipedia.org/wiki/Poisson_distribution) gives the probability of $k$ events occurring in a fixed interval of time, $t$
 $$
@@ -100,17 +112,29 @@ CDF(\lambda, n_I t) = 1 - e^{-\lambda n_I t} = 1 - P(0,\lambda,10 n_I) = 0.629
 $$
 showing the relationship between the Poisson Distribution and the Exponential Distribution.
 
-So why isn't the intersection of Blossom and Sunset littered with the detritus (Detroitus?) of destroyed automobiles? Since cars driving through the neighborhood don't go much more than 25 - 30 mph, there's time for drivers to react. Jamming on the brakes at the last moment is probably enough to separate the cars by more than the 1/3 second needed for a collision.
+## The Intersection of Mathematical Modeling and Reality
+
+So why isn't the intersection of Blossom and Sunset littered with the detritus (Detroitus?) of destroyed automobiles?  While our calculations suggest a high probability of crashes at the intersection of Blossom and Sunset, reality hasn't matched our predictions. This discrepancy highlights an important aspect of applied mathematics: models are simplifications of reality and don't always capture every factor at play.
+
+In this case, human behavior and reaction times play a crucial role that our model didn't account for. Drivers, sensing the lack of clear right-of-way, likely approach the intersection more cautiously, reducing their speed and increasing their awareness. This behavior effectively extends the 'safe' time window beyond our calculated 1/3 second, significantly lowering the actual crash risk.
+
+This exercise demonstrates both the power and limitations of mathematical modeling in real-world scenarios. While our model provides valuable insights into potential risks, it also underscores the importance of considering human factors and behavioral adaptations in traffic safety analyses.
+
+The implications of this study extend beyond just one intersection. It raises important questions about urban planning, traffic management, and the balance between mathematical models and real-world observations. How can we better design intersections to naturally encourage safer driving behaviors? How can we improve our models to account for human factors?
+
+For those interested in exploring these concepts further or applying them to intersections in their own neighborhoods, we've provided a JupyterLab notebook. This tool allows you to adjust parameters and calculate crash probabilities for different scenarios. By experimenting with this model, you can gain insights into traffic safety in your own community and perhaps even contribute to local urban planning discussions.
 
 If you'd like to run this experiment for an intersection nearby, install the [Anaconda](https://www.anaconda.com/) platform and then start the [Navigator](https://docs.anaconda.com/free/navigator/index.html). 
 
 ![navigator](/assets/img/2020-08-01-blossom-and-sunset/navigator.png)
 
-Launch [JupyterLab](https://jupyter.org/) and select the Python kernel. Save a copy of the [Blossom_and_Sunset.ipynb](https://gist.github.com/XerxesZorgon/16bd83e8c5ff0053b12ec40e8c6e8471) notebook locally, and then open it in JupyterLab. You can change the parameters in the notebook to fit your conditions, and then calculate the probability of a crash coming to a neighborhood near you!
+Launch [JupyterLab](https://jupyter.org/) and select the Python kernel. Save a copy of the [Blossom_and_Sunset.ipynb](https://gist.github.com/XerxesZorgon/16bd83e8c5ff0053b12ec40e8c6e8471) notebook locally, and then open it in JupyterLab. You can change the parameters in the notebook to fit your conditions, and then calculate the probability of a crash coming to a neighborhood near you.
+
+So, the next time you approach an unmarked intersection, remember: you're not just a driver, you're part of a complex system of probability and human behavior. Drive safely, and maybe brush up on your Poisson distributions!
 
 ------
 
-#### Image credits
+## Image credits
 
 Hero: Google Street View
 
