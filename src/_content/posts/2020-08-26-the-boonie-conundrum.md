@@ -4,13 +4,16 @@ subtitle: Monte Carlo Simulation of a Conspiracy
 author: John Peach
 lede: This is the tale of the Great Boonie Conspiracy in which we show through the mathematics of the Gompertz Survival Function that all conspiracies must fail. It's the story of a coverup by people who didn't cover up and were exposed in the end.
 hero:
-  url: /assets/img/2020-08-26-the-boonie-conundrum/conspiracy.png
+  url: /assets/img/the-boonie-conundrum/conspiracy.png
   alt:
 tags: [math]
 keywords: [Monte Carlo simulation, conspiracies, Gompertz Survival Function]
-socialImg: /assets/img/2020-08-26-the-boonie-conundrum/conspiracy.png
-software: ['octave']
+socialImg: /assets/img/the-boonie-conundrum/conspiracy.png
 ---
+
+## The Mathematics of Conspiracy Theories
+
+Ever wonder why some wild ideas spread like wildfire on the internet? You know, those conspiracy theories that seem to pop up everywhere? Well, buckle up, because we're about to dive into the wacky world of misinformation math! That's right, there's actually a way to crunch the numbers on how some ideas multiply faster than [boonies in a box](https://www.cumminsforum.com/threads/boonie-box-tools.2115786/). We'll explore the secret sauce of belief formation, peek into the social network pressure cooker, and follow the breadcrumb trail of how false facts find their way into a Facebook feed. By the time we're done, you'll have a whole new toolkit for understanding (and maybe even combating) these persistent tall tales. So grab your calculator and tin foil hat - it's time to unravel the mysterious mathematics of conspiracy theories!
 
 ## The Boonie Story
 
@@ -38,23 +41,23 @@ This is Boonie's conundrum. As soon as he started telling his close friends, the
 
 As soon as the rumor leaped across the nearly impenetrable student/parent information barrier, Roger and I sketched up a graph something like this on my whiteboard and began estimating how long Boonie had until he faced the wrath of Principal S. a second time.
 
-![](/assets/img/2020-08-26-the-boonie-conundrum/boonie-graph.png){ .blend-multiply}
+![](/assets/img/the-boonie-conundrum/boonie-graph.png){ .blend-multiply}
 
 We figured he had about three weeks, and it turned out we were right to within a day or two.
 
 A simplified version might help explain this. Suppose there are five friends: Alex, Boonie, Channing, Drew, Ellison. A way to visualize this is through a matrix like this,
 
-![](/assets/img/2020-08-26-the-boonie-conundrum/friends.png){ .blend-multiply}
+![](/assets/img/the-boonie-conundrum/friends.png){ .blend-multiply}
 
 The row with a "C" in front (for Channing) has $T$ (true) in columns "Boonie" and "Channing", but $F$ (false) for the others meaning Channing is friends with Boonie, but not Alex, Drew or Ellison. Next, we'll add in a vector of people who know about the hidden message. In the beginning, only Boonie knows.
 
-![](/assets/img/2020-08-26-the-boonie-conundrum/knows-day-1.png){ .blend-multiply}
+![](/assets/img/the-boonie-conundrum/knows-day-1.png){ .blend-multiply}
 
 The highlighted column corresponds to the $T$ in the knowledge vector to the right of the Friends matrix and indicates everyone Boonie tells, in this case, Channing and Drew. You can multiply the Friends matrix by the rumor knowledge vector by taking the first entry in the vector $F$ and "multiplying" the entire first column of the friends. This makes everything for that column false, so put an $F$ in the first position of the output vector on the right after the equals sign. The next entry is $T$ because Boonie knows, and the column under "B" contains $F, T, T, T, F$ so those places where there's a $T$ become $T$ in the output vector, but $F$ always remains $F$. The remaining entries in the knowledge vector are $F$ so they don't contribute anything.
 
 Simulate the spread of the rumor from day to day by repeating this process. On the second day, Boonie, Channing, and Drew are all in on the rumor, so if any one of them tells someone else, that person knows. In other words, a single $T$ in the yellow highlighted region on the "A" row is sufficient for Alex to know. Drew knows and Drew is friends with Alex, so Alex hears about the story. The reason we put a $T$ in the Boonie row and column is it keeps Boonie in the know at each step. All of the entries on the diagonal are true for the same reason.
 
-![](/assets/img/2020-08-26-the-boonie-conundrum/knows-day-2.png){ .blend-multiply}
+![](/assets/img/the-boonie-conundrum/knows-day-2.png){ .blend-multiply}
 
 Rumors don't spread quite this quickly. We have motive, but not opportunity yet. Friends may get together during the school day, but there might be someone else (a teacher, Principal S.?) or another reason the message isn't passed on. To simulate this, we'll create an opportunity matrix the same size as the friends' matrix with mostly $F$'s but a few $T$'s where the opportunity exists. The opportunity matrix changes randomly every day, simulating different interactions between students. Now if there is a $T$ in both the friends' matrix and the opportunity matrix, the rumor expands.
 
@@ -79,7 +82,7 @@ To run the simulation we need estimates of the interactions between students, te
 
 With all that, this is a plot of a typical run. ([Octave code boonieSim.m](https://gist.github.com/JanDW/62b4b4d4ca9822080a7ed6209e33ab50))
 
-![](/assets/img/2020-08-26-the-boonie-conundrum/the-boonie-rumor.png){ .blend-multiply}
+![](/assets/img/the-boonie-conundrum/the-boonie-rumor.png){ .blend-multiply}
 
 In 14 school days, or almost three weeks, the rumor travels from Boonie to Principal S. Only 16% of the teachers and 2% of the students (about 30) have heard the story, yet Boonie gets caught anyway.
 
@@ -91,13 +94,13 @@ We can perform Monte Carlo experiments with the Boonie rumor, too. Since the fri
 
 In this [Monte Carlo experiment](https://gist.github.com/JanDW/67d70ecb54bf186622f2a201e01a02ea), I ran the same Boonie rumor function 1000 times. The peak seems to occur around 20 days, and the longest he got away with it is 80 days, but he always gets caught. In fact, after 40 days, there are fewer and fewer cases, meaning that Boonie is very unlikely to make it longer than 40 days in general. Monte Carlo experiments are useful for obtaining statistical insights into problems. You can also change the experiment by adjusting some of the parameters such as `studentFriendship` probability to see how sensitive the outcome is to a small change.
 
-![](/assets/img/2020-08-26-the-boonie-conundrum/boonie-monte-carlo.png){ .blend-multiply}
+![](/assets/img/the-boonie-conundrum/boonie-monte-carlo.png){ .blend-multiply}
 
 ## On the Viability of Conspiratorial Beliefs
 
 In this simulation Boonie always gets caught. But what about other conspiracies? Was the moon landing faked? [Neil deGrasse Tyson](https://www.youtube.com/watch?v=uTChrirK-hw&list=PLo2qyznkcH0JXUR1zG-L5zny0BriJjc7s&index=8&t=0s) says many people saw the Saturn V liftoff, plenty of documents and other evidence is still available, and there were thousands of people at NASA who designed the rocket and its subsystems. In the end, he says it would be easier to send astronauts to the moon than to try to maintain the silence of all those engineers.
 
-David Grimes, from Oxford University, published a paper in PLOS ONE, [On the Viability of Conspiratorial Beliefs](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0147905) in which he derived an equation for the survival time of a conspiracy theory. It depends on the number of conspirators, the amount of time since the beginning of the conspiracy, and an intrinsic probability of discovery common to all conspiracies. A faked moon landing [would have been uncovered in about 3.7 years](https://www.bbc.com/news/science-environment-35411684). His equation is
+David Grimes, from Oxford University, published a paper in PLOS ONE, [On the Viability of Conspiratorial Beliefs](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0147905) in which he derived an equation for the survival time of a conspiracy theory. It depends on the number of conspirators, the amount of time since the beginning of the conspiracy, and an intrinsic probability of discovery common to all conspiracies. A faked moon landing [would have been uncovered in about 3.7 years](https://www.bbc.com/news/science-environment-35411684). His equation uses the Poisson statistics to describes how the likelihood of a conspiracy theory spreading changes over time. Here, $N(t)$ represents the number of people who believe in the theory at time $t$.
 
 $$ L(t,N(t)) = 1 - e^{-t \left( 1-\phi^{N(t)} \right) } $$
 
@@ -106,6 +109,8 @@ where $N(t)$ is the Gompertzian survival function,
 $$ N(t) = N_0 e^{ \frac{\alpha}{\beta} \left( 1 - e^{\beta (t + t_e)} \right) }. $$
 
 $L$ represents the probability of leakage at time $t$ and $\phi$ is the Poisson distributed mean number of failures per unit time. The Gompertz function $N(t)$ has parameters $N_0$ for the initial number of conspirators, the average age of the conspirators $t_e$ at the time of the event, and empirically derived constants $\alpha = 10^{-4}$ and $\beta = 0.085$ which model how many conspirators take the mystery to their graves. The chance that the conspiracy outlives the conspirators declines rapidly with the number of people involved.
+
+Exponential growth means that the number of believers can increase very rapidly. For example, if each believer convinces just one more person each day, the total number of believers can double quickly.
 
 The Boonie Conundrum shows that while conspiracies do exist, eventually there's a reckoning.
 
@@ -134,7 +139,7 @@ The list below contains fact-checking organizations, and some articles on how to
 
 Abbie Richards created the [Conspiracy Chart](https://www.bostonglobe.com/2021/11/29/metro/this-chart-conspiracy-theories-has-gone-viral-freebritney-qanon-local-disinformation-researcher-breaks-down-what-know/) to test your level of belief in reality.
 
-![the-conspiracy-chart](/assets/img/2020-08-26-the-boonie-conundrum/the-conspiracy-chart.jpg)
+![the-conspiracy-chart](/assets/img/the-boonie-conundrum/the-conspiracy-chart.jpg)
 
 ------
 
@@ -143,7 +148,3 @@ Abbie Richards created the [Conspiracy Chart](https://www.bostonglobe.com/2021/1
 Hero: Atze Lourens, "What do religion, populism and conspiracies have in common?" [Medium](https://medium.com/@atzelourens/what-do-religion-populism-and-conspiracies-have-in-common-69a25b7639a0?source=post_internal_links---------3----------------------------)
 
 The Conspiracy Chart: [Abbie Richards 2021](https://conspiracychart.com/)
-
-## Code for this article
-
-[boonieSim.m](https://gist.github.com/JanDW/62b4b4d4ca9822080a7ed6209e33ab50) - Simulates the Boonie Conundrum 

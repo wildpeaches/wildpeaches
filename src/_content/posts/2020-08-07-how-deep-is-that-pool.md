@@ -7,10 +7,9 @@ hero:
   url: /assets/img/2020-08-07-how-deep-is-the-pool/covid-virus.png
   alt:
 date: 2020-08-07
-tags: [math, covid-19]
-keywords: [Pool Testing, Covid, Opt]
+tags: [COVID-19, mathematics, pool-testing, epidemiology, public-health]
+keywords: [COVID-19 testing optimization, Pool testing mathematics, Pandemic response strategies, Test positivity rates, Binomial distribution in epidemiology]
 socialImg: /assets/img/2020-08-07-how-deep-is-the-pool/covid-virus.png
-software: ['anaconda', 'python']
 ---
 
 To control the COVID-19 pandemic requires rapid testing of many people. One way to do this is to perform a single test on the combined samples taken from a group of people, called pool testing. [The American Society for Microbiology thinks it's time to jump in the pool](https://asm.org/Articles/2020/July/COVID-19-Pool-Testing-Is-It-Time-to-Jump-In) and [STAT agrees](https://www.statnews.com/2020/06/26/pool-testing-covid-19/).
@@ -73,7 +72,7 @@ So now it appears that 4 out of 100 or 4% are infected. Since we need to know th
 
 To find the number of tests required for a given infection rate $p$ means we need to find the value of $n$ that makes $T(n,p)$ the smallest.
 
-![Pool size for p = 7.5%](/assets/img/2020-08-07-how-deep-is-the-pool/pool-size-p-seven-half.svg){.blend-multiply}
+![pool-size-p-seven-half](/assets/img/2020-08-07-how-deep-is-the-pool/pool-size-p-seven-half.svg)
 
 ## Optimum Pool Sizes
 
@@ -117,7 +116,7 @@ Usama Kadri from Cardiff University has developed a [linear algebra method](http
 
 ------
 
-#### Image credits
+## Image credits
 
 Hero: [peterschreiber.media](https://www.peterschreiber.media/) / Shutterstock
 
