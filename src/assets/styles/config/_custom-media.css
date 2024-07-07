@@ -1,0 +1,8 @@
+/* Breakpoints taken from TailwindCSS Theme */
+
+@custom-media --upto-small-viewport (width < theme('screens.sm'));
+@custom-media --from-small-viewport (width >= theme('screens.sm'));
+@custom-media --upto-medium-viewport (width < theme('screens.md'));
+@custom-media --from-medium-viewport (width >= theme('screens.md'));
+@custom-media --upto-large-viewport (width <= theme('screens.lg'));
+@custom-media --from-large-viewport (width > theme('screens.lg'));

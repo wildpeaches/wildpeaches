@@ -1,0 +1,19 @@
+---
+title: Wild Peaches
+socialImg: /assets/img/of-sailing-ships-velociraptors-and-walking-on-the-moon/hero-image.jpg
+---
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  {% include 'head.html' %}
+  <body
+    class="overflow-x-hidden {% if bodyClass %}{{ bodyClass }}{% endif %}"
+  >
+    {% include 'global-nav.html' %} 
+    {{ content | safe }}
+    {% if includeSubscription %}
+      {% include "subscription-form.html" %}
+    {% endif%}
+    {% include 'footer.html' %}
+    {% include 'scripts.html' %}
+  </body>
+</html>

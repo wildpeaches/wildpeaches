@@ -1,0 +1,20 @@
+<div class="title mb-0 flex flex-col">
+  <h1
+    class="leading-none tracking-tight text-3xl sm:text-5xl lg:text-6xl  font-sans font-extrabold py-2 pl-4 -ml-6"
+  >
+    {{ title }}
+  </h1>
+  {% if subtitle %}
+  <p class="leading-snug mt-4 text-xl font-sans pb-8">
+    <span class="sr-only">Subtitle:</span>
+    {{ subtitle }}
+  </p>
+  {% endif %}
+
+  <p class="text-base font-sans max-w-none order-first">
+    <time datetime="{{ page.date | w3DateFilter }}"
+      >{{ page.date | dateFilter }}</time
+    >
+    <span class="byline">&middot; {{ author }}</span>
+  </p>
+</div>

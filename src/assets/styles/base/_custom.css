@@ -1,0 +1,38 @@
+a:link {
+  font-weight: 500;
+  border-bottom-color: transparent;
+  border-bottom-width: 2px;
+}
+
+a:hover {
+  border-bottom-color: currentColor;
+}
+
+@responsive {
+  .full-bleed {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+}
+
+.panel {
+  @apply bg-white border border-gray-200 rounded-lg;
+}
+
+.form--success {
+  @apply bg-green-200 text-green-700 font-sans;
+}
+
+.form--error {
+  @apply bg-red-200 text-red-700 font-sans;
+}
+
+@layer utilities {
+  .u-no-indent {
+    text-indent: 0;
+  }
+  /* @TODO Not present in TailwindCSS though it should be? */
+  .u-border-current {
+    border-color: currentColor;
+  }
+}

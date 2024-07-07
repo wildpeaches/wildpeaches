@@ -1,0 +1,46 @@
+<aside
+  class="font-sans p-4 text-base max-w-md o-center o-stack text-blue-800 bg-gray-50 sm:rounded-md "
+  aria-labelledby="subscribe-and-stay-in-the-loop"
+>
+  <div>
+    <h2 id="subscribe-and-stay-in-the-loop" class="font-bold u-no-indent sm:text-center">
+      📬 Subscribe and stay in the loop.
+    </h2>
+  </div>
+  <form
+    class="email-form"
+    name="newsletter"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    aria-live="polite"
+  >
+    <div>
+      <div hidden aria-hidden="true">
+        <label>
+          Don’t fill this out if you're human:
+          <input name="bot-field" />
+        </label>
+      </div>
+
+      <label
+        >Your email address
+        <div class="sm:flex">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="block sm:max-w-xs w-full px-4 py-3 text-base appearance-none border border-gray-300 shadow-none bg-white text-primary rounded-md placeholder-gray-400 focus:outline-none focus:ring focus:border-blue-300 sm:rounded-none sm:rounded-l-md"
+            required
+          />
+          <button
+            type="submit" 
+            class="mt-4 relative sm:mt-0 sm:h-auto block w-full sm:w-auto border border-blue-600 px-6 py-3 text-base font-semibold leading-snug bg-blue-600 text-white rounded-md sm:rounded-none sm:rounded-r-md shadow-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500 transition ease-in-out duration-150"
+          >
+            Subscribe
+          </button>
+        </div>
+      </label>
+    </div>
+  </form>
+</aside>

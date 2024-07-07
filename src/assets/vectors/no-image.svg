@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="672px" height="315px" viewBox="0 0 672 315" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>no image</title>
+    <g id="no-image" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <text id="Image-not-cached" font-family="inter var, inter, sans-serif" font-size="72" font-weight="500" fill="#6F6F6F">
+            <tspan x="26" y="280">Image not cached</tspan>
+        </text>
+        <g id="Group" transform="translate(277.000000, 21.000000)" fill="#6F6F6F">
+            <rect id="Rectangle" x="20" y="0" width="20" height="20"></rect>
+            <rect id="Rectangle-Copy-2" x="60" y="20" width="20" height="20"></rect>
+            <rect id="Rectangle-Copy-3" x="60" y="40" width="20" height="20"></rect>
+            <rect id="Rectangle-Copy-4" transform="translate(130.000000, 110.000000) rotate(-180.000000) translate(-130.000000, -110.000000) " x="120" y="100" width="20" height="20"></rect>
+            <rect id="Rectangle-Copy-5" transform="translate(110.000000, 90.000000) rotate(-180.000000) translate(-110.000000, -90.000000) " x="100" y="80" width="20" height="20"></rect>
+            <rect id="Rectangle-Copy-13" transform="translate(10.000000, 110.000000) rotate(-180.000000) translate(-10.000000, -110.000000) " x="0" y="100" width="20" height="20"></rect>
+            <rect id="Rectangle-Copy-9" transform="translate(70.000000, 90.000000) rotate(-180.000000) translate(-70.000000, -90.000000) " x="60" y="80" width="20" height="20"></rect>
+            <rect id="Rectangle-Copy-8" transform="translate(90.000000, 90.000000) rotate(-180.000000) translate(-90.000000, -90.000000) " x="80" y="80" width="20" height="20"></rect>
+            <rect id="Rectangle-Copy-12" transform="translate(30.000000, 90.000000) rotate(-180.000000) translate(-30.000000, -90.000000) " x="20" y="80" width="20" height="20"></rect>
+            <rect id="Rectangle-Copy-11" transform="translate(50.000000, 90.000000) rotate(-180.000000) translate(-50.000000, -90.000000) " x="40" y="80" width="20" height="20"></rect>
+            <rect id="Rectangle-Copy" x="100" y="0" width="20" height="20"></rect>
+        </g>
+    </g>
+</svg>

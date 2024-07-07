@@ -1,5 +1,5 @@
 # Ignore docs files
-_gh_pages
+*gh*pages
 _site
 _drafts
 .ruby-version
@@ -28,6 +28,8 @@ nbproject
 *.sublime-project
 *.sublime-workspace
 .idea
+.vscode/
+.eslintcache
 
 # Komodo
 *.komodoproject
@@ -43,27 +45,29 @@ www/
 tmp/
 .cache/
 .netlify/
+vendor/
+_zip/
+dist/
+build/
+
+# Files to ignore
 .env
-.DS_Store
 package-lock.json
-src/assets/styles/style.min.css
 package*.json
-vendor
+*.gem
+stats.json
+
+# Jekyll specific
 .sass-cache
 .jekyll-metadata
 .jekyll-cache
-*.gem
-_zip
-/stats.json
-/dist
-/build
 
+# Hydejack specific
 /assets/js/*hydejack-*
 /_sass/*/__*__/*
 
-# Local Netlify folder
+# Netlify specific
 .netlify
 
-# Editor specific
-.vscode/
-.eslintcache
+# Other
+src/assets/styles/style.min.css

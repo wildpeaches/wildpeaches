@@ -1,0 +1,74 @@
+Microsoft Windows [Version 10.0.22621.2134]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches>npm run serve
+
+> wild-peaches@0.0.1 serve C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches
+> npm run css:build-dev && npx @11ty/eleventy --serve
+
+
+> wild-peaches@0.0.1 css:build-dev C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches
+> npm run css:postcss-dev && ncp tmp/style.css src/assets/styles/style.min.css
+
+
+> wild-peaches@0.0.1 css:postcss-dev C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches
+> npx postcss src/assets/styles/app.css -o tmp/style.css --env development
+
+
+1:1     !!  C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches\src\assets\styles\config\_scale.css is empty [postcss-import]
+1:1     !!  C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches\src\assets\styles\config\_custom-properties.css is empty [postcss-import]
+1:1     !!  C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches\src\assets\styles\config\_extends.css is empty [postcss-import]
+
+Error with passthrough copy: (more in DEBUG output)
+> Having trouble copying './src/assets/styles/style.min.css'
+
+`TemplatePassthroughManagerCopyError` was thrown
+> EPERM: operation not permitted, lstat 'C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches\www\assets\styles\style.min.css'
+
+`Error` was thrown:
+    Error: EPERM: operation not permitted, lstat 'C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches\www\assets\styles\style.min.css'
+Unhandled rejection in promise ([object Promise]): (more in DEBUG output)
+> Having trouble copying
+
+`TemplateWriterWriteError` was thrown
+> Having trouble copying './src/assets/styles/style.min.css'
+
+`TemplatePassthroughManagerCopyError` was thrown
+> EPERM: operation not permitted, lstat 'C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches\www\assets\styles\style.min.css'
+
+`Error` was thrown:
+    Error: EPERM: operation not permitted, lstat 'C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches\www\assets\styles\style.min.css'
+No character metrics for '​' in style 'Main-Regular' and mode 'text'
+No character metrics for ' ' in style 'Main-Regular' and mode 'text'
+No character metrics for ' ' in style 'Main-Regular' and mode 'text'
+Problem writing Eleventy templates: (more in DEBUG output)
+> Having trouble rendering njk (and markdown) template ./src/_content/posts/2023-08-22-the-big-squish-theory.md
+
+`TemplateContentRenderError` was thrown
+> (./src/_content/posts/2023-08-22-the-big-squish-theory.md)
+  Error: expected end of comment, got end of file
+
+`Template render error` was thrown:
+    Template render error: (./src/_content/posts/2023-08-22-the-big-squish-theory.md)
+      Error: expected end of comment, got end of file
+        at Object._prettifyError (C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches\node_modules\nunjucks\src\lib.js:36:11)
+        at Template.render (C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches\node_modules\nunjucks\src\environment.js:538:21)
+        at C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches\node_modules\@11ty\eleventy\src\Engines\Nunjucks.js:236:14
+        at new Promise (<anonymous>)
+        at C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches\node_modules\@11ty\eleventy\src\Engines\Nunjucks.js:235:14
+        at C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches\node_modules\@11ty\eleventy\src\Engines\Markdown.js:71:47
+        at Template.render (C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches\node_modules\@11ty\eleventy\src\TemplateContent.js:199:28)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+        at async Template._getContent (C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches\node_modules\@11ty\eleventy\src\Template.js:547:12)
+        at async Template.getTemplateMapContent (C:\Users\johnx\OneDrive\Documents\GitHub\wildpeaches\node_modules\@11ty\eleventy\src\Template.js:732:19)
+Copied 71 files / Wrote 0 files in 2.07 seconds (v0.12.1)
+Watching…
+[Browsersync] Access URLs:
+ -------------------------------------
+       Local: http://localhost:8082
+    External: http://192.168.56.1:8082
+ -------------------------------------
+          UI: http://localhost:3003
+ UI External: http://localhost:3003
+ -------------------------------------
+[Browsersync] Serving files from: www

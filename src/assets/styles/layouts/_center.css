@@ -1,0 +1,6 @@
+/* https://every-layout.dev/layouts/center/ */
+
+.o-center {
+  max-width: var(--measure);
+  @apply ml-auto mr-auto px-8 box-content;
+}

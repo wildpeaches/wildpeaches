@@ -1,0 +1,12 @@
+.s-post h2,
+.s-post h3,
+.s-post h4,
+.s-post h5,
+.s-post h6 {
+  text-indent: -1em; /* account for markdown-it-anchor permlink */
+}
+
+h1 {
+  @apply text-4xl font-semibold tracking-tight;
+  text-indent: 0; /* no permlink markdown-it-anchor */
+}

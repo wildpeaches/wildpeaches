@@ -1,0 +1,17 @@
+{% if page.url === "/" or page.url === "/software/" %}
+{% set navBgColor = "bg-yellow-100" %}
+{% else %}
+{% set navBgColor = "bg-white" %}
+{% endif %}
+
+<nav id="top" class="{{ navBgColor }}">
+  <ul class="justify-center flex o-center py-3 list-none font-sans text-current">
+    {% for item in navigation.items %}
+    <li class="{{ item.listClass }}">
+      <a href="{{ item.url }}" class="{{ item.cssClass }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+        >{{ item.text }}</a
+      >
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

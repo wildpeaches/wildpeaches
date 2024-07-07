@@ -1,0 +1,9 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^/assets/"
+    }, {
+      "pattern": "^/blog/"
+    }
+  ]
+}

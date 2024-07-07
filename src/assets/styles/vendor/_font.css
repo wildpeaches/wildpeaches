@@ -1,0 +1,9 @@
+/* Inter variable font import */
+/* https://rsms.me/inter/ */
+
+:root {
+  @apply font-sans text-base sm:text-lg md:text-xl;
+  line-height: 1.7;
+  text-rendering: optimizeSpeed;
+  font-feature-settings: 'ss01', 'ss03', 'cv01';
+}

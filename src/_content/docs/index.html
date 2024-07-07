@@ -1,0 +1,31 @@
+---
+layout: default
+permalink: /docs/
+bodyClass: text-primary bg-blue-50
+---
+
+<section class="my-6 o-stack">
+  <ul class="divide-y divide-blue-400">
+    {% for doc in collections.docs | reverse %}
+
+    <li class="py-3 text-xl">
+      <a
+        class="no-underline text-primary font-medium flex"
+        href="{{ doc.url }}"
+      >
+        <!-- <time datetime="{{ doc.date | w3DateFilter }}"
+          >{{ doc.date | dateFilter }}</time
+        > -->
+        <div>
+          {{ doc.data.title }} {% if doc.data.subtitle %}
+          <div class="text-primary text-opacity-75 text-base">
+            {{ doc.data.subtitle }}
+          </div>
+          {% endif %}
+        </div>
+      </a>
+    </li>
+
+    {% endfor %}
+  </ul>
+</section>
