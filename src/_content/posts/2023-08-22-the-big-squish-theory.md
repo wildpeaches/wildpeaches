@@ -12,6 +12,8 @@ socialImg: /assets/img/2023-08-22-big-squish-theory/nautilus.jpg
 software: ['wolfram-language', 'anaconda', 'jupyterlab']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 > Pressure pushing down on me
 > Pressing down on you, no man ask for
 > Under pressure that burns a building down

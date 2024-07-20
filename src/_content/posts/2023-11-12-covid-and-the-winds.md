@@ -12,6 +12,8 @@ socialImg: /assets/img/2023-11-12-covid-and-the-winds/covid-and-the-winds.webp
 software: ['veusz', 'heuristiclab']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 > The answer, my friend, is blowin' in the wind
 > The answer is blowin' in the wind
 >

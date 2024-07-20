@@ -12,6 +12,8 @@ socialImg: /assets/img/2021-04-23-gambling-science-1/cornelis-de-vos-players-and
 software: ['r', 'rstudio']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 > Victory is a fleeting thing in the gambling business. Today's winners are tomorrow's blinking toads, dumb beasts with no hope.
 >
 > —Hunter S. Thompson

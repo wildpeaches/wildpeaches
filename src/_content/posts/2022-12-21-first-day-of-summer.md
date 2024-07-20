@@ -14,6 +14,8 @@ socialImg: /assets/img/2022-12-21-first-day-of-summer/children-on-the-beach-by-w
 software: ['julia', 'pluto-jl', 'openstreetmap', 'google-earth']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 > School's out for summer
 > School's out forever
 >

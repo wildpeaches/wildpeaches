@@ -12,6 +12,8 @@ socialImg: /assets/img/2022-04-30-bicycle-science/timeline-of-bicycle-design.png
 software: ['notepad++', 'libreoffice', 'pyspread', 'r', 'rstudio']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 ## A Tale of Two Bicycles
 
 I have two bicycles, a ten-year-old [Dynamic Tempo 8](https://www.gadgetreview.com/dynamic-bicycles-tempo-cross-8-review) (my Motorless Child)

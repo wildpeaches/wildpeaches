@@ -12,6 +12,8 @@ socialImg: /assets/img/2023-04-10-fermi-problems/mushroom-cloud.jpg
 software: ['smath-studio']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 > Henk: "Hi, how are you?"
 >
 > ChatGPT: "I feel great, thanks for asking. How can I help you with your existential crisis today?"

@@ -12,7 +12,7 @@ socialImg: /assets/img/2023-04-08-how-lstm-networks-can-predict-the-future/matri
 software: ['openbb-terminal', 'anaconda', 'jupyterlab', 'libreoffice']
 ---
 
-
+[Home](https://wildpeaches.github.io/)
 
 ------
 

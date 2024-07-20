@@ -11,6 +11,8 @@ keywords: [Agent Based Model, Emergent Systems]
 software: ['netlogo']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 ## NetLogo
 
 [NetLogo](https://ccl.northwestern.edu/netlogo/) is a simulation environment for multi-agent systems. Agents operate according to a set of rules within their environment. For example, the environment might be a grassy area where sheep can graze, and wolves attack and eat the sheep. Eating the sheep increases wolf energy allowing them to reproduce as does eating grass for the sheep.

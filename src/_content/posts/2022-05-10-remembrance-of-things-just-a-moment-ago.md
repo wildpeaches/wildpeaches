@@ -12,7 +12,7 @@ socialImg: /assets/img/2022-05-10-remembrance-of-things/proust.png
 software: ['julia', 'vscode', 'veusz']
 ---
 
-
+[Home](https://wildpeaches.github.io/)
 
 ## The Memory Game
 

@@ -12,6 +12,8 @@ socialImg: /assets/img/2020-12-30-put-another-kenken-on-the-barbie/tetsuya-miyam
 software: ['pari-gp', 'notepad++', 'ampl', 'gnu-mathprog', 'sagemath', 'vscode', 'eclipse']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 ## Tetsuya Miyamoto
 
 Tetsuya Miyamoto (宮本 哲也), a Japanese mathematics teacher invented KenKen ("cleverness squared") in 2004 to help his students improve math and logic skills. His students have dominated Japan’s “Math Olympics,” the country’s top mathematics competition for ages 11–15. Mr. Miyamoto said he believes in “the art of teaching without teaching”, and his favorite hobby is scuba diving. He's the star of the new documentary, [“Miyamoto and the Machine, The Story of KenKen”](https://www.miyamotoandthemachine.com/), and featured in a New Yorker article, ["The Puzzle Inventor Who Makes Math Beautiful."](https://www.newyorker.com/culture/the-new-yorker-documentary/the-puzzle-inventor-who-makes-math-beautiful)

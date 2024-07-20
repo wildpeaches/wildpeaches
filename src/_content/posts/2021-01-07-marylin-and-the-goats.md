@@ -17,6 +17,8 @@ pullQuote:
 software: ['r', 'rstudio', 'javascript']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 > Throw out your gold teeth and see how they roll;
 > The answer they reveal: life is unreal.
 >

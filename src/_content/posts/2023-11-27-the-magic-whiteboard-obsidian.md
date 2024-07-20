@@ -12,7 +12,7 @@ socialImg: /assets/img/2023-11-27-the-magic-whiteboard-obsidian/wizard1.webp
 software: ['obsidian','octave','python','r']
 ---
 
-
+[Home](https://wildpeaches.github.io/)
 
 The Magic Whiteboard is your personal genius assistant for all of your STEM projects. It knows practically everything and can have in-depth conversations with you on most topics. If you need to look something up, The Magic Whiteboard will help you find the right sources and can summarize the information and discuss the material with you. 
 

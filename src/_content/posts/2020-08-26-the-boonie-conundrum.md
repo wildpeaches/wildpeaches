@@ -11,6 +11,8 @@ keywords: [Monte Carlo simulation, conspiracies, Gompertz Survival Function]
 socialImg: /assets/img/the-boonie-conundrum/conspiracy.png
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 ## The Mathematics of Conspiracy Theories
 
 Ever wonder why some wild ideas spread like wildfire on the internet? You know, those conspiracy theories that seem to pop up everywhere? Well, buckle up, because we're about to dive into the wacky world of misinformation math! That's right, there's actually a way to crunch the numbers on how some ideas multiply faster than [boonies in a box](https://www.cumminsforum.com/threads/boonie-box-tools.2115786/). We'll explore the secret sauce of belief formation, peek into the social network pressure cooker, and follow the breadcrumb trail of how false facts find their way into a Facebook feed. By the time we're done, you'll have a whole new toolkit for understanding (and maybe even combating) these persistent tall tales. So grab your calculator and tin foil hat - it's time to unravel the mysterious mathematics of conspiracy theories!

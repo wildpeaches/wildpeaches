@@ -20,6 +20,8 @@ lastmod: '2022-03-04T21:18:20.078Z'
 software: ['desmos', 'julia', 'vscode']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 > “How did you go bankrupt?” Bill asked.
 > “Two ways,” Mike said. “Gradually, then suddenly.”
 >

@@ -13,6 +13,8 @@ eleventyComputed:
 software: ['smath-studio', ]
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 > In 18 hundred and 59, the engineer Brunel,
 > Would build the greatest ship afloat,
 > and rule the ocean's swell.

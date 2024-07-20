@@ -12,6 +12,8 @@ socialImg: /assets/img/2020-09-07-winning-the-scratch-lottery/bingo-card.jpg
 software: ['sikulix', 'python', 'tesseract']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 ## Mohan Srivastava's Discovery
 
 Mohan Srivastava is a geological statistician from Toronto who helps mining companies find gold. In 2003, he struck gold in another way by figuring out how to beat the Canadian scratch lottery, as he explained to [Jonah Lehrer of Wired Magazine](https://www.wired.com/2011/01/ff-lottery/). People think the lottery is a completely random game, but it isn't. The lottery commission knows a priori how much it expects to earn from each game by controlling the number of winning tickets.

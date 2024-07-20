@@ -13,6 +13,8 @@ ghDiscussion: 134
 software: ['algodoo', 'octave', 'gptips', 'turningbot', ai-feynman', 'heuristiclab', 'reactphysics3d', 'simphy', 'projectchrono', 'bullet-physics']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 ## The Most Famous Equation
 
 Probably the best-known equation is Albert Einstein's relationship between energy and matter,

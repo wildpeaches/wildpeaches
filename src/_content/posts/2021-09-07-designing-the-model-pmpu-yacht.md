@@ -19,6 +19,8 @@ lastmod: '2022-03-04T21:16:58.247Z'
 software: ['deepnest', 'octave', 'geogebra', 'inkscape', 'delftship', 'libreoffice']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 ## Flites of Fancy
 
 Building a model helps to get a feel for how the ideas developed in the previous posts [Betz The Limit](https://wildpeaches.xyz/blog/betz-the-limit/) and [The Pushmi-Pullyu](https://wildpeaches.xyz/blog/the-pushmi-pullyu/) might work. A catamaran (see [Of Sailing Ships, Velociraptors, and Walking on the Moon](https://wildpeaches.xyz/blog/of-sailing-ships-velociraptors-and-walking-on-the-moon/)) provides a relatively steady surface to attach the wind turbine. For this model, I ignored detailed calculations but used the method described in [Yacht Design with Mathematics](https://wildpeaches.xyz/blog/yacht-design-with-mathematics/) to create the hull form.

@@ -11,6 +11,8 @@ keywords: [Gambling, Statistics, Expectation, Optical Character Recognition]
 software: ['python', 'tesseract']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 ## Shannon and Kelly at Bell Labs
 
 Imagine using a secret formula to win big at blackjack, roulette, and other casino games. That's what two MIT mathematicians, Claude Shannon and John Kelly, Jr., did in the 1950s and 1960s, with the help of a mobster who wanted revenge on the casino owners. In this article, we'll explore how they applied information theory, probability, and the first wearable computer to beat the odds and make a fortune.

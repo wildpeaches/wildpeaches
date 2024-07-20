@@ -13,6 +13,8 @@ ghDiscussion: 131
 software: ['desmos', 'pari-gp']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 > I have never done anything "useful". No discovery of mine has made, or is likely to make, directly or indirectly, for good or ill, the least difference to the amenity of the world.
 >
 > — G. H. Hardy

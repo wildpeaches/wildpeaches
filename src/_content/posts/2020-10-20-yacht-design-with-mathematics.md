@@ -12,6 +12,8 @@ socialImg: /assets/img/2020-10-20-yacht-design-with-mathematics/jurgen-venakowa-
 software: ['geogebra', 'octave', 'libreoffice', 'delftship', 'openfoam']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 > A ship in harbor is safe, but that is not what ships are built for.
 >
 > —William Shedd

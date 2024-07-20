@@ -21,6 +21,8 @@ lastmod: '2022-03-04T21:13:44.581Z'
 software: ['zotero', 'qiqqa', 'docear', 'mendeley']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 ## The Perfect Bet
 
 You want to learn something new. How do you do it? With easy access to the Internet, your first thought might be to let Google do the searching. Searching for terms about a subject often turns up more commonly used terms, and these new phrases may lead to areas you hadn't thought about initially. You can bookmark your searches, organize them into folders, and add [tags](https://support.mozilla.org/en-US/kb/categorizing-bookmarks-make-them-easy-to-find) to identify them using keywords in your bookmark manager.

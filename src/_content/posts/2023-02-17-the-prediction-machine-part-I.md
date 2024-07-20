@@ -12,6 +12,8 @@ socialImg: /assets/img/2023-02-17-the-prediction-machine/Protocols-all.png
 software: ['openbb-terminal', 'anaconda', 'python']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 > "Anyone who believes that exponential growth can go on forever in a finite world is either a madman or an economist."
 >
 > \- Kenneth Boulding, Economist

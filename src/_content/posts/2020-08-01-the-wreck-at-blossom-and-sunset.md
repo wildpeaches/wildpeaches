@@ -12,6 +12,8 @@ socialImg: /assets/img/2020-08-01-blossom-and-sunset/Blossom-and-Sunset.png
 software: ['anaconda', 'jupyterlab', 'python']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 The town of Arlington repaved Sunset Road and installed new sidewalks all around. The block of Blossom between Sunset and Lennon had been unpaved for years because it was privately owned, but in 2020 the town paved it anyway. The neighborhood seemed much nicer after all the construction was done, but there was just one problem. There were no stop signs at the four-way intersection of Blossom and Sunset.
 
 Jan and his family lived in the house right on the corner, and we lived in the blue house next door. We were watching the cars go by and realized that since there weren't any stop signs, everyone assumed they had the right-of-way no matter which direction they approached the intersection. Sooner or later there would be a huge wreck at the intersection of Blossom and Sunset. It seemed to us that we had two options. The first would be to inform someone in the town planning department about the serious omission. The second was to calculate the probability of a wreck. We chose option two.

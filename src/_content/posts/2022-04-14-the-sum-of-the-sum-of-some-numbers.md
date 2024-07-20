@@ -12,6 +12,8 @@ socialImg: /assets/img/2022-04-14-the-sum-of-the-sum-of-some-numbers/10_DM_Serie
 software: ['julia', 'octave', 'python', 'r']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 ## Carl Gauss' Very Bad Day
 
 Johann Carl Friedrich Gauss has been called the *Princeps mathematicorum* (Latin for "the foremost of mathematicians" and anagram of "Anarchic Meets Impromptu"). He made many contributions to mathematics and science, and the British mathematician Henry John Stephen Smith said of Gauss,

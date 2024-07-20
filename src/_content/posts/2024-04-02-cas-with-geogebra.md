@@ -12,6 +12,8 @@ socialImg: /assets/img/2024-04-02-cas-with-geogebra/circles.webp
 software: ['geogebra', 'maxima', 'wolfram-language']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 [Geogebra](https://www.geogebra.org/) is a great tool for working with geometric objects, but it also has a computer algebra system (CAS) built in. There are other more capable computer algebra systems such as [wxMaxima](https://wxmaxima-developers.github.io/wxmaxima/) and [Wolfram Language](https://www.wolfram.com/language/), but this might work for solving a simple algebraic-geometry problem.
 
 Here's the problem to solve: A circle touches the function $f(x) = x - x^3$​ in two places, the origin and one other point. What's the radius of the circle?

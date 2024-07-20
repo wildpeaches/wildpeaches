@@ -12,6 +12,8 @@ socialImg: /assets/img/2022-08-14-the-growing-gap/pulling-on-the-gas-guage.jpg
 software: ['octave', 'veusz', 'libreoffice', 'r', 'rstudio']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 A recent paper by Jean Laherrère, Charles Hall, and Roger Bentley asks the question, ["How much oil remains for the world to produce? Comparing assessment methods, and separating fact from fiction"](https://www.sciencedirect.com/science/article/pii/S2666049022000524#s0110). 
 
 The answer depends on how much oil has been discovered, how much more we might expect to be discovered, and how much we've already used. 

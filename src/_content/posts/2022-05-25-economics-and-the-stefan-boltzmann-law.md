@@ -11,7 +11,9 @@ keywords: []
 socialImg: /assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/heronimus-bosch-the-harrowing-of-hell.jpg
 ---
 
- Profits. 
+[Home](https://wildpeaches.github.io/) 
+
+Profits. 
 
 ![underpantsgnomes1](/assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/underpantsgnomes1.png)
 

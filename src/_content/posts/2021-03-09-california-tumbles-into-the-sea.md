@@ -13,6 +13,8 @@ ghDiscussion: 133
 software: ['meshroom', 'regard3d', 'visualsfm', 'visualsize', 'google-earth', 'cloudcompare', 'meshlab', 'octave', 'grass-gis', 'webodm', 'qgis']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 ## Fire and Rain
 
 When he was arrested, Ivan Gomez confessed to five murders and setting the fire to cover up evidence. Police booked him on ["charges of arson on forest land, cultivating marijuana, battery on a person, exhibiting a deadly weapon and throwing something at a vehicle intending to cause great bodily injury"](https://www.thecalifornian.com/story/news/2020/09/18/california-wildfires-dolan-fire-arson-murders-mental-health-evaluation/5825074002/), but they never found the bodies. His attorney presented evidence that he may not be mentally competent to stand trial, and while the police still believe the origins of the fire were suspicious, they haven't been able to pin an arson charge on him. Firefighters in the area accused him of throwing rocks at their vehicles.

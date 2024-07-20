@@ -18,6 +18,8 @@ lastmod: '2022-03-04T21:11:23.175Z'
 software: ['julia', 'octave', 'python', 'r', 'graphviz', 'gephi', 'microsoft-automatic-graph-layout', 'tulip', 'neo4j']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 ## Seven Trucks
 
 We live in a small, quiet neighborhood. Still, trucks come fairly often.

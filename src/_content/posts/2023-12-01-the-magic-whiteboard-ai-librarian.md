@@ -12,7 +12,7 @@ socialImg: /assets/img/2023-12-01-the-magic-whiteboard-ai-librarian/robot-librar
 software: ['obsidian', 'zotero', 'pandoc' , 'lyx' ]
 ---
 
-
+[Home](https://wildpeaches.github.io/)
 
 ## About the Librarian
 

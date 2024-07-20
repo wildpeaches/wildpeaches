@@ -12,6 +12,8 @@ socialImg: /assets/img/2024-06-04-the-goldfish-conjecture/goldfishfriends.webp
 software: ['jupyterlab', 'python']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 > ABCD goldfish?
 > LMNO goldfish
 > OSAR goldfish

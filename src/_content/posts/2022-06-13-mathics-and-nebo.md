@@ -12,6 +12,8 @@ socialImg: /assets/img/2022-06-13-mathics-and-nebo/Casablanca.jpeg
 software: ['mathics', 'nebo', 'anaconda', 'python', 'geogebra', 'obsidian', 'syncthing']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 I've been playing around with a couple of fun math toys recently, [Mathics](https://mathics.org/) and [Nebo](https://www.nebo.app/). Mathics is a free, open-source symbolic calculator. Nebo is a note-taking app for laptops, tablets, and smartphones with stylus inputs, and it can accept and understand mathematics. Nebo is free for the iPad, ($10 on Windows), and you can try Nebo [here](https://webdemo.myscript.com/views/math/index.html#).
 
 ## Mathics

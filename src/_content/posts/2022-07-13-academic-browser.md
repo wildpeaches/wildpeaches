@@ -12,6 +12,8 @@ socialImg: /assets/img/2022-07-13-academic-browser/library-francesca-grima-ln_sl
 software: ['zotero', 'mendeley', 'qiqqa', 'docear', 'r', 'rstudio', 'obsidian', 'zettlr', 'lyx', 'ghostwriter', 'typora']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 In an earlier post, [*A Research Rubric*](https://wildpeaches.xyz/blog/a-research-rubric/), we showed how to do online journal article searches, based on Aaron Tay's [blog](https://musingsaboutlibrarianship.blogspot.com/). This post extends the basic idea and provides a structured method for performing a search.
 
 Library image from [Francesca Grima](https://unsplash.com/photos/building-interior-photography-ln_slYqaMiI), Unsplash Sept. 30, 2019.

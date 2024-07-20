@@ -12,6 +12,8 @@ socialImg: /assets/img/2024-02-08-ising-on-the-cake/ising-on-the-cake.webp
 software: ['netlogo', 'r', 'rstudio']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 ## The Ising Model
 
 ![lenz-ising](/assets/img/2024-02-08-ising-on-the-cake/lenz-ising.webp)

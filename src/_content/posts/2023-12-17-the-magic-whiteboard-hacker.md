@@ -12,6 +12,8 @@ socialImg: /assets/img/2023-12-17-the-magic-whiteboard-hacker/the-hacker-sequenc
 software: ['obsidian', 'anaconda', 'mamba', 'jupyterlab', 'julia', 'lean-theorem-prover', 'wxmaxima', 'octave', 'pari-gp', 'python', 'r', 'wolfram-language', 'knime', 'orange', 'weka', 'colab', 'fastai']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 ## The Hacker
 
 The Hacker gives you several programming languages for scientific research as well as tools to analyze data and construct machine-learning methods for datasets. The Hacker is mostly built using [JupyterLab](https://docs.jupyter.org/en/latest/index.html) notebooks which let you insert notes and comments about the code you write using the same formatting that's available for the Magic Whiteboard. You can insert LaTeX math directly into your notes.

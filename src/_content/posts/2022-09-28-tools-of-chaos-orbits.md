@@ -16,6 +16,8 @@ pullQuote:
   quote: No matter where you go, there you are.
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 {% pullquote
   pullQuote.quote,
   pullQuote.author,

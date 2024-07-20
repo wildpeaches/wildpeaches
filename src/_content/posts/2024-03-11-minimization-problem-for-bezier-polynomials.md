@@ -12,6 +12,8 @@ software: ['python']
 socialImg: /assets/img/2024-03-11-minimization-problem-for-bezier-polynomials/math-to-code.webp
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 ## Introduction
 
 In the article, [_Yacht Design with Mathematics_](https://wildpeaches.xyz/blog/yacht-design-with-mathematics/) we showed how to use Bezier polynomials to approximate curves in $\mathbb{R}^2$, but getting a good fit to the curve meant manipulating the positions of the control points by hand until you were satisfied with the approximation. Optimization problems have been solved by computers for decades, and this is one that seems should have a solution.

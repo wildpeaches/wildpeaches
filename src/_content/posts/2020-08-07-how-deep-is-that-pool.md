@@ -12,6 +12,8 @@ keywords: [COVID-19 testing optimization, Pool testing mathematics, Pandemic res
 socialImg: /assets/img/2020-08-07-how-deep-is-the-pool/covid-virus.png
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 To control the COVID-19 pandemic requires rapid testing of many people. One way to do this is to perform a single test on the combined samples taken from a group of people, called pool testing. [The American Society for Microbiology thinks it's time to jump in the pool](https://asm.org/Articles/2020/July/COVID-19-Pool-Testing-Is-It-Time-to-Jump-In) and [STAT agrees](https://www.statnews.com/2020/06/26/pool-testing-covid-19/).
 
 ## How Pool Testing Works

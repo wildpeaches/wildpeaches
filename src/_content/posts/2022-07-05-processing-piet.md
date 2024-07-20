@@ -24,6 +24,8 @@ pullQuote:
     what we are talking about, nor whether what we are saying is true.
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 {% pullquote
   pullQuote.quote,
   pullQuote.author,

@@ -18,6 +18,8 @@ lastmod: '2022-03-04T02:36:04.435Z'
 software: ['julia', 'vscode', 'pluto-jl']
 ---
 
+
+
 ## Gaston Julia
 
 Gaston Julia was born on the 3rd of February, 1893 in Sidi bel Abbès, Algeria to Delorès Delavent and Joseph Julia, a mechanic. Gaston became interested in music and mathematics at an early age, and excelled in both, settling on the violin as his favorite instrument.

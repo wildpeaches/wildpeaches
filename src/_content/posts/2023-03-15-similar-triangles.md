@@ -12,6 +12,8 @@ socialImg: /assets/img/2023-03-15-similar-triangles/solution.png
 software: ['geogebra']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 The previous post [*The Prediction Machine, Part I - Protocols and OpenBB*](https://wildpeaches.xyz/blog/the-prediction-machine/) was supposed to have been followed by a post on a  machine learning method called Long Short-Term Memory (LSTM), but it's taking longer than I thought, so I'm putting this up instead and will get back to predictions later. I see a great future for having the ability to predict things!
 
 ## The problem

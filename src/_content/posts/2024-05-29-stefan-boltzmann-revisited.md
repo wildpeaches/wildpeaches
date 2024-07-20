@@ -12,6 +12,8 @@ socialImg: /assets/img/2024-05-29-stefan-boltzmann-revisited/devil-far-side-cart
 software: ['julia', 'jupyterlab', 'smath-studio']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 In our earlier article, [_Economics and the Stefan Boltzmann Law_](https://wildpeaches.xyz/blog/economics-and-the-stefan-boltzmann-law/) we showed that economic growth is limited by energy consumption because all energy rapidly becomes waste heat which must be radiated away from the Earth. Assuming an unlimited energy supply, the waste heat quickly increases until the Earth becomes uninhabitable. In reality, no energy sources exist that would allow this to happen, but it provides an absolute upper bound on growth.
 
 An assumption is that economic growth depends on energy. [Tim Garrett](https://www.inscc.utah.edu/~tgarrett/garrett.html) who is a climate scientist at the University of Utah wrote two papers on energy and economic growth, [_Long-run evolution of the global economy: 1. Physical basis_](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2013EF000171#eft223-bib-0016) and [_Long-run evolution of the global economy– Part 2: Hindcasts of innovation and growth_](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://esd.copernicus.org/articles/6/673/2015/esd-6-673-2015.pdf) where he estimates that to maintain $1000 of economic wealth requires 7.1 watts of constant power. Economic growth requires a surplus of energy above this minimum maintenance level.

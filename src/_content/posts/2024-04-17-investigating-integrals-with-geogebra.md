@@ -12,7 +12,7 @@ socialImg: /assets/img/2024-04-17-investigating-integrals-with-geogebra/integrat
 software: ['geogebra']
 ---
 
-
+[Home](https://wildpeaches.github.io/)
 
 In the previous article, [*CAS with Geogebra*](https://wildpeaches.xyz/blog/cas-with-geogebra/) we looked at derivatives. Here we'll go in the opposite direction and investigate integrals. If you have a function $f(x)$ then the derivative is written as $f'(x)$ and gives the slope of the function at any point $x$. Integration reverses this process and gives you $f(x)$ from the derivative function $f'(x)$. 
 

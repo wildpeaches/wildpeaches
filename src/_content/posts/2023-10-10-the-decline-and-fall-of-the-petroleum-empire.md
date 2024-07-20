@@ -12,6 +12,8 @@ socialImg: /assets/img/2023-10-10-decline-and-fall-of-petroleum/post-apocalyptic
 software: ['veusz', 'libreoffice']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 Listen to an Energy Return on Input (EROI) discussion with Brent Ragsdale and John Peach on [EcoRadio KC](https://kkfi.org/program-episodes/is-the-decline-of-oil-in-sight/).
 
 ------

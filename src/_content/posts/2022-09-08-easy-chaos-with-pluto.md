@@ -12,6 +12,8 @@ socialImg: /assets/img/2022-09-08-easy-chaos-with-pluto/lorenz3.png
 software: ['julia', 'pluto-jl']
 ---
 
+[Home](https://wildpeaches.github.io/)
+
 ## Getting Started with Pluto
 
 [Pluto](https://juliapackages.com/p/pluto) is a notebook environment for [Julia](https://julialang.org/). Install Julia and start it to get a command window. The first step is to add some [packages](https://docs.julialang.org/en/v1/stdlib/Pkg/) we'll use for this project. Type "]" at the prompt (without the quotes) to enter the package manager. The packages you'll need are:
