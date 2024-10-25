@@ -14,10 +14,15 @@ h3,
 h4,
 h5,
 h6,
-li,
 figcaption {
   max-width: var(--measure);
   text-wrap: balance;
+}
+
+/* Handle list items separately */
+li {
+  max-width: none;  /* Remove the width constraint */
+  text-wrap: pretty;  /* Or remove text-wrap entirely */
 }
 
 p {
