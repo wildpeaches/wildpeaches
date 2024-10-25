@@ -14,6 +14,10 @@ software: []
 
 [Home](https://wildpeaches.github.io/)
 
+This article was co-authored with Erik Michaels who maintains the blog [*Problems, Predicaments, and Technology*](https://problemspredicamentsandtechnology.blogspot.com/) ([*Burning Man* link](https://problemspredicamentsandtechnology.blogspot.com/2024/10/burning-man-failure-of-green-new-deal.html)). Erik is a climate science researcher and writer who has studied climate change and ecological issues for over four decades. He has dedicated much of his life to understanding and communicating the science behind climate change, ecological overshoot, and sustainability challenges. As a journeyman electrician and professional MC/Officiant by trade, he brings a practical perspective to complex environmental issues. 
+
+He manages two Facebook discussion groups focused on climate change and environmental preparation, and regularly writes about these topics, carefully documenting his work with peer-reviewed scientific studies and research. His particular areas of expertise include the science of ecological overshoot, the lack of agency to change outcomes and the denial of reality of our current predicament. Beyond his research work, Erik serves as a community educator, helping others understand the implications of climate science and ecological challenges. 
+
 ## Executive Summary
 
 This article critically examines the feasibility of transitioning to renewable energy systems and the "Green New Deal" through three fundamental lenses: physics, economics, and ecology. Our analysis reveals several critical findings:
