@@ -4,11 +4,11 @@ subtitle: The End of an Era
 author: John Peach
 lede: The oil age may be coming to a close much sooner than most people realize, and there is a growing gap between expectations and the thermodynamic reality of renewable energy.
 hero:
-  url: /assets/img/2022-08-14-the-growing-gap/pulling-on-the-gas-guage.jpg
+  url: /assets/img/2022-08-14-the-growing-gap/pulling-on-the-gas-guage.webp
   alt:
 tags: [math, ]
 keywords: [logistic function]
-socialImg: /assets/img/2022-08-14-the-growing-gap/pulling-on-the-gas-guage.jpg
+socialImg: /assets/img/2022-08-14-the-growing-gap/pullingguage.webp
 software: ['octave', 'veusz', 'libreoffice', 'r', 'rstudio']
 ---
 

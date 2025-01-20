@@ -4,11 +4,11 @@ subtitle: A Letcher in Homotopies
 author: John Peach
 lede: I'll show you how to design a yacht hull with five Bezier curves and a homotopy. I'll demonstrate how to make a scale model of your boat. Becoming a pirate and sailing the seven seas is left as an exercise to the reader.
 hero:
-  url: /assets/img/2020-10-20-yacht-design-with-mathematics/jurgen-venakowa-8Qs9bEhZRvw-unsplash.jpg
+  url: /assets/img/2020-10-20-yacht-design-with-mathematics/sailing.webp
   alt:
 date: 2020-10-19
 tags: [math, yacht design, homotopies, octave, geogebra, delftship]
-socialImg: /assets/img/2020-10-20-yacht-design-with-mathematics/jurgen-venakowa-8Qs9bEhZRvw-unsplash.jpg
+socialImg: /assets/img/2020-10-20-yacht-design-with-mathematics/sailing.webp
 software: ['geogebra', 'octave', 'libreoffice', 'delftship', 'openfoam']
 ---
 

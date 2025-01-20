@@ -4,11 +4,11 @@ subtitle: Part II - Learn how to use long short-term memory networks to forecast
 author: John Peach
 lede:
 hero:
-  url: /assets/img/2023-04-08-how-lstm-networks-can-predict-the-future/matrix.jpg
+  url: /assets/img/2023-04-08-how-lstm-networks-can-predict-the-future/matrix.webp
   alt:
 tags: [machine learning, LSTM, Python, OpenBB, stock prediction]
 keywords: [day trading, prediction, forecasting]
-socialImg: /assets/img/2023-04-08-how-lstm-networks-can-predict-the-future/matrix.jpg
+socialImg: /assets/img/2023-04-08-how-lstm-networks-can-predict-the-future/matrix.webp
 software: ['openbb-terminal', 'anaconda', 'jupyterlab', 'libreoffice']
 ---
 

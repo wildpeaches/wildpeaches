@@ -4,11 +4,11 @@ subtitle: Part III - Learn how to solve a Fermi Problem and get help from Bing A
 author: John Peach
 lede:
 hero:
-  url: /assets/img/2023-04-10-fermi-problems/mushroom-cloud.jpg
+  url: /assets/img/2023-04-10-fermi-problems/mushroom-cloud.webp
   alt:
 tags: []
 keywords: []
-socialImg: /assets/img/2023-04-10-fermi-problems/mushroom-cloud.jpg
+socialImg: /assets/img/2023-04-10-fermi-problems/mushroom-cloud.webp
 software: ['smath-studio']
 ---
 

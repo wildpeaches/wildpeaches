@@ -4,11 +4,11 @@ subtitle: An EROI analysis of renewable energy
 author: John Peach
 lede:
 hero:
-  url: /assets/img/2023-10-10-decline-and-fall-of-petroleum/post-apocalyptic-burning-oil-refinery.png
+  url: /assets/img/2023-10-10-decline-and-fall-of-petroleum/post-apocalyptic-burning-oil-refinery.webp
   alt:
 tags: [math, physics]
 keywords: [Peak oil, Oil production decline, Energy return on investment (EROI), Resource constraints, Biophysical economics]
-socialImg: /assets/img/2023-10-10-decline-and-fall-of-petroleum/post-apocalyptic-burning-oil-refinery.png
+socialImg: /assets/img/2023-10-10-decline-and-fall-of-petroleum/post-apocalyptic-burning-oil-refinery.webp
 software: ['veusz', 'libreoffice']
 ---
 
