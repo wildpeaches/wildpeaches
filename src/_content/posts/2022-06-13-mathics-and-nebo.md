@@ -4,11 +4,11 @@ subtitle: Symbolic Mathematics and AI Handwriting Recognition
 author: John Peach
 lede: "I think this is the beginning of a beautiful friendship."
 hero:
-  url: /assets/img/2022-06-13-mathics-and-nebo/Casablanca.jpeg
+  url: /assets/img/2022-06-13-mathics-and-nebo/Casablanca.webp
   alt:
 tags: [math]
 keywords: []
-socialImg: /assets/img/2022-06-13-mathics-and-nebo/Casablanca.jpeg
+socialImg: /assets/img/2022-06-13-mathics-and-nebo/Casablanca.webp
 software: ['mathics', 'nebo', 'anaconda', 'python', 'geogebra', 'obsidian', 'syncthing']
 ---
 

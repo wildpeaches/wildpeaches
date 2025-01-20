@@ -4,7 +4,7 @@ subtitle: Partitions with Pari/GP
 author: John Peach
 lede: If you like Sudoku, you'll love KenKen!
 hero:
-  url: /assets/img/2020-12-30-put-another-kenken-on-the-barbie/shrimp-on-the-barbie.png
+  url: /assets/img/2020-12-30-put-another-kenken-on-the-barbie/kenken-on-the-barbie.webp
   alt:
 tags: [math]
 keywords: [KenKen, Pari/GP, Integer Partitions, Number theory]

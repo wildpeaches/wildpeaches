@@ -4,11 +4,11 @@ subtitle: The AI Librarian
 author: John Peach
 lede:
 hero:
-  url: /assets/img/2023-12-01-the-magic-whiteboard-ai-librarian/robot-librarian-2.webp
+  url: /assets/img/2023-12-01-the-magic-whiteboard-ai-librarian/robot-librarian.webp
   alt:
 tags: [math, science, technology, AI]
 keywords: []
-socialImg: /assets/img/2023-12-01-the-magic-whiteboard-ai-librarian/robot-librarian-2.webp
+socialImg: /assets/img/2023-12-01-the-magic-whiteboard-ai-librarian/robot-librarian.webp
 software: ['obsidian', 'zotero', 'pandoc' , 'lyx' ]
 ---
 

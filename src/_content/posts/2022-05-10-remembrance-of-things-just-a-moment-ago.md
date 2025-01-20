@@ -4,7 +4,7 @@ subtitle: In Search Of Time Lost Playing This Game
 author: John Peach
 lede: We don't receive wisdom; we must discover it for ourselves after a journey that no one can take for us or spare us. - Marcel Proust
 hero:
-  url: /assets/img/2022-05-10-remembrance-of-things/proust.png
+  url: /assets/img/2022-05-10-remembrance-of-things/proust.webp
   alt:
 tags: [math, Monte Carlo]
 keywords: []

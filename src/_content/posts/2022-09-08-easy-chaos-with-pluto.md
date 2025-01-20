@@ -4,7 +4,7 @@ subtitle: Simply Making a Mess of Everything
 author: John Peach
 lede: 
 hero:
-  url: /assets/img/2022-09-08-easy-chaos-with-pluto/lorenz3.png
+  url: /assets/img/2022-09-08-easy-chaos-with-pluto/lorenz3.webp
   alt:
 tags: [math,chaos theory]
 keywords: [Pluto notebook, logistic function, autocorrelation, phase portrait]

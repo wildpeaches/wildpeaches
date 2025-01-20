@@ -4,7 +4,7 @@ subtitle: An Eulerian circuit through the neighborhood
 author: John Peach
 lede: null
 hero:
-  url: /assets/img/2021-12-30-seven-bridges-for-seven-truckers/seven-brides.png
+  url: /assets/img/2021-12-30-seven-bridges-for-seven-truckers/seven-brides.webp
   alt: null
   class: hero--contain
 tags:

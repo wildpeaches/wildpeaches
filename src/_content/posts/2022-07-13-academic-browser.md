@@ -4,11 +4,11 @@ subtitle: Your Librarian in the Cloud
 author: John Peach
 lede:
 hero:
-  url: /assets/img/2022-07-13-academic-browser/library-francesca-grima-ln_slYqaMiI-unsplash.jpg
+  url: /assets/img/2022-07-13-academic-browser/library.webp
   alt:
 tags: [math]
 keywords: []
-socialImg: /assets/img/2022-07-13-academic-browser/library-francesca-grima-ln_slYqaMiI-unsplash.jpg
+socialImg: /assets/img/2022-07-13-academic-browser/library.webp
 software: ['zotero', 'mendeley', 'qiqqa', 'docear', 'r', 'rstudio', 'obsidian', 'zettlr', 'lyx', 'ghostwriter', 'typora']
 ---
 

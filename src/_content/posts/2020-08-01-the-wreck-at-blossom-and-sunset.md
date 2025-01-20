@@ -4,11 +4,11 @@ subtitle: The Intersection of Poisson and Exponential Distributions
 author: John Peach
 lede:
 hero: 
-  url: /assets/img/2020-08-01-blossom-and-sunset/Blossom-and-Sunset.png
+  url: /assets/img/2020-08-01-blossom-and-sunset/Blossom-and-Sunset.webp
   alt:
 tags: [math,Poisson,Exponential]
 keywords: [science, technology, engineering, mathematics, computing]
-socialImg: /assets/img/2020-08-01-blossom-and-sunset/Blossom-and-Sunset.png
+socialImg: /assets/img/2020-08-01-blossom-and-sunset/Blossom-and-Sunset.webp
 software: ['anaconda', 'jupyterlab', 'python']
 ---
 

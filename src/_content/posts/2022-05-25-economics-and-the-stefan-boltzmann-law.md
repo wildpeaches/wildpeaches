@@ -4,7 +4,7 @@ subtitle: Why do economists want us to live in a searing, burning, flaming apoca
 author: John Peach
 lede:
 hero:
-  url: /assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/heronimus-bosch-the-harrowing-of-hell.jpg
+  url: /assets/img/2022-05-25-economics-and-the-stefan-boltzmann-law/heronimus-bosch-the-harrowing-of-hell.webp
   alt:
 tags: [math]
 keywords: []

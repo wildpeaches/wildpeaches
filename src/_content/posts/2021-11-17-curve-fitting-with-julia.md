@@ -4,7 +4,7 @@ subtitle: Why Oil Production May Not Follow a Gaussian Function
 author: John Peach
 lede: null
 hero:
-  url: /assets/img/2021-11-17-curve-fitting-with-julia/huntington-beach.jpeg
+  url: /assets/img/2021-11-17-curve-fitting-with-julia/huntington-beach.webp
   alt: null
   class: hero--contain
 tags:

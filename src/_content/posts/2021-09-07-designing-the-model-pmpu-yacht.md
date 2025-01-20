@@ -4,7 +4,7 @@ subtitle: The Ultra Hyper Totally Amazing Push Me Pull You Supercavitating Surfa
 author: John Peach
 lede: null
 hero:
-  url: /assets/img/2021-09-07-designing-the-model/ode-on-a-grecian-urn.jpeg
+  url: /assets/img/2021-09-07-designing-the-model/ode-on-a-grecian-urn.webp
   alt: null
 tags:
   - math
@@ -14,7 +14,7 @@ keywords:
   - bin packing
   - genetic algorithm
   - Procrustes method
-socialImg: /assets/img/2021-09-07-designing-the-model/ode-on-a-grecian-urn.jpeg
+socialImg: /assets/img/2021-09-07-designing-the-model/ode-on-a-grecian-urn.webp
 lastmod: '2022-03-04T21:16:58.247Z'
 software: ['deepnest', 'octave', 'geogebra', 'inkscape', 'delftship', 'libreoffice']
 ---
